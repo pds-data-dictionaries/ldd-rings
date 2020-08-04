@@ -27,3 +27,13 @@ Documentation included in the source (src) directory is generated using the "pds
 
 After a build the README.md files are updated (manually) to reflect the content of repository.
 
+
+# Contribute
+
+Have a bug or feature request? Create one in the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
+
+
+# Support
+
+See the [PDS Data Dictionaries Support page](https://pds-data-dictionaries.github.io/support/) for more Support information.
+
