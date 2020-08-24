@@ -1,10 +1,5 @@
-# Rings Local Data Dictionary (LDD)
+# LDD Source Directory
 
-The Ring dictionary that describe objects related to planetary ring observation. 
-It includes classes to describe a ring model, occulations (radio and stellar) and ring relationships.
+This directory should contain one IngestLDD for the LDD being built. The auto-generation script does not currently support multiple versions of an LDD being maintained.
 
-Steward: RINGS
-
-## Versions
-
-- [1.6.0.0](1.6.0.0)
+See the [tutorial on updating and building an IngestLDD](https://pds-data-dictionaries.github.io/support/tutorials.html#ldd-update-and-build-tutorial) and the [LDD Update Process](https://pds-data-dictionaries.github.io/development/ldd-update.html) for more details.
