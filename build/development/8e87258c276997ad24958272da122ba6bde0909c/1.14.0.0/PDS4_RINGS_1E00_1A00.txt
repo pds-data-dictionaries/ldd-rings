@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        11.3.2
+   LDDTool Version        0.0.0
    LDD Version Id:        1.10.0.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Aug 20 18:15:17 UTC 2020
+   Time                   Tue Sep 08 20:47:18 UTC 2020
    Common Schema          [PDS4_PDS_1E00.xsd]
    Common Schematron      [PDS4_PDS_1E00.sch]
    IM Version Id:         1.14.0.0
@@ -33,116 +33,10 @@ Summary:
    Attributes             154
    Associations           288
    Error messages         0
-   Warning messages       19
-   Information messages   87
+   Warning messages       0
+   Information messages   0
 
 Detailed validation messages
-   WARNING  Attribute: <background_signal_level> - This local attribute was not used in an Association.
-   WARNING  Attribute: <corotating_ring_longitude> - This local attribute was not used in an Association.
-   WARNING  Attribute: <earth_received_time> - This local attribute was not used in an Association.
-   WARNING  Attribute: <maximum_sub_stellar_clock_angle> - This local attribute was not used in an Association.
-   WARNING  Attribute: <maximum_sub_stellar_ring_azimuth> - This local attribute was not used in an Association.
-   WARNING  Attribute: <minimum_sub_stellar_clock_angle> - This local attribute was not used in an Association.
-   WARNING  Attribute: <minimum_sub_stellar_ring_azimuth> - This local attribute was not used in an Association.
-   WARNING  Attribute: <observed_event_tdb> - This local attribute was not used in an Association.
-   WARNING  Attribute: <observed_event_time> - This local attribute was not used in an Association.
-   WARNING  Attribute: <observed_event_time_utc> - This local attribute was not used in an Association.
-   WARNING  Attribute: <observed_ring_azimuth> - This local attribute was not used in an Association.
-   WARNING  Attribute: <phase_angle> - This local attribute was not used in an Association.
-   WARNING  Attribute: <ring_event_tdb> - This local attribute was not used in an Association.
-   WARNING  Attribute: <ring_event_time> - This local attribute was not used in an Association.
-   WARNING  Attribute: <ring_radius> - This local attribute was not used in an Association.
-   WARNING  Attribute: <spacecraft_event_time> - This local attribute was not used in an Association.
-   WARNING  Attribute: <stellar_signal_level> - This local attribute was not used in an Association.
-   WARNING  Header:  - New steward has been specified:rings
-   WARNING  Header:  - New namespace id has been specified:rings
-   INFO     Attribute: <axis_name> - This local attribute has a duplicate in the PDS4 data dictionary.
-   INFO     Attribute: <ring_detected> - The default minimum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <ring_detected> - The default maximum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <planetary_occultation_flag> - The default minimum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <planetary_occultation_flag> - The default maximum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <ring_longitude_observed_minus_subsolar> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <ring_longitude_observed_minus_subsolar> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_ring_longitude_observed_minus_subsolar> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_ring_longitude_observed_minus_subsolar> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_ring_longitude_observed_minus_subsolar> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_ring_longitude_observed_minus_subsolar> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <observed_ring_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <observed_ring_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <minimum_observed_ring_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <minimum_observed_ring_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <maximum_observed_ring_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <maximum_observed_ring_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <mean_observed_ring_elevation> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <mean_observed_ring_elevation> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <minimum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <maximum_emission_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_emission_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <minimum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <maximum_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <light_source_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <light_source_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <minimum_light_source_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_light_source_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <maximum_light_source_incidence_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_light_source_incidence_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <minimum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <maximum_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <mean_phase_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <mean_phase_angle> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <observed_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <observed_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_observed_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_observed_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_observed_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_observed_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <sub_stellar_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <sub_stellar_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_sub_stellar_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_sub_stellar_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_sub_stellar_ring_azimuth> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_sub_stellar_ring_azimuth> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <sub_stellar_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <sub_stellar_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_sub_stellar_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_sub_stellar_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_sub_stellar_clock_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_sub_stellar_clock_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <pole_right_ascension_angle> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <pole_right_ascension_angle> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <pole_declination_angle> - The default minimum value provided by the attribute's data type is being overridden with -90
-   INFO     Attribute: <pole_declination_angle> - The default maximum value provided by the attribute's data type is being overridden with 90
-   INFO     Attribute: <periapse_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <periapse_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <inclination> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <inclination> - The default maximum value provided by the attribute's data type is being overridden with 180
-   INFO     Attribute: <node_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <node_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <corotating_flag> - The default minimum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <corotating_flag> - The default maximum characters provided by the attribute's data type is being overridden with 1
-   INFO     Attribute: <corotating_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <minimum_corotating_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <minimum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
-   INFO     Attribute: <maximum_corotating_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
-   INFO     Attribute: <maximum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
 
 Parsed Input - Header:
    LDD Name               Rings Dictionary

@@ -3,7 +3,7 @@
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
       "Version": "1.14.0.0" ,
-      "Date": "Thu Aug 20 18:15:17 UTC 2020" ,
+      "Date": "Tue Sep 08 20:47:18 UTC 2020" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
       "classDictionary": [
         {
@@ -5580,6 +5580,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Left to Right" ,
+                  "valueMeaning": "Data along the horizontal axis of an array should be displayed from left to right. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Right to Left" ,
+                  "valueMeaning": "Data along the horizontal axis of an array should be displayed from right to left. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -5630,6 +5644,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "Bottom to Top" ,
+                  "valueMeaning": "Data along the vertical axis of an array should be displayed from the bottom to the top of the display device. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Top to Bottom" ,
+                  "valueMeaning": "Data along the vertical axis of an array should be displayed from the top to the bottom of the display device. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6055,6 +6083,50 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "0" ,
+                  "valueMeaning": "Not observable - observations at the predicted occultation event time for this ring were either not recorded (for example, the star was below the horizon) or the occultation chord did not intersect the ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1" ,
+                  "valueMeaning": "High-SNR profile with sharp edges matched by square-well model fit." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2" ,
+                  "valueMeaning": "Moderate-SNR profile with well-defined midtime from square-well model fit but possible systematic deviations of observed ring profile from model fit." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "3" ,
+                  "valueMeaning": "Clear ring detection but less-reliable ring width and or mid-time due to noise or substantial convolution by star diameter and\/or instrumental time constant." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "4" ,
+                  "valueMeaning": "Unreliable detection - some hint of a ring occultation, fitted by square-well model, but ~50% chance it is just noise." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "5" ,
+                  "valueMeaning": "No detection - Data were recorded at the expected location of a ring occultation, but no ring was observed, either because ring event was obscured by noise or (for the lambda ring) the optical depth of the ring at the observed longitude was below detectability, even if the overall SNR of the data is high." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "6" ,
+                  "valueMeaning": "Is not an indication of data quality. Indicates the product is a profile of the entire ring system based on the equator system of the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6080,6 +6152,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "fair" ,
+                  "valueMeaning": "Some portions of the data have issues which may be identified in the Note Flag column of the data file or other documentation. Overall the data may be suitable for quantitative measures, but extra care should be used." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "good" ,
+                  "valueMeaning": "The data is uniformly good and is suitable for quantitative measurements." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "poor" ,
+                  "valueMeaning": "The data are sufficiently compromised that they are not suitable for quantitative measurements (although they may be satisfactory for determining the locations of sharp features such as gap edges)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6205,6 +6297,110 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "Frequency range: 5.85 to 8.20 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "Frequency range: 2.20 to 3.30 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "Frequency range: 3.30 to 4.90 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "Frequency range: 4.90 to 7.05 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "Frequency range: 3.95 to 5.85 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "H" ,
+                  "valueMeaning": "Frequency range: 7.05 to 10.10 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "K" ,
+                  "valueMeaning": "Frequency range: 5.0 to 26.5 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ka" ,
+                  "valueMeaning": "Frequency range: 26.5 to 40.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ku" ,
+                  "valueMeaning": "Frequency range: 12.4 to 18.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Q" ,
+                  "valueMeaning": "Frequency range: 33 to 50 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "R" ,
+                  "valueMeaning": "Frequency range: 1.70 to 2.60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "S" ,
+                  "valueMeaning": "Frequency range: 2.60 to 3.95 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "U" ,
+                  "valueMeaning": "Frequency range: 40 to 60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "V" ,
+                  "valueMeaning": "Frequency range: 50 to 75 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "W" ,
+                  "valueMeaning": "Frequency range: 75 to 110 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "X" ,
+                  "valueMeaning": "Frequency range: 8.2 to 12.4 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Frequency range: 325 to 500 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6855,6 +7051,32 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "both" ,
+                  "valueMeaning": "The distance to the target body center along a portion of the occultation track decreases with time, and along a different portion increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "The distance to the target body center increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "The distance to the target body center decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6880,6 +7102,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "radio" ,
+                  "valueMeaning": "Radio waves were transmitted through the target." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "solar" ,
+                  "valueMeaning": "The target occulted the sun." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "stellar" ,
+                  "valueMeaning": "The target occulted a star." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -6930,6 +7172,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N" ,
+                  "valueMeaning": "The occultation track does not intersect the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Some portion of the occultation track also intersects the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7055,6 +7311,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N" ,
+                  "valueMeaning": "The ring was not detected." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "The ring was detected." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7180,6 +7450,140 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "A" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the A Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "B" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the B Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the C Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the D Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the E Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the F Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the G Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Phoebe" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Phoebe Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "alpha" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Alpha Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "beta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Beta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "delta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Delta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "epsilon" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Epsilon Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "equator" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the equatorial plane of the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "eta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Eta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "five" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Five Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "four" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Four Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "gamma" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Gamma Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "individual" ,
+                  "valueMeaning": "When parameters such as ring_radius are given in the data file for multiple rings, each set of parameters for a specific ring were determined based on the plane of that specific ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "lambda" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Lambda Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "mu" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Mu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "nu" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Nu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "six" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Six Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7205,6 +7609,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "The ring radius along the occultation track increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "The ring radius along the occultation track decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7480,6 +7904,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "double pole" ,
+                  "valueMeaning": "double pole filter." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "none" ,
+                  "valueMeaning": "No instrumental time constant, in which case time_constant and sigma_time_constant are both zero." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "single pole" ,
+                  "valueMeaning": "A single pole filter with impulse response given by h(t) = (t\/t_c^2)exp(-t\/t_c) for t greater than 0, 0 for t less than 0, where t_c is the time constant. See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7655,6 +8099,110 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "Frequency range: 5.85 to 8.20 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "Frequency range: 2.20 to 3.30 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "Frequency range: 3.30 to 4.90 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "Frequency range: 4.90 to 7.05 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "Frequency range: 3.95 to 5.85 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "H" ,
+                  "valueMeaning": "Frequency range: 7.05 to 10.10 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "K" ,
+                  "valueMeaning": "Frequency range: 5.0 to 26.5 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ka" ,
+                  "valueMeaning": "Frequency range: 26.5 to 40.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ku" ,
+                  "valueMeaning": "Frequency range: 12.4 to 18.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Q" ,
+                  "valueMeaning": "Frequency range: 33 to 50 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "R" ,
+                  "valueMeaning": "Frequency range: 1.70 to 2.60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "S" ,
+                  "valueMeaning": "Frequency range: 2.60 to 3.95 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "U" ,
+                  "valueMeaning": "Frequency range: 40 to 60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "V" ,
+                  "valueMeaning": "Frequency range: 50 to 75 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "W" ,
+                  "valueMeaning": "Frequency range: 75 to 110 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "X" ,
+                  "valueMeaning": "Frequency range: 8.2 to 12.4 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Frequency range: 325 to 500 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7730,6 +8278,32 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "both" ,
+                  "valueMeaning": "The distance to the target body center along a portion of the occultation track decreases with time, and along a different portion increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "The distance to the target body center increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "The distance to the target body center decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7755,6 +8329,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "radio" ,
+                  "valueMeaning": "Radio waves were transmitted through the target." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "solar" ,
+                  "valueMeaning": "The target occulted the sun." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "stellar" ,
+                  "valueMeaning": "The target occulted a star." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7805,6 +8399,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N" ,
+                  "valueMeaning": "The occultation track does not intersect the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Some portion of the occultation track also intersects the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7855,6 +8463,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "The ring radius along the occultation track increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "The ring radius along the occultation track decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -7930,6 +8558,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "fair" ,
+                  "valueMeaning": "Some portions of the data have issues which may be identified in the Note Flag column of the data file or other documentation. Overall the data may be suitable for quantitative measures, but extra care should be used." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "good" ,
+                  "valueMeaning": "The data is uniformly good and is suitable for quantitative measurements." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "poor" ,
+                  "valueMeaning": "The data are sufficiently compromised that they are not suitable for quantitative measurements (although they may be satisfactory for determining the locations of sharp features such as gap edges)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -8055,6 +8703,110 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "Frequency range: 5.85 to 8.20 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "Frequency range: 2.20 to 3.30 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "Frequency range: 3.30 to 4.90 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "Frequency range: 4.90 to 7.05 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "Frequency range: 3.95 to 5.85 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "H" ,
+                  "valueMeaning": "Frequency range: 7.05 to 10.10 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "K" ,
+                  "valueMeaning": "Frequency range: 5.0 to 26.5 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ka" ,
+                  "valueMeaning": "Frequency range: 26.5 to 40.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Ku" ,
+                  "valueMeaning": "Frequency range: 12.4 to 18.0 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Q" ,
+                  "valueMeaning": "Frequency range: 33 to 50 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "R" ,
+                  "valueMeaning": "Frequency range: 1.70 to 2.60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "S" ,
+                  "valueMeaning": "Frequency range: 2.60 to 3.95 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "U" ,
+                  "valueMeaning": "Frequency range: 40 to 60 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "V" ,
+                  "valueMeaning": "Frequency range: 50 to 75 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "W" ,
+                  "valueMeaning": "Frequency range: 75 to 110 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "X" ,
+                  "valueMeaning": "Frequency range: 8.2 to 12.4 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Frequency range: 325 to 500 GHz " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -8655,6 +9407,32 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "both" ,
+                  "valueMeaning": "The distance to the target body center along a portion of the occultation track decreases with time, and along a different portion increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "The distance to the target body center increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "The distance to the target body center decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -8680,6 +9458,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "radio" ,
+                  "valueMeaning": "Radio waves were transmitted through the target." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "solar" ,
+                  "valueMeaning": "The target occulted the sun." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "stellar" ,
+                  "valueMeaning": "The target occulted a star." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -8730,6 +9528,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N" ,
+                  "valueMeaning": "The occultation track does not intersect the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "Some portion of the occultation track also intersects the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -8905,6 +9717,140 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "A" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the A Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "B" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the B Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the C Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the D Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the E Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the F Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the G Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Phoebe" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Phoebe Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "alpha" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Alpha Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "beta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Beta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "delta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Delta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "epsilon" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Epsilon Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "equator" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the equatorial plane of the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "eta" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Eta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "five" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Five Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "four" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Four Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "gamma" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Gamma Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "individual" ,
+                  "valueMeaning": "When parameters such as ring_radius are given in the data file for multiple rings, each set of parameters for a specific ring were determined based on the plane of that specific ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "lambda" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Lambda Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "mu" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Mu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "nu" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Nu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "six" ,
+                  "valueMeaning": "Parameters such as ring_radius were determined based on the plane of the Six Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -9180,6 +10126,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "double pole" ,
+                  "valueMeaning": "double pole filter." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "none" ,
+                  "valueMeaning": "No instrumental time constant, in which case time_constant and sigma_time_constant are both zero." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "single pole" ,
+                  "valueMeaning": "A single pole filter with impulse response given by h(t) = (t\/t_c^2)exp(-t\/t_c) for t greater than 0, 0 for t less than 0, where t_c is the time constant. See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -9205,6 +10171,32 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "both" ,
+                  "valueMeaning": "The time series includes both ingress and egress values." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "egress" ,
+                  "valueMeaning": "Ring radius or atmospheric height along the occultation track increases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "ingress" ,
+                  "valueMeaning": "Ring radius or atmospheric height along the occultation track decreases with time." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "multiple" ,
+                  "valueMeaning": "The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36)." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -9330,6 +10322,20 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "N" ,
+                  "valueMeaning": "A corotating frame was used." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Y" ,
+                  "valueMeaning": "A corotating frame was used." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -9705,6 +10711,140 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "A" ,
+                  "valueMeaning": "The reprojection is onto the plane of the A Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "B" ,
+                  "valueMeaning": "The reprojection is onto the plane of the B Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "C" ,
+                  "valueMeaning": "The reprojection is onto the plane of the C Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "D" ,
+                  "valueMeaning": "The reprojection is onto the plane of the D Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "E" ,
+                  "valueMeaning": "The reprojection is onto the plane of the E Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "F" ,
+                  "valueMeaning": "The reprojection is onto the plane of the F Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "G" ,
+                  "valueMeaning": "The reprojection is onto the plane of the G Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Laplace" ,
+                  "valueMeaning": "The reprojection is onto the Laplace plane of the planetary system." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "Phoebe" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Phoebe Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "alpha" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Alpha Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "beta" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Beta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "delta" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Delta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "epsilon" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Epsilon Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "equator" ,
+                  "valueMeaning": "The reprojection is onto the equatorial plane of the planet." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "eta" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Eta Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "five" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Five Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "four" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Four Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "gamma" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Gamma Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "lambda" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Lambda Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "mu" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Mu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "nu" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Nu Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "six" ,
+                  "valueMeaning": "The reprojection is onto the plane of the Six Ring." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -9955,6 +11095,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "0" ,
+                  "valueMeaning": "Fitted value. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1" ,
+                  "valueMeaning": "computed from J2 and J4. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2" ,
+                  "valueMeaning": "computed from J2 and J4, and five major Uranian satellites. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -10155,6 +11315,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "0" ,
+                  "valueMeaning": "fitted value. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "1" ,
+                  "valueMeaning": "computed from J2 and J4. " ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "2" ,
+                  "valueMeaning": "computed from J2 and J4, and five major Uranian satellites. " ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       , {
@@ -11680,6 +12860,26 @@
             "unitOfMeasureId": "null" ,
             "unitId": "null" ,
             "defaultUnitId": "null"
+          , "PermissibleValueList": [
+              {"PermissibleValue": {
+                  "value": "exponential" ,
+                  "valueMeaning": "The sampling values are incremented in terms of exponential values of the physical values they represent." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "linear" ,
+                  "valueMeaning": "The sampling intervals are linear with respect to the physical values they represent." ,
+                  "isDeprecated": "false"
+                }
+             }
+            , {"PermissibleValue": {
+                  "value": "logarithmic" ,
+                  "valueMeaning": "The sampling values are logarithms of the physical values they represent." ,
+                  "isDeprecated": "false"
+                }
+             }
+           ]
           }
         }
       ]
