@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.10.0.0 - Thu Aug 20 18:15:17 UTC 2020 -->
-  <!-- Generated from the PDS4 Information Model Version 1.14.0.0 - System Build 10b -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.10.0.0 - Tue Oct 13 16:45:56 UTC 2020 -->
+  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.14.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.10.0.0 - rings: - Rings Dictionary                                      -->
   <!--   file:/home/runner/work/ldd-rings/ldd-rings/src/PDS4_RINGS_IngestLDD.xml -->
   <!--                                                                           -->
@@ -16,7 +16,7 @@
     attributeFormDefault="unqualified"
     version="1.10.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
@@ -3384,21 +3384,4 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
- 
-  <xs:annotation>
-    <xs:documentation>
-[
-  {
-    "dataDictionary": {
-      "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.14.0.0" ,
-      "Date": "Thu Aug 20 18:15:17 UTC 2020" ,
-      "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
-      "PropertyMapDictionary": [
-      ]
-    }
-  }
-]
-    </xs:documentation>
-  </xs:annotation>
 </xs:schema>
