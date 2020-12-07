@@ -17,8 +17,8 @@
     <namespace_id>rings</namespace_id>
     <comment> 
     
-      2020 06	
-        Added the attributes: data_quality_index, data_quality_index, ring_detected.
+      2020 12	
+        Added the attributes: data_quality_index, ring_detected.
         Revised the case of several attribute enumerated values from Title case to all lower case. The named 
         rings of Saturn are in title case while those of Uranus are lower case, consistent with normal usage 
         by the community.
@@ -154,13 +154,15 @@
         - Add Units of Measure Type = Gmass to the gmass attribute.
       v1.10.0.0  2020-06-25
         - Updated to version 1.14.0.0 of IM.
-        - Added the attributes: data_quality_index, data_quality_index, ring_detected.
+        - Added the attributes: data_quality_index, ring_detected.
         - Revised the case of several attribute enumerated values from Title case to all lower case. The named rings of 
           Saturn are in title case while those of Uranus are lower case, consistent with normal usage by the community.
         - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series.
+        - Expanded definitions of highest and lowest detectable opacity. In each, set the minimum value to -1.0 which 
+          indicates the signal was too poor to allow the calculation of the value.
 
     </comment>
-    <last_modification_date_time>2020-06-25</last_modification_date_time>
+    <last_modification_date_time>2020-12-02</last_modification_date_time>
     
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -1004,7 +1006,7 @@
         <local_identifier>data_quality_index</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>data_quality_index provides amore precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. Possible values are:.   
+        <definition>data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. Possible values are:.   
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1368,7 +1370,7 @@
         <local_identifier>maximum_radial_sampling_interval</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_radial_sampling_interval indicates the smallest radial spacing between 
+        <definition>maximum_radial_sampling_interval indicates the largest radial spacing between 
             consecutive points in a ring profile. In practice, this may be somewhat smaller than 
             the radial_resolution because a profile may be over-sampled.
 
@@ -1571,6 +1573,8 @@
             nearly opaque rings. It specifies the rough value for the largest normal ring opacity that can
             be detected in the data at the resolution provided, incorporating both statistical effects and
             calibration uncertainties.
+            
+            -1.0 indicates the signal was too poor to allow the calculation of the value.
 
             Strongly recommended in labels of ring occultation observations. Not intended as a value for
             a table field.
@@ -1578,6 +1582,7 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>-1</minimum_value>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -1591,6 +1596,8 @@
             nearly opaque rings. It specifies the rough value for the smallest normal ring opacity that can
             be detected in the data at the resolution provided, incorporating both statistical effects and
             calibration uncertainties.
+            
+            -1.0 indicates the signal was too poor to allow the calculation of the value.
 
             Strongly recommended in labels of ring occultation observations. Not intended as a value for
             a table field.
@@ -1598,6 +1605,7 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>-1</minimum_value>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -2641,7 +2649,7 @@
         <local_identifier>fractional_error_star_counts</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>fractional_error_star_counts indicates the fractional error (1-sigma) in starcounts 
+        <definition>fractional_error_star_counts indicates the fractional error (1-sigma) in star counts 
         	  used for square-well model fit.
         </definition>
         <DD_Value_Domain>
