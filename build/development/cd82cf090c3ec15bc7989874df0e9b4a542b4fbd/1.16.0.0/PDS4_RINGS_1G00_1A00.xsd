@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.10.0.0 - Tue May 04 05:13:44 UTC 2021 -->
-  <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.10.0.0 - Tue May 04 05:13:26 UTC 2021 -->
+  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
-  <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
+  <!-- 1.16.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.10.0.0 - rings: - Rings Dictionary                                      -->
   <!--   file:/home/runner/work/ldd-rings/ldd-rings/src/PDS4_RINGS_IngestLDD.xml -->
   <!--                                                                           -->
@@ -16,7 +16,7 @@
     attributeFormDefault="unqualified"
     version="1.10.0.0">
  
-    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd"/>
+    <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"/>
  
   <xs:annotation>
     <xs:documentation>
