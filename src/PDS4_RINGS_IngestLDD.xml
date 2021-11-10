@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.sch"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch"?>
 
 <Ingest_LDD 
   xmlns="http://pds.nasa.gov/pds4/pds/v1"
@@ -7,52 +7,16 @@
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   
   xsi:schemaLocation=
-   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd"> 
+   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"> 
 
     <name>Rings Dictionary</name>
-    <ldd_version_id>1.10.0.0</ldd_version_id>
+    <ldd_version_id>1.11.0.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Mitchell K Gordon</full_name>
     <steward_id>rings</steward_id>
     <namespace_id>rings</namespace_id>
     <comment> 
     
-      2020 12	
-        Added the attributes: data_quality_index, ring_detected.
-        Revised the case of several attribute enumerated values from Title case to all lower case. The named 
-        rings of Saturn are in title case while those of Uranus are lower case, consistent with normal usage 
-        by the community.
-        
-        Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
-    	2019 03 
-    	  An issue within LDDTool means that currently the tool does not
-    	  support referencing classes or attributes from other Discipline namespaces
-    	  A fix to LDDTool is in work, but in the interim we borrow classes and 
-    	  attributes from the geometry dictionary and redefine them here. The 
-    	  blocks of such borrowed classes and attributes are preceded and followed 
-    	  by xml comments which include '@@@'
-
-          	
-    	2018 07-17 
-
-    	Classes borrowed from the geom namespace
-    	  - Body_Ident_Base       -->   Body_Ident_Base      
-    	  - Frame_Ident_Base      -->   Frame_Ident_Base     
-    	  - Reference_Frame_Ident -->   Reference_Frame_Ident
-    	  - Central_Body_Ident    -->   Central_Body_Ident   
-    	  - Display_Direction
-
-    	attributes borrowed from the geom namespace
-    	  - body_spice_name
-    	  - frame_spice_name
-        - horizontal_display_axis
-        - horizontal_display_direction
-        - vertical_display_axis
-        - vertical_display_direction
-
-      Once LDDTool is repaired the preceding classes and attributes will be
-      removed and the following will be valid.
-    	   	
     	Classes used from the geom namespace
     	  - Body_Ident_Base
     	  - Reference_Frame_Ident
@@ -70,9 +34,8 @@
     	  - description
     	  - name     (indirectly via classes from the geom namespace)
     	  - comment  (indirectly via classes from the geom namespace)
-    	  
-    	
-      v1.2  2014-03-29
+
+      v1.2.0  2014-03-29
         -  Moved information from comments into definitions for all attributes. 
         -  Added source product, orbit number and sclk start/stop times. 
         -  Revised some enumerated value options, and corrected some nillable inconsistencies.
@@ -160,9 +123,26 @@
         - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series.
         - Expanded definitions of highest and lowest detectable opacity. In each, set the minimum value to -1.0 which 
           indicates the signal was too poor to allow the calculation of the value.
-
+      v1.11.0.0  2021-11-10
+        - Defined the attributes and included in Occultation_Time_Series: 
+          minimum_projected_sun_diameter, maximum_projected_sun_diameter, 
+          sigma_projected_sun_diameter, average_unocculted_signal,
+          lowest_detectable_normal_optical_depth, highest_detectable_normal_optical_depth,
+        - Defined attributes antipated to be used as columns in data tables:
+          observed_event_TDB_start_integration, observed_event_TDB_mid_integration,
+          observed_event_TDB_stop_integration, ring_event_TDB_start_integration,
+          ring_event_TDB_mid_integration, ring_event_TDB_stop_integration,
+          ring_radius_start_integration, ring_radius_mid_integration, ring_radius_stop_integration,
+          raw_total_counts,counts_per_second, transparency, normal_optical_depth,
+          projected_sun_diameter. 
+        - In Occultation_Ring_Profile and Occultation_Time_Series,changed the cardinality of 
+          data_quality_index to [0,*].
+        - Added to data_quality_index enumerated values to support solar occultations: B, F, R, U, X.
+        - Revised the case of several attribute enumerated values to Title case.
+        - Added the attribute: ring_detected.
+        - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
     </comment>
-    <last_modification_date_time>2020-12-02</last_modification_date_time>
+    <last_modification_date_time>2021-11-10</last_modification_date_time>
     
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -347,7 +327,7 @@
         <local_identifier>minimum_reflectivity</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_reflectivity indicates the largest value of I/F within the data object.
+        <definition>minimum_reflectivity indicates the smallest value of I/F within the data object.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -427,21 +407,22 @@
         <submitter_name>Mitch Gordon</submitter_name>
         <definition>
             The sampling_scale attribute indicates the type of scale that applies to the 
-            sample interval increments.  It must have a value of either Linear or Logarithmic.
+            sample interval increments.  It must have a value of either Linear, Logarithmic or
+            Exponential.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>linear</value>
+                <value>Linear</value>
                 <value_meaning>The sampling intervals are linear with respect to the physical values they represent.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>logarithmic</value>
+                <value>Logarithmic</value>
                 <value_meaning>The sampling values are logarithms of the physical values they represent.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>exponential</value>
+                <value>Exponential</value>
                 <value_meaning>The sampling values are incremented in terms of exponential values of the physical values they represent.</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
@@ -1039,6 +1020,26 @@
                 <value>6</value>
                 <value_meaning>Is not an indication of data quality. Indicates the product is a profile of the entire ring system based on the equator system of the planet.</value_meaning>
             </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>B</value>
+                <value_meaning>Background is from a different occultation.</value_meaning>
+            </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>F</value>
+                <value_meaning>Significant fraction of Sun is outside FOV.</value_meaning>
+            </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>R</value>
+                <value_meaning>Some of the data are flagged for removal.</value_meaning>
+            </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>U</value>
+                <value_meaning>Unocculted solar signal is from a different occultation.</value_meaning>
+            </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>X</value>
+                <value_meaning>Observation is unusable for analysis.</value_meaning>
+            </DD_Permissible_Value>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -1055,15 +1056,15 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>good</value>
+                <value>Good</value>
                 <value_meaning>The data is uniformly good and is suitable for quantitative measurements.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>fair</value>
+                <value>Fair</value>
                 <value_meaning>Some portions of the data have issues which may be identified in the Note Flag column of the data file or other documentation. Overall the data may be suitable for quantitative measures, but extra care should be used.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>poor</value>
+                <value>Poor</value>
                 <value_meaning>The data are sufficiently compromised that they are not suitable for quantitative measurements (although they may be satisfactory for determining the locations of sharp features such as gap edges).</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
@@ -1112,15 +1113,15 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>solar</value>
+                <value>Solar</value>
                 <value_meaning>The target occulted the sun.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>stellar</value>
+                <value>Stellar</value>
                 <value_meaning>The target occulted a star.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>radio</value>
+                <value>Radio</value>
                 <value_meaning>Radio waves were transmitted through the target.</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
@@ -1175,15 +1176,15 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>ingress</value>
+                <value>Ingress</value>
                 <value_meaning>The distance to the target body center decreases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                    <value>egress</value>
+                    <value>Egress</value>
                 <value_meaning>The distance to the target body center increases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>both</value>
+                <value>Both</value>
                 <value_meaning>The distance to the target body center along a portion of the occultation track decreases with time, and 
                     along a different portion increases with time.</value_meaning>
             </DD_Permissible_Value>
@@ -1393,7 +1394,7 @@
         <definition>ring_plane indicates the plane upon which
         parameters such as ring_radius are based. Possible values 
         for the Saturn ring system are 'Equator', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe'.
-        For the Uranus ring system values are 'equator', 'six', 'five',
+        For the Uranus ring system values are 'Equator', 'six', 'five',
         'four', 'alpha', 'beta',  'eta', 'gamma', 'delta', 'lambda','epsilon',nu, mu. 
         An additional value, 'individual' is also defined. Note that the named rings of Saturn 
         are in title case while those of Uranus are lower case, consistent with normal usage by the community.
@@ -1435,7 +1436,7 @@
                 <value_meaning>Parameters such as ring_radius were determined based on the plane of the Phoebe Ring.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>equator</value>
+                <value>Equator</value>
                 <value_meaning>Parameters such as ring_radius were determined based on the equatorial plane of the planet.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
@@ -1512,15 +1513,15 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>ingress</value>
+                <value>Ingress</value>
                 <value_meaning>The ring radius along the occultation track decreases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>egress</value>
+                <value>Egress</value>
                 <value_meaning>The ring radius along the occultation track increases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>multiple</value>
+                <value>Multiple</value>
                 <value_meaning>The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36).</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
@@ -1545,21 +1546,74 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>ingress</value>
+                <value>Ingress</value>
                 <value_meaning>Ring radius or atmospheric height along the occultation track decreases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>egress</value>
+                <value>Egress</value>
                 <value_meaning>Ring radius or atmospheric height along the occultation track increases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>both</value>
+                <value>Both</value>
                 <value_meaning>The time series includes both ingress and egress values.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>multiple</value>
+                <value>Multiple</value>
                 <value_meaning>The occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36).</value_meaning>
             </DD_Permissible_Value>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>normal_optical_depth</name>
+        <version_id>1.0</version_id>
+        <local_identifier>normal_optical_depth</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>normal_optical_depth is the ratio of incident to transmitted radiant power 
+        	corrected for background_signal and for the value of observed_ring_elevation (the viewing 
+        	angle). Normal optical depth is defined as the observed_optical_depth times the sine of 
+        	observed_ring_elevation.  
+            
+          Typically negative values are used to indicate the signal was too poor to allow the 
+          calculation of the value.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>-2000</minimum_value>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>lowest_detectable_normal_optical_depth</name>
+        <version_id>1.0</version_id>
+        <local_identifier>lowest_detectable_normal_optical_depth</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>lowest_detectable_normal_optical_depth gives the theoretical lowest possible 
+        	normal optical depth that can be detected in the observation based on the background 
+        	signal and unocculted signal measurements.   
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>highest_detectable_normal_optical_depth</name>
+        <version_id>1.0</version_id>
+        <local_identifier>highest_detectable_normal_optical_depth</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>highest_detectable_normal_optical_depth gives the theoretical highest possible 
+        	normal optical depth that can be detected in the observation based on the background 
+        	signal and unocculted signal measurements.    
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -1610,18 +1664,18 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>background_signal_level</name>
+        <name>background_signal</name>
         <version_id>1.2</version_id>
-        <local_identifier>background_signal_level</local_identifier>
+        <local_identifier>background_signal</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>background_signal_level indicates the anticipated signal (in counts, counts per
-            second, or other specified units) received when no stellar signal reaches the detector. This is
-            the signal level that indicates an opaque ring.
+        <definition>background_signal indicates the anticipated signal (in counts, counts per
+            second, or other specified units) received when no occulted source signal reaches the 
+            detector. This is the signal level that indicates an opaque ring.
 
-            Strongly recommended in labels of ring stellar occultation observations if the value is constant.
-            For stellar occultations, if the value is not constant, strongly recommended to be used as a
-            field in the data table. Normally not used for radio occultations.
+            Strongly recommended in labels of ring occultation observations if the value is constant, 
+            or strongly recommended to be used as a field in the data table if the value is not constant. 
+            Normally not used for radio occultations.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1649,6 +1703,25 @@
         </DD_Value_Domain>
     </DD_Attribute>
     
+    <DD_Attribute>
+        <name>average_unocculted_signal</name>
+        <version_id>1.0</version_id>
+        <local_identifier>average_unocculted_signal</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>average_unocculted_signal indicates the average of the signal in counts/second 
+        	  received from outside the rings or from nominally transparent regions of the rings after 
+        	  subtraction of background signal.
+
+            Strongly recommended in labels of ring solar occultation observations if the value is constant.
+            For solar occultations, if the value is not constant, strongly recommended to be used as a
+            field in the data table. Not used for radio occultations.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
     
     <DD_Attribute>
         <name>ring_radius</name>
@@ -2673,18 +2746,18 @@
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
-                <value>none</value>
+                <value>None</value>
                 <value_meaning>No instrumental time constant, in which case time_constant and sigma_time_constant are both zero.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>single pole</value>
+                <value>Single Pole</value>
                 <value_meaning>A single pole filter with impulse response given by 
                 	h(t) = (t/t_c^2)exp(-t/t_c) for t greater than 0, 0 for t less than 0, 
                     where t_c is the time constant. See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603.
                 </value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>double pole</value>
+                <value>Double Pole</value>
                 <value_meaning>double pole filter.</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
@@ -2723,6 +2796,73 @@
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>projected_sun_diameter</name>
+        <version_id>1.0</version_id>
+        <local_identifier>projected_sun_diameter</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>projected_sun_diameter provides the diameter in kilometers
+        	 of the sun projected onto the ring plane radius  based on the line 
+        	 of sight from the observer to the ring plane at  the start of the 
+        	 integration assuming the sun subtends a circular disk with an angular 
+        	 size based on the distance of the central body from the sun.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>minimum_projected_sun_diameter</name>
+        <version_id>1.0</version_id>
+        <local_identifier>minimum_projected_sun_diameter</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>minimum_projected_sun_diameter provides the smallest value of  
+         projected_sun_diameter in the obsevation.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>maximum_projected_sun_diameter</name>
+        <version_id>1.0</version_id>
+        <local_identifier>maximum_projected_sun_diameter</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>maximum_projected_sun_diameter provides the largest value of  
+         projected_sun_diameter in the obsevation.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>sigma_projected_sun_diameter</name>
+        <version_id>1.0</version_id>
+        <local_identifier>sigma_projected_sun_diameter</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>sigma_projected_sun_diameter indicates the Standard deviation 
+          (1-sigma) of projected_sun_diameter in the observation.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -3363,7 +3503,7 @@
                 <value_meaning>The reprojection is onto the plane of the Phoebe Ring.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
-                <value>equator</value>
+                <value>Equator</value>
                 <value_meaning>The reprojection is onto the equatorial plane of the planet.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
@@ -3799,9 +3939,9 @@
         <version_id>1.0</version_id>
         <local_identifier>Occultation_Ring_Profile</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>This class replaces the Radio_Occultation and Stellar_Occultation classes. It 
-        	is used for all ring occultation profiles regardless of the occultation type.
-       </definition>
+        <definition>This class replaces the Radio_Occultation and Stellar_Occultation classes. 
+        	It is used for all ring occultation profiles regardless of the occultation type.
+        </definition>
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
@@ -3862,7 +4002,7 @@
             <identifier_reference>data_quality_index</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
+            <maximum_occurrences>*</maximum_occurrences>
         </DD_Association>
         <DD_Association>
             <identifier_reference>ring_detected</identifier_reference>
@@ -4237,10 +4377,34 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>data_quality_index</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>*</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>ring_plane</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>*</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_projected_sun_diameter</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_projected_sun_diameter</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>sigma_projected_sun_diameter</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
             <identifier_reference>star_name</identifier_reference>
@@ -4507,7 +4671,31 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>lowest_detectable_normal_optical_depth</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>highest_detectable_normal_optical_depth</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>along_track_timing_offset</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>background_signal</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>average_unocculted_signal</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
