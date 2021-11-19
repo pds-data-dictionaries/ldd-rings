@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.10.0.0 - Tue May 04 05:13:44 UTC 2021 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.10.0.0 - Mon Nov 01 16:35:17 UTC 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -343,14 +343,14 @@
     <sch:rule context="rings:Display_Direction/rings:horizontal_display_direction">
       <sch:assert test=". = ('Left to Right', 'Right to Left')">
         <title>rings:Display_Direction/rings:horizontal_display_direction/rings:horizontal_display_direction</title>
-        The attribute rings:horizontal_display_direction must be equal to one of the following values 'Left to Right', 'Right to Left'.</sch:assert>
+        The attribute rings:Display_Direction/rings:horizontal_display_direction must be equal to one of the following values 'Left to Right', 'Right to Left'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Display_Direction/rings:vertical_display_direction">
       <sch:assert test=". = ('Bottom to Top', 'Top to Bottom')">
         <title>rings:Display_Direction/rings:vertical_display_direction/rings:vertical_display_direction</title>
-        The attribute rings:vertical_display_direction must be equal to one of the following values 'Bottom to Top', 'Top to Bottom'.</sch:assert>
+        The attribute rings:Display_Direction/rings:vertical_display_direction must be equal to one of the following values 'Bottom to Top', 'Top to Bottom'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -413,14 +413,14 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:data_quality_index">
       <sch:assert test=". = ('0', '1', '2', '3', '4', '5', '6')">
         <title>rings:Occultation_Ring_Profile/rings:data_quality_index/rings:data_quality_index</title>
-        The attribute rings:data_quality_index must be equal to one of the following values '0', '1', '2', '3', '4', '5', '6'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:data_quality_index must be equal to one of the following values '0', '1', '2', '3', '4', '5', '6'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:data_quality_score">
       <sch:assert test=". = ('fair', 'good', 'poor')">
         <title>rings:Occultation_Ring_Profile/rings:data_quality_score/rings:data_quality_score</title>
-        The attribute rings:data_quality_score must be equal to one of the following values 'fair', 'good', 'poor'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:data_quality_score must be equal to one of the following values 'fair', 'good', 'poor'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -441,7 +441,7 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:frequency_band">
       <sch:assert test=". = ('C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y')">
         <title>rings:Occultation_Ring_Profile/rings:frequency_band/rings:frequency_band</title>
-        The attribute rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -595,21 +595,21 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:occultation_direction">
       <sch:assert test=". = ('both', 'egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Ring_Profile/rings:occultation_direction/rings:occultation_direction</title>
-        The attribute rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:occultation_type">
       <sch:assert test=". = ('radio', 'solar', 'stellar')">
         <title>rings:Occultation_Ring_Profile/rings:occultation_type/rings:occultation_type</title>
-        The attribute rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:planetary_occultation_flag">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Occultation_Ring_Profile/rings:planetary_occultation_flag/rings:planetary_occultation_flag</title>
-        The attribute rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -644,7 +644,7 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_detected">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Occultation_Ring_Profile/rings:ring_detected/rings:ring_detected</title>
-        The attribute rings:ring_detected must be equal to one of the following values 'N', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:ring_detected must be equal to one of the following values 'N', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -679,14 +679,14 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_plane">
       <sch:assert test=". = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six')">
         <title>rings:Occultation_Ring_Profile/rings:ring_plane/rings:ring_plane</title>
-        The attribute rings:ring_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:ring_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_profile_direction">
       <sch:assert test=". = ('egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Ring_Profile/rings:ring_profile_direction/rings:ring_profile_direction</title>
-        The attribute rings:ring_profile_direction must be equal to one of the following values 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:ring_profile_direction must be equal to one of the following values 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -742,7 +742,7 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:time_constant_type">
       <sch:assert test=". = ('double pole', 'none', 'single pole')">
         <title>rings:Occultation_Ring_Profile/rings:time_constant_type/rings:time_constant_type</title>
-        The attribute rings:time_constant_type must be equal to one of the following values 'double pole', 'none', 'single pole'.</sch:assert>
+        The attribute rings:Occultation_Ring_Profile/rings:time_constant_type must be equal to one of the following values 'double pole', 'none', 'single pole'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -756,7 +756,7 @@
     <sch:rule context="rings:Occultation_Supplement/rings:frequency_band">
       <sch:assert test=". = ('C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y')">
         <title>rings:Occultation_Supplement/rings:frequency_band/rings:frequency_band</title>
-        The attribute rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Supplement/rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -777,21 +777,21 @@
     <sch:rule context="rings:Occultation_Supplement/rings:occultation_direction">
       <sch:assert test=". = ('both', 'egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Supplement/rings:occultation_direction/rings:occultation_direction</title>
-        The attribute rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Supplement/rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Supplement/rings:occultation_type">
       <sch:assert test=". = ('radio', 'solar', 'stellar')">
         <title>rings:Occultation_Supplement/rings:occultation_type/rings:occultation_type</title>
-        The attribute rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
+        The attribute rings:Occultation_Supplement/rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Supplement/rings:planetary_occultation_flag">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Occultation_Supplement/rings:planetary_occultation_flag/rings:planetary_occultation_flag</title>
-        The attribute rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Supplement/rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -805,7 +805,7 @@
     <sch:rule context="rings:Occultation_Supplement/rings:ring_profile_direction">
       <sch:assert test=". = ('egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Supplement/rings:ring_profile_direction/rings:ring_profile_direction</title>
-        The attribute rings:ring_profile_direction must be equal to one of the following values 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Supplement/rings:ring_profile_direction must be equal to one of the following values 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -819,7 +819,7 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:data_quality_score">
       <sch:assert test=". = ('fair', 'good', 'poor')">
         <title>rings:Occultation_Time_Series/rings:data_quality_score/rings:data_quality_score</title>
-        The attribute rings:data_quality_score must be equal to one of the following values 'fair', 'good', 'poor'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:data_quality_score must be equal to one of the following values 'fair', 'good', 'poor'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -840,7 +840,7 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:frequency_band">
       <sch:assert test=". = ('C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y')">
         <title>rings:Occultation_Time_Series/rings:frequency_band/rings:frequency_band</title>
-        The attribute rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:frequency_band must be equal to one of the following values 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -980,21 +980,21 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:occultation_direction">
       <sch:assert test=". = ('both', 'egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Time_Series/rings:occultation_direction/rings:occultation_direction</title>
-        The attribute rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:occultation_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:occultation_type">
       <sch:assert test=". = ('radio', 'solar', 'stellar')">
         <title>rings:Occultation_Time_Series/rings:occultation_type/rings:occultation_type</title>
-        The attribute rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:occultation_type must be equal to one of the following values 'radio', 'solar', 'stellar'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:planetary_occultation_flag">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Occultation_Time_Series/rings:planetary_occultation_flag/rings:planetary_occultation_flag</title>
-        The attribute rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:planetary_occultation_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1043,7 +1043,7 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:ring_plane">
       <sch:assert test=". = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six')">
         <title>rings:Occultation_Time_Series/rings:ring_plane/rings:ring_plane</title>
-        The attribute rings:ring_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:ring_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'individual', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1099,14 +1099,14 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:time_constant_type">
       <sch:assert test=". = ('double pole', 'none', 'single pole')">
         <title>rings:Occultation_Time_Series/rings:time_constant_type/rings:time_constant_type</title>
-        The attribute rings:time_constant_type must be equal to one of the following values 'double pole', 'none', 'single pole'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:time_constant_type must be equal to one of the following values 'double pole', 'none', 'single pole'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:time_series_direction">
       <sch:assert test=". = ('both', 'egress', 'ingress', 'multiple')">
         <title>rings:Occultation_Time_Series/rings:time_series_direction/rings:time_series_direction</title>
-        The attribute rings:time_series_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
+        The attribute rings:Occultation_Time_Series/rings:time_series_direction must be equal to one of the following values 'both', 'egress', 'ingress', 'multiple'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1120,7 +1120,7 @@
     <sch:rule context="rings:Reprojection_Geometry/rings:corotating_flag">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Reprojection_Geometry/rings:corotating_flag/rings:corotating_flag</title>
-        The attribute rings:corotating_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
+        The attribute rings:Reprojection_Geometry/rings:corotating_flag must be equal to one of the following values 'N', 'Y'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1225,7 +1225,7 @@
     <sch:rule context="rings:Reprojection_Geometry/rings:reprojection_plane">
       <sch:assert test=". = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six')">
         <title>rings:Reprojection_Geometry/rings:reprojection_plane/rings:reprojection_plane</title>
-        The attribute rings:reprojection_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
+        The attribute rings:Reprojection_Geometry/rings:reprojection_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'equator', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1260,7 +1260,7 @@
     <sch:rule context="rings:Ring_Orbital_Elements/rings:nodal_regression_rate_method">
       <sch:assert test=". = ('0', '1', '2')">
         <title>rings:Ring_Orbital_Elements/rings:nodal_regression_rate_method/rings:nodal_regression_rate_method</title>
-        The attribute rings:nodal_regression_rate_method must be equal to one of the following values '0', '1', '2'.</sch:assert>
+        The attribute rings:Ring_Orbital_Elements/rings:nodal_regression_rate_method must be equal to one of the following values '0', '1', '2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1309,7 +1309,7 @@
     <sch:rule context="rings:Ring_Orbital_Elements/rings:periapse_precession_rate_method">
       <sch:assert test=". = ('0', '1', '2')">
         <title>rings:Ring_Orbital_Elements/rings:periapse_precession_rate_method/rings:periapse_precession_rate_method</title>
-        The attribute rings:periapse_precession_rate_method must be equal to one of the following values '0', '1', '2'.</sch:assert>
+        The attribute rings:Ring_Orbital_Elements/rings:periapse_precession_rate_method must be equal to one of the following values '0', '1', '2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1638,7 +1638,7 @@
     <sch:rule context="rings:Uniformly_Sampled_Radius/rings:sampling_scale">
       <sch:assert test=". = ('exponential', 'linear', 'logarithmic')">
         <title>rings:Uniformly_Sampled_Radius/rings:sampling_scale/rings:sampling_scale</title>
-        The attribute rings:sampling_scale must be equal to one of the following values 'exponential', 'linear', 'logarithmic'.</sch:assert>
+        The attribute rings:Uniformly_Sampled_Radius/rings:sampling_scale must be equal to one of the following values 'exponential', 'linear', 'logarithmic'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
