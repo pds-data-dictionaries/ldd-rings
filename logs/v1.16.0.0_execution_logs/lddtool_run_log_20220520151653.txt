@@ -1,12 +1,12 @@
 
->>  INFO LDDTOOL Version: 13.1.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO LDDTOOL Version: 10.0.0
+>>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Wed Nov 10 17:39:39 UTC 2021
->>  INFO PARENT_DIR: /tmp/lddtool-13.1.0
->>  INFO SCRIPT_DIR: /tmp/lddtool-13.1.0/bin
->>  INFO LIB_DIR: /tmp/lddtool-13.1.0/lib
+>>  INFO IM Label Version Id: 1.22
+>>  INFO Date: Fri May 20 15:16:53 UTC 2022
+>>  INFO PARENT_DIR: /tmp/lddtool-14.0.1
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.0.1/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.0.1/lib
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
@@ -119,28 +119,27 @@
 >>> WARNING Attribute: <ring_radius> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <spacecraft_event_time> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <stellar_signal_level> - This local attribute was not used in an Association.
->>> WARNING Header:  - New steward has been specified:rings
->>> WARNING Header:  - New namespace id has been specified:rings
 
  -- LDDTool Execution Summary --
-     20 warning(s)
+     18 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1G00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-rings/ldd-rings/src/PDS4_RINGS_IngestLDD.xml
 
 Output:
 
-     - ./PDS4_RINGS_1H00_1B00.xsd
-     - ./PDS4_RINGS_1H00_1B00.sch
-     - ./PDS4_RINGS_1H00_1B00.xml
-     - ./PDS4_RINGS_1H00_1B00.JSON
+     - ./PDS4_RINGS_1G00_1B00.xsd
+     - ./PDS4_RINGS_1G00_1B00.sch
+     - ./PDS4_RINGS_1G00_1B00.xml
+     - ./PDS4_RINGS_1G00_1B00.JSON
 
 >>  INFO Exit(0)

@@ -1,18 +1,18 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        13.1.0
+   LDDTool Version        14.0.1
    LDD Version Id:        1.11.0.0
-   LDD Label Version Id:  1.21
+   LDD Label Version Id:  1.24
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Nov 10 17:39:28 UTC 2021
-   Common Schema          [PDS4_PDS_1F00.xsd]
-   Common Schematron      [PDS4_PDS_1F00.sch]
-   IM Version Id:         1.15.0.0
+   Time                   Fri May 20 15:16:58 UTC 2022
+   Common Schema          [PDS4_PDS_1I00.xsd]
+   Common Schematron      [PDS4_PDS_1I00.sch]
+   IM Version Id:         1.18.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.21
+   IM Label Version Id:   1.24
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -177,100 +177,100 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   body_spice_name
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The body_spice_name attribute is a NAIF-recognized string identifier for a physical object (spacecraft, planet, instrument transmitter, system barycenter, etc.), associated with the data. 
 
    name                   frame_spice_name
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The frame_spice_name attribute is a NAIF-recognized string identifier for a reference frame associated with the data. 
 
    name                   horizontal_display_axis
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The horizontal_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the horizontal or "sample" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array. 
 
    name                   horizontal_display_direction
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The horizontal_display_direction attribute specifies the direction across the screen of a display device that data along the horizontal axis of an Array is supposed to be displayed. 
 
    name                   vertical_display_axis
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The vertical_display_axis attribute identifies, by name, the axis of an Array (or Array subclass) that is intended to be displayed in the vertical or "line" dimension on a display device. The value of this attribute must match the value of one, and only one, axis_name attribute in an Axis_Array class of the associated Array. 
 
    name                   vertical_display_direction
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The vertical_display_direction attribute specifies the direction along the screen of a display device that data along the vertical axis of an Array is supposed to be displayed. 
 
    name                   orbit_number
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            orbit_number if present is the value assigned by the mission for the orbit number associated with the observation. Optional in labels of occultation observations and may be used multiple times. 
 
    name                   reflectivity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            reflectivity indicates I/F, a dimensionless standardized measure of reflectivity that is unity for a Lambertian surface viewed at normal incidence. 
 
    name                   minimum_reflectivity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_reflectivity indicates the smallest value of I/F within the data object. 
 
    name                   maximum_reflectivity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_reflectivity indicates the largest value of I/F within the data object. 
 
    name                   axis_name
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             The axis_name attribute contains a string that matches the axis_name attribute in an axis_array class of an associated array object. 
 
    name                   sampling_interval_length
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description             The sampling_interval_length attribute provides the spacing of points, in units of length, at which data are sampled and at which a value for an instrument or data parameter is available. This sampling interval can be either the original (raw) sampling or the result of some resampling process. 
    unit of measure type   Units_of_Length
 
    name                   sampling_base
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description             The sampling_base attribute indicates the numeric base of the associated logarithmic or exponential sampling interval. 
 
    name                   sampling_scale
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             The sampling_scale attribute indicates the type of scale that applies to the sample interval increments. It must have a value of either Linear, Logarithmic or Exponential. 
 
    name                   first_ring_radius
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description             The first_ring_radius attribute provides the value of the first increment along the radius axis of an array given in units of length. 
    unit of measure type   Units_of_Length
 
    name                   last_ring_radius
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description             The last_ring_radius attribute provides the value of the last increment along the radius axis of an array given in units of length. 
    unit of measure type   Units_of_Length
 
    name                   sclk_start_time
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            sclk_start_time is the value of the spacecraft clock corresponding to the start_date_time given in the label. 
 
    name                   sclk_stop_time
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            sclk_stop_time is the value of the spacecraft clock corresponding to the stop_date_time given in the label. 
 
    name                   reference_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            reference_time_utc provides a date and time in UTC format. Given in a label when time values in a table are given as elapsed seconds offset from a reference time. Unless there are compelling reasons to do otherwise, reference_time_utc should correspond to the start of a day. Required anytime a table field is given relative to a specific date and time other than when Barycentric Dynamical Time is used (e.g., observed_event_tdb). 
    unit of measure type   Units_of_Time
@@ -282,13 +282,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   maximum_observed_event_time
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_observed_event_time gives the largest value for observed_event_time in the associated data file. It is given in numeric seconds as an offset from the specified UTC reference time. maximum_observed_event_time is optional in labels since the data file time interval end point values are given by the required start_date_time_utc and stop_date_time_utc attributes in the Time_Coordinates class. 
    unit of measure type   Units_of_Time
 
    name                   minimum_observed_event_time
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_observed_event_time gives the smallest value for observed_event_time in the associated data file. It is given in numeric seconds as an offset from the specified UTC reference time. minimum_observed_event_time is optional in labels since the data file time interval end point values are given by the required start_date_time_utc and stop_date_time_utc attributes in the Time_Coordinates class. 
    unit of measure type   Units_of_Time
@@ -300,13 +300,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   observed_event_start_tdb
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            observed_event_start_tdb indicates the value for earliest time in the described data, and is given in elapsed seconds since the J2000 epoch. Optional in labels; not intended for use as a table field.
    unit of measure type   Units_of_Time
 
    name                   observed_event_stop_tdb
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            observed_event_stop_tdb indicates the value for latest time in the described data, and is given in elapsed seconds since the J2000 epoch. Optional in labels; not intended for use as a table field. 
    unit of measure type   Units_of_Time
@@ -318,12 +318,12 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   observed_event_start_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            observed_event_start_time_utc indicates the UTC value for earliest time in the described data. It is part of a start/stop pair. If one of observed_event_start_time_utc and observed_event_stop_time_utc is used, both must be used. 
 
    name                   observed_event_stop_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            observed_event_stop_time_utc indicates the UTC value for latest time in the described data. It is part of a start/stop pair. If one of observed_event_start_time_utc and observed_event_stop_time_utc is used, both must be used. 
 
@@ -334,13 +334,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   spacecraft_event_start_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            spacecraft_event_start_time_utc gives the UTC time corresponding to the earliest time given by spacecraft_event_time in the data table. However, while spacecraft_event_time is given as seconds offset from a reference time, spacecraft_event_start_time_utc is given as a UTC date time. Required in the label for radio occultation data. Not used for stellar occultations. 
    unit of measure type   Units_of_Time
 
    name                   spacecraft_event_stop_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            spacecraft_event_stop_time_utc gives the UTC time corresponding to the latest time given by spacecraft_event_time in the data table. However, while spacecraft_event_time is given as seconds offset from a reference time, spacecraft_event_stop_time_utc is given as a UTC date time. Required in the label for radio occultation data. Not used for stellar occultations. 
    unit of measure type   Units_of_Time
@@ -352,13 +352,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   earth_received_start_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            earth_received_start_time_utc gives the UTC time corresponding to the earliest time for the data product at which telemetry or other photons were received on Earth. Optional for occultation data. 
    unit of measure type   Units_of_Time
 
    name                   earth_received_stop_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            earth_received_stop_time_utc gives the UTC time corresponding to the latest time for the data product at which telemetry or other photons were received on Earth. Optional for occultation data. 
    unit of measure type   Units_of_Time
@@ -370,13 +370,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   ring_event_start_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            ring_event_start_time_utc gives the UTC time corresponding to the earliest time given by ring_event_time or ring_event_tdb in the data table. ring_event_start_time_utc is required for all ring occultation data. ring_event_start_time_utc is required label attribute for all ring occultation data. 
    unit of measure type   Units_of_Time
 
    name                   ring_event_stop_time_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            ring_event_stop_time_utc gives the UTC time corresponding to the latest time given by ring_event_time or ring_event_tdb in the data table. ring_event_stop_time_utc is required for all ring occultation data. ring_event_stop_time_utc is required label attribute for all ring occultation data. 
    unit of measure type   Units_of_Time
@@ -388,128 +388,128 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Time
 
    name                   ring_event_start_tdb
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            ring_event_start_tdb indicates the value for earliest time in the described data, and is given in ring_event_tdb format. Optional in labels; not intended for use as a table field. 
    unit of measure type   Units_of_Time
 
    name                   ring_event_stop_tdb
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            ring_event_stop_tdb indicates the value for latest time in the described data, and is given in ring_event_tdb format. Optional in labels; not intended for use as a table field. 
    unit of measure type   Units_of_Time
 
    name                   along_track_timing_offset
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            along_track_timing_offset is a timing offset to the along track spacecraft position. It is the value that minimizes differences in radii of matching circular ring features observed on the ingress and egress sides of the occultation track. Optional in labels for radio occultation. 
    unit of measure type   Units_of_Time
 
    name                   data_quality_index
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. Possible values are:. 
 
    name                   data_quality_score
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            data_quality_score indicates the overall quality of the data, based on a subjective evaluation by the data provider. Required in labels of ring occultation radial profiles. Normally not intended as a value for a table field. 
 
    name                   ring_detected
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The ring_detected attribute is a yes-or-no flag that indicates whether a specific ring has been detected. Typically used in radial profiles of a single ring. 
    minimum characters     1
    maximum characters     1
 
    name                   occultation_type
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            occultation_type distinguishes between three types of occultation experiments: Stellar, Solar, or Radio. Stellar occultations involve observing a star as a targeted ring or body passes in front, as seen from either a spacecraft or Earth-based observatory. Solar occultations are similar to stellar occultations except that the Sun is used in place of a star. Radio occultations typically involve observing the continuous-wave radio transmissions from a spacecraft as it passes behind the target as seen from a radio telescope on Earth or another spacecraft. Required in labels of occultation observations. Normally not intended as a value for a table field. 
 
    name                   planetary_occultation_flag
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The planetary_occultation_flag is a yes-or-no flag that indicates whether a occultation track also intersects the planet. Required in labels of ring occultation observations. Normally not intended as a value for a table field. 
    minimum characters     1
    maximum characters     1
 
    name                   occultation_direction
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            occultation_direction indicates the direction of an occultation track. This refers to the observed occultation track overall, not to the subset that might appear in a particular file (e.g., if an occultation includes both ingress and egress tracks, the value for occultation_direction will be both in the data products for each occultation profile. Permitted values are 'ingress', 'egress', 'both', and 'multiple'. The value 'multiple' is used where the occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36). Required in labels of ring occultation observations. Not intended as a value for a table field. 
 
    name                   star_name
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            star_name provides the identifying name of star, including the catalog name if necessary. Examples include 'sigma Sgr' and 'SAO 123456' (for star number 123456 in the Smithsonian Astrophysical Observatory catalog). Use 'Sun' for solar occultations. Required in labels for stellar and solar occultations. Not used for radio occultations. 
 
    name                   radial_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            radial_resolution indicates the nominal radial distance over which changes in ring properties can be detected within a data product. Note: this value may be larger than the radial_sampling_interval value, because a data product can be over-sampled. Required in labels if the value is fixed, as it is for stellar occultations. If the value varies, the corresponding minimum and maximum attributes must be used instead. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   minimum_radial_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_radial_resolution indicates the minimum radial distance over which changes in ring properties can be detected within a data product. Note: this value may be larger than the radial_sampling_interval value, because a data product can be over-sampled. If the value of radial resolution varies, the minimum and maximum radial resolution attributes are required in labels. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   maximum_radial_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_radial_resolution indicates the maximum radial distance over which changes in ring properties can be detected within a data product. Note: this value may be larger than the radial_sampling_interval value, because a data product can be over-sampled. If the value of radial resolution varies, the minimum and maximum radial resolution attributes are required in labels. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   ring_intercept_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            ring_intercept_resolution is the size of edge of a pixel at the distance of the ring intercept point. If the pixel shape is not square, it is defined by the smaller of the two edges. Unlike the quantity ‘radial resolution’, these values are not projected into the ring plane. 
    unit of measure type   Units_of_Length
 
    name                   minimum_ring_intercept_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_ring_intercept_resolution indicates the smallest value for ring_intercept_resolution in the data product. 
    unit of measure type   Units_of_Length
 
    name                   maximum_ring_intercept_resolution
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_ring_intercept_resolution indicates the largest value for ring_intercept_resolution in the data product. 
    unit of measure type   Units_of_Length
 
    name                   radial_sampling_interval
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            radial_sampling_interval indicates the radial spacing between consecutive points in a ring profile. In practice, this may be somewhat smaller than the radial_resolution because a profile may be over-sampled. Required in labels if the value is fixed. If the value varies, the corresponding minimum and and maximum attributes must be used instead. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   minimum_radial_sampling_interval
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_radial_sampling_interval indicates the smallest radial spacing between consecutive points in a ring profile. In practice, this may be somewhat smaller than the radial_resolution because a profile may be over-sampled. If the value of radial_sampling_interval varies, the minimum and maximum attributes are required in labels. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   maximum_radial_sampling_interval
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_radial_sampling_interval indicates the largest radial spacing between consecutive points in a ring profile. In practice, this may be somewhat smaller than the radial_resolution because a profile may be over-sampled. If the value of radial_sampling_interval varies, the minimum and maximum attributes are required in labels. Not intended to be used as a table field. 
    unit of measure type   Units_of_Length
 
    name                   ring_plane
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            ring_plane indicates the plane upon which parameters such as ring_radius are based. Possible values for the Saturn ring system are 'Equator', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe'. For the Uranus ring system values are 'Equator', 'six', 'five', 'four', 'alpha', 'beta', 'eta', 'gamma', 'delta', 'lambda','epsilon',nu, mu. An additional value, 'individual' is also defined. Note that the named rings of Saturn are in title case while those of Uranus are lower case, consistent with normal usage by the community. Required in labels of ring occultation observations. 
 
    name                   ring_profile_direction
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            ring_profile_direction indicates the radial direction of a ring occultation within a particular data product. Possible values are 'Ingress', 'Egress', or 'Multiple'. The value 'Multiple' is used where the occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36). Required in labels of ring occultation observations. Not intended as a value for a table field. 
 
    name                   time_series_direction
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            time_series_direction indicates the direction the occultation proceeds through the target within a particular data product. Possible values are 'Ingress', 'Egress', 'Both' or 'Multiple'. The value 'Multiple' is used where the occultation track is not monotonic over relatively short time scales. Generally only used for some Hubble-based occultations. May be appropriate for extremely long duration occultations of a high proper motion star (e.g., u36). Not intended as a value for a table field. 
 
@@ -520,29 +520,29 @@ Parsed Input - Attributes:
    minimum value          -2000
 
    name                   lowest_detectable_normal_optical_depth
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            lowest_detectable_normal_optical_depth gives the theoretical lowest possible normal optical depth that can be detected in the observation based on the background signal and unocculted signal measurements. 
 
    name                   highest_detectable_normal_optical_depth
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            highest_detectable_normal_optical_depth gives the theoretical highest possible normal optical depth that can be detected in the observation based on the background signal and unocculted signal measurements. 
 
    name                   highest_detectable_opacity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            highest_detectable_opacity indicates the sensitivity of a ring occultation data set to nearly opaque rings. It specifies the rough value for the largest normal ring opacity that can be detected in the data at the resolution provided, incorporating both statistical effects and calibration uncertainties. -1.0 indicates the signal was too poor to allow the calculation of the value. Strongly recommended in labels of ring occultation observations. Not intended as a value for a table field. 
    minimum value          -1
 
    name                   lowest_detectable_opacity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            lowest_detectable_opacity indicates the sensitivity of a ring occultation data set to nearly opaque rings. It specifies the rough value for the smallest normal ring opacity that can be detected in the data at the resolution provided, incorporating both statistical effects and calibration uncertainties. -1.0 indicates the signal was too poor to allow the calculation of the value. Strongly recommended in labels of ring occultation observations. Not intended as a value for a table field. 
    minimum value          -1
 
    name                   background_signal
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            background_signal indicates the anticipated signal (in counts, counts per second, or other specified units) received when no occulted source signal reaches the detector. This is the signal level that indicates an opaque ring. Strongly recommended in labels of ring occultation observations if the value is constant, or strongly recommended to be used as a field in the data table if the value is not constant. Normally not used for radio occultations. 
 
@@ -552,7 +552,7 @@ Parsed Input - Attributes:
    description            stellar_signal_level indicates the anticipated signal from an un-occulted star, in the absence of any background signal. This is the signal level that defines the difference between a transparent ring and an opaque ring. Strongly recommended in labels of ring stellar occultation observations if the value is constant. For stellar occultations, if the value is not constant, strongly recommended to be used as a field in the data table. Not used for radio occultations. 
 
    name                   average_unocculted_signal
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            average_unocculted_signal indicates the average of the signal in counts/second received from outside the rings or from nominally transparent regions of the rings after subtraction of background signal. Strongly recommended in labels of ring solar occultation observations if the value is constant. For solar occultations, if the value is not constant, strongly recommended to be used as a field in the data table. Not used for radio occultations. 
 
@@ -563,19 +563,19 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Length
 
    name                   minimum_ring_radius
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_ring_radius indicates the smallest ring radius value in the data table. Units are km and are always positive. Required in label files for ring occultation data. 
    unit of measure type   Units_of_Length
 
    name                   maximum_ring_radius
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_ring_radius indicates the largest ring radius value in the data table. Units are km and are always positive. Required in label files for ring occultation data. 
    unit of measure type   Units_of_Length
 
    name                   ring_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            ring_longitude specifies the inertial longitude of a ring feature relative to the prime meridian. In planetary ring systems, the prime meridian is the ascending node of the planet's invariable plane on the Earth's mean equator of J2000. Longitudes are measured in the direction of orbital motion along the planet's invariable plane to the ring's ascending node, and thence along the ring plane. Values range from 0 to 360 in units of degrees. Note: The invariable plane of a planet is equivalent to its equatorial plane for every ringed planet except Neptune. Required to be the second field in ring occultation profiles. In labels, the min and max attributes are required. 
    minimum value          0
@@ -583,7 +583,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_ring_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_ring_longitude specifes one boundary for the ring longitude range in the data; normally the smallest value. However, for ranges that cross the prime meridian, the minimum ring longitude will have a value greater than the maximum ring longitude. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
@@ -591,7 +591,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_ring_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_ring_longitude specifies one boundary for the ring longitude range in the data; normally the largest value. However, for ranges that cross the prime meridian, the maximum ring longitude will have a value less than the minimum ring longitude. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
@@ -599,7 +599,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   ring_longitude_observed_minus_subsolar
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            ring_longitude_observed_minus_subsolar providees the difference between the inertial ring longitude of the observation and inertial ring longitude of the sub-solar point. 
    minimum value          0
@@ -607,7 +607,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_ring_longitude_observed_minus_subsolar
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_ring_longitude_observed_minus_subsolar specifes smallest separation in ring longitude between the observation and the sub-solar point. Required in label files for ring occultation data. 
    minimum value          0
@@ -615,7 +615,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_ring_longitude_observed_minus_subsolar
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_ring_longitude_observed_minus_sub-solar specifes smallest separation in ring longitude between the observation and the subsolar point. 
    minimum value          0
@@ -623,7 +623,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   observed_ring_elevation
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            observed_ring_elevation is an angle measured at a point in the ring plane, starting from the ring plane to the direction of a photon heading to the observer. This angle is positive on the side of the ring plane defined by positive angular momentum, and negative on the opposite side. Values range from -90 to +90 in units of degrees. This angle is constant for stellar occultations, but may vary significantly during radio occultations. Note: The direction of positive angular momentum points toward the IAU-defined north side of the ring plane for Jupiter, Saturn and Neptune, but IAU-defined south side of the ring plane for Uranus. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label, and observed_ring_elevation is strongly recommended as a field in the data table. The above definition of observed_ring_elevation is equivalent to the most common usage of the term 'ring open angle', B. 
    minimum value          -90
@@ -631,7 +631,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_observed_ring_elevation
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_observed_ring_elevation specifes the smallest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          -90
@@ -639,7 +639,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_observed_ring_elevation
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_observed_ring_elevation specifes the largest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          -90
@@ -647,7 +647,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   mean_observed_ring_elevation
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            mean_observed_ring_elevation specifes the mean value for observed_ring_elevation in the data file. 
    minimum value          -90
@@ -655,7 +655,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   emission_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The emission_angle element provides the value of the angle between the surface normal vector at the intercept point and a vector from the intercept point to the spacecraft. Higher values of emission_angle indicate more oblique viewing of the target. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for ring data. 
    minimum value          0
@@ -663,7 +663,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_emission_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_emission_angle attribute provides the smallest value during the observation for the emission angle at the target. 
    minimum value          0
@@ -671,7 +671,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_emission_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_emission_angle element provides the largest value during the observation for the emission angle at the target. 
    minimum value          0
@@ -679,7 +679,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The incidence_angle element provides a measure of the lighting condition at the intercept point. Incidence angle is the angle the surface normal vector at the intercept point and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept is tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for ring data. 
    minimum value          0
@@ -687,7 +687,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_incidence_angle attribute provides the smallest value during the observation for the incidence angle at the target. 
    minimum value          0
@@ -695,7 +695,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_incidence_angle element provides the largest value during the observation for the incidence angle at the target. 
    minimum value          0
@@ -703,7 +703,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   light_source_incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            light_source_incidence_angle is an angle measured from the local surface normal vector to the direction of a photon arriving from the light source. For rings, the normal vector is that on the same side of the rings as the light source, so values always range between 0 and 90 in units of degrees. The value is always equal to 90 - | observed_ring_elevation | This will enable users to perform database searches based on the effective ring opening angle when they are not concerned about the distinction between north-side and southside viewpoints. We have included the 'light source' prefix to the term so that this quantity is not confused with 'incidence angle', a term that is generally associated with sunlight rather than stars or radio transmitters. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label. Optional as a field in the data table. 
    minimum value          -90
@@ -711,7 +711,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_light_source_incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_light_source_incidence_angle specifes the smallest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          0
@@ -719,7 +719,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_light_source_incidence_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_light_source_incidence_angle specifes the largest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          0
@@ -735,7 +735,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_phase_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The minimum_phase_angle attribute provides the smallest value during the observation for the phase angle at the target. 
    minimum value          0
@@ -743,7 +743,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_phase_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The maximum_phase_angle element provides the largest value during the observation for the phase angle at the target. 
    minimum value          0
@@ -751,7 +751,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   mean_phase_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The mean_phase_angle element provides the mean value during the observation for the phase angle at the target. 
    minimum value          0
@@ -767,7 +767,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_observed_ring_azimuth
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_observed_ring_azimuth specifes the smallest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
@@ -775,7 +775,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_observed_ring_azimuth
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_observed_ring_azimuth specifes the largest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
@@ -783,7 +783,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   sub_stellar_ring_azimuth
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            sub_stellar_ring_azimuth is an angle measured at a point in the ring plane, starting from the direction of a photon arriving from a star, and ending at the direction of a local radial vector. This angle is projected into the ring plane and measured in the prograde direction. Values range from 0 to 360 in units of degrees. For stellar occultation data, this angle is equal to (observed_ring_azimuth + 180) mod 360. It is available only for backward compatibility with previously published Cassini UVIS occultation data analysis; observed_ring_azimuth is the preferred quantity for archiving. sub_stellar_ring_azimuth is an optional data table field for Cassini UVIS occultation data; not recommended for other occultation data. In a label, the min and max variation attributes are optional for Cassini UVIS occultation data; not recommended for other occultation data. 
    minimum value          0
@@ -807,7 +807,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   sub_stellar_clock_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            sub_stellar_clock_angle is an angle measured at a point in the ring plane, from the direction toward a star to the local radial direction. This angle is projected into the ring plane and measured in the clockwise (retrograde) direction. Equivalently, this is the prograde angle from the local radial direction to the direction toward the star. For stellar occultation data, this angle is equal to (180 - OBSERVED_RING_AZIMUTH) mod 360. It is available only for backward compatibility with previously published Cassini VIMS occultation data analysis; observed_ring_azimuth is the preferred quantity for archiving. sub_stellar_clock_angle is an optional data table field for Cassini VIMS occultation data; not recommended for other occultation data. In a label, the min and max variation attributes are optional for Cassini VIMS occultation data; not recommended for other occultation data. 
    minimum value          0
@@ -831,70 +831,70 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   wavelength
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            wavelength of the observation. Optional in labels. If the observation is over a wavelength range, use the corresponding minimum and maximum attributes instead. 
    unit of measure type   Units_of_Length
 
    name                   minimum_wavelength
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_wavelength is the smallest wavelength used in the observation. Optional in labels. Used with maximum_wavelength when the observation is over a wavelength range. 
    unit of measure type   Units_of_Length
 
    name                   maximum_wavelength
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_wavelength is the largest wavelength used in the observation. Optional in labels. Used with minimum_wavelength when the observation is over a wavelength range. 
    unit of measure type   Units_of_Length
 
    name                   dsn_station_number
-   version                1.15
+   version                1.18
    value data type        ASCII_Integer
    description            dsn_station_number identifies the receiving DSN station. Required in labels for radio occultations; not used for stellar occultations. Nillable in which case the nil_reason should be 'inapplicable'. 
    nillable               true
 
    name                   frequency_band
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description             The frequency_band attribute provides the one or two letter identifier for the frequency band associated with radio occultation data. Required in labels for radio occultations; not used for stellar occultations. 
 
    name                   fresnel_scale
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            fresnel_scale is sqrt(lambda * D/2), where lambda is the central wavelength of the observation and D is the average distance between the observer and the occulting ring. This is an average value for the entire occultation and is a measure of the limit on the radial resolution of ring structure due to diffraction. Note that the actual overall resolution is affected as well by the projected diameter of the occulted star and the instrumental time constant, if any. 
    unit of measure type   Units_of_Length
 
    name                   projected_star_diameter
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            projected_star_diameter provides the projected angular diameter of the occulted star, from observer to occulting object. 
    unit of measure type   Units_of_Length
 
    name                   sigma_projected_star_diameter
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            sigma_projected_star_diameter indicates the uncertainty (1-sigma) in the projected_star_diameter. 
    unit of measure type   Units_of_Length
 
    name                   fractional_error_star_counts
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            fractional_error_star_counts indicates the fractional error (1-sigma) in star counts used for square-well model fit. 
 
    name                   time_constant_type
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            time_constant_type distinguishes between three types of instrumental time constant assumed in a square-well model. This attribute is required if the time_constant attribute is present. 
 
    name                   time_constant
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            time_constant indicates the instrumental time constant of the detector. See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603. If this attribute is used them the attribute time_constant_type also must be present. 
    unit of measure type   Units_of_Time
 
    name                   sigma_time_constant
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            sigma_time_constant indicates the uncertainty in the time_constant. See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603. If this attribute is used them the attribute time_constant also must be present. 
    unit of measure type   Units_of_Time
@@ -906,25 +906,25 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Length
 
    name                   minimum_projected_sun_diameter
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            minimum_projected_sun_diameter provides the smallest value of projected_sun_diameter in the obsevation. 
    unit of measure type   Units_of_Length
 
    name                   maximum_projected_sun_diameter
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            maximum_projected_sun_diameter provides the largest value of projected_sun_diameter in the obsevation. 
    unit of measure type   Units_of_Length
 
    name                   sigma_projected_sun_diameter
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            sigma_projected_sun_diameter indicates the Standard deviation (1-sigma) of projected_sun_diameter in the observation. 
    unit of measure type   Units_of_Length
 
    name                   pole_right_ascension_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The right ascension (RA) of the pole of the specified body, given in angular measurements. 
    minimum value          0
@@ -932,13 +932,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   pole_right_ascension_angle_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty of the right ascension (RA) of the pole of the specified body, given in angular measurements. 
    unit of measure type   Units_of_Angle
 
    name                   pole_declination_angle
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The declination (Dec) of the pole of the specified body, given in angular measurements. 
    minimum value          -90
@@ -946,73 +946,73 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   pole_declination_angle_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty of the declination (Dec) of the pole of the specified body, given in angular measurements. 
    unit of measure type   Units_of_Angle
 
    name                   j2
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The J2 gravitational harmonic coefficient of the body identified in the enclosing class. 
 
    name                   j4
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The J4 gravitational harmonic coefficient of the body identified in the enclosing class. 
 
    name                   j6
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The J6 gravitational harmonic coefficient of the body identified in the enclosing class. 
 
    name                   j8
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The J8 gravitational harmonic coefficient of the body identified in the enclosing class. 
 
    name                   gmass
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The product of the Gravitational constant and the mass of the identified body. 
    unit of measure type   Units_of_Gmass
 
    name                   grav_ref_radius
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The reference radius for the gravitational harmonic coefficients of the body identified in the enclosing class. 
    unit of measure type   Units_of_Length
 
    name                   epoch_ring_fit_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The epoch for the ring orbital elements given in this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. 
    unit of measure type   Units_of_Time
 
    name                   semimajor_axis
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The semimajor axis of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Length
 
    name                   semimajor_axis_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the semimajor axis of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Length
 
    name                   eccentricity
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The eccentricity of the orbit of the body or ring identified in the enclosing class. 
 
    name                   eccentricity_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the eccentricity of the orbit of the body or ring identified in the enclosing class. 
 
    name                   periapse_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The longitude of periapse for the orbit of the body or ring identified in the enclosing class. 
    minimum value          0
@@ -1020,30 +1020,30 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   periapse_longitude_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the longitude of periapse for the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angle
 
    name                   periapse_precession_rate
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The precession rate of the periapse of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   periapse_precession_rate_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   periapse_precession_rate_method
-   version                1.15
+   version                1.18
    value data type        ASCII_Integer
    description            A flag indicating the constraints used to determine the periapse precession rate of the orbit of the body or ring identified in the enclosing class. 
 
    name                   inclination
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The inclination of the orbit of the body or ring identified in the enclosing class. 
    minimum value          0
@@ -1051,13 +1051,13 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   inclination_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the inclination of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angle
 
    name                   node_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The longitude of the ascending node of the orbit of the body or ring identified in the enclosing class. 
    minimum value          0
@@ -1065,100 +1065,100 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   node_longitude_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the longitude of the ascending node of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angle
 
    name                   nodal_regression_rate
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The regression rate of the node of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   nodal_regression_rate_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   nodal_regression_rate_method
-   version                1.15
+   version                1.18
    value data type        ASCII_Integer
    description            A flag indicating the constraints used to determine the node regression rate of the orbit of the body or ring identified in the enclosing class. 
 
    name                   number_points
-   version                1.15
+   version                1.18
    value data type        ASCII_Integer
    description            Number of fitted data points for the orbit of the body or ring identified in the enclosing class. 
 
    name                   fit_rms_semimajor
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The RMS residuals for the semimajor axis of the body or ring identified in the enclosing class. 
    unit of measure type   Units_of_Length
 
    name                   normal_mode_amplitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The amplitude of the normal mode for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Length
 
    name                   normal_mode_amplitude_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the normal mode of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Length
 
    name                   normal_mode_phase
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The phase of the normal mode at epoch specified by epoch_ring_fit_utc for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Angle
 
    name                   normal_mode_phase_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the value for the normal_mode_phase of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Angle
 
    name                   normal_mode_pattern_speed
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   normal_mode_pattern_speed_uncert
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The uncertainty in the pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring. 
    unit of measure type   Units_of_Angular_Velocity
 
    name                   normal_mode_wavenumber
-   version                1.15
+   version                1.18
    value data type        ASCII_Integer
    description            The wave number of the normal mode in the ring identified in the enclosing class. A value of -999 indicates there is no normal mode for the ring. 
 
    name                   reprojection_plane
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            reprojection_plane identifies the plane onto which the reprojection is based. Possible values for the Saturn ring system are 'Equator', 'Laplace', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'Phoebe'. For the Uranus ring system values are 'Equator', 'Laplace', 'Six', 'Five', 'Four', 'Alpha', 'Beta', 'Eta', 'Gamma', 'Delta', 'Lambda','Epsilon',Nu, Mu. Required in labels of ring reprojection products. 
 
    name                   epoch_reprojection_basis_utc
-   version                1.15
+   version                1.18
    value data type        ASCII_Date_Time_YMD_UTC
    description            The basis epoch for the reprojection used in this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. 
    unit of measure type   Units_of_Time
 
    name                   corotating_flag
-   version                1.15
+   version                1.18
    value data type        ASCII_Short_String_Collapsed
    description            The corotating_flag is a yes-or-no flag that indicates whether or not a corotating frame is used. a table field. 
    minimum characters     1
    maximum characters     1
 
    name                   corotation_rate
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The co-rotation rate associated with the data. 
    unit of measure type   Units_of_Angular_Velocity
@@ -1172,7 +1172,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   minimum_corotating_ring_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The minimum value in this product for ring longitude in the rotating frame. The with zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
@@ -1180,7 +1180,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   maximum_corotating_ring_longitude
-   version                1.15
+   version                1.18
    value data type        ASCII_Real
    description            The maximum value in this product for ring longitude in the rotating frame. The with zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
