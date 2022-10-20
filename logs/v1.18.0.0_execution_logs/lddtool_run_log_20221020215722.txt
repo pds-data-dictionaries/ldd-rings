@@ -1,12 +1,12 @@
 
->>  INFO LDDTOOL Version: 10.0.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO LDDTOOL Version: 14.1.2
+>>  INFO IM Version Id: 1.18.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Thu Jun 02 19:15:08 UTC 2022
->>  INFO PARENT_DIR: /tmp/lddtool-14.0.1
->>  INFO SCRIPT_DIR: /tmp/lddtool-14.0.1/bin
->>  INFO LIB_DIR: /tmp/lddtool-14.0.1/lib
+>>  INFO IM Label Version Id: 1.24
+>>  INFO Date: Thu Oct 20 21:57:22 UTC 2022
+>>  INFO PARENT_DIR: /tmp/lddtool-14.1.2
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.1.2/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.1.2/lib
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
@@ -127,7 +127,7 @@
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1I00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -137,9 +137,9 @@ Input:
 
 Output:
 
-     - ./PDS4_RINGS_1H00_1B00.xsd
-     - ./PDS4_RINGS_1H00_1B00.sch
-     - ./PDS4_RINGS_1H00_1B00.xml
-     - ./PDS4_RINGS_1H00_1B00.JSON
+     - ./PDS4_RINGS_1I00_1B00.xsd
+     - ./PDS4_RINGS_1I00_1B00.sch
+     - ./PDS4_RINGS_1I00_1B00.xml
+     - ./PDS4_RINGS_1I00_1B00.JSON
 
 >>  INFO Exit(0)
