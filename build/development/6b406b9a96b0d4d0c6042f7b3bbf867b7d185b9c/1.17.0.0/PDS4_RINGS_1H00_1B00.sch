@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.11.0.0 - Thu Jun 02 19:15:08 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.11.0.0 - Tue Oct 25 22:09:18 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.17.0.0 - System Build 12.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -21,280 +21,280 @@
   <sch:pattern>
     <sch:rule context="//Occultation_Ring_Profile">
       <sch:assert test="if ((rings:occultation_type='radio') and not (rings:dsn_station_number))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         If rings:occultation_type is set to radio, you must specify the DSN receiving station number.</sch:assert>
       <sch:assert test="if ((rings:occultation_type='radio') and not (rings:frequency_band))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         If rings:occultation_type is set to radio, you must specify the frequency band.</sch:assert>
       <sch:assert test="if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</sch:assert>
       <sch:assert test="if (not (rings:wavelength) and not (rings:minimum_wavelength)) then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         You must identify the wavelength of the observation either as a single value using rings:wavelength,
             	or as a range using the minimum-maximum wavelength pair.</sch:assert>
       <sch:assert test="if ((rings:minimum_wavelength) and not (rings:maximum_wavelength))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_wavelength) and not (rings:minimum_wavelength))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if (not (rings:radial_sampling_interval) and not (rings:minimum_radial_sampling_interval))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.</sch:assert>
       <sch:assert test="if ((rings:minimum_radial_sampling_interval) and not (rings:maximum_radial_sampling_interval))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_radial_sampling_interval and rings:maximum_radial_sampling_interval, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_radial_sampling_interval) and not (rings:minimum_radial_sampling_interval))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_radial_sampling_interval and rings:maximum_radial_sampling_interval, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:sclk_start_time) and not (rings:sclk_stop_time))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:sclk_stop_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:sclk_stop_time) and not (rings:sclk_start_time))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_subsolar_azimuth and rings:maximum_subsolar_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_event_time) and not (rings:maximum_observed_event_time))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_event_time and rings:maximum_observed_event_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_event_time) and not (rings:minimum_observed_event_time))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_event_time and rings:maximum_observed_event_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_start_time_utc) and not (rings:observed_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:observed_event_start_time_utc and rings:observed_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_stop_time_utc) and not (rings:observed_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:observed_event_start_time_utc and rings:observed_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_start_tdb) and not (rings:observed_event_stop_tdb))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:observed_event_start_tdb and rings:observed_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_stop_tdb) and not (rings:observed_event_start_tdb))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:observed_event_start_tdb and rings:observed_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:spacecraft_event_start_time_utc) and not (rings:spacecraft_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:spacecraft_event_start_time_utc and rings:spacecraft_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:spacecraft_event_stop_time_utc) and not (rings:spacecraft_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:spacecraft_event_start_time_utc and rings:spacecraft_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_start_time_utc) and not (rings:ring_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:ring_event_start_time_utc and rings:ring_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_stop_time_utc) and not (rings:ring_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:ring_event_start_time_utc and rings:ring_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_start_tdb) and not (rings:ring_event_stop_tdb))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:ring_event_start_tdb and rings:ring_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_stop_tdb) and not (rings:ring_event_start_tdb))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:ring_event_start_tdb and rings:ring_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:earth_received_start_time_utc) and not (rings:earth_received_stop_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:earth_received_start_time_utc and rings:earth_received_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:earth_received_stop_time_utc) and not (rings:earth_received_start_time_utc))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:earth_received_start_time_utc and rings:earth_received_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_ring_radius) and not (rings:maximum_ring_radius))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_ring_radius and rings:maximum_ring_radius, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_ring_radius) and not (rings:minimum_ring_radius))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_ring_radius and rings:maximum_ring_radius, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_ring_azimuth) and not (rings:minimum_observed_ring_azimuth))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if (not (rings:observed_ring_elevation) and not (rings:minimum_observed_ring_elevation)) then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         You must identify the observed ring elevation of the observation ( [-90,90] degrees) either as a single value using rings:observed_ring_elevation,
             	or as a range using the minimum-maximum observed ring elevation pair.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_elevation) and not (rings:maximum_observed_ring_elevation))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_elevation and rings:maximum_observed_ring_elevation, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_ring_elevation) and not (rings:minimum_observed_ring_elevation))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_elevation and rings:maximum_observed_ring_elevation, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_light_source_incidence_angle) and not (rings:maximum_light_source_incidence_angle))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_light_source_incidence_angle and rings:maximum_light_source_incidence_angle, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_light_source_incidence_angle) and not (rings:minimum_light_source_incidence_angle))  then false() else true()">
-        <title>Occultation_Ring_Profile_1/Rule</title>
+        <title>//Occultation_Ring_Profile/Rule</title>
         rings:minimum_light_source_incidence_angle and rings:maximum_light_source_incidence_angle, are a pair; if you use one, you must use both.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="//Occultation_Time_Series">
       <sch:assert test="if ((rings:occultation_type='radio') and not (rings:dsn_station_number))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:occultation_type is set to radio, you must specify the DSN receiving station number.</sch:assert>
       <sch:assert test="if ((rings:occultation_type='radio') and not (rings:frequency_band))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:occultation_type is set to radio, you must specify the frequency band.</sch:assert>
       <sch:assert test="if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</sch:assert>
       <sch:assert test="if (not (rings:wavelength) and not (rings:minimum_wavelength)) then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         You must identify the wavelength of the observation either as a single value using rings:wavelength,
             	or as a range using the minimum-maximum wavelength pair.</sch:assert>
       <sch:assert test="if ((rings:minimum_wavelength) and not (rings:maximum_wavelength))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_wavelength) and not (rings:minimum_wavelength))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if (not (rings:radial_sampling_interval) and not (rings:minimum_radial_sampling_interval))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.</sch:assert>
       <sch:assert test="if ((rings:sclk_start_time) and not (rings:sclk_stop_time))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:sclk_stop_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:sclk_stop_time) and not (rings:sclk_start_time))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_subsolar_azimuth and rings:maximum_subsolar_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_event_time) and not (rings:maximum_observed_event_time))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_event_time and rings:maximum_observed_event_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_event_time) and not (rings:minimum_observed_event_time))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_event_time and rings:maximum_observed_event_time, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_start_time_utc) and not (rings:observed_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:observed_event_start_time_utc and rings:observed_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_stop_time_utc) and not (rings:observed_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:observed_event_start_time_utc and rings:observed_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_start_tdb) and not (rings:observed_event_stop_tdb))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:observed_event_start_tdb and rings:observed_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:observed_event_stop_tdb) and not (rings:observed_event_start_tdb))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:observed_event_start_tdb and rings:observed_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:spacecraft_event_start_time_utc) and not (rings:spacecraft_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:spacecraft_event_start_time_utc and rings:spacecraft_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:spacecraft_event_stop_time_utc) and not (rings:spacecraft_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:spacecraft_event_start_time_utc and rings:spacecraft_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_start_time_utc) and not (rings:ring_event_stop_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:ring_event_start_time_utc and rings:ring_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_stop_time_utc) and not (rings:ring_event_start_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:ring_event_start_time_utc and rings:ring_event_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_start_tdb) and not (rings:ring_event_stop_tdb))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:ring_event_start_tdb and rings:ring_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:ring_event_stop_tdb) and not (rings:ring_event_start_tdb))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:ring_event_start_tdb and rings:ring_event_stop_tdb, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:earth_received_start_time_utc) and not (rings:earth_received_stop_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:earth_received_start_time_utc and rings:earth_received_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:earth_received_stop_time_utc) and not (rings:earth_received_start_time_utc))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:earth_received_start_time_utc and rings:earth_received_stop_time_utc, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_ring_radius) and not (rings:maximum_ring_radius))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_ring_radius and rings:maximum_ring_radius, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_ring_radius) and not (rings:minimum_ring_radius))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_ring_radius and rings:maximum_ring_radius, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_ring_azimuth) and not (rings:minimum_observed_ring_azimuth))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if (not (rings:observed_ring_elevation) and not (rings:minimum_observed_ring_elevation)) then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         You must identify the observed ring elevation of the observation ( [-90,90] degrees) either as a single value using rings:observed_ring_elevation,
             	or as a range using the minimum-maximum observed ring elevation pair.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_elevation) and not (rings:maximum_observed_ring_elevation))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_elevation and rings:maximum_observed_ring_elevation, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_observed_ring_elevation) and not (rings:minimum_observed_ring_elevation))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_elevation and rings:maximum_observed_ring_elevation, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_light_source_incidence_angle) and not (rings:maximum_light_source_incidence_angle))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_light_source_incidence_angle and rings:maximum_light_source_incidence_angle, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_light_source_incidence_angle) and not (rings:minimum_light_source_incidence_angle))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         rings:minimum_light_source_incidence_angle and rings:maximum_light_source_incidence_angle, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:sigma_projected_star_diameter) and not (rings:projected_star_diameter))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:sigma_projected_star_diameter is used, you must also provide a value for rings:projected_star_diameter.</sch:assert>
       <sch:assert test="if ((rings:projected_star_diameter) and not (rings:sigma_projected_star_diameter))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:projected_star_diameter is used, you must also provide a value for rings:sigma_projected_star_diameter.</sch:assert>
       <sch:assert test="if ((rings:sigma_time_constant) and not (rings:time_constant))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:sigma_time_constant is used, you must also specify a value for rings:time_constant.</sch:assert>
       <sch:assert test="if ((rings:time_constant) and not (rings:sigma_time_constant))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:time_constant is used, you must also specify a value for rings:sigma_time_constant.</sch:assert>
       <sch:assert test="if ((rings:time_constant) and not (rings:time_constant_type))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:time_constant is used, you must also specify a value for rings:time_constant_type.</sch:assert>
       <sch:assert test="if ((rings:time_constant_type) and not (rings:time_constant))  then false() else true()">
-        <title>Occultation_Time_Series_1/Rule</title>
+        <title>//Occultation_Time_Series/Rule</title>
         If rings:time_constant_type is used, you must also specify a value for rings:time_constant.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="//Ring_Model/rings:Central_Body_Parameters">
+      <sch:assert test="if ((rings:j2) and not (rings:grav_ref_radius))  then false() else true()">
+        <title>//Ring_Model/rings:Central_Body_Parameters/Rule</title>
+        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
+      <sch:assert test="if ((rings:j4) and not (rings:grav_ref_radius))  then false() else true()">
+        <title>//Ring_Model/rings:Central_Body_Parameters/Rule</title>
+        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
+      <sch:assert test="if ((rings:j6) and not (rings:grav_ref_radius))  then false() else true()">
+        <title>//Ring_Model/rings:Central_Body_Parameters/Rule</title>
+        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
+      <sch:assert test="if ((rings:j8) and not (rings:grav_ref_radius))  then false() else true()">
+        <title>//Ring_Model/rings:Central_Body_Parameters/Rule</title>
+        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="//Ring_Reprojection/rings:Reprojection_Geometry">
+      <sch:assert test="if ((rings:corotating_flag='Y') and not (rings:corotation_rate))  then false() else true()">
+        <title>//Ring_Reprojection/rings:Reprojection_Geometry/Rule</title>
+        You must supply the corotation rate, rings:corotation_rate, associated with the co-rotation frame. </sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="//Uniformly_Sampled_Radius">
+      <sch:assert test="if ((rings:sampling_base) and not (rings:sampling_scale=logarithmic)and not (rings:sampling_scale=exponential))  then false() else true()">
+        <title>//Uniformly_Sampled_Radius/Rule</title>
+        rings:sampling_base is only used when the value of rings:sampling_scale is either logarithmic, or exponential.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="//rings:Uniformly_Sampled_Radius/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'uniformly_sampled_radius_to_array_axis'
             ">
-        <title>Uniformly_Sampled_Radius_0/Rule</title>
+        <title>//rings:Uniformly_Sampled_Radius/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in rings:Uniformly_Sampled_Radius, local_reference_type must equal 'uniformly_sampled_radius_to_array_axis'.
             </sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="//Uniformly_Sampled_Radius">
-      <sch:assert test="if ((rings:sampling_base) and not (rings:sampling_scale=logarithmic)and not (rings:sampling_scale=exponential))  then false() else true()">
-        <title>Uniformly_Sampled_Radius_1/Rule</title>
-        rings:sampling_base is only used when the value of rings:sampling_scale is either logarithmic, or exponential.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="//Ring_Reprojection/rings:Reprojection_Geometry">
-      <sch:assert test="if ((rings:corotating_flag='Y') and not (rings:corotation_rate))  then false() else true()">
-        <title>corotating/Rule</title>
-        You must supply the corotation rate, rings:corotation_rate, associated with the co-rotation frame. </sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="//Ring_Model/rings:Central_Body_Parameters">
-      <sch:assert test="if ((rings:j2) and not (rings:grav_ref_radius))  then false() else true()">
-        <title>grav_harmonic_coeff/Rule</title>
-        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
-      <sch:assert test="if ((rings:j4) and not (rings:grav_ref_radius))  then false() else true()">
-        <title>grav_harmonic_coeff/Rule</title>
-        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
-      <sch:assert test="if ((rings:j6) and not (rings:grav_ref_radius))  then false() else true()">
-        <title>grav_harmonic_coeff/Rule</title>
-        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
-      <sch:assert test="if ((rings:j8) and not (rings:grav_ref_radius))  then false() else true()">
-        <title>grav_harmonic_coeff/Rule</title>
-        You must supply the reference radius, rings:grav_ref_radius, associated with the gravitational harmonic coefficient. </sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

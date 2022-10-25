@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        10.0.0
+   LDDTool Version        14.1.2
    LDD Version Id:        1.11.0.0
    LDD Label Version Id:  1.23
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jun 02 19:15:08 UTC 2022
+   Time                   Thu Oct 20 21:57:20 UTC 2022
    Common Schema          [PDS4_PDS_1H00.xsd]
    Common Schematron      [PDS4_PDS_1H00.sch]
    IM Version Id:         1.17.0.0
