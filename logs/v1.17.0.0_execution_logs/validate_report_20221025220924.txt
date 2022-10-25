@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.3.0
-   Date                          2022-10-20T21:57:29Z
+   Date                          2022-10-25T22:09:26Z
 
 Parameters:
-   Targets                       [file:/home/runner/work/ldd-rings/ldd-rings/build/development/d80a65ab894e8c9f96711c415c893219bba7c66b/1.18.0.0/PDS4_RINGS_1I00_1B00.xml]
+   Targets                       [file:/home/runner/work/ldd-rings/ldd-rings/build/development/6b406b9a96b0d4d0c6042f7b3bbf867b7d185b9c/1.17.0.0/PDS4_RINGS_1H00_1B00.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-rings/ldd-rings/build/development/d80a65ab894e8c9f96711c415c893219bba7c66b/1.18.0.0/PDS4_RINGS_1I00_1B00.xsd, file:/tmp/PDS4_PDS_1I00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-rings/ldd-rings/build/development/d80a65ab894e8c9f96711c415c893219bba7c66b/1.18.0.0/PDS4_RINGS_1I00_1B00.sch, file:/tmp/PDS4_PDS_1I00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-rings/ldd-rings/build/development/6b406b9a96b0d4d0c6042f7b3bbf867b7d185b9c/1.17.0.0/PDS4_RINGS_1H00_1B00.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-rings/ldd-rings/build/development/6b406b9a96b0d4d0c6042f7b3bbf867b7d185b9c/1.17.0.0/PDS4_RINGS_1H00_1B00.sch, file:/tmp/PDS4_PDS_1H00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-rings/ldd-rings/build/development/d80a65ab894e8c9f96711c415c893219bba7c66b/1.18.0.0/PDS4_RINGS_1I00_1B00.xml
+  PASS: file:/home/runner/work/ldd-rings/ldd-rings/build/development/6b406b9a96b0d4d0c6042f7b3bbf867b7d185b9c/1.17.0.0/PDS4_RINGS_1H00_1B00.xml
         1 product validation(s) completed
 
 Summary:
@@ -42,5 +42,5 @@ Summary:
 
 
 End of Report
-Completed execution in 5782 ms
+Completed execution in 5688 ms
 
