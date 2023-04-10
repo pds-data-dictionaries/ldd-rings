@@ -141,6 +141,9 @@
         - Revised the case of several attribute enumerated values to Title case.
         - Added the attribute: ring_detected.
         - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
+      v1.12.0.0  2023-04-10
+        - Improved definitions of epoch_reprojection_basis_utc, corotating_ring_longitude, minimum_corotating_ring_longitude, 
+          and maximum_corotating_ring_longitude.  Fixed typo in corotating_flag enumerated value definition. 
     </comment>
     <last_modification_date_time>2021-11-10</last_modification_date_time>
     
@@ -3567,7 +3570,7 @@
         <local_identifier>epoch_reprojection_basis_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The basis epoch for the reprojection used in this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.
+        <definition>The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3597,7 +3600,7 @@
             </DD_Permissible_Value>
             <DD_Permissible_Value>
                 <value>N</value>
-                <value_meaning>A corotating frame was used.</value_meaning>
+                <value_meaning>A corotating frame was not used.</value_meaning>
             </DD_Permissible_Value>
         </DD_Value_Domain>
     </DD_Attribute>
@@ -3608,7 +3611,7 @@
         <local_identifier>corotation_rate</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The co-rotation rate associated with the data.
+        <definition>The corotation rate associated with the data.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3623,7 +3626,7 @@
         <local_identifier>corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The ring longitude in the rotating frame. The with zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3641,7 +3644,7 @@
         <local_identifier>minimum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The minimum value in this product for ring longitude in the rotating frame. The with zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The minimum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3659,7 +3662,7 @@
         <local_identifier>maximum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The maximum value in this product for ring longitude in the rotating frame. The with zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The maximum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -6226,7 +6229,7 @@
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:corotating_flag='Y') and not (rings:corotation_rate))  then false() else true()</rule_test>
-            <rule_message>You must supply the corotation rate, rings:corotation_rate, associated with the co-rotation frame. </rule_message>
+            <rule_message>You must supply the corotation rate, rings:corotation_rate, associated with the corotating frame. </rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
     <DD_Rule>
