@@ -5463,6 +5463,12 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>pds.Local_Internal_Reference</identifier_reference>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>Display_Direction</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -6227,6 +6233,17 @@
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:corotating_flag='Y') and not (rings:corotation_rate))  then false() else true()</rule_test>
             <rule_message>You must supply the corotation rate, rings:corotation_rate, associated with the co-rotation frame. </rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
+    <DD_Rule>
+        <local_identifier>Ring_Reprojection_0</local_identifier> 
+        <rule_context>//rings:Ring_Reprojection/pds:Local_Internal_Reference</rule_context>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>pds:local_reference_type = 'reprojection_to_array'
+            </rule_test>
+            <rule_message>For Local_Internal_Reference in rings:Ring_Reprojection, local_reference_type must equal 'reprojection_to_array'.
+            </rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
     <DD_Rule>
