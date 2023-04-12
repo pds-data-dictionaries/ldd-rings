@@ -10,9 +10,9 @@
    "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd"> 
 
     <name>Rings Dictionary</name>
-    <ldd_version_id>1.11.0.0</ldd_version_id>
+    <ldd_version_id>1.12.0.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
-    <full_name>Mitchell K Gordon</full_name>
+    <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
     <namespace_id>rings</namespace_id>
     <comment> 
@@ -142,10 +142,12 @@
         - Added the attribute: ring_detected.
         - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
       v1.12.0.0  2023-04-10
+        - Update steward name from Mitchell Gordon to Matthew Tiscareno
         - Improved definitions of epoch_reprojection_basis_utc, corotating_ring_longitude, minimum_corotating_ring_longitude, 
           and maximum_corotating_ring_longitude.  
         - Fixed typo in corotating_flag enumerated value definition. 
         - Regularized spelling of "corotation"
+        - 
     </comment>
     <last_modification_date_time>2021-11-10</last_modification_date_time>
     
