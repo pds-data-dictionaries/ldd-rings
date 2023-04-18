@@ -141,15 +141,19 @@
         - Revised the case of several attribute enumerated values to Title case.
         - Added the attribute: ring_detected.
         - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
-      v1.12.0.0  2023-04-10
+      v1.12.0.0  2023-04-18
         - Update steward name from Mitchell Gordon to Matthew Tiscareno
         - Improved definitions of epoch_reprojection_basis_utc, corotating_ring_longitude, minimum_corotating_ring_longitude, 
           and maximum_corotating_ring_longitude.  
         - Fixed typo in corotating_flag enumerated value definition. 
         - Regularized spelling of "corotation"
-        - 
+        - Add inertial_ring_longitude, minimum_inertial_ring_longitude, and maximum_inertial_ring_longitude.  These replace 
+          ring_longitude, minimum_ring_longitude, and maximum_ring_longitude, which should be deprecated. 
+        - Also, classes that are copied here from the Geometry and Display dictionaries should be deprecated, as of now.
+          These include Body_Ident_Base, Reference_Frame_Ident, Central_Body_Ident, and Display_Direction. 
+        - Actual deprecation not yet implemented. 
     </comment>
-    <last_modification_date_time>2021-11-10</last_modification_date_time>
+    <last_modification_date_time>2023-04-18</last_modification_date_time>
     
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -1783,6 +1787,77 @@
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+    
+    <DD_Attribute>
+        <name>inertial_ring_longitude</name>
+        <version_id>1.1</version_id>
+        <local_identifier>inertial_ring_longitude</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>inertial_ring_longitude specifies the inertial longitude of a ring feature relative to the prime
+            meridian. In planetary ring systems, the prime meridian is the ascending node of the planet's
+            invariable plane on the Earth's mean equator of J2000. Longitudes are measured in the
+            direction of orbital motion along the planet's invariable plane to the ring's ascending node,
+            and thence along the ring plane. Values range from 0 to 360 in units of degrees.
+            Note: The invariable plane of a planet is equivalent to its equatorial plane for every ringed
+            planet except Neptune.
+            
+            Required to be the second field in ring occultation profiles. In labels, the min and 
+            max attributes are required.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>0</minimum_value>
+            <maximum_value>360</maximum_value>
+            <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+            <specified_unit_id>deg</specified_unit_id>            
+        </DD_Value_Domain>
+    </DD_Attribute>
+    
+    <DD_Attribute>
+        <name>minimum_inertial_ring_longitude</name>
+        <version_id>1.2</version_id>
+        <local_identifier>minimum_inertial_ring_longitude</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>minimum_inertial_ring_longitude specifes one boundary for the ring longitude range in the data; normally the 
+            smallest value. However, for ranges that cross the prime meridian, the minimum ring longitude will have a
+            value greater than the maximum ring longitude. Values range from 0 to 360 in units of degrees.
+            
+            Required in label files for ring occultation data.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>0</minimum_value>
+            <maximum_value>360</maximum_value>
+            <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+            <specified_unit_id>deg</specified_unit_id>
+        </DD_Value_Domain>
+    </DD_Attribute>
+    
+    <DD_Attribute>
+        <name>maximum_inertial_ring_longitude</name>
+        <version_id>1.2</version_id>
+        <local_identifier>maximum_inertial_ring_longitude</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>maximum_inertial_ring_longitude specifies one boundary for the ring longitude range in the data; normally the 
+            largest value. However, for ranges that cross the prime meridian, the maximum ring longitude will have a
+            value less than the minimum ring longitude. Values range from 0 to 360 in units of degrees.
+            
+            Required in label files for ring occultation data.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>0</minimum_value>
+            <maximum_value>360</maximum_value>
+            <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+            <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -4228,6 +4303,18 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>minimum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>minimum_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
@@ -4589,6 +4676,18 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_ring_radius</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_inertial_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5332,6 +5431,18 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>minimum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>minimum_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -5561,6 +5672,24 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_radial_sampling_interval</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_inertial_ring_longitude</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_inertial_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5958,6 +6087,16 @@
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:minimum_inertial_ring_longitude) and not (rings:maximum_inertial_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
             <rule_test>if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()</rule_test>
             <rule_message>rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
@@ -6131,6 +6270,16 @@
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:maximum_ring_radius) and not (rings:minimum_ring_radius))  then false() else true()</rule_test>
             <rule_message>rings:minimum_ring_radius and rings:maximum_ring_radius, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:minimum_inertial_ring_longitude) and not (rings:maximum_inertial_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
