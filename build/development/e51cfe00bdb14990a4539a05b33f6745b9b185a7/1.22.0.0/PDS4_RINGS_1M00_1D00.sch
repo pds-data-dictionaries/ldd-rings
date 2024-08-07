@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Aug 07 17:28:53 UTC 2024 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Aug 07 18:29:14 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -294,6 +294,20 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="//Ring_Spectrum">
+      <sch:assert test="if (not (rings:wavelength) and not (rings:minimum_wavelength)) then false() else true()">
+        <title>//Ring_Spectrum/Rule</title>
+        You must identify the wavelength of the observation either as a single value using rings:wavelength,
+            	or as a range using the minimum-maximum wavelength pair.</sch:assert>
+      <sch:assert test="if ((rings:minimum_wavelength) and not (rings:maximum_wavelength))  then false() else true()">
+        <title>//Ring_Spectrum/Rule</title>
+        rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
+      <sch:assert test="if ((rings:maximum_wavelength) and not (rings:minimum_wavelength))  then false() else true()">
+        <title>//Ring_Spectrum/Rule</title>
+        rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="//Uniformly_Sampled_Radius">
       <sch:assert test="if ((rings:sampling_base) and not (rings:sampling_scale=logarithmic)and not (rings:sampling_scale=exponential))  then false() else true()">
         <title>//Uniformly_Sampled_Radius/Rule</title>
@@ -536,13 +550,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:maximum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Ring_Profile/rings:maximum_wavelength/rings:maximum_wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Ring_Profile/rings:minimum_inertial_ring_longitude/rings:minimum_inertial_ring_longitude</title>
@@ -595,13 +602,6 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_ring_radius">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Ring_Profile/rings:minimum_ring_radius/rings:minimum_ring_radius</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Ring_Profile/rings:minimum_wavelength/rings:minimum_wavelength</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -781,13 +781,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Ring_Profile/rings:wavelength/rings:wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Supplement/rings:frequency_band">
       <sch:assert test=". = ('C', 'D', 'E', 'F', 'G', 'H', 'K', 'Ka', 'Ku', 'Q', 'R', 'S', 'U', 'V', 'W', 'X', 'Y')">
         <title>rings:Occultation_Supplement/rings:frequency_band/rings:frequency_band</title>
@@ -956,13 +949,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:maximum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Time_Series/rings:maximum_wavelength/rings:maximum_wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:minimum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Time_Series/rings:minimum_inertial_ring_longitude/rings:minimum_inertial_ring_longitude</title>
@@ -1015,13 +1001,6 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:minimum_ring_radius">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Time_Series/rings:minimum_ring_radius/rings:minimum_ring_radius</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:minimum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Time_Series/rings:minimum_wavelength/rings:minimum_wavelength</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1184,13 +1163,6 @@
       <sch:assert test=". = ('Both', 'Egress', 'Ingress', 'Multiple')">
         <title>rings:Occultation_Time_Series/rings:time_series_direction/rings:time_series_direction</title>
         The attribute rings:Occultation_Time_Series/rings:time_series_direction must be equal to one of the following values 'Both', 'Egress', 'Ingress', 'Multiple'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Occultation_Time_Series/rings:wavelength/rings:wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1537,13 +1509,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:maximum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Ring_Spectrum/rings:maximum_wavelength/rings:maximum_wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Ring_Spectrum/rings:mean_observed_ring_elevation">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:mean_observed_ring_elevation/rings:mean_observed_ring_elevation</title>
@@ -1642,13 +1607,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:minimum_wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Ring_Spectrum/rings:minimum_wavelength/rings:minimum_wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Ring_Spectrum/rings:radial_resolution">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Ring_Spectrum/rings:radial_resolution/rings:radial_resolution</title>
@@ -1681,13 +1639,6 @@
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:ring_longitude_observed_minus_subsolar/rings:ring_longitude_observed_minus_subsolar</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:wavelength">
-      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
-        <title>rings:Ring_Spectrum/rings:wavelength/rings:wavelength</title>
-        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1751,6 +1702,27 @@
       <sch:assert test=". = ('Exponential', 'Linear', 'Logarithmic')">
         <title>rings:Uniformly_Sampled_Radius/rings:sampling_scale/rings:sampling_scale</title>
         The attribute rings:Uniformly_Sampled_Radius/rings:sampling_scale must be equal to one of the following values 'Exponential', 'Linear', 'Logarithmic'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Wavelength_Parameters/rings:maximum_wavelength">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Wavelength_Parameters/rings:maximum_wavelength/rings:maximum_wavelength</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Wavelength_Parameters/rings:minimum_wavelength">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Wavelength_Parameters/rings:minimum_wavelength/rings:minimum_wavelength</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Wavelength_Parameters/rings:wavelength">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Wavelength_Parameters/rings:wavelength/rings:wavelength</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

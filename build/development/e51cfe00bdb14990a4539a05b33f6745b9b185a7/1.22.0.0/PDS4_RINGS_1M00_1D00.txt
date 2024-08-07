@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Aug 07 17:28:53 UTC 2024
+   Time                   Wed Aug 07 18:29:14 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -28,9 +28,9 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                21
+   Classes                22
    Attributes             165
-   Associations           306
+   Associations           304
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -180,12 +180,13 @@ Parsed Input - Header:
         - Also, classes that are copied here from the Geometry and Display dictionaries should be deprecated, as of now.
           These include Body_Ident_Base, Reference_Frame_Ident, Central_Body_Ident, and Display_Direction. 
         - Actual deprecation not yet implemented.
-      v1.13.0  2024-07-03
+      v1.13.0  2024-08-07
         - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
         - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE]
+	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
+	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
     
-   Last Modification Time 2024-07-03
+   Last Modification Time 2024-08-07
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -1410,6 +1411,34 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
+   name                   Wavelength_Parameters
+   description            This class contains the three wavelength attributes 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      pds.local_identifier
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:wavelength
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:minimum_wavelength
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:maximum_wavelength
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
    name                   Occultation_Ring_Profile
    description            This class replaces the Radio_Occultation and Stellar_Occultation classes. It is used for all ring occultation profiles regardless of the occultation type. 
    is abstract            false
@@ -1518,27 +1547,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:maximum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
       local identifier      rings:dsn_station_number
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      rings:frequency_band
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:wavelength
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -1733,6 +1747,11 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      rings:Wavelength_Parameters
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
    name                   Occultation_Time_Series
    description            This class supports occultation data organized as a time series.
    is abstract            false
@@ -1851,27 +1870,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:maximum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
       local identifier      rings:dsn_station_number
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      rings:frequency_band
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:wavelength
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -2065,6 +2069,11 @@ Parsed Input - Classes:
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
+
+      local identifier      rings:Wavelength_Parameters
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
 
    name                   Occultation_Supplement
    description            This class is required for all radio ring occultation calibration and geometry supplemental files.
@@ -2747,21 +2756,6 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:minimum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      rings:maximum_wavelength
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
       local identifier      rings:radial_resolution
       minimum occurrences   0
       maximum occurrences   1
@@ -2883,6 +2877,11 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      rings:Display_Direction
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      rings:Wavelength_Parameters
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of

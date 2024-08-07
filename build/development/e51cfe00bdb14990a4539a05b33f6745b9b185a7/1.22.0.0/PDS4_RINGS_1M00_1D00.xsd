@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Aug 07 17:28:53 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Aug 07 18:29:14 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -156,10 +156,11 @@
         - Also, classes that are copied here from the Geometry and Display dictionaries should be deprecated, as of now.
           These include Body_Ident_Base, Reference_Frame_Ident, Central_Body_Ident, and Display_Direction. 
         - Actual deprecation not yet implemented.
-      v1.13.0  2024-07-03
+      v1.13.0  2024-08-07
         - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
         - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE]
+	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
+	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
     
     </xs:documentation>
   </xs:annotation>
@@ -321,11 +322,8 @@
       <xs:element name="time_constant_type" type="rings:time_constant_type" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="time_constant" type="rings:time_constant" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="sigma_time_constant" type="rings:sigma_time_constant" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="minimum_wavelength" type="rings:minimum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_wavelength" type="rings:maximum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="dsn_station_number" nillable="true" type="rings:dsn_station_number" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="frequency_band" type="rings:frequency_band" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="wavelength" type="rings:wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="radial_resolution" type="rings:radial_resolution" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="radial_sampling_interval" type="rings:radial_sampling_interval" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_radial_sampling_interval" type="rings:minimum_radial_sampling_interval" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -364,6 +362,7 @@
       <xs:element name="lowest_detectable_opacity" type="rings:lowest_detectable_opacity" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="highest_detectable_opacity" type="rings:highest_detectable_opacity" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="along_track_timing_offset" type="rings:along_track_timing_offset" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Wavelength_Parameters" type="rings:Wavelength_Parameters" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="rings:occultation_type = ('Radio', 'Solar', 'Stellar')"/> -->
@@ -438,11 +437,8 @@
       <xs:element name="time_constant_type" type="rings:time_constant_type" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="time_constant" type="rings:time_constant" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="sigma_time_constant" type="rings:sigma_time_constant" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="minimum_wavelength" type="rings:minimum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_wavelength" type="rings:maximum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="dsn_station_number" nillable="true" type="rings:dsn_station_number" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="frequency_band" type="rings:frequency_band" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="wavelength" type="rings:wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="reference_time_utc" type="rings:reference_time_utc" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_observed_event_time" type="rings:minimum_observed_event_time" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_observed_event_time" type="rings:maximum_observed_event_time" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -481,6 +477,7 @@
       <xs:element name="along_track_timing_offset" type="rings:along_track_timing_offset" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="background_signal" type="rings:background_signal" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="average_unocculted_signal" type="rings:average_unocculted_signal" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Wavelength_Parameters" type="rings:Wavelength_Parameters" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="rings:occultation_type = ('Radio', 'Solar', 'Stellar')"/> -->
@@ -670,9 +667,6 @@
       <xs:element name="ring_longitude_observed_minus_subsolar" type="rings:ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_longitude_observed_minus_subsolar" type="rings:minimum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_longitude_observed_minus_subsolar" type="rings:maximum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="wavelength" type="rings:wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="minimum_wavelength" type="rings:minimum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="maximum_wavelength" type="rings:maximum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="radial_resolution" type="rings:radial_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_radial_resolution" type="rings:minimum_radial_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_radial_resolution" type="rings:maximum_radial_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -697,6 +691,7 @@
       <xs:element name="emission_angle" type="rings:emission_angle" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_emission_angle" type="rings:minimum_emission_angle" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_emission_angle" type="rings:maximum_emission_angle" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Wavelength_Parameters" type="rings:Wavelength_Parameters" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -761,6 +756,19 @@
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="rings:sampling_scale = ('Exponential', 'Linear', 'Logarithmic')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="Wavelength_Parameters">
+    <xs:annotation>
+      <xs:documentation>This class contains the three wavelength
+        attributes </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="wavelength" type="rings:wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_wavelength" type="rings:minimum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_wavelength" type="rings:maximum_wavelength" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
   </xs:complexType>
 
     <xs:annotation>

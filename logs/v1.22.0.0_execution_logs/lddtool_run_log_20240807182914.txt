@@ -3,15 +3,9 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Aug 07 18:09:09 UTC 2024
+>>  INFO Date: Wed Aug 07 18:29:14 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:Wavelength_Parameters  Attribute: rings:Wavelength_Parameters - Missing Attribute
->>> ERROR Association: rings:Wavelength_Parameters - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Time_Series  Association:rings:Wavelength_Parameters  Attribute: rings:Wavelength_Parameters - Missing Attribute
->>> ERROR Association: rings:Wavelength_Parameters - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:Wavelength_Parameters  Attribute: rings:Wavelength_Parameters - Missing Attribute
->>> ERROR Association: rings:Wavelength_Parameters - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -132,7 +126,7 @@
 
  -- LDDTool Execution Summary --
      18 warning(s)
-     6 error(s)
+     0 error(s)
      0 fatal error(s)
 
 Input:
@@ -151,4 +145,4 @@ Output:
      - ./PDS4_RINGS_1M00_1D00.xml
      - ./export/JSON/PDS4_PDS_1M00.JSON
 
->>  INFO Exit(1)
+>>  INFO Exit(0)
