@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Fri May 24 20:11:58 UTC 2024
+>>  INFO Date: Wed Aug 07 17:28:53 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
@@ -140,9 +140,9 @@ Input:
 
 Output:
 
-     - ./PDS4_RINGS_1M00_1C00.xsd
-     - ./PDS4_RINGS_1M00_1C00.sch
-     - ./PDS4_RINGS_1M00_1C00.xml
+     - ./PDS4_RINGS_1M00_1D00.xsd
+     - ./PDS4_RINGS_1M00_1D00.sch
+     - ./PDS4_RINGS_1M00_1D00.xml
      - ./export/JSON/PDS4_PDS_1M00.JSON
 
 >>  INFO Exit(0)
