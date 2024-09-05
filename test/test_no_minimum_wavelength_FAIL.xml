@@ -46,13 +46,13 @@
         <Discipline_Area>
             <rings:Ring_Moon_Systems>
                 <rings:Occultation_Time_Series>
-                    <rings:occultation_type>stellar</rings:occultation_type>
-                    <rings:occultation_direction>egress</rings:occultation_direction>
-                    <rings:time_series_direction>both</rings:time_series_direction>
+                    <rings:occultation_type>Stellar</rings:occultation_type>
+                    <rings:occultation_direction>Egress</rings:occultation_direction>
+                    <rings:time_series_direction>Both</rings:time_series_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
                     <rings:Wavelength_Parameters>
-                        <rings:wavelength>2200.00000</rings:wavelength>
-                        <rings:maximum_wavelength>2416.00000</rings:maximum_wavelength>
+                        <rings:wavelength unit="nm">2200.00000</rings:wavelength>
+                        <rings:maximum_wavelength unit="nm">2416.00000</rings:maximum_wavelength>
                     </rings:Wavelength_Parameters>
                 </rings:Occultation_Time_Series>
             </rings:Ring_Moon_Systems>
