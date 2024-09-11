@@ -6183,11 +6183,6 @@
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if (not (rings:radial_sampling_interval) and not (rings:minimum_radial_sampling_interval))  then false() else true()</rule_test>
-            <rule_message>You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
             <rule_test>if ((rings:sclk_start_time) and not (rings:sclk_stop_time))  then false() else true()</rule_test>
             <rule_message>rings:sclk_stop_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
