@@ -25,7 +25,7 @@
             <stop_date_time>2022-01-01T00:00:00Z</stop_date_time>
         </Time_Coordinates>
         <Investigation_Area>
-            <name>None</name>
+            <name>No Specific Investigation</name>
             <type>Individual Investigation</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
