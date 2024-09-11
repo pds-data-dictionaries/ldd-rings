@@ -50,10 +50,10 @@
                     <rings:occultation_direction>Egress</rings:occultation_direction>
                     <rings:time_series_direction>Both</rings:time_series_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
+                    <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
                     <rings:Wavelength_Parameters>
                         <rings:wavelength unit="nm">2200.00000</rings:wavelength>
                     </rings:Wavelength_Parameters>
-                    <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
                 </rings:Occultation_Time_Series>
             </rings:Ring_Moon_Systems>
         </Discipline_Area>
