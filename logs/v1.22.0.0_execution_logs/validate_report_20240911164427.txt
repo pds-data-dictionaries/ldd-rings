@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.5.2
-   Date        2024-09-05T22:00:40Z
+   Date        2024-09-11T16:44:27Z
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/8125cff081971baece39243a84a4057a3365c042/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/8125cff081971baece39243a84a4057a3365c042/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/6a528aaa764cfa03d3e5386b0eac26047fc348b4/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/6a528aaa764cfa03d3e5386b0eac26047fc348b4/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,8 +22,13 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_VALID.xml
+  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_VALID.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
+      ERROR  [error.label.schematron]   line 48, 48: You must identify the wavelength of the observation either as a single value using rings:wavelength,
+            	or as a range using the minimum-maximum wavelength pair.
+      ERROR  [error.label.schematron]   line 48, 48: You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.
+      ERROR  [error.label.schematron]   line 48, 48: You must identify the observed ring elevation of the observation ( [-90,90] degrees) either as a single value using rings:observed_ring_elevation,
+            	or as a range using the minimum-maximum observed ring elevation pair.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
       WARNING  [warning.label.context_ref_mismatch]   line 31: Context reference name mismatch. Value: 'None' Expected one of: '[NO SPECIFIC INVESTIGATION]'
         1 product validation(s) completed
@@ -31,12 +36,12 @@ Product Level Validation Results
 Summary:
 
   1 product(s)
-  0 error(s)
+  3 error(s)
   3 warning(s)
 
   Product Validation Summary:
-    1          product(s) passed
-    0          product(s) failed
+    0          product(s) passed
+    1          product(s) failed
     0          product(s) skipped
     1          product(s) total
 
@@ -47,10 +52,11 @@ Summary:
     0          check(s) total
 
   Message Types:
+    3            error.label.schematron
     1            warning.label.context_ref_mismatch
     1            warning.label.missing_schematron_spec
     1            warning.label.schema
 
 End of Report
-Completed execution in 5336 ms
+Completed execution in 5086 ms
 
