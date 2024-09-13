@@ -154,8 +154,6 @@
         - Actual deprecation not yet implemented.
       v1.13.0  2024-08-07
         - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
-        - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
 	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
     </comment>
     <last_modification_date_time>2024-08-07</last_modification_date_time>
