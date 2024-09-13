@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Sep 11 21:57:54 UTC 2024
+   Time                   Fri Sep 13 04:38:11 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -182,8 +182,6 @@ Parsed Input - Header:
         - Actual deprecation not yet implemented.
       v1.13.0  2024-08-07
         - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
-        - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
 	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
     
    Last Modification Time 2024-08-07
