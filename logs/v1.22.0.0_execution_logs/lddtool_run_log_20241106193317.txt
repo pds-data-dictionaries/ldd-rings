@@ -3,9 +3,27 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Nov 06 19:10:11 UTC 2024
+>>  INFO Date: Wed Nov 06 19:33:17 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
 
+>>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Time_Series  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Time_Series  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Reprojection_Geometry  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Reprojection_Geometry  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:ring_longitude  Attribute: rings:ring_longitude - Missing Attribute
+>>> ERROR Association: rings:ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
+>>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
+>>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -23,12 +41,6 @@
 >>> INFO Attribute: <minimum_inertial_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <maximum_inertial_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <maximum_inertial_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
->>> INFO Attribute: <ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
->>> INFO Attribute: <ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
->>> INFO Attribute: <minimum_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
->>> INFO Attribute: <minimum_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
->>> INFO Attribute: <maximum_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
->>> INFO Attribute: <maximum_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <ring_longitude_observed_minus_subsolar> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <ring_longitude_observed_minus_subsolar> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <minimum_ring_longitude_observed_minus_subsolar> - The default minimum value provided by the attribute's data type is being overridden with 0
@@ -126,7 +138,7 @@
 
  -- LDDTool Execution Summary --
      18 warning(s)
-     0 error(s)
+     18 error(s)
      0 fatal error(s)
 
 Input:
@@ -145,4 +157,4 @@ Output:
      - ./PDS4_RINGS_1M00_1D00.xml
      - ./export/JSON/PDS4_PDS_1M00.JSON
 
->>  INFO Exit(0)
+>>  INFO Exit(1)
