@@ -136,5 +136,6 @@
       v1.13.0  2024-08-07
         - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
         - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
+	- Remove attributes that have been previously deprecated: ring_longitude, minimum_ring_longitude, and maximum_ring_longitude
+	- Remove classes that were copied from Geometry and Display dictionaries, and replace their usage with the same class but with a prefix indicating the dictionary from which they come:  Body_Ident_Base ==> geom.Body_Ident_Base, 
 	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
