@@ -1,3 +1,25 @@
+# Spectral Discipline Namespace Change Log
+
+## Changes from v1.12.0.0 and v1.13.0
+
+	### Switched to three-element semantic versioning
+	- For example, this is v1.13.0, not v1.13.0.0
+
+	### Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory
+        * We used the change log in the Spectral LDD as a template
+
+	### Add Wavelength_Parameters class
+	- Added a new class, Wavelength_Parameters, which includes the three existing wavelength attributes
+	- Updated the various classes that already use the wavelength attributes to use the new class
+	- Updated associated schematron rules
+	- Added associated unit tests
+	- Discussion found at https://github.com/pds-data-dictionaries/ldd-rings/pull/24
+	
+      v1.13.0  2024-08-07
+	- Remove attributes that have been previously deprecated: ring_longitude, minimum_ring_longitude, and maximum_ring_longitude
+	
+## Changes between v1.0 and v1.12.0.0
+
     	Classes used from the geom namespace
     	  - Body_Ident_Base
     	  - Reference_Frame_Ident
@@ -133,9 +155,3 @@
         - Also, classes that are copied here from the Geometry and Display dictionaries should be deprecated, as of now.
           These include Body_Ident_Base, Reference_Frame_Ident, Central_Body_Ident, and Display_Direction. 
         - Actual deprecation not yet implemented.
-      v1.13.0  2024-08-07
-        - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
-        - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [STILL TO DO].
-	- Remove attributes that have been previously deprecated: ring_longitude, minimum_ring_longitude, and maximum_ring_longitude
-	- Remove classes that were copied from Geometry and Display dictionaries, and replace their usage with the same class but with a prefix indicating the dictionary from which they come:  Body_Ident_Base ==> geom.Body_Ident_Base, 
-	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
