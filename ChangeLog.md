@@ -18,6 +18,15 @@
 ### Remove attributes that have been previously deprecated: ring_longitude, minimum_ring_longitude, and maximum_ring_longitude
 - [[MORE NEEDED HERE]]
 
+### Issue #245: Update epoch_reprojection_basis_utc
+- epoch_reprojection_basis_utc attribute needs a clearer definition.
+- It could incorporate info from <corotating_ring_longitude>: “... zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.”
+
+### Issue #306: Fix data type and unit issues for UTC attributes
+- For the following attributes (reference_time_utc, spacecraft_event_start_time_utc, spacecraft_event_stop_time_utc, earth_received_start_time_utc, earth_received_stop_time_utc, ring_event_start_time_utc, ring_event_stop_time_utc, epoch_ring_fit_utc, epoch_reprojection_basis_utc), the attribute definitions should not contain "Units_of_Time".
+- For the attribute observed_event_time_utc, the data type is ASCII_Real, but should be ASCII_Date_Time_YMD_UTC.  Consequently, remove "Units_of_Time" here also.
+
+
 ## Changes between v1.0 and v1.12.0.0
 
 ### v1.12.0.0  2023-04-18

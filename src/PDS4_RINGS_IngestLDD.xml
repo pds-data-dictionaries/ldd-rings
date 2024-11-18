@@ -19,31 +19,8 @@
 
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
-    	Classes used from the geom namespace
-    	  - Body_Ident_Base
-    	  - Reference_Frame_Ident
-    	  - Central_Body_Ident
-    	  - Display_Direction
-    	  
-    	Classes used from the pds namespace
-    	  - Internal_Reference
-
-    	Attributes used from the pds namespace
-    	  - local_identifier_reference
-    	  - sampling_parameter_name
-    	  - sampling_parameter_unit
-    	  - sampling_parameter_interval
-    	  - description
-    	  - name     (indirectly via classes from the geom namespace)
-    	  - comment  (indirectly via classes from the geom namespace)
-	  
-      v1.13.0  2024-08-07
-        - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
-        - Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory [COMPLETE THE FORMATTING TO MATCH ChangeLog_spectral.md].
-	- Remove items that have been previously deprecated: [STILL TO DO, ALSO DESCRIBE DETAILS HERE].
-	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
     </comment>
-    <last_modification_date_time>2024-11-06</last_modification_date_time>
+    <last_modification_date_time>2024-11-18</last_modification_date_time>
     
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -407,7 +384,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -575,8 +551,7 @@
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Real</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+            <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -655,7 +630,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -675,7 +649,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -718,7 +691,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -736,7 +708,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -779,7 +750,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -798,7 +768,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-            <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
     
@@ -2936,7 +2905,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-       <unit_of_measure_type>Units_of_Time</unit_of_measure_type>  
         </DD_Value_Domain>
     </DD_Attribute>
 
@@ -3473,7 +3441,6 @@
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
-       <unit_of_measure_type>Units_of_Time</unit_of_measure_type>  
         </DD_Value_Domain>
     </DD_Attribute>
 
