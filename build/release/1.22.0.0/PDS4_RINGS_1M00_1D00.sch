@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Nov 06 19:10:11 UTC 2024 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon Nov 18 19:14:35 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -389,13 +389,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Global_Model_Parameters/rings:epoch_ring_fit_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Global_Model_Parameters/rings:epoch_ring_fit_utc/rings:epoch_ring_fit_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Normal_Mode_Parameters/rings:normal_mode_amplitude">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Normal_Mode_Parameters/rings:normal_mode_amplitude/rings:normal_mode_amplitude</title>
@@ -456,20 +449,6 @@
       <sch:assert test=". = ('Fair', 'Good', 'Poor')">
         <title>rings:Occultation_Ring_Profile/rings:data_quality_score/rings:data_quality_score</title>
         The attribute rings:Occultation_Ring_Profile/rings:data_quality_score must be equal to one of the following values 'Fair', 'Good', 'Poor'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:earth_received_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:earth_received_start_time_utc/rings:earth_received_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:earth_received_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:earth_received_stop_time_utc/rings:earth_received_stop_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -536,13 +515,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:maximum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Occultation_Ring_Profile/rings:maximum_ring_longitude/rings:maximum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:maximum_ring_radius">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Ring_Profile/rings:maximum_ring_radius/rings:maximum_ring_radius</title>
@@ -589,13 +561,6 @@
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Ring_Profile/rings:minimum_radial_sampling_interval/rings:minimum_radial_sampling_interval</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Occultation_Ring_Profile/rings:minimum_ring_longitude/rings:minimum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -669,13 +634,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:reference_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:reference_time_utc/rings:reference_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_detected">
       <sch:assert test=". = ('N', 'Y')">
         <title>rings:Occultation_Ring_Profile/rings:ring_detected/rings:ring_detected</title>
@@ -690,23 +648,9 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_event_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:ring_event_start_time_utc/rings:ring_event_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_event_stop_tdb">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>rings:Occultation_Ring_Profile/rings:ring_event_stop_tdb/rings:ring_event_stop_tdb</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:ring_event_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:ring_event_stop_time_utc/rings:ring_event_stop_time_utc</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -735,20 +679,6 @@
     <sch:rule context="rings:Occultation_Ring_Profile/rings:sigma_time_constant">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>rings:Occultation_Ring_Profile/rings:sigma_time_constant/rings:sigma_time_constant</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:spacecraft_event_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:spacecraft_event_start_time_utc/rings:spacecraft_event_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Ring_Profile/rings:spacecraft_event_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Ring_Profile/rings:spacecraft_event_stop_time_utc/rings:spacecraft_event_stop_time_utc</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -823,13 +753,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Supplement/rings:reference_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Supplement/rings:reference_time_utc/rings:reference_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Supplement/rings:ring_profile_direction">
       <sch:assert test=". = ('Egress', 'Ingress', 'Multiple')">
         <title>rings:Occultation_Supplement/rings:ring_profile_direction/rings:ring_profile_direction</title>
@@ -855,20 +778,6 @@
       <sch:assert test=". = ('Fair', 'Good', 'Poor')">
         <title>rings:Occultation_Time_Series/rings:data_quality_score/rings:data_quality_score</title>
         The attribute rings:Occultation_Time_Series/rings:data_quality_score must be equal to one of the following values 'Fair', 'Good', 'Poor'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:earth_received_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:earth_received_start_time_utc/rings:earth_received_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:earth_received_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:earth_received_stop_time_utc/rings:earth_received_stop_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -935,13 +844,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:maximum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Occultation_Time_Series/rings:maximum_ring_longitude/rings:maximum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:maximum_ring_radius">
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Time_Series/rings:maximum_ring_radius/rings:maximum_ring_radius</title>
@@ -988,13 +890,6 @@
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Time_Series/rings:minimum_projected_sun_diameter/rings:minimum_projected_sun_diameter</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:minimum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Occultation_Time_Series/rings:minimum_ring_longitude/rings:minimum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1054,13 +949,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:reference_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:reference_time_utc/rings:reference_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:ring_event_start_tdb">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>rings:Occultation_Time_Series/rings:ring_event_start_tdb/rings:ring_event_start_tdb</title>
@@ -1068,23 +956,9 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:ring_event_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:ring_event_start_time_utc/rings:ring_event_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:ring_event_stop_tdb">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>rings:Occultation_Time_Series/rings:ring_event_stop_tdb/rings:ring_event_stop_tdb</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:ring_event_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:ring_event_stop_time_utc/rings:ring_event_stop_time_utc</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1113,20 +987,6 @@
     <sch:rule context="rings:Occultation_Time_Series/rings:sigma_time_constant">
       <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
         <title>rings:Occultation_Time_Series/rings:sigma_time_constant/rings:sigma_time_constant</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:spacecraft_event_start_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:spacecraft_event_start_time_utc/rings:spacecraft_event_start_time_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Occultation_Time_Series/rings:spacecraft_event_stop_time_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Occultation_Time_Series/rings:spacecraft_event_stop_time_utc/rings:spacecraft_event_stop_time_utc</title>
         The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1180,13 +1040,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Reprojection_Geometry/rings:epoch_reprojection_basis_utc">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>rings:Reprojection_Geometry/rings:epoch_reprojection_basis_utc/rings:epoch_reprojection_basis_utc</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Reprojection_Geometry/rings:maximum_corotating_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Reprojection_Geometry/rings:maximum_corotating_ring_longitude/rings:maximum_corotating_ring_longitude</title>
@@ -1211,13 +1064,6 @@
     <sch:rule context="rings:Reprojection_Geometry/rings:maximum_phase_angle">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Reprojection_Geometry/rings:maximum_phase_angle/rings:maximum_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Reprojection_Geometry/rings:maximum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Reprojection_Geometry/rings:maximum_ring_longitude/rings:maximum_ring_longitude</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1267,13 +1113,6 @@
     <sch:rule context="rings:Reprojection_Geometry/rings:minimum_phase_angle">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Reprojection_Geometry/rings:minimum_phase_angle/rings:minimum_phase_angle</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Reprojection_Geometry/rings:minimum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Reprojection_Geometry/rings:minimum_ring_longitude/rings:minimum_ring_longitude</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1488,13 +1327,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:maximum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Ring_Spectrum/rings:maximum_ring_longitude/rings:maximum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Ring_Spectrum/rings:maximum_ring_longitude_observed_minus_subsolar">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:maximum_ring_longitude_observed_minus_subsolar/rings:maximum_ring_longitude_observed_minus_subsolar</title>
@@ -1586,13 +1418,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:minimum_ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Ring_Spectrum/rings:minimum_ring_longitude/rings:minimum_ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="rings:Ring_Spectrum/rings:minimum_ring_longitude_observed_minus_subsolar">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:minimum_ring_longitude_observed_minus_subsolar/rings:minimum_ring_longitude_observed_minus_subsolar</title>
@@ -1625,13 +1450,6 @@
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Ring_Spectrum/rings:ring_intercept_resolution/rings:ring_intercept_resolution</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="rings:Ring_Spectrum/rings:ring_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>rings:Ring_Spectrum/rings:ring_longitude/rings:ring_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
