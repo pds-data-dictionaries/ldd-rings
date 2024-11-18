@@ -1,0 +1,16 @@
+[Fatal Error] PDS4_RINGS_IngestLDD.xml:19:2: The content of elements must consist of well-formed character data or markup.
+org.xml.sax.SAXParseException; systemId: file:///home/runner/work/ldd-rings/ldd-rings/src/PDS4_RINGS_IngestLDD.xml; lineNumber: 19; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:261)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:178)
+	at gov.nasa.pds.model.plugin.LDDDOMParser.parseXmlFile(LDDDOMParser.java:190)
+	at gov.nasa.pds.model.plugin.LDDDOMParser.getLocalDD(LDDDOMParser.java:154)
+	at gov.nasa.pds.model.plugin.GetDOMModel.getDOMModel(GetDOMModel.java:262)
+	at gov.nasa.pds.model.plugin.DMDocument.run(DMDocument.java:533)
+	at gov.nasa.pds.model.plugin.DMDocument.main(DMDocument.java:327)
+Exception in thread "main" java.lang.NullPointerException
+	at gov.nasa.pds.model.plugin.LDDDOMParser.parseDocument(LDDDOMParser.java:202)
+	at gov.nasa.pds.model.plugin.LDDDOMParser.getLocalDD(LDDDOMParser.java:158)
+	at gov.nasa.pds.model.plugin.GetDOMModel.getDOMModel(GetDOMModel.java:262)
+	at gov.nasa.pds.model.plugin.DMDocument.run(DMDocument.java:533)
+	at gov.nasa.pds.model.plugin.DMDocument.main(DMDocument.java:327)
