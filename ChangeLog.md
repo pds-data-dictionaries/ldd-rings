@@ -2,13 +2,13 @@
 
 ## Changes from v1.12.0.0 and v1.13.0
 
-	### Switched to three-element semantic versioning
-	- For example, this is v1.13.0, not v1.13.0.0
+### Switched to three-element semantic versioning
+- For example, this is v1.13.0, not v1.13.0.0
 
-	### Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory
-        * We used the change log in the Spectral LDD as a template
+### Migrated the change log from a comment in the IngestLDD to a file ChangeLog.md in the ldd-rings directory
+* We used the change log in the Spectral LDD as a template
 
-	### Add Wavelength_Parameters class
+### Add Wavelength_Parameters class
 	- Added a new class, Wavelength_Parameters, which includes the three existing wavelength attributes
 	- Updated the various classes that already use the wavelength attributes to use the new class
 	- Updated associated schematron rules
