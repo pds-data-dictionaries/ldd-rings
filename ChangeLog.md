@@ -1,6 +1,6 @@
-# Spectral Discipline Namespace Change Log
+# Rings Namespace Change Log
 
-## Changes from v1.12.0.0 and v1.13.0
+## Changes from v1.12.0.0 to v1.13.0
 
 ### Switched to three-element semantic versioning
 - For example, this is v1.13.0, not v1.13.0.0
