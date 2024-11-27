@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Nov 27 19:28:17 UTC 2024
+>>  INFO Date: Wed Nov 27 20:32:20 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.3/Data/
 
 >>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
