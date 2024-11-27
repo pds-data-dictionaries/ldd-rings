@@ -370,7 +370,7 @@
     
     <DD_Attribute>
         <name>reference_time_utc</name>
-        <version_id>1.1</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>reference_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -616,7 +616,7 @@
     
     <DD_Attribute>
         <name>spacecraft_event_start_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>spacecraft_event_start_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -635,7 +635,7 @@
     
     <DD_Attribute>
         <name>spacecraft_event_stop_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>spacecraft_event_stop_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -679,7 +679,7 @@
     
     <DD_Attribute>
         <name>earth_received_start_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>earth_received_start_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -696,7 +696,7 @@
     
     <DD_Attribute>
         <name>earth_received_stop_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>earth_received_stop_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -737,7 +737,7 @@
     
     <DD_Attribute>
         <name>ring_event_start_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>ring_event_start_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -755,7 +755,7 @@
     
     <DD_Attribute>
         <name>ring_event_stop_time_utc</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>ring_event_stop_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -2896,7 +2896,7 @@
 
     <DD_Attribute>
         <name>epoch_ring_fit_utc</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>epoch_ring_fit_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -3432,11 +3432,11 @@
 
     <DD_Attribute>
         <name>epoch_reprojection_basis_utc</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>epoch_reprojection_basis_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3487,11 +3487,11 @@
 
     <DD_Attribute>
         <name>corotating_ring_longitude</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3505,11 +3505,11 @@
 
     <DD_Attribute>
         <name>minimum_corotating_ring_longitude</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>minimum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The minimum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+	<definition>The minimum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3523,11 +3523,11 @@
 
     <DD_Attribute>
         <name>maximum_corotating_ring_longitude</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>maximum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The maximum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+	<definition>The maximum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3841,7 +3841,7 @@
     
     <DD_Class>
         <name>Occultation_Ring_Profile</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>Occultation_Ring_Profile</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
         <definition>This class replaces the Radio_Occultation and Stellar_Occultation classes. 
@@ -4221,7 +4221,7 @@
     
     <DD_Class>
         <name>Occultation_Time_Series</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>Occultation_Time_Series</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
         <definition>This class supports occultation data organized as a time series.</definition>
@@ -5421,7 +5421,7 @@
 
     <DD_Class>
         <name>Ring_Spectrum</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>Ring_Spectrum</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
         <definition>This class provides the parameters used to describe ring spectra or spectrograms.</definition>

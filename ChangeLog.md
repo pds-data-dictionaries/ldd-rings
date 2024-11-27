@@ -10,7 +10,7 @@
 
 ### Add Wavelength_Parameters class
 - Added a new class, `Wavelength_Parameters`, which includes the three existing wavelength attributes: `wavelength`, `minimum_wavelength`, and `maximum_wavelength`
-- Updated the various classes that already use the wavelength attributes to use the new class
+- Updated the classes that already use the wavelength attributes to use the new class, and incremented the version numbers for those classes (new version in parentheses): Occultation_Ring_Profile (2.0), Occultation_Time_Series (2.0), and Ring_Spectrum (2.0)
 - Updated associated schematron rules
 - Added associated unit tests
 - Discussion found at https://github.com/pds-data-dictionaries/ldd-rings/pull/24
@@ -18,13 +18,40 @@
 ### Remove attributes that have been previously deprecated
 - Namely `ring_longitude`, `minimum_ring_longitude`, and `maximum_ring_longitude`
 
+### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
+- STILL TO DO
+- PULL REQUEST FOR V1.12 SAYS IT FIXES THIS, BUT IS THAT TRUE?
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/243
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#243
+
 ### Issue #245: Update epoch_reprojection_basis_utc
-- epoch_reprojection_basis_utc attribute needs a clearer definition.
-- It could incorporate info from <corotating_ring_longitude>: “... zero longitude defined at the epoch specified by epoch_reprojection_basis_utc, zero longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.”
+- Added words for increased clarity to the definitions of the following attributes (new version in parentheses): epoch_reprojection_basis_utc (2.0, see below), corotating_ring_longitude (1.1), minimum_corotating_ring_longitude (1.1), and maximum_corotating_ring_longitude (1.1)
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/245
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#245
+
+### Issue #267: Create class for attributes that are not currently members of any class
+- STILL TO DO
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/267
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#267
+
+### Issue #301: Update Rings dictionary for R&A F ring mosaics project
+- STILL TO DO
+- MIA'S POINTS
+  - 1) INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
+  - 2) WE WILL ADD THESE IN THE RINGS LDD
+  - 3) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
+  - 4) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
+  - 5) COMMENTARY
+- ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
+- ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
 
 ### Issue #306: Fix data type and unit issues for UTC attributes
-- For the following attributes (reference_time_utc, spacecraft_event_start_time_utc, spacecraft_event_stop_time_utc, earth_received_start_time_utc, earth_received_stop_time_utc, ring_event_start_time_utc, ring_event_stop_time_utc, epoch_ring_fit_utc, epoch_reprojection_basis_utc), the attribute definitions should not contain "Units_of_Time".
-- For the attribute observed_event_time_utc, the data type is ASCII_Real, but should be ASCII_Date_Time_YMD_UTC.  Consequently, remove "Units_of_Time" here also.
+- Removed specification of "Units_of_Time" for attributes that have data type ASCII_Date_Time_YMD_UTC, where it had been mistakenly included, for the following attributes (new version in parentheses):  reference_time_utc (2.0), spacecraft_event_start_time_utc (2.0), spacecraft_event_stop_time_utc (2.0), earth_received_start_time_utc (2.0), earth_received_stop_time_utc (2.0), ring_event_start_time_utc (2.0), ring_event_stop_time_utc (2.0), epoch_ring_fit_utc (2.0), epoch_reprojection_basis_utc (2.0)
+- For the attribute observed_event_time_utc, change data type from ASCII_Real (which was mistaken) to ASCII_Date_Time_YMD_UTC.  Consequently, remove "Units_of_Time" here also.  New version for this attribute is 2.0.
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/306
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#306
 
 ### General Cleanup
 - Fixed spelling error in `ring_longitude_observed_minus_subsolar` definition: "providees" ==> "provides"
