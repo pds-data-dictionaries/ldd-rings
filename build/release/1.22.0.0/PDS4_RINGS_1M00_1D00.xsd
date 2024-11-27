@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Fri Nov 22 00:37:46 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Nov 27 19:28:17 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -864,10 +864,10 @@
       <xs:documentation>The basis epoch for the corotating frame. Format
         is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating
         frame is defined so that zero corotating longitude is equal to
-        zero inertial longitude at the epoch specified by
-        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
-        time t corresponds to an inertial longitude of
-        (t-epoch)*corotation_rate. </xs:documentation>
+        zero inertial longitude defined at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude in
+        the corotating frame at time t corresponds to an inertial
+        longitude of (t-epoch)*corotation_rate. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
@@ -1321,10 +1321,10 @@
       <xs:documentation>The maximum value in this product for ring
         longitude in the corotating frame. The corotating frame is
         defined so that zero corotating longitude is equal to zero
-        inertial longitude at the epoch specified by
-        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
-        time t corresponds to an inertial longitude of
-        (t-epoch)*corotation_rate. </xs:documentation>
+        inertial longitude defined at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude in
+        the corotating frame at time t corresponds to an inertial
+        longitude of (t-epoch)*corotation_rate. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:maximum_corotating_ring_longitude_WO_Units">
@@ -1720,10 +1720,10 @@
       <xs:documentation>The minimum value in this product for ring
         longitude in the corotating frame. The corotating frame is
         defined so that zero corotating longitude is equal to zero
-        inertial longitude at the epoch specified by
-        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
-        time t corresponds to an inertial longitude of
-        (t-epoch)*corotation_rate. </xs:documentation>
+        inertial longitude defined at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude in
+        the corotating frame at time t corresponds to an inertial
+        longitude of (t-epoch)*corotation_rate. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:minimum_corotating_ring_longitude_WO_Units">

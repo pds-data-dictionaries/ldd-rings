@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Nov 22 00:37:46 UTC 2024
+   Time                   Wed Nov 27 19:28:17 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -1015,7 +1015,7 @@ Parsed Input - Attributes:
    name                   epoch_reprojection_basis_utc
    version                1.22
    value data type        ASCII_Date_Time_YMD_UTC
-   description            The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
+   description            The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
 
    name                   corotating_flag
    version                1.22
@@ -1033,7 +1033,7 @@ Parsed Input - Attributes:
    name                   corotating_ring_longitude
    version                1.0
    value data type        ASCII_Real
-   description            The ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
+   description            The ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -1041,7 +1041,7 @@ Parsed Input - Attributes:
    name                   minimum_corotating_ring_longitude
    version                1.22
    value data type        ASCII_Real
-   description            The minimum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
+   description            The minimum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -1049,7 +1049,7 @@ Parsed Input - Attributes:
    name                   maximum_corotating_ring_longitude
    version                1.22
    value data type        ASCII_Real
-   description            The maximum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
+   description            The maximum value in this product for ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
