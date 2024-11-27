@@ -49,12 +49,12 @@
 
 ### Issue #306: Fix data type and unit issues for UTC attributes
 - Removed specification of "Units_of_Time" for attributes that have data type ASCII_Date_Time_YMD_UTC, where it had been mistakenly included, for the following attributes (new version in parentheses):  reference_time_utc (2.0), spacecraft_event_start_time_utc (2.0), spacecraft_event_stop_time_utc (2.0), earth_received_start_time_utc (2.0), earth_received_stop_time_utc (2.0), ring_event_start_time_utc (2.0), ring_event_stop_time_utc (2.0), epoch_ring_fit_utc (2.0), epoch_reprojection_basis_utc (2.0)
-- For the attribute observed_event_time_utc, change data type from ASCII_Real (which was mistaken) to ASCII_Date_Time_YMD_UTC.  Consequently, remove "Units_of_Time" here also.  New version for this attribute is 2.0.
+- For the attribute observed_event_time_utc, change data type from ASCII_Real (which was mistaken) to ASCII_Date_Time_YMD_UTC.  Consequently, remove "Units_of_Time" here also.  Incremented the version to 2.0 for this attribute.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/306
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#306
 
 ### General Cleanup
-- Fixed spelling error in `ring_longitude_observed_minus_subsolar` definition: "providees" ==> "provides"
+- Fixed spelling error in `ring_longitude_observed_minus_subsolar` definition: "providees" ==> "provides".  Incremented the version to 1.1 for this attribute.
 
 ## Changes between v1.0 and v1.12.0.0
 

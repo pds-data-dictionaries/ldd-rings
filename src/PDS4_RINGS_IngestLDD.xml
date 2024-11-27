@@ -1722,7 +1722,7 @@
     
     <DD_Attribute>
         <name>ring_longitude_observed_minus_subsolar</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
