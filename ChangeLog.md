@@ -18,6 +18,20 @@
 ### Remove attributes that have been previously deprecated
 - Namely `ring_longitude`, `minimum_ring_longitude`, and `maximum_ring_longitude`
 
+### Issue #241: Reprojection grid attributes for ring coordinate system and Issue #301: Update Rings dictionary for R&A F ring mosaics project
+- STILL TO DO
+- MIA'S POINTS
+  - 1) INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
+  - 2) WE WILL ADD THESE IN THE RINGS LDD
+  - 3) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
+  - 4) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
+  - 5) COMMENTARY
+- ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
+- ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
+
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
 - STILL TO DO
 - PULL REQUEST FOR V1.12 SAYS IT FIXES THIS, BUT IS THAT TRUE?
@@ -33,19 +47,6 @@
 - STILL TO DO
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/267
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#267
-
-### Issue #301: Update Rings dictionary for R&A F ring mosaics project
-- STILL TO DO
-- MIA'S POINTS
-  - 1) INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
-  - 2) WE WILL ADD THESE IN THE RINGS LDD
-  - 3) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
-  - 4) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
-  - 5) COMMENTARY
-- ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
-- ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
-- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
-- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
 
 ### Issue #306: Fix data type and unit issues for UTC attributes
 - Removed specification of "Units_of_Time" for attributes that have data type ASCII_Date_Time_YMD_UTC, where it had been mistakenly included, for the following attributes (new version in parentheses):  reference_time_utc (2.0), spacecraft_event_start_time_utc (2.0), spacecraft_event_stop_time_utc (2.0), earth_received_start_time_utc (2.0), earth_received_stop_time_utc (2.0), ring_event_start_time_utc (2.0), ring_event_stop_time_utc (2.0), epoch_ring_fit_utc (2.0), epoch_reprojection_basis_utc (2.0)
