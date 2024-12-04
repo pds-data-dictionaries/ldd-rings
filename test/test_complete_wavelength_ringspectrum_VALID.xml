@@ -3,20 +3,20 @@
 <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
 <Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
-
-  <!-- This test is for the rings:Wavelength_Parameters class, containing the rings:wavelength, rings:minimum_wavelength, and rings:maximum_wavelength attributes-->
-
+    xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
+    
+    <!-- This test is for the rings:Wavelength_Parameters class, containing the rings:wavelength, rings:minimum_wavelength, and rings:maximum_wavelength attributes-->
+    
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
         <version_id>1.0</version_id>
         <title>Wavelength Parameter Class Test</title>
-        <information_model_version>1.14.0.0</information_model_version>
+        <information_model_version>1.22.0.0</information_model_version>
         <product_class>Product_Observational</product_class>
     </Identification_Area>
     <Observation_Area>
@@ -45,18 +45,13 @@
         </Target_Identification>
         <Discipline_Area>
             <rings:Ring_Moon_Systems>
-                <rings:Occultation_Time_Series>
-                    <rings:occultation_type>Stellar</rings:occultation_type>
-                    <rings:occultation_direction>Egress</rings:occultation_direction>
-                    <rings:time_series_direction>Both</rings:time_series_direction>
-                    <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
-                    <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
+                <rings:Ring_Spectrum>
                     <rings:Wavelength_Parameters>
                         <rings:wavelength unit="nm">2200.00000</rings:wavelength>
                         <rings:minimum_wavelength unit="nm">1903.00000</rings:minimum_wavelength>
                         <rings:maximum_wavelength unit="nm">2416.00000</rings:maximum_wavelength>
                     </rings:Wavelength_Parameters>
-                </rings:Occultation_Time_Series>
+                </rings:Ring_Spectrum>
             </rings:Ring_Moon_Systems>
         </Discipline_Area>
     </Observation_Area>
