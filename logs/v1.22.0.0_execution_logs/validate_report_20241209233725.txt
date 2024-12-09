@@ -2,21 +2,21 @@
 PDS Validate Tool Report
 
 Configuration:
-   Version     3.6.2
-   Date        2024-11-18T19:20:37Z
+   Version     3.6.3
+   Date        2024-12-09T23:37:26Z
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_no_maximum_wavelength_FAIL.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/20fcc885628d6f013d4bc36fe3a4b518b722084b/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/20fcc885628d6f013d4bc36fe3a4b518b722084b/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
    Data Content Validation        off
    Product Level Validation       on
    Max Errors                     100000
-   Registered Contexts File       /tmp/validate-3.6.2/resources/registered_context_products.json
+   Registered Contexts File       /tmp/validate-3.6.3/resources/registered_context_products.json
 
 
 Fatal error: [node=null,object=null,url=file:/home/runner/work/ldd-rings/ldd-rings/test/test_no_maximum_wavelength_FAIL.xml,line=9,col=57,offset=-1]: The prefix "Xmlns" for attribute "Xmlns:rings" associated with an element type "Product_Observational" is not bound.
@@ -55,5 +55,5 @@ Summary:
     1            error.validation.missing_required_file
 
 End of Report
-Completed execution in 3967 ms
+Completed execution in 4052 ms
 
