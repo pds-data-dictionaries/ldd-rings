@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.6.3
-   Date        2024-12-09T23:32:15Z
+   Date        2024-12-09T23:38:08Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringprofile_VALID.xml]
+   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_simple_wavelength_ringprofile_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/a8ddc2cc6d42e5fb8a3385f88014c5c2a2aeaf37/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/a8ddc2cc6d42e5fb8a3385f88014c5c2a2aeaf37/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/5e7c0e20e8e2c26f941fe14c5dcbae94120d6c1c/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/5e7c0e20e8e2c26f941fe14c5dcbae94120d6c1c/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,9 +22,11 @@ Parameters:
 
 Product Level Validation Results
 
-  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringprofile_VALID.xml
+  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/test/test_simple_wavelength_ringprofile_VALID.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
-      ERROR  [error.label.schema]   line 61, 62: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://pds.nasa.gov/pds4/rings/v1":minimum_ring_longitude}'. One of '{"http://pds.nasa.gov/pds4/rings/v1":minimum_observed_ring_azimuth}' is expected.
+      ERROR  [error.label.schema]   line 59, 62: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://pds.nasa.gov/pds4/rings/v1":minimum_ring_longitude}'. One of '{"http://pds.nasa.gov/pds4/rings/v1":minimum_observed_ring_azimuth}' is expected.
+      ERROR  [error.label.schematron]   line 48, 49: You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.
+      ERROR  [error.label.schematron]   line 51, 51: The attribute rings:Occultation_Ring_Profile/rings:ring_profile_direction must be equal to one of the following values 'Egress', 'Ingress', 'Multiple'.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
       WARNING  [warning.label.context_ref_mismatch]   line 31: Context reference name mismatch. Value: 'None' Expected one of: '[No Specific Investigation]'
         1 product validation(s) completed
@@ -32,7 +34,7 @@ Product Level Validation Results
 Summary:
 
   1 product(s)
-  1 error(s)
+  3 error(s)
   3 warning(s)
 
   Product Validation Summary:
@@ -49,10 +51,11 @@ Summary:
 
   Message Types:
     1            error.label.schema
+    2            error.label.schematron
     1            warning.label.context_ref_mismatch
     1            warning.label.missing_schematron_spec
     1            warning.label.schema
 
 End of Report
-Completed execution in 5424 ms
+Completed execution in 5314 ms
 
