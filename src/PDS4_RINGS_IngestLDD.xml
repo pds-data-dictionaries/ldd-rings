@@ -5731,7 +5731,26 @@
             
 
 <!-- Schematron Rules -->
-
+<DD_Rule>
+    <local_identifier>Wavelength_Parameters</local_identifier>
+    <rule_context>//rings:Wavelength_Parameters</rule_context>
+    <DD_Rule_Statement>
+        <rule_type>Assert</rule_type>
+        <rule_test>if (not (rings:wavelength) and not (rings:minimum_wavelength)) then false() else true()</rule_test>
+        <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
+            or as a range using the minimum-maximum wavelength pair.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+        <rule_type>Assert</rule_type>
+        <rule_test>if ((rings:minimum_wavelength) and not (rings:maximum_wavelength))  then false() else true()</rule_test>
+        <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
+    </DD_Rule_Statement>
+    <DD_Rule_Statement>
+        <rule_type>Assert</rule_type>
+        <rule_test>if ((rings:maximum_wavelength) and not (rings:minimum_wavelength))  then false() else true()</rule_test>
+        <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
+    </DD_Rule_Statement>
+    </DD_Rule>
     <DD_Rule>
         <local_identifier>Occultation_Ring_Profile_1</local_identifier>
         <rule_context>//rings:Occultation_Ring_Profile</rule_context>
@@ -5749,22 +5768,6 @@
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()</rule_test>
             <rule_message>If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement> <!--MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength"-->
-            <rule_type>Assert</rule_type>
-            <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
-            <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
-            	or as a range using the minimum-maximum wavelength pair.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:minimum_wavelength) and not (rings:Wavelength_Parameters/rings:maximum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
@@ -5945,22 +5948,6 @@
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()</rule_test>
             <rule_message>If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement> <!-- MJTM: same point as Occultation_Ring_Profile_1, about XPaths -->
-            <rule_type>Assert</rule_type>
-            <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
-            <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
-            	or as a range using the minimum-maximum wavelength pair.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:minimum_wavelength) and not (rings:Wavelength_Parameters/rings:maximum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
@@ -6203,25 +6190,9 @@
             <rule_message>rings:sampling_base is only used when the value of rings:sampling_scale is either logarithmic, or exponential.</rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
-    <DD_Rule> <!--MJTM: Add new rule for Ring_Spectrum class, which contains Wavelength_Parameters -->
+    <DD_Rule>
         <local_identifier>Ring_Spectrum_1</local_identifier>
         <rule_context>//rings:Ring_Spectrum</rule_context>
-        <DD_Rule_Statement> <!--MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength" -->
-            <rule_type>Assert</rule_type>
-            <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
-            <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
-            	or as a range using the minimum-maximum wavelength pair.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:minimum_wavelength) and not (rings:Wavelength_Parameters/rings:maximum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>
     </DD_Rule>
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 </Ingest_LDD>
