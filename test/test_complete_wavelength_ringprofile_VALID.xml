@@ -47,8 +47,8 @@
             <rings:Ring_Moon_Systems>
                 <rings:Occultation_Ring_Profile>
                     <rings:occultation_type>Stellar</rings:occultation_type>
-                    <rings:star_name>Sun</rings:star_name>
                     <rings:occultation_direction>Egress</rings:occultation_direction>
+                    <rings:star_name>Sun</rings:star_name>
                     <rings:ring_profile_direction>Multiple</rings:ring_profile_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
                     <rings:data_quality_score>Fair</rings:data_quality_score>
