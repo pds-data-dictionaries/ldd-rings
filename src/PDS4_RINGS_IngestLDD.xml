@@ -5732,7 +5732,7 @@
 
 <!-- Schematron Rules -->
 <DD_Rule>
-    <local_identifier>Wavelength_Parameters</local_identifier>
+    <local_identifier>Wavelength_Parameters_1</local_identifier>
     <rule_context>//rings:Wavelength_Parameters</rule_context>
     <DD_Rule_Statement>
         <rule_type>Assert</rule_type>
