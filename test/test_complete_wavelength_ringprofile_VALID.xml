@@ -47,11 +47,13 @@
             <rings:Ring_Moon_Systems>
                 <rings:Occultation_Ring_Profile>
                     <rings:occultation_type>Stellar</rings:occultation_type>
+                    <rings:star_name>Sun</rings:star_name>
                     <rings:occultation_direction>Egress</rings:occultation_direction>
-                    <rings:ring_profile_direction>Both</rings:ring_profile_direction>
+                    <rings:ring_profile_direction>Multiple</rings:ring_profile_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
                     <rings:data_quality_score>Fair</rings:data_quality_score>
                     <rings:radial_resolution unit="mm">10</rings:radial_resolution>
+                    <rings:radial_sampling_interval unit="km">10.0</rings:radial_sampling_interval>
                     <rings:minimum_ring_radius unit="mm">50</rings:minimum_ring_radius>
                     <rings:maximum_ring_radius unit="mm">50</rings:maximum_ring_radius>
                     <rings:minimum_inertial_ring_longitude unit="deg">5</rings:minimum_inertial_ring_longitude>

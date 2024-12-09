@@ -5787,12 +5787,12 @@
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:sclk_start_time) and not (rings:sclk_stop_time))  then false() else true()</rule_test>
-            <rule_message>rings:sclk_stop_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</rule_message>
+            <rule_message>rings:sclk_start_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
+            <rule_type>Assert</rule_type> <!--ES: rule_test was previously testing rings:sclk_start_time and rings:sclk_stop_time-->
             <rule_test>if ((rings:sclk_stop_time) and not (rings:sclk_start_time))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_subsolar_azimuth and rings:maximum_subsolar_azimuth, are a pair; if you use one, you must use both.</rule_message>
+            <rule_message>rings:sclk_stop_time and rings:sclk_start_time, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
@@ -5957,7 +5957,7 @@
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:sclk_stop_time) and not (rings:sclk_start_time))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_subsolar_azimuth and rings:maximum_subsolar_azimuth, are a pair; if you use one, you must use both.</rule_message>
+            <rule_message>rings:sclk_stop_time and rings:sclk_start_time, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
