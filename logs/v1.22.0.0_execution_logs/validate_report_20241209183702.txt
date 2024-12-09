@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.6.3
-   Date        2024-12-09T18:22:26Z
+   Date        2024-12-09T18:37:03Z
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_ringspectrum_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/c82f074d6d52dac446abf7b41e7c8b85cffd2b0a/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/c82f074d6d52dac446abf7b41e7c8b85cffd2b0a/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/5e2d3f155af6d85940112cfade0ffb0aa0790e99/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/5e2d3f155af6d85940112cfade0ffb0aa0790e99/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -52,5 +52,5 @@ Summary:
     1            warning.label.schema
 
 End of Report
-Completed execution in 5418 ms
+Completed execution in 5506 ms
 
