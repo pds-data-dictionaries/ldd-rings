@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.6.3
-   Date        2024-12-09T19:23:06Z
+   Date        2024-12-09T19:32:14Z
 
 Parameters:
    Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringprofile_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/b627fe9cb5d59a6bcf9222ee15f533d290ff026d/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/b627fe9cb5d59a6bcf9222ee15f533d290ff026d/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/383e8b3ee562282db5662c937e7a5251125369b9/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/383e8b3ee562282db5662c937e7a5251125369b9/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -24,7 +24,7 @@ Product Level Validation Results
 
   FAIL: file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringprofile_VALID.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
-      ERROR  [error.label.schema]   line 51, 38: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://pds.nasa.gov/pds4/rings/v1":star_name}'. One of '{"http://pds.nasa.gov/pds4/rings/v1":ring_profile_direction}' is expected.
+      ERROR  [error.label.schema]   line 61, 62: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://pds.nasa.gov/pds4/rings/v1":minimum_ring_longitude}'. One of '{"http://pds.nasa.gov/pds4/rings/v1":minimum_observed_ring_azimuth}' is expected.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
       WARNING  [warning.label.context_ref_mismatch]   line 31: Context reference name mismatch. Value: 'None' Expected one of: '[No Specific Investigation]'
         1 product validation(s) completed
@@ -54,5 +54,5 @@ Summary:
     1            warning.label.schema
 
 End of Report
-Completed execution in 5424 ms
+Completed execution in 5370 ms
 
