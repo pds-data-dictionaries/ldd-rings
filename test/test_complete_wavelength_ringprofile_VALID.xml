@@ -51,7 +51,7 @@
                     <rings:ring_profile_direction>Multiple</rings:ring_profile_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
                     <rings:data_quality_score>Fair</rings:data_quality_score>
-                    <rings:star_name>Sun</rings:star_name>
+                    <rings:star_name>sigma Sgr</rings:star_name>
                     <rings:radial_resolution unit="mm">10</rings:radial_resolution>
                     <rings:radial_sampling_interval unit="km">10.0</rings:radial_sampling_interval>
                     <rings:minimum_ring_radius unit="mm">50</rings:minimum_ring_radius>
