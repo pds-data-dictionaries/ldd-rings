@@ -9,8 +9,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
-
-  <!-- This test is for the rings:Wavelength_Parameters class, and will fail due to the presence of a rings:minimum_wavelength attribute without the rings:maximum_wavelength attribute. -->
+  
+  <!-- This test is for the rings:Wavelength_Parameters class, containing just the rings:wavelength attribute-->
 
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
@@ -25,7 +25,7 @@
             <stop_date_time>2022-01-01T00:00:00Z</stop_date_time>
         </Time_Coordinates>
         <Investigation_Area>
-            <name>No Specific Investigation</name>
+            <name>None</name>
             <type>Individual Investigation</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
@@ -45,17 +45,11 @@
         </Target_Identification>
         <Discipline_Area>
             <rings:Ring_Moon_Systems>
-                <rings:Occultation_Time_Series>
-                    <rings:occultation_type>Stellar</rings:occultation_type>
-                    <rings:occultation_direction>Egress</rings:occultation_direction>
-                    <rings:time_series_direction>Both</rings:time_series_direction>
-                    <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
-                    <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
-                    <rings:Wavelength_Parameters> <!-- Test fails due to minimum_wavelength not paired with maximum_wavelength-->
+                <rings:Ring_Spectrum>
+                    <rings:Wavelength_Parameters>
                         <rings:wavelength unit="nm">2200.00000</rings:wavelength>
-                        <rings:minimum_wavelength unit="nm">1903.00000</rings:minimum_wavelength>
                     </rings:Wavelength_Parameters>
-                </rings:Occultation_Time_Series>
+                </rings:Ring_Spectrum>
             </rings:Ring_Moon_Systems>
         </Discipline_Area>
     </Observation_Area>
