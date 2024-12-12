@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://pds.nasa.gov/pds4/rings/v1/PDS4_RINGS_1N00_1D00.sch"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
-    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd
-    http://pds.nasa.gov/pds4/rings/v1 https://pds.nasa.gov/pds4/rings/v1/PDS4_RINGS_1N00_1D00.xsd">
+<!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+  xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
   <!-- This test is for the rings:Wavelength_Parameters class, containing just the rings:wavelength attribute-->
 
