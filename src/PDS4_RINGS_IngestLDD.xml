@@ -3943,7 +3943,7 @@
     <DD_Class>
         <name>Reprojection_Grid_Parameters</name>
         <version_id>1.0</version_id>
-        <local_identifier>Wavelength_Parameters</local_identifier>
+        <local_identifier>Reprojection_Grid_Parameters</local_identifier>
         <submitter_name>M.S. Tiscareno</submitter_name>
         <definition>This class contains reprojection grid resolution parameters
         </definition>
