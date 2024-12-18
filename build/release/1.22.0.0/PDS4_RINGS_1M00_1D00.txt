@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Dec 18 19:07:10 UTC 2024
+   Time                   Wed Dec 18 19:57:23 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -454,7 +454,7 @@ Parsed Input - Attributes:
    name                   minimum_inertial_ring_longitude
    version                1.22
    value data type        ASCII_Real
-   description            minimum_inertial_ring_longitude specifes one boundary for the ring longitude range in the data; normally the smallest value. However, for ranges that cross the prime meridian, the minimum ring longitude will have a value greater than the maximum ring longitude. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
+   description            minimum_inertial_ring_longitude specifies one boundary for the ring longitude range in the data; normally the smallest value. However, for ranges that cross the prime meridian, the minimum ring longitude will have a value greater than the maximum ring longitude. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -478,7 +478,7 @@ Parsed Input - Attributes:
    name                   minimum_ring_longitude_observed_minus_subsolar
    version                1.22
    value data type        ASCII_Real
-   description            minimum_ring_longitude_observed_minus_subsolar specifes smallest separation in ring longitude between the observation and the sub-solar point. Required in label files for ring occultation data. 
+   description            minimum_ring_longitude_observed_minus_subsolar specifies smallest separation in ring longitude between the observation and the sub-solar point. Required in label files for ring occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -486,7 +486,7 @@ Parsed Input - Attributes:
    name                   maximum_ring_longitude_observed_minus_subsolar
    version                1.22
    value data type        ASCII_Real
-   description            maximum_ring_longitude_observed_minus_sub-solar specifes smallest separation in ring longitude between the observation and the subsolar point. 
+   description            maximum_ring_longitude_observed_minus_sub-solar specifies smallest separation in ring longitude between the observation and the subsolar point. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -502,7 +502,7 @@ Parsed Input - Attributes:
    name                   minimum_observed_ring_elevation
    version                1.22
    value data type        ASCII_Real
-   description            minimum_observed_ring_elevation specifes the smallest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
+   description            minimum_observed_ring_elevation specifies the smallest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          -90
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -510,7 +510,7 @@ Parsed Input - Attributes:
    name                   maximum_observed_ring_elevation
    version                1.22
    value data type        ASCII_Real
-   description            maximum_observed_ring_elevation specifes the largest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
+   description            maximum_observed_ring_elevation specifies the largest value for observed_ring_elevation in the data file. Only used if the value is not constant over the observation. Values range from -90 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          -90
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -518,7 +518,7 @@ Parsed Input - Attributes:
    name                   mean_observed_ring_elevation
    version                1.22
    value data type        ASCII_Real
-   description            mean_observed_ring_elevation specifes the mean value for observed_ring_elevation in the data file. 
+   description            mean_observed_ring_elevation specifies the mean value for observed_ring_elevation in the data file. 
    minimum value          -90
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -526,7 +526,7 @@ Parsed Input - Attributes:
    name                   emission_angle
    version                1.22
    value data type        ASCII_Real
-   description            The emission_angle element provides the value of the angle between the surface normal vector at the intercept point and a vector from the intercept point to the spacecraft. Higher values of emission_angle indicate more oblique viewing of the target. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for ring data. 
+   description            The emission_angle element provides the value of the angle between the surface normal vector at the intercept point and a vector from the intercept point to the spacecraft. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body. Thus, higher values of emission_angle indicate more oblique viewing of the target. For ring data, values in the range of 90 to 180 degrees indicate viewing on the unlit side from oblique or edge-on at 90 degrees to the unlit nadir at 180 degrees. 
    minimum value          0
    maximum value          180
    unit of measure type   Units_of_Angle
@@ -574,7 +574,7 @@ Parsed Input - Attributes:
    name                   light_source_incidence_angle
    version                1.22
    value data type        ASCII_Real
-   description            light_source_incidence_angle is an angle measured from the local surface normal vector to the direction of a photon arriving from the light source. For rings, the normal vector is that on the same side of the rings as the light source, so values always range between 0 and 90 in units of degrees. The value is always equal to 90 - | observed_ring_elevation | This will enable users to perform database searches based on the effective ring opening angle when they are not concerned about the distinction between north-side and southside viewpoints. We have included the 'light source' prefix to the term so that this quantity is not confused with 'incidence angle', a term that is generally associated with sunlight rather than stars or radio transmitters. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label. Optional as a field in the data table. 
+   description            light_source_incidence_angle is an angle measured from the local surface normal vector to the direction of a photon arriving from the light source. For rings, the normal vector is that on the same side of the rings as the light source, so values always range between 0 and 90 in units of degrees. For ring occultations, this value is always equal to 90 - | observed_ring_elevation | This will enable users to perform database searches based on the effective ring opening angle when they are not concerned about the distinction between north-side and southside viewpoints. We have included the 'light source' prefix to the term so that this quantity is not confused with 'incidence angle', a term that is generally associated with sunlight rather than stars or radio transmitters. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label. Optional as a field in the data table. 
    minimum value          -90
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -582,7 +582,7 @@ Parsed Input - Attributes:
    name                   minimum_light_source_incidence_angle
    version                1.22
    value data type        ASCII_Real
-   description            minimum_light_source_incidence_angle specifes the smallest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
+   description            minimum_light_source_incidence_angle specifies the smallest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          0
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -590,7 +590,7 @@ Parsed Input - Attributes:
    name                   maximum_light_source_incidence_angle
    version                1.22
    value data type        ASCII_Real
-   description            maximum_light_source_incidence_angle specifes the largest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
+   description            maximum_light_source_incidence_angle specifies the largest value for light_source_incidence_angle in the observation. Only used if the value is not constant over the observation. Values range from 0 to +90 in units of degrees. Not intended for use in the data file. 
    minimum value          0
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -638,7 +638,7 @@ Parsed Input - Attributes:
    name                   minimum_observed_ring_azimuth
    version                1.22
    value data type        ASCII_Real
-   description            minimum_observed_ring_azimuth specifes the smallest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
+   description            minimum_observed_ring_azimuth specifies the smallest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -646,7 +646,7 @@ Parsed Input - Attributes:
    name                   maximum_observed_ring_azimuth
    version                1.22
    value data type        ASCII_Real
-   description            maximum_observed_ring_azimuth specifes the largest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
+   description            maximum_observed_ring_azimuth specifies the largest value for observed_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Required in label files for ring occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -662,7 +662,7 @@ Parsed Input - Attributes:
    name                   minimum_sub_stellar_ring_azimuth
    version                1.0
    value data type        ASCII_Real
-   description            minimum_sub_stellar_ring_azimuth specifes the smallest value for sub_stellar_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini UVIS occultation data; not used for other occultation data. 
+   description            minimum_sub_stellar_ring_azimuth specifies the smallest value for sub_stellar_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini UVIS occultation data; not used for other occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -670,7 +670,7 @@ Parsed Input - Attributes:
    name                   maximum_sub_stellar_ring_azimuth
    version                1.0
    value data type        ASCII_Real
-   description            maximum_sub_stellar_ring_azimuth specifes the largest value for sub_stellar_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini UVIS occultation data; not used for other occultation data. 
+   description            maximum_sub_stellar_ring_azimuth specifies the largest value for sub_stellar_ring_azimuth in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini UVIS occultation data; not used for other occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -686,7 +686,7 @@ Parsed Input - Attributes:
    name                   minimum_sub_stellar_clock_angle
    version                1.0
    value data type        ASCII_Real
-   description            minimum_sub_stellar_clock_angle specifes the smallest value for sub_stellar_clock_angle in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini VIMS occultation data; not used for other occultation data. 
+   description            minimum_sub_stellar_clock_angle specifies the smallest value for sub_stellar_clock_angle in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini VIMS occultation data; not used for other occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -694,7 +694,7 @@ Parsed Input - Attributes:
    name                   maximum_sub_stellar_clock_angle
    version                1.0
    value data type        ASCII_Real
-   description            maximum_sub_stellar_clock_angle specifes the largest value for sub_stellar_clock_angle in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini VIMS occultation data; not used for other occultation data. 
+   description            maximum_sub_stellar_clock_angle specifies the largest value for sub_stellar_clock_angle in the data file. Values range from 0 to 360 in units of degrees. Optional label attribute for Cassini VIMS occultation data; not used for other occultation data. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -1020,7 +1020,7 @@ Parsed Input - Attributes:
    name                   corotating_flag
    version                1.22
    value data type        ASCII_Short_String_Collapsed
-   description            The corotating_flag is a yes-or-no flag that indicates whether or not a corotating frame is used. a table field. 
+   description            The corotating_flag is a yes-or-no flag that indicates whether or not a corotating frame is used. 
    minimum characters     1
    maximum characters     1
 

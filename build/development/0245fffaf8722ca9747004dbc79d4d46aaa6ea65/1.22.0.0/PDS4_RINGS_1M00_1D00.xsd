@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 19:07:10 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 19:57:23 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -741,8 +741,8 @@
   <xs:simpleType name="corotating_flag">
     <xs:annotation>
       <xs:documentation>The corotating_flag is a yes-or-no flag that
-        indicates whether or not a corotating frame is used. a table
-        field. </xs:documentation>
+        indicates whether or not a corotating frame is used.
+        </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -892,12 +892,14 @@
       <xs:documentation>The emission_angle element provides the value of
         the angle between the surface normal vector at the intercept
         point and a vector from the intercept point to the spacecraft.
-        Higher values of emission_angle indicate more oblique viewing of
-        the target. The emission_angle varies from 0 degrees when the
-        spacecraft is viewing the subspacecraft point (nadir viewing) to
-        90 degrees when the intercept is tangent to the surface of the
-        target body, values in the range of 90 to 180 degrees are
-        possible for ring data. </xs:documentation>
+        The emission_angle varies from 0 degrees when the spacecraft is
+        viewing the subspacecraft point (nadir viewing) to 90 degrees
+        when the intercept is tangent to the surface of the target body.
+        Thus, higher values of emission_angle indicate more oblique
+        viewing of the target. For ring data, values in the range of 90
+        to 180 degrees indicate viewing on the unlit side from oblique
+        or edge-on at 90 degrees to the unlit nadir at 180 degrees.
+        </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:emission_angle_WO_Units">
@@ -1305,8 +1307,8 @@
         of a photon arriving from the light source. For rings, the
         normal vector is that on the same side of the rings as the light
         source, so values always range between 0 and 90 in units of
-        degrees. The value is always equal to 90 - |
-        observed_ring_elevation | This will enable users to perform
+        degrees. For ring occultations, this value is always equal to 90
+        - | observed_ring_elevation | This will enable users to perform
         database searches based on the effective ring opening angle when
         they are not concerned about the distinction between north-side
         and southside viewpoints. We have included the 'light source'
@@ -1453,7 +1455,7 @@
 
   <xs:complexType name="maximum_light_source_incidence_angle">
     <xs:annotation>
-      <xs:documentation>maximum_light_source_incidence_angle specifes
+      <xs:documentation>maximum_light_source_incidence_angle specifies
         the largest value for light_source_incidence_angle in the
         observation. Only used if the value is not constant over the
         observation. Values range from 0 to +90 in units of degrees. Not
@@ -1499,7 +1501,7 @@
 
   <xs:complexType name="maximum_observed_ring_azimuth">
     <xs:annotation>
-      <xs:documentation>maximum_observed_ring_azimuth specifes the
+      <xs:documentation>maximum_observed_ring_azimuth specifies the
         largest value for observed_ring_azimuth in the data file. Values
         range from 0 to 360 in units of degrees. Required in label files
         for ring occultation data. </xs:documentation>
@@ -1520,7 +1522,7 @@
 
   <xs:complexType name="maximum_observed_ring_elevation">
     <xs:annotation>
-      <xs:documentation>maximum_observed_ring_elevation specifes the
+      <xs:documentation>maximum_observed_ring_elevation specifies the
         largest value for observed_ring_elevation in the data file. Only
         used if the value is not constant over the observation. Values
         range from -90 to +90 in units of degrees. Not intended for use
@@ -1663,7 +1665,7 @@
   <xs:complexType name="maximum_ring_longitude_observed_minus_subsolar">
     <xs:annotation>
       <xs:documentation>maximum_ring_longitude_observed_minus_sub-solar
-        specifes smallest separation in ring longitude between the
+        specifies smallest separation in ring longitude between the
         observation and the subsolar point. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -1724,7 +1726,7 @@
 
   <xs:complexType name="mean_observed_ring_elevation">
     <xs:annotation>
-      <xs:documentation>mean_observed_ring_elevation specifes the mean
+      <xs:documentation>mean_observed_ring_elevation specifies the mean
         value for observed_ring_elevation in the data file.
         </xs:documentation>
     </xs:annotation>
@@ -1828,7 +1830,7 @@
 
   <xs:complexType name="minimum_inertial_ring_longitude">
     <xs:annotation>
-      <xs:documentation>minimum_inertial_ring_longitude specifes one
+      <xs:documentation>minimum_inertial_ring_longitude specifies one
         boundary for the ring longitude range in the data; normally the
         smallest value. However, for ranges that cross the prime
         meridian, the minimum ring longitude will have a value greater
@@ -1852,7 +1854,7 @@
 
   <xs:complexType name="minimum_light_source_incidence_angle">
     <xs:annotation>
-      <xs:documentation>minimum_light_source_incidence_angle specifes
+      <xs:documentation>minimum_light_source_incidence_angle specifies
         the smallest value for light_source_incidence_angle in the
         observation. Only used if the value is not constant over the
         observation. Values range from 0 to +90 in units of degrees. Not
@@ -1898,7 +1900,7 @@
 
   <xs:complexType name="minimum_observed_ring_azimuth">
     <xs:annotation>
-      <xs:documentation>minimum_observed_ring_azimuth specifes the
+      <xs:documentation>minimum_observed_ring_azimuth specifies the
         smallest value for observed_ring_azimuth in the data file.
         Values range from 0 to 360 in units of degrees. Required in
         label files for ring occultation data. </xs:documentation>
@@ -1919,7 +1921,7 @@
 
   <xs:complexType name="minimum_observed_ring_elevation">
     <xs:annotation>
-      <xs:documentation>minimum_observed_ring_elevation specifes the
+      <xs:documentation>minimum_observed_ring_elevation specifies the
         smallest value for observed_ring_elevation in the data file.
         Only used if the value is not constant over the observation.
         Values range from -90 to +90 in units of degrees. Not intended
@@ -2062,7 +2064,7 @@
   <xs:complexType name="minimum_ring_longitude_observed_minus_subsolar">
     <xs:annotation>
       <xs:documentation>minimum_ring_longitude_observed_minus_subsolar
-        specifes smallest separation in ring longitude between the
+        specifies smallest separation in ring longitude between the
         observation and the sub-solar point. Required in label files for
         ring occultation data. </xs:documentation>
     </xs:annotation>
