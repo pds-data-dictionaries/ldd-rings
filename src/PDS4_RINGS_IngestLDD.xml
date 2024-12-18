@@ -3539,6 +3539,109 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
+    <DD_Attribute>
+        <name>reprojection_grid_radial_resolution_mean</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_radial_resolution_mean</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_radial_resolution_mean indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>reprojection_grid_radial_resolution_min</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_radial_resolution_min</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_radial_resolution_min indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>reprojection_grid_radial_resolution_max</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_radial_resolution_max</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_radial_resolution_max indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>reprojection_grid_angular_resolution_mean</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_angular_resolution_mean</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_angular_resolution_mean indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>reprojection_grid_angular_resolution_min</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_angular_resolution_min</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_angular_resolution_min indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>reprojection_grid_angular_resolution_max</name>
+        <version_id>1.0</version_id>
+        <local_identifier>reprojection_grid_angular_resolution_max</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Tiscareno</submitter_name>
+        <definition>reprojection_grid_angular_resolution_max indicates <!--MORE NEEDED HERE-->
+            Required in labels.
+            Not intended to be used as a table field.
+        </definition>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+
 
 
 <!-- @@@ The following classes are modified versions of classes borrowed from the geom namespace
@@ -3830,6 +3933,60 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_wavelength</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+    </DD_Class>
+
+
+    <DD_Class>
+        <name>Reprojection_Grid_Parameters</name>
+        <version_id>1.0</version_id>
+        <local_identifier>Wavelength_Parameters</local_identifier>
+        <submitter_name>M.S. Tiscareno</submitter_name>
+        <definition>This class contains reprojection grid resolution parameters
+        </definition>
+        <abstract_flag>false</abstract_flag>        
+        <element_flag>false</element_flag>
+        <DD_Association>
+            <identifier_reference>pds.local_identifier</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_radial_resolution_mean</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_radial_resolution_min</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_radial_resolution_max</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_angular_resolution_mean</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_angular_resolution_min</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>reprojection_grid_angular_resolution_max</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5263,6 +5420,12 @@
             <identifier_reference>maximum_ring_radius</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>Reprojection_Grid_Parameters</identifier_reference>
+            <reference_type>component_of</reference_type>
+            <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
     </DD_Class>
