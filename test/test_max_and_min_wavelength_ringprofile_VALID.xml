@@ -10,7 +10,7 @@
 
   <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
-  <!-- This test is for the rings:Wavelength_Parameters class, and will fail due to the presence of a rings:maximum_wavelength attribute without the rings:minimum_wavelength attribute. -->
+  <!-- This test is for the rings:Wavelength_Parameters class, containing the rings:minimum_wavelength and rings:maximum_wavelength attributes-->
 
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
@@ -25,7 +25,7 @@
             <stop_date_time>2022-01-01T00:00:00Z</stop_date_time>
         </Time_Coordinates>
         <Investigation_Area>
-            <name>No Specific Investigation</name>
+            <name>None</name>
             <type>Individual Investigation</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
@@ -63,7 +63,7 @@
                     <rings:maximum_observed_ring_azimuth unit="deg">4</rings:maximum_observed_ring_azimuth>
                     <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
                     <rings:Wavelength_Parameters>
-                        <rings:wavelength unit="nm">2200.00000</rings:wavelength>
+                        <rings:minimum_wavelength unit="nm">1903.00000</rings:minimum_wavelength>
                         <rings:maximum_wavelength unit="nm">2416.00000</rings:maximum_wavelength>
                     </rings:Wavelength_Parameters>
                 </rings:Occultation_Ring_Profile>

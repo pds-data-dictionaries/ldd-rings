@@ -3,15 +3,15 @@
 <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
 <Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
-
-  <!-- This test is for the rings:Wavelength_Parameters class, and will fail due to the presence of a rings:maximum_wavelength attribute without the rings:minimum_wavelength attribute. -->
-
+    xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
+    
+    <!-- This test is for the rings:Wavelength_Parameters class, and will fail due to the class having no content. -->
+    
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
         <version_id>1.0</version_id>
@@ -63,8 +63,6 @@
                     <rings:maximum_observed_ring_azimuth unit="deg">4</rings:maximum_observed_ring_azimuth>
                     <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
                     <rings:Wavelength_Parameters>
-                        <rings:wavelength unit="nm">2200.00000</rings:wavelength>
-                        <rings:maximum_wavelength unit="nm">2416.00000</rings:maximum_wavelength>
                     </rings:Wavelength_Parameters>
                 </rings:Occultation_Ring_Profile>
             </rings:Ring_Moon_Systems>
