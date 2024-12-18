@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 18:36:07 UTC 2024 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 19:07:10 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -1153,6 +1153,48 @@
       <sch:assert test=". = ('A', 'B', 'C', 'D', 'E', 'Equator', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six')">
         <title>rings:Reprojection_Geometry/rings:reprojection_plane/rings:reprojection_plane</title>
         The attribute rings:Reprojection_Geometry/rings:reprojection_plane must be equal to one of the following values 'A', 'B', 'C', 'D', 'E', 'Equator', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_max">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_max/rings:reprojection_grid_angular_resolution_max</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_mean">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_mean/rings:reprojection_grid_angular_resolution_mean</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_min">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_angular_resolution_min/rings:reprojection_grid_angular_resolution_min</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_max">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_max/rings:reprojection_grid_radial_resolution_max</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_mean">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_mean/rings:reprojection_grid_radial_resolution_mean</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_min">
+      <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
+        <title>rings:Reprojection_Grid_Parameters/rings:reprojection_grid_radial_resolution_min/rings:reprojection_grid_radial_resolution_min</title>
+        The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

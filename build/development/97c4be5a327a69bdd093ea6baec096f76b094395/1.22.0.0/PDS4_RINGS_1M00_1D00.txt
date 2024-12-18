@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Dec 18 18:36:07 UTC 2024
+   Time                   Wed Dec 18 19:07:10 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -28,9 +28,9 @@ Parameters:
    Merge with Master      false
 
 Summary:
-   Classes                22
-   Attributes             162
-   Associations           302
+   Classes                23
+   Attributes             168
+   Associations           310
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -1054,6 +1054,42 @@ Parsed Input - Attributes:
    maximum value          360
    unit of measure type   Units_of_Angle
 
+   name                   reprojection_grid_radial_resolution_mean
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_radial_resolution_mean indicates 
+   unit of measure type   Units_of_Length
+
+   name                   reprojection_grid_radial_resolution_min
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_radial_resolution_min indicates 
+   unit of measure type   Units_of_Length
+
+   name                   reprojection_grid_radial_resolution_max
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_radial_resolution_max indicates 
+   unit of measure type   Units_of_Length
+
+   name                   reprojection_grid_angular_resolution_mean
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_angular_resolution_mean indicates 
+   unit of measure type   Units_of_Length
+
+   name                   reprojection_grid_angular_resolution_min
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_angular_resolution_min indicates 
+   unit of measure type   Units_of_Length
+
+   name                   reprojection_grid_angular_resolution_max
+   version                1.22
+   value data type        ASCII_Real
+   description            reprojection_grid_angular_resolution_max indicates 
+   unit of measure type   Units_of_Length
+
 Parsed Input - Classes:
 
    name                   Body_Ident_Base
@@ -1263,6 +1299,49 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      rings:maximum_wavelength
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   Reprojection_Grid_Parameters
+   description            This class contains reprojection grid resolution parameters 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      pds.local_identifier
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_radial_resolution_mean
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_radial_resolution_min
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_radial_resolution_max
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_angular_resolution_mean
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_angular_resolution_min
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      rings:reprojection_grid_angular_resolution_max
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -2442,6 +2521,11 @@ Parsed Input - Classes:
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
+
+      local identifier      rings:Reprojection_Grid_Parameters
+      minimum occurrences   1
+      maximum occurrences   1
+      reference type        component_of
 
    name                   Ring_Reprojection
    description            This class provides the parameters used to describe ring reprojection geometry.

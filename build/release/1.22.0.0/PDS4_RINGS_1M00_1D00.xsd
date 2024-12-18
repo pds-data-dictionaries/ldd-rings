@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 18:36:07 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 19:07:10 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -399,11 +399,28 @@
       <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_radius" type="rings:minimum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="Reprojection_Grid_Parameters" type="rings:Reprojection_Grid_Parameters" minOccurs="1" maxOccurs="1"> </xs:element>
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="rings:reprojection_plane = ('A', 'B', 'C', 'D', 'E', 'Equator', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six')"/> -->
     <!-- <xs:assert test="rings:corotating_flag = ('N', 'Y')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="Reprojection_Grid_Parameters">
+    <xs:annotation>
+      <xs:documentation>This class contains reprojection grid resolution
+        parameters </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_radial_resolution_mean" type="rings:reprojection_grid_radial_resolution_mean" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_radial_resolution_min" type="rings:reprojection_grid_radial_resolution_min" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_radial_resolution_max" type="rings:reprojection_grid_radial_resolution_max" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_angular_resolution_mean" type="rings:reprojection_grid_angular_resolution_mean" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_angular_resolution_min" type="rings:reprojection_grid_angular_resolution_min" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="reprojection_grid_angular_resolution_max" type="rings:reprojection_grid_angular_resolution_max" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="Ring_Identification">
@@ -2783,6 +2800,120 @@
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="reprojection_grid_angular_resolution_max_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_angular_resolution_max">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_angular_resolution_max
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_angular_resolution_max_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="reprojection_grid_angular_resolution_mean_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_angular_resolution_mean">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_angular_resolution_mean
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_angular_resolution_mean_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="reprojection_grid_angular_resolution_min_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_angular_resolution_min">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_angular_resolution_min
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_angular_resolution_min_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="reprojection_grid_radial_resolution_max_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_radial_resolution_max">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_radial_resolution_max
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_radial_resolution_max_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="reprojection_grid_radial_resolution_mean_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_radial_resolution_mean">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_radial_resolution_mean
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_radial_resolution_mean_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="reprojection_grid_radial_resolution_min_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reprojection_grid_radial_resolution_min">
+    <xs:annotation>
+      <xs:documentation>reprojection_grid_radial_resolution_min
+        indicates </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:reprojection_grid_radial_resolution_min_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="reprojection_plane">
     <xs:annotation>
