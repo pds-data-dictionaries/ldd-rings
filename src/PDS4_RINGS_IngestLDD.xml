@@ -1682,7 +1682,7 @@
         <local_identifier>minimum_inertial_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_inertial_ring_longitude specifes one boundary for the ring longitude range in the data; normally the 
+        <definition>minimum_inertial_ring_longitude specifies one boundary for the ring longitude range in the data; normally the 
             smallest value. However, for ranges that cross the prime meridian, the minimum ring longitude will have a
             value greater than the maximum ring longitude. Values range from 0 to 360 in units of degrees.
             
@@ -1741,11 +1741,11 @@
     
     <DD_Attribute>
         <name>minimum_ring_longitude_observed_minus_subsolar</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>minimum_ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_ring_longitude_observed_minus_subsolar specifes smallest separation in ring 
+        <definition>minimum_ring_longitude_observed_minus_subsolar specifies smallest separation in ring 
         	longitude between the observation and the sub-solar point.
 
             Required in label files for ring occultation data.
@@ -1762,11 +1762,11 @@
     
     <DD_Attribute>
         <name>maximum_ring_longitude_observed_minus_subsolar</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>maximum_ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_ring_longitude_observed_minus_sub-solar specifes smallest separation in ring 
+        <definition>maximum_ring_longitude_observed_minus_sub-solar specifies smallest separation in ring 
         	longitude between the observation and the subsolar point.
         </definition>
         <DD_Value_Domain>
@@ -1815,7 +1815,7 @@
         <local_identifier>minimum_observed_ring_elevation</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_observed_ring_elevation specifes the smallest value for observed_ring_elevation in 
+        <definition>minimum_observed_ring_elevation specifies the smallest value for observed_ring_elevation in 
             the data file. Only used if the value is not constant over the observation. Values range from -90 
             to +90 in units of degrees.
 
@@ -1837,7 +1837,7 @@
         <local_identifier>maximum_observed_ring_elevation</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_observed_ring_elevation specifes the largest value for observed_ring_elevation in 
+        <definition>maximum_observed_ring_elevation specifies the largest value for observed_ring_elevation in 
             the data file. Only used if the value is not constant over the observation. Values range from -90 
             to +90 in units of degrees.
 
@@ -1859,7 +1859,7 @@
         <local_identifier>mean_observed_ring_elevation</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>mean_observed_ring_elevation specifes the mean value for observed_ring_elevation in 
+        <definition>mean_observed_ring_elevation specifies the mean value for observed_ring_elevation in 
             the data file. 
         </definition>
         <DD_Value_Domain>
@@ -1874,17 +1874,18 @@
 
     <DD_Attribute>
         <name>emission_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>emission_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The emission_angle element provides the value of the angle between the surface
             normal vector at the intercept point and a vector from the intercept point to the
-            spacecraft. Higher values of emission_angle indicate more oblique viewing of the target. 
-            The emission_angle varies from 0 degrees when the spacecraft is viewing the
+            spacecraft. The emission_angle varies from 0 degrees when the spacecraft is viewing the
             subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the
-            surface of the target body, values in the range of 90 to 180 degrees are possible for 
-            ring data.
+            surface of the target body. Thus, higher values of emission_angle indicate more oblique
+	    viewing of the target. For ring data, values in the range of 90 to 180 degrees indicate
+	    viewing on the unlit side from oblique or edge-on at 90 degrees to the unlit nadir at
+	    180 degrees.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1996,7 +1997,7 @@
     </DD_Attribute>
     <DD_Attribute>
         <name>light_source_incidence_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>light_source_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -2004,7 +2005,7 @@
             vector to the direction of a photon arriving from the light source. For rings, the normal vector
             is that on the same side of the rings as the light source, so values always range between 0
             and 90 in units of degrees.
-            The value is always equal to 90 - | observed_ring_elevation |
+            For ring occultations, this value is always equal to 90 - | observed_ring_elevation |
             This will enable users to perform database searches based on the effective ring opening
             angle when they are not concerned about the distinction between north-side and southside
             viewpoints.
@@ -2028,11 +2029,11 @@
     
     <DD_Attribute>
         <name>minimum_light_source_incidence_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_light_source_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_light_source_incidence_angle specifes the smallest value for light_source_incidence_angle in 
+        <definition>minimum_light_source_incidence_angle specifies the smallest value for light_source_incidence_angle in 
             the observation. Only used if the value is not constant over the observation. Values range from 0 
             to +90 in units of degrees.
 
@@ -2050,11 +2051,11 @@
     
     <DD_Attribute>
         <name>maximum_light_source_incidence_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_light_source_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_light_source_incidence_angle specifes the largest value for light_source_incidence_angle in 
+        <definition>maximum_light_source_incidence_angle specifies the largest value for light_source_incidence_angle in 
             the observation. Only used if the value is not constant over the observation. Values range from 0 
             to +90 in units of degrees.
 
@@ -2176,11 +2177,11 @@
     
     <DD_Attribute>
         <name>minimum_observed_ring_azimuth</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_observed_ring_azimuth</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_observed_ring_azimuth specifes the smallest value for observed_ring_azimuth in 
+        <definition>minimum_observed_ring_azimuth specifies the smallest value for observed_ring_azimuth in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Required in label files for ring occultation data.
@@ -2197,11 +2198,11 @@
     
     <DD_Attribute>
         <name>maximum_observed_ring_azimuth</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_observed_ring_azimuth</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_observed_ring_azimuth specifes the largest value for observed_ring_azimuth in 
+        <definition>maximum_observed_ring_azimuth specifies the largest value for observed_ring_azimuth in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Required in label files for ring occultation data.
@@ -2246,11 +2247,11 @@
     
     <DD_Attribute>
         <name>minimum_sub_stellar_ring_azimuth</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_sub_stellar_ring_azimuth</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_sub_stellar_ring_azimuth specifes the smallest value for sub_stellar_ring_azimuth in 
+        <definition>minimum_sub_stellar_ring_azimuth specifies the smallest value for sub_stellar_ring_azimuth in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Optional label attribute for Cassini UVIS occultation data; not used for other occultation 
@@ -2268,11 +2269,11 @@
     
     <DD_Attribute>
         <name>maximum_sub_stellar_ring_azimuth</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_sub_stellar_ring_azimuth</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_sub_stellar_ring_azimuth specifes the largest value for sub_stellar_ring_azimuth in 
+        <definition>maximum_sub_stellar_ring_azimuth specifies the largest value for sub_stellar_ring_azimuth in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Optional label attribute for Cassini UVIS occultation data; not used for other occultation 
@@ -2319,11 +2320,11 @@
     
     <DD_Attribute>
         <name>minimum_sub_stellar_clock_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_sub_stellar_clock_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_sub_stellar_clock_angle specifes the smallest value for sub_stellar_clock_angle in 
+        <definition>minimum_sub_stellar_clock_angle specifies the smallest value for sub_stellar_clock_angle in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Optional label attribute for Cassini VIMS occultation data; not used for other occultation 
@@ -2341,11 +2342,11 @@
     
     <DD_Attribute>
         <name>maximum_sub_stellar_clock_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_sub_stellar_clock_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_sub_stellar_clock_angle specifes the largest value for sub_stellar_clock_angle in 
+        <definition>maximum_sub_stellar_clock_angle specifies the largest value for sub_stellar_clock_angle in 
             the data file. Values range from 0 to 360 in units of degrees.
 
             Optional label attribute for Cassini VIMS occultation data; not used for other occultation 
@@ -3447,12 +3448,11 @@
 
     <DD_Attribute>
         <name>corotating_flag</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>corotating_flag</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>The corotating_flag is a yes-or-no flag that indicates whether or not a corotating frame is used.
-            a table field.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>

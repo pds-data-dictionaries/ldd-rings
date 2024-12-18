@@ -19,13 +19,10 @@
 - Namely `ring_longitude`, `minimum_ring_longitude`, and `maximum_ring_longitude`
 
 ### Issue #241: Reprojection grid attributes for ring coordinate system and Issue #301: Update Rings dictionary for R&A F ring mosaics project
-- STILL TO DO
-- MIA'S POINTS
-  - 1) INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
-  - 2) Attributes added and put into class, but STILL NEED DEFINITIONS AND UNIT TESTS, AND THIS WILL BE SUBJECT TO THE REORGANIZATION IN POINT #1 ABOVE
-  - 3) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
-  - 4) STRAIGHTFORWARD EDIT OF ATTRIBUTE DEFINITION
-  - 5) COMMENTARY
+- SOME THINGS STILL TO DO
+- We added the class `Reprojection_Grid_Parameters` containing new attributes `reprojection_grid_radial_resolution_mean`, `reprojection_grid_radial_resolution_min`, `reprojection_grid_radial_resolution_max`, `reprojection_grid_angular_resolution_mean`, `reprojection_grid_angular_resolution_min`, and `reprojection_grid_angular_resolution_max`.  WE STILL NEED DEFINITIONS AND UNIT TESTS, AND THIS WILL BE SUBJECT TO THE REORGANIZATION MENTIONED BELOW.
+- We made changes to the definitions of corotating_flag, emission_angle, and light_source_incidence_angle and corrected spelling errors in multiple attributes.
+- INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
 - ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
 - ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
