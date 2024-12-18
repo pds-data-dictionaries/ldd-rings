@@ -209,6 +209,8 @@
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_observed_ring_azimuth" type="rings:minimum_observed_ring_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_observed_ring_azimuth" type="rings:maximum_observed_ring_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="sub_stellar_ring_azimuth" type="rings:sub_stellar_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>

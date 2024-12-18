@@ -57,6 +57,8 @@
                     <rings:maximum_ring_radius unit="mm">50</rings:maximum_ring_radius>
                     <rings:minimum_inertial_ring_longitude unit="deg">5</rings:minimum_inertial_ring_longitude>
                     <rings:maximum_inertial_ring_longitude unit="deg">5</rings:maximum_inertial_ring_longitude>
+                    <rings:minimum_corotating_ring_longitude unit="deg">5</rings:minimum_corotating_ring_longitude>
+                    <rings:maximum_corotating_ring_longitude unit="deg">5</rings:maximum_corotating_ring_longitude>
                     <rings:minimum_observed_ring_azimuth unit="deg">2</rings:minimum_observed_ring_azimuth>
                     <rings:maximum_observed_ring_azimuth unit="deg">4</rings:maximum_observed_ring_azimuth>
                     <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
