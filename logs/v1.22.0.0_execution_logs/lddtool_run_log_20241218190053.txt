@@ -3,9 +3,11 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Dec 18 18:36:07 UTC 2024
+>>  INFO Date: Wed Dec 18 19:00:56 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.3/Data/
 
+>>> ERROR Class:0001_NASA_PDS_1.rings.Reprojection_Geometry  Association:rings:Reprojection_Grid_Parameters  Class:rings:Reprojection_Grid_Parameters - Missing Component Class
+>>> ERROR Association: rings:Reprojection_Grid_Parameters - Missing Component - Reference Type: component_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -119,7 +121,7 @@
 
  -- LDDTool Execution Summary --
      17 warning(s)
-     0 error(s)
+     2 error(s)
      0 fatal error(s)
 
 Input:
