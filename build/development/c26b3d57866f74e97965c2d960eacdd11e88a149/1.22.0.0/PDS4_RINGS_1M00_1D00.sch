@@ -108,12 +108,6 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
-        <title>//rings:Occultation_Ring_Profile/Rule</title>
-        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
-        <title>//rings:Occultation_Ring_Profile/Rule</title>
-        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
@@ -219,7 +213,7 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:minimum_inertial_ring_longitude) and not (rings:maximum_inertial_ring_longitude))  then false() else true()">
+      <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
