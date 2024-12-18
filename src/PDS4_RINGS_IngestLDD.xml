@@ -4122,13 +4122,13 @@
         <DD_Association>
             <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
+            <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
+            <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
@@ -5151,7 +5151,7 @@
 
     <DD_Class>
         <name>Reprojection_Geometry</name>  
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>Reprojection_Geometry</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
         <definition>This class provides the parameters describing reprojection geometry when the ring(s) is reprojected based on a fixed grid of coordinates (.g., radius vs. longitude).</definition>
@@ -5237,18 +5237,6 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_inertial_ring_longitude</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
