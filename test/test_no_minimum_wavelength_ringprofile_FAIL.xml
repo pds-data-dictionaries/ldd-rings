@@ -10,13 +10,13 @@
 
   <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
 
-  <!-- This test is for the rings:Wavelength_Parameters class, containing just the rings:wavelength attribute-->
+  <!-- This test is for the rings:Wavelength_Parameters class, and will fail due to the presence of a rings:maximum_wavelength attribute without the rings:minimum_wavelength attribute. -->
 
     <Identification_Area>
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
         <version_id>1.0</version_id>
         <title>Wavelength Parameter Class Test</title>
-        <information_model_version>1.22.0.0</information_model_version>
+        <information_model_version>1.14.0.0</information_model_version>
         <product_class>Product_Observational</product_class>
     </Identification_Area>
     <Observation_Area>
@@ -25,7 +25,7 @@
             <stop_date_time>2022-01-01T00:00:00Z</stop_date_time>
         </Time_Coordinates>
         <Investigation_Area>
-            <name>None</name>
+            <name>No Specific Investigation</name>
             <type>Individual Investigation</type>
             <Internal_Reference>
                 <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
@@ -48,11 +48,10 @@
                 <rings:Occultation_Ring_Profile>
                     <rings:occultation_type>Stellar</rings:occultation_type>
                     <rings:occultation_direction>Egress</rings:occultation_direction>
-                    <rings:ring_profile_direction>Multiple</rings:ring_profile_direction>
+                    <rings:ring_profile_direction>Both</rings:ring_profile_direction>
                     <rings:planetary_occultation_flag>Y</rings:planetary_occultation_flag>
                     <rings:data_quality_score>Fair</rings:data_quality_score>
                     <rings:radial_resolution unit="mm">10</rings:radial_resolution>
-                    <rings:radial_sampling_interval unit="mm">.5</rings:radial_sampling_interval>
                     <rings:minimum_ring_radius unit="mm">50</rings:minimum_ring_radius>
                     <rings:maximum_ring_radius unit="mm">50</rings:maximum_ring_radius>
                     <rings:minimum_inertial_ring_longitude unit="deg">5</rings:minimum_inertial_ring_longitude>
@@ -64,6 +63,7 @@
                     <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>
                     <rings:Wavelength_Parameters>
                         <rings:wavelength unit="nm">2200.00000</rings:wavelength>
+                        <rings:maximum_wavelength unit="nm">2416.00000</rings:maximum_wavelength>
                     </rings:Wavelength_Parameters>
                 </rings:Occultation_Ring_Profile>
             </rings:Ring_Moon_Systems>
