@@ -3,27 +3,9 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Thu Dec 12 23:04:02 UTC 2024
+>>  INFO Date: Wed Dec 18 17:15:25 UTC 2024
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.3/Data/
 
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Time_Series  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Time_Series  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Reprojection_Geometry  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Reprojection_Geometry  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:ring_longitude  Attribute: rings:ring_longitude - Missing Attribute
->>> ERROR Association: rings:ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:minimum_ring_longitude  Attribute: rings:minimum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:minimum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
->>> ERROR Class:0001_NASA_PDS_1.rings.Ring_Spectrum  Association:rings:maximum_ring_longitude  Attribute: rings:maximum_ring_longitude - Missing Attribute
->>> ERROR Association: rings:maximum_ring_longitude - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -117,7 +99,6 @@
 >>> INFO Attribute: <minimum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <maximum_corotating_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <maximum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
->>> WARNING Attribute: <corotating_ring_longitude> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <earth_received_time> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <maximum_sub_stellar_clock_angle> - This local attribute was not used in an Association.
 >>> WARNING Attribute: <maximum_sub_stellar_ring_azimuth> - This local attribute was not used in an Association.
@@ -137,8 +118,8 @@
 >>> WARNING Attribute: <stellar_signal_level> - This local attribute was not used in an Association.
 
  -- LDDTool Execution Summary --
-     18 warning(s)
-     18 error(s)
+     17 warning(s)
+     0 error(s)
      0 fatal error(s)
 
 Input:
