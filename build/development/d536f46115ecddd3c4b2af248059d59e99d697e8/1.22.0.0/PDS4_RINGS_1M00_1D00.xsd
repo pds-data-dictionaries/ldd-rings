@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Thu Dec 12 22:51:17 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 17:53:40 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -320,6 +320,8 @@
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_observed_ring_azimuth" type="rings:minimum_observed_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_observed_ring_azimuth" type="rings:maximum_observed_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="sub_stellar_ring_azimuth" type="rings:sub_stellar_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -519,6 +521,9 @@
       <xs:element name="inertial_ring_longitude" type="rings:inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="corotating_ring_longitude" type="rings:corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="ring_longitude_observed_minus_subsolar" type="rings:ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_longitude_observed_minus_subsolar" type="rings:minimum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_longitude_observed_minus_subsolar" type="rings:maximum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -727,6 +732,29 @@
      <xs:maxLength value="1"/>
 	   </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="corotating_ring_longitude_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="360"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="corotating_ring_longitude">
+    <xs:annotation>
+      <xs:documentation>The ring longitude in the corotating frame. The
+        corotating frame is defined so that zero corotating longitude is
+        equal to zero inertial longitude defined at the epoch specified
+        by epoch_reprojection_basis_utc. Thus, zero corotating longitude
+        in the corotating frame at time t corresponds to an inertial
+        longitude of (t-epoch)*corotation_rate. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:corotating_ring_longitude_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 
   <xs:simpleType name="corotation_rate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">

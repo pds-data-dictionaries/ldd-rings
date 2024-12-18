@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Thu Dec 12 22:51:17 UTC 2024 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 17:53:40 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -108,12 +108,12 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
+      <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
-        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
+        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+      <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
-        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
@@ -219,12 +219,12 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
+      <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
-        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
-      <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
+        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+      <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
-        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+        rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
@@ -470,6 +470,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="rings:Occultation_Ring_Profile/rings:maximum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Occultation_Ring_Profile/rings:maximum_corotating_ring_longitude/rings:maximum_corotating_ring_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="rings:Occultation_Ring_Profile/rings:maximum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Ring_Profile/rings:maximum_inertial_ring_longitude/rings:maximum_inertial_ring_longitude</title>
@@ -516,6 +523,13 @@
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Ring_Profile/rings:maximum_ring_radius/rings:maximum_ring_radius</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Occultation_Ring_Profile/rings:minimum_corotating_ring_longitude/rings:minimum_corotating_ring_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -799,6 +813,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="rings:Occultation_Time_Series/rings:maximum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Occultation_Time_Series/rings:maximum_corotating_ring_longitude/rings:maximum_corotating_ring_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="rings:Occultation_Time_Series/rings:maximum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Time_Series/rings:maximum_inertial_ring_longitude/rings:maximum_inertial_ring_longitude</title>
@@ -845,6 +866,13 @@
       <sch:assert test="@unit = ('AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm')">
         <title>rings:Occultation_Time_Series/rings:maximum_ring_radius/rings:maximum_ring_radius</title>
         The attribute @unit must be equal to one of the following values 'AU', 'Angstrom', 'cm', 'km', 'm', 'micrometer', 'mm', 'nm'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Occultation_Time_Series/rings:minimum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Occultation_Time_Series/rings:minimum_corotating_ring_longitude/rings:minimum_corotating_ring_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1233,6 +1261,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="rings:Ring_Spectrum/rings:corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Ring_Spectrum/rings:corotating_ring_longitude/rings:corotating_ring_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="rings:Ring_Spectrum/rings:emission_angle">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:emission_angle/rings:emission_angle</title>
@@ -1257,6 +1292,13 @@
     <sch:rule context="rings:Ring_Spectrum/rings:light_source_incidence_angle">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:light_source_incidence_angle/rings:light_source_incidence_angle</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Ring_Spectrum/rings:maximum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Ring_Spectrum/rings:maximum_corotating_ring_longitude/rings:maximum_corotating_ring_longitude</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -1348,6 +1390,13 @@
     <sch:rule context="rings:Ring_Spectrum/rings:mean_phase_angle">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Ring_Spectrum/rings:mean_phase_angle/rings:mean_phase_angle</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Ring_Spectrum/rings:minimum_corotating_ring_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Ring_Spectrum/rings:minimum_corotating_ring_longitude/rings:minimum_corotating_ring_longitude</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>

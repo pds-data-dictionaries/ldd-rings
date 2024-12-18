@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Dec 12 22:51:17 UTC 2024
+   Time                   Wed Dec 18 17:53:40 UTC 2024
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -1031,7 +1031,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angular_Velocity
 
    name                   corotating_ring_longitude
-   version                1.0
+   version                1.22
    value data type        ASCII_Real
    description            The ring longitude in the corotating frame. The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc. Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate. 
    minimum value          0
@@ -1500,12 +1500,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_ring_longitude
+      local identifier      rings:minimum_corotating_ring_longitude
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:maximum_ring_longitude
+      local identifier      rings:maximum_corotating_ring_longitude
       minimum occurrences   1
       maximum occurrences   1
       reference type        attribute_of
@@ -1803,12 +1803,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_ring_longitude
+      local identifier      rings:minimum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:maximum_ring_longitude
+      local identifier      rings:maximum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -2423,12 +2423,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_ring_longitude
+      local identifier      rings:minimum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:maximum_ring_longitude
+      local identifier      rings:maximum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -2554,17 +2554,17 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:ring_longitude
+      local identifier      rings:corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:minimum_ring_longitude
+      local identifier      rings:minimum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      rings:maximum_ring_longitude
+      local identifier      rings:maximum_corotating_ring_longitude
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
