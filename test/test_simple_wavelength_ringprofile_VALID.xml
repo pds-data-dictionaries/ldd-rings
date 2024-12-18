@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/rings/v1/PDS4_RINGS_1M00_1D00.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
-
-<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
-  xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.xsd
+    http://pds.nasa.gov/pds4/rings/v1 https://pds.nasa.gov/pds4/rings/v1/PDS4_RINGS_1M00_1D00.xsd">
 
   <!-- This test is for the rings:Wavelength_Parameters class, containing just the rings:wavelength attribute-->
 
@@ -16,7 +16,7 @@
         <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
         <version_id>1.0</version_id>
         <title>Wavelength Parameter Class Test</title>
-        <information_model_version>1.23.0.0</information_model_version>
+        <information_model_version>1.22.0.0</information_model_version>
         <product_class>Product_Observational</product_class>
     </Identification_Area>
     <Observation_Area>
@@ -57,8 +57,6 @@
                     <rings:maximum_ring_radius unit="mm">50</rings:maximum_ring_radius>
                     <rings:minimum_inertial_ring_longitude unit="deg">5</rings:minimum_inertial_ring_longitude>
                     <rings:maximum_inertial_ring_longitude unit="deg">5</rings:maximum_inertial_ring_longitude>
-                    <rings:minimum_ring_longitude unit="deg">3</rings:minimum_ring_longitude>
-                    <rings:maximum_ring_longitude unit="deg">6</rings:maximum_ring_longitude>
                     <rings:minimum_observed_ring_azimuth unit="deg">2</rings:minimum_observed_ring_azimuth>
                     <rings:maximum_observed_ring_azimuth unit="deg">4</rings:maximum_observed_ring_azimuth>
                     <rings:observed_ring_elevation unit="deg">-19.69149</rings:observed_ring_elevation>

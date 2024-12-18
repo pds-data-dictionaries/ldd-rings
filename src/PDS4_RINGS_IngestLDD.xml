@@ -4120,13 +4120,13 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>minimum_ring_longitude</identifier_reference>
+            <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>maximum_ring_longitude</identifier_reference>
+            <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -4486,13 +4486,13 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>minimum_ring_longitude</identifier_reference>
+            <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>maximum_ring_longitude</identifier_reference>
+            <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5242,13 +5242,13 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>minimum_ring_longitude</identifier_reference>
+            <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>maximum_ring_longitude</identifier_reference>
+            <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5494,19 +5494,19 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>ring_longitude</identifier_reference>
+            <identifier_reference>corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>minimum_ring_longitude</identifier_reference>
+            <identifier_reference>minimum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>maximum_ring_longitude</identifier_reference>
+            <identifier_reference>maximum_corotating_ring_longitude</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5883,13 +5883,13 @@
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+            <rule_test>if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+            <rule_test>if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
@@ -6064,13 +6064,13 @@
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+            <rule_test>if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
+            <rule_test>if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
