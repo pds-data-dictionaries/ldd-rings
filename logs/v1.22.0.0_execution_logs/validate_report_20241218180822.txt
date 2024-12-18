@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.6.3
-   Date        2024-12-18T18:01:54Z
+   Date        2024-12-18T18:08:23Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringspectrum_VALID.xml]
+   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_ringspectrum_VALID.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/282c536618558cac291959b6876bae1c52b03344/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/282c536618558cac291959b6876bae1c52b03344/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/9e2f55ff24bd96a4c2c0c1d8750008f84e2e72a0/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/9e2f55ff24bd96a4c2c0c1d8750008f84e2e72a0/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_ringspectrum_VALID.xml
+  PASS: file:/home/runner/work/ldd-rings/ldd-rings/test/test_max_and_min_wavelength_ringspectrum_VALID.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
       WARNING  [warning.label.context_ref_mismatch]   line 31: Context reference name mismatch. Value: 'None' Expected one of: '[No Specific Investigation]'
@@ -52,5 +52,5 @@ Summary:
     1            warning.label.schema
 
 End of Report
-Completed execution in 5203 ms
+Completed execution in 5402 ms
 
