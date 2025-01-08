@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        15.2.3
+   LDDTool Version        15.2.4
    LDD Version Id:        1.13.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Dec 18 19:57:23 UTC 2024
+   Time                   Wed Jan 08 19:49:02 UTC 2025
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -48,7 +48,7 @@ Parsed Input - Header:
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     
-   Last Modification Time 2024-11-18
+   Last Modification Time 2025-01-08
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -243,12 +243,12 @@ Parsed Input - Attributes:
    name                   ring_event_start_time_utc
    version                1.22
    value data type        ASCII_Date_Time_YMD_UTC
-   description            ring_event_start_time_utc gives the UTC time corresponding to the earliest time given by ring_event_time or ring_event_tdb in the data table. ring_event_start_time_utc is required for all ring occultation data. ring_event_start_time_utc is required label attribute for all ring occultation data. 
+   description            ring_event_start_time_utc gives the UTC time corresponding to the earliest time given by ring_event_time or ring_event_tdb in the data table. ring_event_start_time_utc is required for all ring occultation data. 
 
    name                   ring_event_stop_time_utc
    version                1.22
    value data type        ASCII_Date_Time_YMD_UTC
-   description            ring_event_stop_time_utc gives the UTC time corresponding to the latest time given by ring_event_time or ring_event_tdb in the data table. ring_event_stop_time_utc is required for all ring occultation data. ring_event_stop_time_utc is required label attribute for all ring occultation data. 
+   description            ring_event_stop_time_utc gives the UTC time corresponding to the latest time given by ring_event_time or ring_event_tdb in the data table. ring_event_stop_time_utc is required for all ring occultation data. 
 
    name                   ring_event_tdb
    version                1.0
@@ -277,7 +277,7 @@ Parsed Input - Attributes:
    name                   data_quality_index
    version                1.22
    value data type        ASCII_Short_String_Collapsed
-   description            data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. Possible values are:. 
+   description            data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. 
 
    name                   data_quality_score
    version                1.22

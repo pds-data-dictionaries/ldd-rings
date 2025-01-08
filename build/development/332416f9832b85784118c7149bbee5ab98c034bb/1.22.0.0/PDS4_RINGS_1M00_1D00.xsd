@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Dec 18 19:57:23 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Wed Jan 08 19:49:02 UTC 2025 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -796,8 +796,7 @@
     <xs:annotation>
       <xs:documentation>data_quality_index provides a more precise
         subjective assessment by the data provider of the quality of the
-        observed/predicted ring occultation. Possible values are:.
-        </xs:documentation>
+        observed/predicted ring occultation. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -2972,9 +2971,7 @@
       <xs:documentation>ring_event_start_time_utc gives the UTC time
         corresponding to the earliest time given by ring_event_time or
         ring_event_tdb in the data table. ring_event_start_time_utc is
-        required for all ring occultation data.
-        ring_event_start_time_utc is required label attribute for all
-        ring occultation data. </xs:documentation>
+        required for all ring occultation data. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
@@ -3007,9 +3004,7 @@
       <xs:documentation>ring_event_stop_time_utc gives the UTC time
         corresponding to the latest time given by ring_event_time or
         ring_event_tdb in the data table. ring_event_stop_time_utc is
-        required for all ring occultation data. ring_event_stop_time_utc
-        is required label attribute for all ring occultation data.
-        </xs:documentation>
+        required for all ring occultation data. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
