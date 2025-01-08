@@ -20,7 +20,7 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2024-11-18</last_modification_date_time>
+    <last_modification_date_time>2025-01-08</last_modification_date_time>
     
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -234,7 +234,7 @@
         <nillable_flag>false</nillable_flag>
         <submitter_name>ACR</submitter_name>
         <definition>
-            The axis_name attribute contains a string that matches the axis_name attribute in an axis_array class of an associated  array object.
+            The axis_name attribute contains a string that matches the axis_name attribute in an axis_array class of an associated array object.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -737,15 +737,13 @@
     
     <DD_Attribute>
         <name>ring_event_start_time_utc</name>
-        <version_id>2.0</version_id>
+        <version_id>2.1</version_id>
         <local_identifier>ring_event_start_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>ring_event_start_time_utc gives the UTC time corresponding to the earliest time given by 
             ring_event_time or ring_event_tdb in the data table. ring_event_start_time_utc is required for all
             ring occultation data.
-
-            ring_event_start_time_utc is required label attribute for all ring occultation data.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -755,15 +753,13 @@
     
     <DD_Attribute>
         <name>ring_event_stop_time_utc</name>
-        <version_id>2.0</version_id>
+        <version_id>2.1</version_id>
         <local_identifier>ring_event_stop_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>ring_event_stop_time_utc gives the UTC time corresponding to the latest time given by 
             ring_event_time or ring_event_tdb in the data table. ring_event_stop_time_utc is required for all
             ring occultation data.
-
-            ring_event_stop_time_utc is required label attribute for all ring occultation data.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -853,11 +849,11 @@
     
     <DD_Attribute>
         <name>data_quality_index</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>data_quality_index</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. Possible values are:.   
+        <definition>data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. 
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -963,6 +959,7 @@
             </DD_Permissible_Value>
         </DD_Value_Domain>
     </DD_Attribute>
+
     <DD_Attribute>
         <name>occultation_type</name>
         <version_id>1.3</version_id>
@@ -1995,6 +1992,7 @@
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
     </DD_Attribute>
+
     <DD_Attribute>
         <name>light_source_incidence_angle</name>
         <version_id>1.3</version_id>
@@ -2150,6 +2148,7 @@
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
     </DD_Attribute>
+
     <DD_Attribute>
         <name>observed_ring_azimuth</name>
         <version_id>1.1</version_id>
@@ -3307,6 +3306,7 @@
             <unit_of_measure_type>Units_of_Angular_Velocity</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
+
     <DD_Attribute>
         <name>normal_mode_wavenumber</name>
         <version_id>1.0</version_id>
