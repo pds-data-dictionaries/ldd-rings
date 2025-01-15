@@ -1592,13 +1592,13 @@
     
     <DD_Attribute>
         <name>ring_radius</name>
-        <version_id>1.1</version_id>
+        <version_id>1.2</version_id>
         <local_identifier>ring_radius</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>ring_radius indicates a radial location within a planetary ring system. Radii are
-            measured from the center of mass of the planet along the nominal ring plane. Units are km
-            and are always positive.
+            measured from the center of mass of the planet along the nominal ring plane. Units are 
+            always positive.
 
             Required to be the first field in ring occultation profiles. Data are always organized 
             with ring radius increasing. In labels, the min and max attributes are required.
@@ -1612,12 +1612,12 @@
     
     <DD_Attribute>
         <name>minimum_ring_radius</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_ring_radius</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_ring_radius indicates the smallest ring radius value in the data table. Units are km
-            and are always positive.
+        <definition>minimum_ring_radius indicates the smallest ring radius value in the data table. Units are
+            always positive.
 
             Required in label files for ring occultation data.
         </definition>
@@ -1630,12 +1630,12 @@
     
     <DD_Attribute>
         <name>maximum_ring_radius</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_ring_radius</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_ring_radius indicates the largest ring radius value in the data table. Units are km
-            and are always positive.
+        <definition>maximum_ring_radius indicates the largest ring radius value in the data table. Units are
+            always positive.
 
             Required in label files for ring occultation data.
         </definition>
@@ -1763,7 +1763,7 @@
         <local_identifier>maximum_ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_ring_longitude_observed_minus_sub-solar specifies smallest separation in ring 
+        <definition>maximum_ring_longitude_observed_minus_sub-solar specifies largest separation in ring 
         	longitude between the observation and the subsolar point.
         </definition>
         <DD_Value_Domain>
@@ -1934,12 +1934,12 @@
     
     <DD_Attribute>
         <name>incidence_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The incidence_angle element provides a measure of the lighting condition at
-            the intercept point. Incidence angle is the angle the surface normal vector at the intercept
+            the intercept point. Incidence angle is the angle between the surface normal vector at the intercept
             point and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees
             when the intercept point coincides with the subsolar point to 90 degrees when the intercept is 
             tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for 
@@ -2005,7 +2005,7 @@
             and 90 in units of degrees.
             For ring occultations, this value is always equal to 90 - | observed_ring_elevation |
             This will enable users to perform database searches based on the effective ring opening
-            angle when they are not concerned about the distinction between north-side and southside
+            angle when they are not concerned about the distinction between northside and southside
             viewpoints.
             We have included the 'light source' prefix to the term so that this quantity is not confused
             with 'incidence angle', a term that is generally associated with sunlight rather than stars
@@ -2671,13 +2671,13 @@
 
     <DD_Attribute>
         <name>projected_sun_diameter</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>projected_sun_diameter</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>projected_sun_diameter provides the diameter in kilometers
-        	 of the sun projected onto the ring plane radius  based on the line 
-        	 of sight from the observer to the ring plane at  the start of the 
+        <definition>projected_sun_diameter provides the diameter
+        	 of the sun projected onto the ring plane radius based on the line 
+        	 of sight from the observer to the ring plane at the start of the 
         	 integration assuming the sun subtends a circular disk with an angular 
         	 size based on the distance of the central body from the sun.
         </definition>
@@ -2690,12 +2690,12 @@
 
     <DD_Attribute>
         <name>minimum_projected_sun_diameter</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>minimum_projected_sun_diameter</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>minimum_projected_sun_diameter provides the smallest value of  
-         projected_sun_diameter in the obsevation.
+         projected_sun_diameter in the observation.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2706,12 +2706,12 @@
 
     <DD_Attribute>
         <name>maximum_projected_sun_diameter</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>maximum_projected_sun_diameter</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>maximum_projected_sun_diameter provides the largest value of  
-         projected_sun_diameter in the obsevation.
+         projected_sun_diameter in the observation.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
