@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.6.3
-   Date        2025-01-08T19:49:27Z
+   Date        2025-01-15T19:21:14Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_timeseries_VALID.xml]
+   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/test/test_no_maximum_wavelength_ringprofile_FAIL.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/332416f9832b85784118c7149bbee5ab98c034bb/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/332416f9832b85784118c7149bbee5ab98c034bb/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/8ef963e29ff00cd7aaff9985efc9d9928bef4364/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/8ef963e29ff00cd7aaff9985efc9d9928bef4364/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,21 +22,21 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-rings/ldd-rings/test/test_complete_wavelength_timeseries_VALID.xml
+  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/test/test_no_maximum_wavelength_ringprofile_FAIL.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
+      ERROR  [error.label.schematron]   line 48, 49: rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
-      WARNING  [warning.label.context_ref_mismatch]   line 31: Context reference name mismatch. Value: 'None' Expected one of: '[No Specific Investigation]'
         1 product validation(s) completed
 
 Summary:
 
   1 product(s)
-  0 error(s)
-  3 warning(s)
+  1 error(s)
+  2 warning(s)
 
   Product Validation Summary:
-    1          product(s) passed
-    0          product(s) failed
+    0          product(s) passed
+    1          product(s) failed
     0          product(s) skipped
     1          product(s) total
 
@@ -47,10 +47,10 @@ Summary:
     0          check(s) total
 
   Message Types:
-    1            warning.label.context_ref_mismatch
+    1            error.label.schematron
     1            warning.label.missing_schematron_spec
     1            warning.label.schema
 
 End of Report
-Completed execution in 5514 ms
+Completed execution in 5445 ms
 

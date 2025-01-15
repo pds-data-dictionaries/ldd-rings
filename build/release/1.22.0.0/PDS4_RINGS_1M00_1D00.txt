@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Jan 08 19:49:02 UTC 2025
+   Time                   Wed Jan 15 19:19:53 UTC 2025
    Common Schema          [PDS4_PDS_1M00.xsd]
    Common Schematron      [PDS4_PDS_1M00.sch]
    IM Version Id:         1.22.0.0
@@ -428,19 +428,19 @@ Parsed Input - Attributes:
    name                   ring_radius
    version                1.0
    value data type        ASCII_Real
-   description            ring_radius indicates a radial location within a planetary ring system. Radii are measured from the center of mass of the planet along the nominal ring plane. Units are km and are always positive. Required to be the first field in ring occultation profiles. Data are always organized with ring radius increasing. In labels, the min and max attributes are required. 
+   description            ring_radius indicates a radial location within a planetary ring system. Radii are measured from the center of mass of the planet along the nominal ring plane. Units are always positive. Required to be the first field in ring occultation profiles. Data are always organized with ring radius increasing. In labels, the min and max attributes are required. 
    unit of measure type   Units_of_Length
 
    name                   minimum_ring_radius
    version                1.22
    value data type        ASCII_Real
-   description            minimum_ring_radius indicates the smallest ring radius value in the data table. Units are km and are always positive. Required in label files for ring occultation data. 
+   description            minimum_ring_radius indicates the smallest ring radius value in the data table. Units are always positive. Required in label files for ring occultation data. 
    unit of measure type   Units_of_Length
 
    name                   maximum_ring_radius
    version                1.22
    value data type        ASCII_Real
-   description            maximum_ring_radius indicates the largest ring radius value in the data table. Units are km and are always positive. Required in label files for ring occultation data. 
+   description            maximum_ring_radius indicates the largest ring radius value in the data table. Units are always positive. Required in label files for ring occultation data. 
    unit of measure type   Units_of_Length
 
    name                   inertial_ring_longitude
@@ -486,7 +486,7 @@ Parsed Input - Attributes:
    name                   maximum_ring_longitude_observed_minus_subsolar
    version                1.22
    value data type        ASCII_Real
-   description            maximum_ring_longitude_observed_minus_sub-solar specifies smallest separation in ring longitude between the observation and the subsolar point. 
+   description            maximum_ring_longitude_observed_minus_sub-solar specifies largest separation in ring longitude between the observation and the subsolar point. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
@@ -550,7 +550,7 @@ Parsed Input - Attributes:
    name                   incidence_angle
    version                1.22
    value data type        ASCII_Real
-   description            The incidence_angle element provides a measure of the lighting condition at the intercept point. Incidence angle is the angle the surface normal vector at the intercept point and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept is tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for ring data. 
+   description            The incidence_angle element provides a measure of the lighting condition at the intercept point. Incidence angle is the angle between the surface normal vector at the intercept point and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept is tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for ring data. 
    minimum value          0
    maximum value          180
    unit of measure type   Units_of_Angle
@@ -574,7 +574,7 @@ Parsed Input - Attributes:
    name                   light_source_incidence_angle
    version                1.22
    value data type        ASCII_Real
-   description            light_source_incidence_angle is an angle measured from the local surface normal vector to the direction of a photon arriving from the light source. For rings, the normal vector is that on the same side of the rings as the light source, so values always range between 0 and 90 in units of degrees. For ring occultations, this value is always equal to 90 - | observed_ring_elevation | This will enable users to perform database searches based on the effective ring opening angle when they are not concerned about the distinction between north-side and southside viewpoints. We have included the 'light source' prefix to the term so that this quantity is not confused with 'incidence angle', a term that is generally associated with sunlight rather than stars or radio transmitters. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label. Optional as a field in the data table. 
+   description            light_source_incidence_angle is an angle measured from the local surface normal vector to the direction of a photon arriving from the light source. For rings, the normal vector is that on the same side of the rings as the light source, so values always range between 0 and 90 in units of degrees. For ring occultations, this value is always equal to 90 - | observed_ring_elevation | This will enable users to perform database searches based on the effective ring opening angle when they are not concerned about the distinction between northside and southside viewpoints. We have included the 'light source' prefix to the term so that this quantity is not confused with 'incidence angle', a term that is generally associated with sunlight rather than stars or radio transmitters. Required in the label if the value is constant for the observation. If the angle varies for the observation, the min and max attributes are required in the label. Optional as a field in the data table. 
    minimum value          -90
    maximum value          90
    unit of measure type   Units_of_Angle
@@ -771,19 +771,19 @@ Parsed Input - Attributes:
    name                   projected_sun_diameter
    version                1.0
    value data type        ASCII_Real
-   description            projected_sun_diameter provides the diameter in kilometers of the sun projected onto the ring plane radius based on the line of sight from the observer to the ring plane at the start of the integration assuming the sun subtends a circular disk with an angular size based on the distance of the central body from the sun. 
+   description            projected_sun_diameter provides the diameter of the sun projected onto the ring plane radius based on the line of sight from the observer to the ring plane at the start of the integration assuming the sun subtends a circular disk with an angular size based on the distance of the central body from the sun. 
    unit of measure type   Units_of_Length
 
    name                   minimum_projected_sun_diameter
    version                1.22
    value data type        ASCII_Real
-   description            minimum_projected_sun_diameter provides the smallest value of projected_sun_diameter in the obsevation. 
+   description            minimum_projected_sun_diameter provides the smallest value of projected_sun_diameter in the observation. 
    unit of measure type   Units_of_Length
 
    name                   maximum_projected_sun_diameter
    version                1.22
    value data type        ASCII_Real
-   description            maximum_projected_sun_diameter provides the largest value of projected_sun_diameter in the obsevation. 
+   description            maximum_projected_sun_diameter provides the largest value of projected_sun_diameter in the observation. 
    unit of measure type   Units_of_Length
 
    name                   sigma_projected_sun_diameter
