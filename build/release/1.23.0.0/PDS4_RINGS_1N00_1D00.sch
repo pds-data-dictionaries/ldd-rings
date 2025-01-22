@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Jan 15 19:19:53 UTC 2025 -->
-  <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Wed Jan 22 18:48:02 UTC 2025 -->
+  <!-- Generated from the PDS4 Information Model Version 1.23.0.0 - System Build 15.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -368,6 +368,13 @@
     <sch:rule context="rings:Central_Body_Parameters/rings:pole_right_ascension_angle_uncert">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Central_Body_Parameters/rings:pole_right_ascension_angle_uncert/rings:pole_right_ascension_angle_uncert</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="rings:Column_Headers/rings:emission_angle">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>rings:Column_Headers/rings:emission_angle/rings:emission_angle</title>
         The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
