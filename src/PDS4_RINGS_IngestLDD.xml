@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD 
   xmlns="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"   
   xsi:schemaLocation=
-   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd 
-    http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
+   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -4365,7 +4362,6 @@
         <DD_Association>
 	    <identifier_reference>XSChoice#</identifier_reference>
             <identifier_reference>Wavelength_Min_Max</identifier_reference>
-            <reference_type>component_of</reference_type>
             <identifier_reference>wavelength</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -6376,26 +6372,6 @@
             <rule_test>if ((rings:sampling_base) and not (rings:sampling_scale=logarithmic)and not (rings:sampling_scale=exponential))  then false() else true()</rule_test>
             <rule_message>rings:sampling_base is only used when the value of rings:sampling_scale is either logarithmic, or exponential.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule>
-    <DD_Rule> <!--MJTM: Add new rule for Ring_Spectrum class, which contains Wavelength_Parameters -->
-        <local_identifier>Ring_Spectrum_1</local_identifier>
-        <rule_context>//rings:Ring_Spectrum</rule_context>
-        <!--<DD_Rule_Statement> MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength" 
-            <rule_type>Assert</rule_type>
-            <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
-            <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
-            	or as a range using the minimum-maximum wavelength pair.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:minimum_wavelength) and not (rings:Wavelength_Parameters/rings:maximum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>
-        <DD_Rule_Statement>
-            <rule_type>Assert</rule_type>
-            <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
-            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
-        </DD_Rule_Statement>-->
     </DD_Rule>
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 
