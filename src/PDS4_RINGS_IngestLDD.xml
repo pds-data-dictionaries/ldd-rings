@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD 
   xmlns="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"   
   xsi:schemaLocation=
-   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.xsd">
+   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd 
+    http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -3904,11 +3907,11 @@
 
     <!-- Wavelength Parameters Class -->
     <DD_Class>
-        <name>Wavelength_Min_Max</name>
+        <name>Wavelength_Parameters</name>
         <version_id>1.0</version_id>
-        <local_identifier>Wavelength_Min_Max</local_identifier>
+        <local_identifier>Wavelength_Parameters</local_identifier>
         <submitter_name>M.J.T. Mace</submitter_name>
-        <definition>This class contains both minimum and maximum wavelength
+        <definition>This class contains the three wavelength attributes
         </definition>
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
@@ -3919,15 +3922,21 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>wavelength</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>minimum_wavelength</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
+            <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_wavelength</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
+            <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
     </DD_Class>
@@ -4360,10 +4369,8 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-	    <identifier_reference>XSChoice#</identifier_reference>
-            <identifier_reference>Wavelength_Min_Max</identifier_reference>
-            <identifier_reference>wavelength</identifier_reference>
-            <reference_type>attribute_of</reference_type>
+            <identifier_reference>Wavelength_Parameters</identifier_reference>
+            <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
@@ -4751,12 +4758,12 @@
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
-<!--        <DD_Association>
+        <DD_Association>
             <identifier_reference>Wavelength_Parameters</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>-->
+        </DD_Association>
     </DD_Class>
     
     <!-- Radio Occultation Support Class -->
@@ -5819,12 +5826,12 @@
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
-<!--        <DD_Association>
+        <DD_Association>
             <identifier_reference>Wavelength_Parameters</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>-->
+        </DD_Association>
     </DD_Class>
 
     <!-- Column_Headers Class --> 
@@ -5920,7 +5927,7 @@
             <rule_test>if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()</rule_test>
             <rule_message>If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</rule_message>
         </DD_Rule_Statement>
-        <DD_Rule_Statement> <!--MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength"
+        <DD_Rule_Statement> <!--MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength"-->
             <rule_type>Assert</rule_type>
             <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
             <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
@@ -5936,7 +5943,7 @@
             <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
             <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
-        <DD_Rule_Statement>-->
+        <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
             <rule_test>if (not (rings:radial_sampling_interval) and not (rings:minimum_radial_sampling_interval))  then false() else true()</rule_test>
             <rule_message>You must specify either the radial sampling interval, or the pair minimum and maximum radial sampling interval.</rule_message>
@@ -6116,7 +6123,7 @@
             <rule_test>if ((rings:occultation_type='stellar') and not (rings:star_name))  then false() else true()</rule_test>
             <rule_message>If rings:occultation_type is set to stellar, you must identify the star using the star_name attribute.</rule_message>
         </DD_Rule_Statement>
-        <DD_Rule_Statement> <!-- MJTM: same point as Occultation_Ring_Profile_1, about XPaths 
+        <DD_Rule_Statement> <!-- MJTM: same point as Occultation_Ring_Profile_1, about XPaths -->
             <rule_type>Assert</rule_type>
             <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
             <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
@@ -6132,7 +6139,7 @@
             <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
             <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
-        <DD_Rule_Statement>-->
+        <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
             <rule_test>if ((rings:sclk_start_time) and not (rings:sclk_stop_time))  then false() else true()</rule_test>
             <rule_message>rings:sclk_stop_time and rings:sclk_stop_time, are a pair; if you use one, you must use both.</rule_message>
@@ -6373,6 +6380,26 @@
             <rule_message>rings:sampling_base is only used when the value of rings:sampling_scale is either logarithmic, or exponential.</rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
+    <DD_Rule> <!--MJTM: Add new rule for Ring_Spectrum class, which contains Wavelength_Parameters -->
+        <local_identifier>Ring_Spectrum_1</local_identifier>
+        <rule_context>//rings:Ring_Spectrum</rule_context>
+        <DD_Rule_Statement> <!--MJTM: Since the wavelength parameters are now in a class, the rules need to specify an Xpath like "rings:Wavelength_Parameters/rings:wavelength" -->
+            <rule_type>Assert</rule_type>
+            <rule_test>if (not (rings:Wavelength_Parameters/rings:wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength)) then false() else true()</rule_test>
+            <rule_message>You must identify the wavelength of the observation either as a single value using rings:wavelength,
+            	or as a range using the minimum-maximum wavelength pair.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Wavelength_Parameters/rings:minimum_wavelength) and not (rings:Wavelength_Parameters/rings:maximum_wavelength))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Wavelength_Parameters/rings:maximum_wavelength) and not (rings:Wavelength_Parameters/rings:minimum_wavelength))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_wavelength and rings:maximum_wavelength, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 
     <!-- Here is a rule to require disp:Display_Direction -->
@@ -6385,5 +6412,5 @@
             <rule_test>if ($is_image_like) then //disp:Display_Direction else true()</rule_test>
             <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "Display_Direction" must be specified, as well.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule>-->
+    </DD_Rule> -->
 </Ingest_LDD>

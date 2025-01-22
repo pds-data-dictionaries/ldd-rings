@@ -19,6 +19,7 @@
 - Namely `ring_longitude`, `minimum_ring_longitude`, and `maximum_ring_longitude`
 
 ### Issue #241: Reprojection grid attributes for ring coordinate system and Issue #301: Update Rings dictionary for R&A F ring mosaics project
+- 1/22: WE DID SOME TESTS OF A WAVELENGTH_MIN_MAX CLASS, BUT CANNOT DO A XSCHOICE BETWEEN A CLASS AND AN ATTRIBUTE.
 - SOME THINGS STILL TO DO
 - We added the class `Reprojection_Grid_Parameters` containing new attributes `reprojection_grid_radial_resolution_mean`, `reprojection_grid_radial_resolution_min`, `reprojection_grid_radial_resolution_max`, `reprojection_grid_angular_resolution_mean`, `reprojection_grid_angular_resolution_min`, and `reprojection_grid_angular_resolution_max`.  WE STILL NEED DEFINITIONS AND UNIT TESTS, AND THIS WILL BE SUBJECT TO THE REORGANIZATION MENTIONED BELOW.
 - We made changes to the definitions of corotating_flag, emission_angle, and light_source_incidence_angle and corrected spelling errors in multiple attributes.
@@ -30,8 +31,9 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
 
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
-- STILL TO DO
-- PULL REQUEST FOR V1.12 SAYS IT FIXES THIS, BUT IS THAT TRUE?
+- Added schematron rule rule_display_direction_check, BUT IT DIDN'T WORK SO WE COMMENTED IT OUT.
+- STILL TO DO: CREATE UNIT TESTS
+- STILL TO DO: REMOVE DISPLAY_DIRECTION, ALL ITS CHILD ATTRIBUTES, AND THE REFERENCES TO IT
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/243
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#243
 
@@ -41,7 +43,8 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#245
 
 ### Issue #267: Create class for attributes that are not currently members of any class
-- STILL TO DO
+- Created the class Column_Headers
+- STILL TO DO: COLLECT ALL ATTRIBUTES THAT SHOULD LIVE WITHIN THIS CLASS
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/267
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#267
 
