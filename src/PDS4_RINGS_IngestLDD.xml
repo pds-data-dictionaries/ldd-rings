@@ -3907,11 +3907,11 @@
 
     <!-- Wavelength Parameters Class -->
     <DD_Class>
-        <name>Wavelength_Parameters</name>
+        <name>Wavelength_Min_Max</name>
         <version_id>1.0</version_id>
         <local_identifier>Wavelength_Parameters</local_identifier>
         <submitter_name>M.J.T. Mace</submitter_name>
-        <definition>This class contains the three wavelength attributes
+        <definition>This class contains both minimum and maximum wavelength
         </definition>
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
@@ -3922,21 +3922,15 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>wavelength</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
             <identifier_reference>minimum_wavelength</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
+            <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_wavelength</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
+            <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
     </DD_Class>
@@ -4369,8 +4363,11 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>Wavelength_Parameters</identifier_reference>
+	    <identifier_reference>XSChoice#</identifier_reference>
+            <identifier_reference>Wavelength_Min_Max</identifier_reference>
             <reference_type>component_of</reference_type>
+            <identifier_reference>wavelength</identifier_reference>
+            <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
@@ -6403,7 +6400,7 @@
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 
     <!-- Here is a rule to require disp:Display_Direction -->
-<!--        <DD_Rule>
+        <DD_Rule>
         <local_identifier>rule_display_direction_check</local_identifier>
         <rule_context>rings:Ring_Moon_Systems</rule_context>
         <rule_assign>name="is_image_like" value="//(rings:Ring_Reprojection|rings:Ring_Spectrum)"</rule_assign>
@@ -6412,5 +6409,5 @@
             <rule_test>if ($is_image_like) then //disp:Display_Direction else true()</rule_test>
             <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "Display_Direction" must be specified, as well.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule> -->
+    </DD_Rule>
 </Ingest_LDD>
