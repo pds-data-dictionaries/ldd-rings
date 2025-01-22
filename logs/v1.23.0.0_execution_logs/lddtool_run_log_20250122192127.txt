@@ -1,13 +1,11 @@
 
 >>  INFO LDDTOOL Version: 15.2.4
->>  INFO IM Version Id: 1.22.0.0
+>>  INFO IM Version Id: 1.23.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Jan 22 19:15:26 UTC 2025
+>>  INFO Date: Wed Jan 22 19:21:29 UTC 2025
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.4/Data/
 
->>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:Wavelength_Min_Max  Class:rings:Wavelength_Min_Max - Missing Component Class
->>> ERROR Association: rings:Wavelength_Min_Max - Missing Component - Reference Type: component_of
 >>> ERROR Class:0001_NASA_PDS_1.rings.Occultation_Ring_Profile  Association:rings:wavelength  Class:rings:wavelength - Missing Component Class
 >>> ERROR Association: rings:wavelength - Missing Component - Reference Type: component_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
@@ -123,24 +121,23 @@
 
  -- LDDTool Execution Summary --
      17 warning(s)
-     4 error(s)
+     2 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1M00
+     - IM Version: 1N00
      - PDS4 Flag: true
      - LDD Flag: true
-     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-rings/ldd-rings/src/PDS4_RINGS_IngestLDD.xml
 
 Output:
 
-     - ./PDS4_RINGS_1M00_1D00.xsd
-     - ./PDS4_RINGS_1M00_1D00.sch
-     - ./PDS4_RINGS_1M00_1D00.xml
-     - ./export/PDS4_PDS_1M00.JSON
+     - ./PDS4_RINGS_1N00_1D00.xsd
+     - ./PDS4_RINGS_1N00_1D00.sch
+     - ./PDS4_RINGS_1N00_1D00.xml
+     - ./export/PDS4_PDS_1N00.JSON
 
 >>  INFO Exit(0)
