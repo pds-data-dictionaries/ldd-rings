@@ -6401,7 +6401,9 @@
         </DD_Rule_Statement>
     </DD_Rule>
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
-    <DD_Rule>
+
+    <!-- Here is a rule to require disp:Display_Direction -->
+<!--        <DD_Rule>
         <local_identifier>rule_display_direction_check</local_identifier>
         <rule_context>rings:Ring_Moon_Systems</rule_context>
         <rule_assign>name="is_image_like" value="//(rings:Ring_Reprojection|rings:Ring_Spectrum)"</rule_assign>
@@ -6410,5 +6412,5 @@
             <rule_test>if ($is_image_like) then //disp:Display_Direction else true()</rule_test>
             <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "Display_Direction" must be specified, as well.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule>
+    </DD_Rule> -->
 </Ingest_LDD>
