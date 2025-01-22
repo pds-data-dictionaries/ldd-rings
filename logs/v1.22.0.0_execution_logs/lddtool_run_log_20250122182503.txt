@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Wed Jan 15 19:19:53 UTC 2025
+>>  INFO Date: Wed Jan 22 18:25:03 UTC 2025
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.4/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
