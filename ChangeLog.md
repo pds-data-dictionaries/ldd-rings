@@ -30,6 +30,12 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
 
+### Issue #242: Deprecate copied classes from Geometry and Display dictionaries
+- STILL TO DO: Replaced references to Body_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident with references to geom.Body_Identification_Base, geom.Reference_Frame_Identification, and geom.Central_Body_Identification, after having set element_flag=true for each of those within the Geometry LDD.
+- STILL TO DO: Removed Body_Ident_Base, Frame_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident.  Also remove attributes used only within those classes, namely body_spice_name and frame_spice_name.
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/242
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#242
+
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
 - Added schematron rule rule_display_direction_check, BUT IT DIDN'T WORK SO WE COMMENTED IT OUT.
 - STILL TO DO: CREATE UNIT TESTS
