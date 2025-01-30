@@ -1026,7 +1026,7 @@
 
     <DD_Attribute>
         <name>occultation_direction</name>
-        <version_id>1.3</version_id>
+        <version_id>1.4</version_id>
         <local_identifier>occultation_direction</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1046,15 +1046,15 @@
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
             <DD_Permissible_Value>
                 <value>Ingress</value>
-                <value_meaning>The distance to the target body center decreases with time.</value_meaning>
+                <value_meaning>The projected distance to the target body center decreases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
                     <value>Egress</value>
-                <value_meaning>The distance to the target body center increases with time.</value_meaning>
+                <value_meaning>The projected distance to the target body center increases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
                 <value>Both</value>
-                <value_meaning>The distance to the target body center along a portion of the occultation track decreases with time, and 
+                <value_meaning>The projected distance to the target body center along a portion of the occultation track decreases with time, and 
                     along a different portion increases with time.</value_meaning>
             </DD_Permissible_Value>
             <DD_Permissible_Value>
@@ -1740,14 +1740,12 @@
     
     <DD_Attribute>
         <name>minimum_ring_longitude_observed_minus_subsolar</name>
-        <version_id>1.1</version_id>
+        <version_id>1.2</version_id>
         <local_identifier>minimum_ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>minimum_ring_longitude_observed_minus_subsolar specifies smallest separation in ring 
         	longitude between the observation and the sub-solar point.
-
-            Required in label files for ring occultation data.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2637,14 +2635,14 @@
 
     <DD_Attribute>
         <name>time_constant</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>time_constant</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>time_constant indicates the instrumental time constant of the detector. 
         	  See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603.
         	  
-        	  If this attribute is used them the attribute time_constant_type also must be present.
+        	  If this attribute is used then the attribute time_constant_type also must be present.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2655,14 +2653,14 @@
 
     <DD_Attribute>
         <name>sigma_time_constant</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>sigma_time_constant</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>sigma_time_constant indicates the uncertainty in the time_constant. 
         	  See Eq. 9 Elliot et al. (1984) Astron. J. 1587-1603.
         	  
-        	  If this attribute is used them the attribute time_constant also must be present.
+        	  If this attribute is used then the attribute time_constant also must be present.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3206,11 +3204,11 @@
 
     <DD_Attribute>
         <name>fit_rms_semimajor</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>fit_rms_semimajor</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The RMS residuals for the semimajor axis of the body or ring identified in the enclosing class.
+        <definition>The root mean square residuals for the semimajor axis of the body or ring identified in the enclosing class.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3781,7 +3779,7 @@
         is redefined here for convenience. The local_identifier_reference is 
         used to identify the array or arrays to which this iteration of the 
         class applies. Multiple entries are permitted the settings in the 
-        iteration of Display_Direction apply to all of the referenced arrays. 
+        iteration of Display_Direction apply to all of the referenced arrays.
         </definition>
         <abstract_flag>false</abstract_flag>
         <element_flag>false</element_flag>
@@ -4898,10 +4896,10 @@
 
      <DD_Class>
         <name>Normal_Mode_Parameters</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>Normal_Mode_Parameters</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>This class provides the normal mode parameters is one is present in the described ring.</definition>
+        <definition>This class provides the normal mode parameters if one is present in the described ring.</definition>
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
@@ -5310,10 +5308,10 @@
 
     <DD_Class>
         <name>Reprojection_Geometry</name>  
-        <version_id>2.0</version_id>
+        <version_id>2.1</version_id>
         <local_identifier>Reprojection_Geometry</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>This class provides the parameters describing reprojection geometry when the ring(s) is reprojected based on a fixed grid of coordinates (.g., radius vs. longitude).</definition>
+        <definition>This class provides the parameters describing reprojection geometry when the ring(s) is reprojected based on a fixed grid of coordinates (e.g., radius vs. longitude).</definition>
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>

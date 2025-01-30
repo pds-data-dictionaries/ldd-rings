@@ -199,10 +199,12 @@
 -  Added source product, orbit number and sclk start/stop times.
 -  Revised some enumerated value options, and corrected some nillable inconsistencies.
 
-### Classes used from the geom namespace
+### Classes copied from the geom namespace
 - Body_Ident_Base
 - Reference_Frame_Ident
 - Central_Body_Ident
+
+### Classes copied from the display namespace
 - Display_Direction
 
 ### Classes used from the pds namespace
