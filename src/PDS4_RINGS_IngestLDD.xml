@@ -36,6 +36,9 @@
             identifier for a physical object (spacecraft, planet, instrument 
             transmitter, system barycenter, etc.), associated with the data.
         </definition>
+ 	<comment>
+ 	  v1.0 (pre-2020):  Attribute creation
+ 	</comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -166,6 +169,10 @@
             
             Optional in labels of occultation observations and may be used multiple times. 
         </definition>
+ 	<comment>
+ 	  v1.0 (pre-2020):  Attribute creation
+	  v1.1 (LDD version v1.8.0.0, 2020-01-28):  Removed nillable
+ 	</comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>

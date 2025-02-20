@@ -65,6 +65,16 @@
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/306
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#306
 
+### Issue #319: Update readme to include links to version history
+- STILL TO FINISH
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/319
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#319
+
+### Issue #320: Add version history for attributes and classes
+- STILL TO FINISH
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/320
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#320
+
 ### General Cleanup
 - Fixed spelling error in `ring_longitude_observed_minus_subsolar` definition: "providees" ==> "provides".  Incremented the version to 1.1 for this attribute.
 
