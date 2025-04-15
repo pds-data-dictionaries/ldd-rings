@@ -36,9 +36,9 @@
             identifier for a physical object (spacecraft, planet, instrument 
             transmitter, system barycenter, etc.), associated with the data.
         </definition>
- 	<comment>
- 	  v1.0 (pre-2020):  Attribute creation
- 	</comment>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -54,6 +54,9 @@
         <definition>The frame_spice_name attribute is a NAIF-recognized string 
             identifier for a reference frame associated with the data.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -73,6 +76,9 @@
         match the value of one, and only one, axis_name attribute in an
         Axis_Array class of the associated Array.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -89,6 +95,9 @@
             across the screen of a display device that data along the horizontal axis of
             an Array is supposed to be displayed. 
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -120,6 +129,9 @@
         match the value of one, and only one, axis_name attribute in an
         Axis_Array class of the associated Array.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -136,6 +148,9 @@
             along the screen of a display device that data along the vertical axis
             of an Array is supposed to be displayed. 
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -169,10 +184,10 @@
             
             Optional in labels of occultation observations and may be used multiple times. 
         </definition>
- 	<comment>
- 	  v1.0 (pre-2020):  Attribute creation
-	  v1.1 (LDD version v1.8.0.0, 2020-01-28):  Removed nillable
- 	</comment>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+            v1.1 (LDD version v1.8.0.0, 2020-01-28):  Removed nillable
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -202,6 +217,9 @@
         	measure of reflectivity that is unity for a Lambertian surface  
         	viewed at normal incidence.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -216,6 +234,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>minimum_reflectivity indicates the smallest value of I/F within the data object.
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -230,6 +251,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>maximum_reflectivity indicates the largest value of I/F within the data object.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -245,6 +269,9 @@
         <definition>
             The axis_name attribute contains a string that matches the axis_name attribute in an axis_array class of an associated array object.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -264,6 +291,9 @@
             interval can be either the original (raw) sampling or the result of
             some resampling process.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -280,6 +310,9 @@
         <definition>
             The sampling_base attribute indicates the numeric base of the associated logarithmic or exponential sampling interval.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -297,6 +330,9 @@
             sample interval increments.  It must have a value of either Linear, Logarithmic or
             Exponential.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -324,6 +360,9 @@
         <definition>
             The first_ring_radius attribute provides the value of the first increment along the radius axis of an array given in units of length.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -340,6 +379,9 @@
         <definition>
             The last_ring_radius attribute provides the value of the last increment along the radius axis of an array given in units of length.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -357,6 +399,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>sclk_start_time is the value of the spacecraft clock corresponding to the start_date_time given in the label.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+            v1.1 (pre-2020): Attribute moved to new Occultation_Ring_Profile class
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -371,6 +417,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>sclk_stop_time is the value of the spacecraft clock corresponding to the stop_date_time given in the label.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+            v1.1 (Pre-2020): Attribute moved to new Occultation_Ring_Profile class
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -390,6 +440,11 @@
             Required anytime a table field is given relative to a specific date and time other than when Barycentric Dynamical 
             Time is used (e.g., observed_event_tdb).
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+            v1.1 (pre-2020): Made an optional attribute for all profile labels.
+            v2.0 (LDD version v1.3.0.0, 2020-06-25): Removed specification of "Units_of_Time"
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -423,6 +478,9 @@
             Note: For occultation data, PDS prefers year-month-day format for dates rather  
             than year plus day-of-year format. However, either format is permitted.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -444,6 +502,9 @@
             values are given by the required start_date_time_utc and stop_date_time_utc attributes in the 
             Time_Coordinates class.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -465,6 +526,9 @@
             values are given by the required start_date_time_utc and stop_date_time_utc attributes in the 
             Time_Coordinates class.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -495,6 +559,9 @@
             to the time at the DSN receiving station. For an uplink radio occultation, this is the 
             spacecraft event time.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -512,6 +579,9 @@
             in the described data, and is given in elapsed seconds since the J2000 epoch.
 
             Optional in labels; not intended for use as a table field.</definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -530,6 +600,9 @@
 
             Optional in labels; not intended for use as a table field.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -539,7 +612,7 @@
     
     <DD_Attribute>
         <name>observed_event_time_utc</name>
-        <version_id>1.1</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>observed_event_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -558,6 +631,10 @@
           to the time at the DSN receiving station. For an uplink radio occultation, this is the 
           spacecraft event time.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC. Removed "Units_of_time".
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -576,6 +653,9 @@
             It is part of a start/stop pair. If one of observed_event_start_time_utc and 
             observed_event_stop_time_utc is used, both must be used.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -594,6 +674,9 @@
             It is part of a start/stop pair. If one of observed_event_start_time_utc and 
             observed_event_stop_time_utc is used, both must be used.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -616,6 +699,9 @@
             Additionally, in radio occultation labels the corresponding time interval end point values are 
             given by the required start_spacecraft_event_time_utc and stop_spacecraft_event_time_utc attributes.
          </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -636,6 +722,10 @@
 
             Required in the label for radio occultation data. Not used for stellar occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -655,6 +745,10 @@
             
             Required in the label for radio occultation data. Not used for stellar occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -679,6 +773,9 @@
             table field for stellar occultations and is not used for radio occultations. When 
             earth_received_time is used, the attribute reference_time_utc is required in the label.
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -697,6 +794,10 @@
 
             Optional for occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -714,6 +815,10 @@
 
             Optional for occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -737,6 +842,9 @@
             One of ring_event_time or ring_event_tdb is a required table field for all ring occultations. 
             Both may be used. If ring_event_time is used, the attribute reference_time_utc is required in the label.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -754,6 +862,11 @@
             ring_event_time or ring_event_tdb in the data table. ring_event_start_time_utc is required for all
             ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.1 (LDD version v1.23.0.0, 2024-11-13): <!-- ASK MIA-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -770,6 +883,11 @@
             ring_event_time or ring_event_tdb in the data table. ring_event_stop_time_utc is required for all
             ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.1 (LDD version v1.23.0.0, 2024-11-13): <!-- ASK MIA-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -791,6 +909,9 @@
             One of ring_event_time or ring_event_tdb is a required table field for all ring occultations. 
             Both may be used.
         </definition>
+        <comment>
+            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -809,6 +930,9 @@
 
             Optional in labels; not intended for use as a table field.
         </definition>
+        <comment>
+            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -827,6 +951,9 @@
 
             Optional in labels; not intended for use as a table field.
         </definition>
+        <comment>
+            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -847,6 +974,9 @@
 
             Optional in labels for radio occultation. 
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -864,6 +994,11 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>data_quality_index provides a more precise subjective assessment by the data provider of the quality of the observed/predicted ring occultation. 
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+            v1.1 (LDD version v1.10.0.0, 2020-06-25):  Revised enumerated values to lower case
+            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added values to support solar occultations
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -927,6 +1062,9 @@
         <definition>data_quality_score indicates the overall quality of the data, based on a subjective evaluation by the data provider.   
             Required in labels of ring occultation radial profiles. Normally not intended as a value for a table field.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -953,6 +1091,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The ring_detected attribute is a yes-or-no flag that indicates whether a specific ring has been detected. Typically used in radial profiles of a single ring. 
         </definition>
+        <comment>
+            v1.2 (LDD version v1.10.0.0, 2020-06-25): Attribute creation.
+            v1.2 (LDD version v1.11.0.0, 2021-11-10): Attribute creation.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -985,6 +1127,9 @@
 
             Required in labels of occultation observations. Normally not intended as a value for a table field.
         </definition>
+        <comment>
+            v1.3 (pre-2020):  Added to distinguish among Stellar, Solar, and Radio occultation types
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1015,6 +1160,9 @@
             Required in labels of ring occultation observations. Normally not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1048,6 +1196,10 @@
             Required in labels of ring occultation observations. Not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.3 (pre-2020):  Attribute creation
+            v1.4 (pre-2020):  Renamed from ring_occultation_direction to occultation_direction
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1083,6 +1235,9 @@
 
             Required in labels for stellar and solar occultations. Not used for radio occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1103,6 +1258,9 @@
             If the value varies, the corresponding minimum and maximum attributes must be used instead. 
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1123,6 +1281,9 @@
             If the value of radial resolution varies, the minimum and maximum radial resolution attributes 
             are required in labels. Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1143,6 +1304,9 @@
             If the value of radial resolution varies, the minimum and maximum radial resolution attributes 
             are required in labels. Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1161,6 +1325,10 @@
         	shape is not square, it is defined by the smaller of the two edges. 
         	Unlike the quantity ‘radial resolution’, these values are not projected into the ring plane.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute created.
+            v1.1 (Pre-2020): Attribute added to the Ring_Spectrum class.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1177,6 +1345,9 @@
         <definition>minimum_ring_intercept_resolution indicates the smallest value for 
         	ring_intercept_resolution in the data product.
         </definition>
+        <comment>
+            v1.1 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1193,6 +1364,9 @@
         <definition>maximum_ring_intercept_resolution indicates the largest value for 
         	ring_intercept_resolution in the data product.
         </definition>
+        <comment>
+            v1.2 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1214,6 +1388,9 @@
             and maximum attributes must be used instead. Not intended to be used 
             as a table field.
         </definition>
+        <comment>
+            v1.1 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1234,6 +1411,9 @@
             If the value of radial_sampling_interval varies, the minimum and maximum attributes 
             are required in labels. Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.1 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1254,6 +1434,9 @@
             If the value of radial_sampling_interval varies, the minimum and maximum attributes 
             are required in labels. Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.1 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1276,6 +1459,10 @@
         are in title case while those of Uranus are lower case, consistent with normal usage by the community.
         Required in labels of ring occultation observations.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+            v1.0 (pre-2020):  Reinstated in Occultation_Ring_Profile and Occultation_Time_Series classes
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1385,6 +1572,9 @@
             Required in labels of ring occultation observations. Not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.2 (Pre-2020): Attribute created.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1418,6 +1608,9 @@
             Not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -1454,6 +1647,9 @@
           Typically negative values are used to indicate the signal was too poor to allow the 
           calculation of the value.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added for standardized measure of ring opacity
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1471,6 +1667,9 @@
         	normal optical depth that can be detected in the observation based on the background 
         	signal and unocculted signal measurements.   
         </definition>
+        <comment>
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to Occultation_Time_Series
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1487,6 +1686,9 @@
         	normal optical depth that can be detected in the observation based on the background 
         	signal and unocculted signal measurements.    
         </definition>
+        <comment>
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to Occultation_Time_Series
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1509,6 +1711,9 @@
             Strongly recommended in labels of ring occultation observations. Not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1532,6 +1737,9 @@
             Strongly recommended in labels of ring occultation observations. Not intended as a value for
             a table field.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1553,6 +1761,9 @@
             or strongly recommended to be used as a field in the data table if the value is not constant. 
             Normally not used for radio occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1573,6 +1784,9 @@
             For stellar occultations, if the value is not constant, strongly recommended to be used as a
             field in the data table. Not used for radio occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1593,6 +1807,9 @@
             For solar occultations, if the value is not constant, strongly recommended to be used as a
             field in the data table. Not used for radio occultations.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to Occultation_Time_Series for signal analysis
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1612,6 +1829,10 @@
             Required to be the first field in ring occultation profiles. Data are always organized 
             with ring radius increasing. In labels, the min and max attributes are required.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+            v1.2 (LDD version v1.23.0.0): <!-- FIXIT-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1630,6 +1851,10 @@
 
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+            v1.3 (LDD version v1.23.0.0): <!-- FIXIT-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1648,6 +1873,10 @@
 
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+            v1.3 (LDD version v1.23.0.0): <!-- FIXIT-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1672,6 +1901,10 @@
             Required to be the second field in ring occultation profiles. In labels, the min and 
             max attributes are required.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added as replacement for deprecated ring_longitude
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1694,6 +1927,9 @@
             
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of inertial longitudes
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1716,6 +1952,9 @@
             
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (LDD version v1.12.0.0, 2023-04-18):  Added as replacement for deprecated maximum_ring_longitude
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1735,6 +1974,10 @@
         <definition>ring_longitude_observed_minus_subsolar provides the difference between the inertial 
         	  ring longitude of the observation and inertial ring longitude of the sub-solar point. 
         </definition>
+        <comment>
+            v1.0 (pre-2020): Added to describe offset between observed and subsolar ring longitude
+            v1.1 (post-2020): Fixed spelling error in description.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1754,6 +1997,11 @@
         <definition>minimum_ring_longitude_observed_minus_subsolar specifies smallest separation in ring 
         	longitude between the observation and the sub-solar point.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
+            v1.1 (post-2020):
+            v1.2 (post-2020): 
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1773,6 +2021,10 @@
         <definition>maximum_ring_longitude_observed_minus_sub-solar specifies largest separation in ring 
         	longitude between the observation and the subsolar point.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
+            v1.1 (post-2020):
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1803,6 +2055,9 @@
             is strongly recommended as a field in the data table. The above definition of observed_ring_elevation 
             is equivalent to the most common usage of the term 'ring open angle', B.
         </definition>
+        <comment>
+            v1.1 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1825,6 +2080,9 @@
 
             Not intended for use in the data file.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1847,6 +2105,9 @@
 
             Not intended for use in the data file.
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1866,6 +2127,9 @@
         <definition>mean_observed_ring_elevation specifies the mean value for observed_ring_elevation in 
             the data file. 
         </definition>
+        <comment>
+            v1.2 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1891,6 +2155,10 @@
 	    viewing on the unlit side from oblique or edge-on at 90 degrees to the unlit nadir at
 	    180 degrees.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+            v1.1 (post-2020): Made changes to the definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1910,6 +2178,9 @@
         <definition>The minimum_emission_angle attribute provides the smallest 
             value during the observation for the emission angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1929,6 +2200,9 @@
         <definition>The maximum_emission_angle element provides the largest 
             value during the observation for the emission angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1952,6 +2226,10 @@
             tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for 
             ring data.
         </definition>
+        <comment>
+            v1.0 (pre-2020): Attribute creation
+            v1.1 (post-2020): corrected spelling errors in definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1971,6 +2249,9 @@
         <definition>The minimum_incidence_angle attribute provides the smallest 
             value during the observation for the incidence angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -1990,6 +2271,9 @@
         <definition>The maximum_incidence_angle element provides the largest 
             value during the observation for the incidence angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2022,6 +2306,10 @@
             the observation, the min and max attributes are required in the label. Optional as a field in 
             the data table.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+            v1.1 (post-2020): corrected spelling errors in definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2044,6 +2332,10 @@
 
             Not intended for use in the data file.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (post-2020): corrected spelling errors in definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2066,6 +2358,10 @@
 
             Not intended for use in the data file.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (post-2020): corrected spelling errors in definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2089,6 +2385,9 @@
             not specfied, the target is assumed to be at the center of the instrument 
             field of view. If illumination is from behind the instrument, phase_angle will be small.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2108,6 +2407,9 @@
         <definition>The minimum_phase_angle attribute provides the smallest 
             value during the observation for the phase angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2127,6 +2429,9 @@
         <definition>The maximum_phase_angle element provides the largest 
             value during the observation for the phase angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2146,6 +2451,9 @@
         <definition>The mean_phase_angle element provides the mean 
             value during the observation for the phase angle at the target.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2171,6 +2479,9 @@
             Required to be the third field in ring occultation profiles. In labels, the min and 
             max attributes are required.
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2192,6 +2503,10 @@
 
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (LDD version v1.11.0.0, 2021-11-10): Added to the Occultation_Time_Series class
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2213,6 +2528,10 @@
 
             Required in label files for ring occultation data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (LDD version v1.11.0.0, 2021-11-10): Added to the Occultation_Time_Series class
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2241,6 +2560,11 @@
             for other occultation data. In a label, the min and max variation attributes are optional for 
             Cassini UVIS occultation data; not recommended for other occultation data.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v2.0 (LDD version v1.4.0.0, 2016-04-25):  Added schematron rule for conditional requirement based on occultation type
+            v2.0 (LDD version v1.5.0.0, 2017-04-12):  Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2263,6 +2587,10 @@
             Optional label attribute for Cassini UVIS occultation data; not used for other occultation 
             data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (pre-2020): Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2285,6 +2613,10 @@
             Optional label attribute for Cassini UVIS occultation data; not used for other occultation 
             data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (pre-2020): Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2314,6 +2646,10 @@
             Cassini VIMS occultation data; not recommended for other occultation data.
             
         </definition>
+        <comment>
+            v1.1 (pre-2020):  Attribute creation
+            v1.2 (pre-2020): Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2336,6 +2672,10 @@
             Optional label attribute for Cassini VIMS occultation data; not used for other occultation 
             data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (pre-2020): Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2358,6 +2698,10 @@
             Optional label attribute for Cassini VIMS occultation data; not used for other occultation 
             data.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (pre-2020): Corrected definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2379,6 +2723,9 @@
             Optional in labels. If the observation is over a wavelength range, use the 
             corresponding minimum and maximum attributes instead.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2397,6 +2744,9 @@
             Optional in labels. Used with maximum_wavelength when the observation is over 
             a wavelength range.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2415,6 +2765,9 @@
             Optional in labels. Used with minimum_wavelength when the observation is over 
             a wavelength range.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2433,6 +2786,10 @@
             Required in labels for radio occultations; not used for stellar occultations. Nillable in 
             which case the nil_reason should be 'inapplicable'.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.2 (pre-2020):  Added schematron rule for conditional requirement
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
@@ -2451,6 +2808,9 @@
 
             Required in labels for radio occultations; not used for stellar occultations.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -2554,6 +2914,9 @@
             overall resolution is affected as well by the projected diameter of 
             the occulted star and the instrumental time constant, if any.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added as optional attribute in Occultation_Time_Series
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2570,6 +2933,9 @@
         <definition>projected_star_diameter provides the projected angular diameter of the 
         	   occulted star, from observer to occulting object.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added for stellar occultation calibration
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2586,6 +2952,9 @@
         <definition>sigma_projected_star_diameter indicates the uncertainty (1-sigma) in 
         	   the projected_star_diameter.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added for uncertainty in projected star size
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2602,6 +2971,9 @@
         <definition>fractional_error_star_counts indicates the fractional error (1-sigma) in star counts 
         	  used for square-well model fit.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added as optional attribute in Occultation_Time_Series
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2619,6 +2991,9 @@
         	
         	This attribute is required if the time_constant attribute is present.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added to support time response modeling
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -2651,6 +3026,9 @@
         	  
         	  If this attribute is used then the attribute time_constant_type also must be present.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added to support time response modeling
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2669,6 +3047,10 @@
         	  
         	  If this attribute is used then the attribute time_constant also must be present.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.8.0.0, 2020-01-28):  Attribute creation
+            v1.1 (post-2020)
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2688,6 +3070,9 @@
         	 integration assuming the sun subtends a circular disk with an angular 
         	 size based on the distance of the central body from the sun.
         </definition>
+        <comment>
+            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added for solar occultation calibration
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2704,6 +3089,9 @@
         <definition>minimum_projected_sun_diameter provides the smallest value of  
          projected_sun_diameter in the observation.
         </definition>
+        <comment>
+            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2720,6 +3108,10 @@
         <definition>maximum_projected_sun_diameter provides the largest value of  
          projected_sun_diameter in the observation.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2736,6 +3128,9 @@
         <definition>sigma_projected_sun_diameter indicates the Standard deviation 
           (1-sigma) of projected_sun_diameter in the observation.
         </definition>
+        <comment>
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added for uncertainty in projected Sun size
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2753,6 +3148,9 @@
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The right ascension (RA) of the pole of the specified body, given in angular measurements.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2771,6 +3169,9 @@
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The uncertainty of the right ascension (RA) of the pole of the specified body, given in angular measurements.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2786,6 +3187,9 @@
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The declination (Dec) of the pole of the specified body, given in angular measurements.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2804,6 +3208,9 @@
         <submitter_name>Mitchell K. Gordon</submitter_name>
         <definition>The uncertainty of the declination (Dec) of the pole of the specified body, given in angular measurements.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2819,6 +3226,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The J2 gravitational harmonic coefficient of the body identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2834,6 +3244,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The J4 gravitational harmonic coefficient of the body identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2849,6 +3262,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The J6 gravitational harmonic coefficient of the body identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2864,6 +3280,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The J8 gravitational harmonic coefficient of the body identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2879,6 +3298,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The product of the Gravitational constant and the mass of the identified body.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.0 (LDD version v1.9.0.0, 2020-01-31):  Changed unit_of_measure_type to Units_of_Gmass
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2894,6 +3317,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The reference radius for the gravitational harmonic coefficients of the body identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2909,6 +3335,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The epoch for the ring orbital elements given in this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v2.0 (LDD version v1.23.0.0): <!--FIXIT-->
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -2923,6 +3353,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The semimajor axis of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2938,6 +3371,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the semimajor axis of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2953,6 +3389,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The eccentricity of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2968,6 +3407,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the eccentricity of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -2983,6 +3425,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The longitude of periapse for the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3001,6 +3446,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the longitude of periapse for the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3016,6 +3464,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The precession rate of the periapse of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3031,6 +3482,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3046,6 +3500,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>A flag indicating the constraints used to determine the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
@@ -3076,6 +3533,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The inclination of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3094,6 +3554,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the inclination of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3109,6 +3572,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The longitude of the ascending node of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3127,6 +3593,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the longitude of the ascending node of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3142,6 +3611,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The regression rate of the node of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3157,6 +3629,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3172,6 +3647,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>A flag indicating the constraints used to determine the node regression rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
@@ -3202,6 +3680,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>Number of fitted data points for the orbit of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
@@ -3217,6 +3698,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The root mean square residuals for the semimajor axis of the body or ring identified in the enclosing class.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.1 (post-2020): Improved definition clarity
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3232,6 +3717,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The amplitude of the normal mode for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3247,6 +3735,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the normal mode of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3262,6 +3753,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The phase of the normal mode at epoch specified by epoch_ring_fit_utc for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3277,6 +3771,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the value for the normal_mode_phase of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3292,6 +3789,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3307,6 +3807,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The uncertainty in the pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3322,6 +3825,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The wave number of the normal mode in the ring identified in the enclosing class. A value of -999 indicates there is no normal mode for the ring.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
@@ -3344,6 +3850,9 @@
         'Four', 'Alpha', 'Beta',  'Eta', 'Gamma', 'Delta', 'Lambda','Epsilon',Nu, Mu. 
         Required in labels of ring reprojection products.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -3446,6 +3955,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+            v2.0 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Date_Time_YMD_UTC</value_data_type>
@@ -3461,6 +3974,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The corotating_flag is a yes-or-no flag that indicates whether or not a corotating frame is used.
         </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (LDD version v1.12.0.0, 2023-04-18):  Updated definition and spelling
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -3485,6 +4002,9 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The corotation rate associated with the data.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3500,6 +4020,10 @@
         <submitter_name>M. Gordon</submitter_name>
         <definition>The ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
+        <comment>
+            v1.0 (pre-2020):  Attribute creation
+            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Improved clarity in definition
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3518,6 +4042,10 @@
         <submitter_name>M. Gordon</submitter_name>
 	<definition>The minimum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of corotating longitudes
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3534,8 +4062,12 @@
         <local_identifier>maximum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-	<definition>The maximum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+	    <definition>The maximum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
+        <comment>
+            v1.0 (Pre-2020): Attribute creation
+            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3556,6 +4088,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3573,6 +4108,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3590,6 +4128,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3607,6 +4148,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3624,6 +4168,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
@@ -3641,6 +4188,9 @@
             Required in labels.
             Not intended to be used as a table field.
         </definition>
+        <comment>
+            v1.0 (post-2020): Attribute creation
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
