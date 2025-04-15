@@ -419,7 +419,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (Pre-2020): Attribute moved to new Occultation_Ring_Profile class
+            v1.1 (pre-2020): Attribute moved to new Occultation_Ring_Profile class
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -865,7 +865,7 @@
         <comment>
             v1.2 (pre-2020):  Attribute creation
             v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
-            v2.1 (LDD version v1.23.0.0, 2024-11-13): <!-- ASK MIA-->
+            v2.1 (LDD version v1.23.0.0, 2024-11-13): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -886,7 +886,7 @@
         <comment>
             v1.2 (pre-2020):  Attribute creation
             v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
-            v2.1 (LDD version v1.23.0.0, 2024-11-13): <!-- ASK MIA-->
+            v2.1 (LDD version v1.23.0.0, 2024-11-13): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -910,7 +910,7 @@
             Both may be used.
         </definition>
         <comment>
-            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+            v1.2 (pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -931,7 +931,7 @@
             Optional in labels; not intended for use as a table field.
         </definition>
         <comment>
-            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+            v1.2 (pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -952,7 +952,7 @@
             Optional in labels; not intended for use as a table field.
         </definition>
         <comment>
-            v1.2 (Pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
+            v1.2 (pre-2020):  Added to support ring occultation timing in Barycentric Dynamical Time
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1326,8 +1326,8 @@
         	Unlike the quantity ‘radial resolution’, these values are not projected into the ring plane.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute created.
-            v1.1 (Pre-2020): Attribute added to the Ring_Spectrum class.
+            v1.0 (pre-2020): Attribute created.
+            v1.1 (pre-2020): Attribute added to the Ring_Spectrum class.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1346,7 +1346,7 @@
         	ring_intercept_resolution in the data product.
         </definition>
         <comment>
-            v1.1 (Pre-2020): Attribute created.
+            v1.1 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1365,7 +1365,7 @@
         	ring_intercept_resolution in the data product.
         </definition>
         <comment>
-            v1.2 (Pre-2020): Attribute created.
+            v1.2 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1389,7 +1389,7 @@
             as a table field.
         </definition>
         <comment>
-            v1.1 (Pre-2020): Attribute created.
+            v1.1 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1412,7 +1412,7 @@
             are required in labels. Not intended to be used as a table field.
         </definition>
         <comment>
-            v1.1 (Pre-2020): Attribute created.
+            v1.1 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1435,7 +1435,7 @@
             are required in labels. Not intended to be used as a table field.
         </definition>
         <comment>
-            v1.1 (Pre-2020): Attribute created.
+            v1.1 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1573,7 +1573,7 @@
             a table field.
         </definition>
         <comment>
-            v1.2 (Pre-2020): Attribute created.
+            v1.2 (pre-2020): Attribute created.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1831,7 +1831,7 @@
         </definition>
         <comment>
             v1.1 (pre-2020): Attribute creation
-            v1.2 (LDD version v1.23.0.0): <!-- FIXIT-->
+            v1.2 (LDD version v1.23.0.0): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1853,7 +1853,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.23.0.0): <!-- FIXIT-->
+            v1.3 (LDD version v1.23.0.0): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1875,7 +1875,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.23.0.0): <!-- FIXIT-->
+            v1.3 (LDD version v1.23.0.0): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1902,7 +1902,7 @@
             max attributes are required.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added as replacement for deprecated ring_longitude
         </comment>
         <DD_Value_Domain>
@@ -2561,7 +2561,7 @@
             Cassini UVIS occultation data; not recommended for other occultation data.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v2.0 (LDD version v1.4.0.0, 2016-04-25):  Added schematron rule for conditional requirement based on occultation type
             v2.0 (LDD version v1.5.0.0, 2017-04-12):  Corrected definition
         </comment>
@@ -3109,7 +3109,7 @@
          projected_sun_diameter in the observation.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
         </comment>
         <DD_Value_Domain>
@@ -3299,7 +3299,7 @@
         <definition>The product of the Gravitational constant and the mass of the identified body.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.0 (LDD version v1.9.0.0, 2020-01-31):  Changed unit_of_measure_type to Units_of_Gmass
         </comment>
         <DD_Value_Domain>
@@ -3318,7 +3318,7 @@
         <definition>The reference radius for the gravitational harmonic coefficients of the body identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3336,8 +3336,8 @@
         <definition>The epoch for the ring orbital elements given in this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
-            v2.0 (LDD version v1.23.0.0): <!--FIXIT-->
+            v1.0 (pre-2020): Attribute creation
+            v2.0 (LDD version v1.23.0.0): Changed to have value data type ASCII_Date_Time_YMD_UTC
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3354,7 +3354,7 @@
         <definition>The semimajor axis of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3372,7 +3372,7 @@
         <definition>The uncertainty in the value for the semimajor axis of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3390,7 +3390,7 @@
         <definition>The eccentricity of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3408,7 +3408,7 @@
         <definition>The uncertainty in the value for the eccentricity of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3426,7 +3426,7 @@
         <definition>The longitude of periapse for the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3447,7 +3447,7 @@
         <definition>The uncertainty in the value for the longitude of periapse for the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3465,7 +3465,7 @@
         <definition>The precession rate of the periapse of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3483,7 +3483,7 @@
         <definition>The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3501,7 +3501,7 @@
         <definition>A flag indicating the constraints used to determine the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -3534,7 +3534,7 @@
         <definition>The inclination of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3555,7 +3555,7 @@
         <definition>The uncertainty in the value for the inclination of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3573,7 +3573,7 @@
         <definition>The longitude of the ascending node of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3594,7 +3594,7 @@
         <definition>The uncertainty in the value for the longitude of the ascending node of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3612,7 +3612,7 @@
         <definition>The regression rate of the node of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3630,7 +3630,7 @@
         <definition>The uncertainty in the value for the periapse precession rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3648,7 +3648,7 @@
         <definition>A flag indicating the constraints used to determine the node regression rate of the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -3681,7 +3681,7 @@
         <definition>Number of fitted data points for the orbit of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3699,7 +3699,7 @@
         <definition>The root mean square residuals for the semimajor axis of the body or ring identified in the enclosing class.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.1 (post-2020): Improved definition clarity
         </comment>
         <DD_Value_Domain>
@@ -3718,7 +3718,7 @@
         <definition>The amplitude of the normal mode for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3736,7 +3736,7 @@
         <definition>The uncertainty in the value for the normal mode of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3754,7 +3754,7 @@
         <definition>The phase of the normal mode at epoch specified by epoch_ring_fit_utc for the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3772,7 +3772,7 @@
         <definition>The uncertainty in the value for the normal_mode_phase of the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3790,7 +3790,7 @@
         <definition>The pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3808,7 +3808,7 @@
         <definition>The uncertainty in the pattern speed of the normal mode in the ring identified in the enclosing class. A value of -9.99X10^99 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3826,7 +3826,7 @@
         <definition>The wave number of the normal mode in the ring identified in the enclosing class. A value of -999 indicates there is no normal mode for the ring.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4043,7 +4043,7 @@
 	<definition>The minimum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of corotating longitudes
         </comment>
         <DD_Value_Domain>
@@ -4065,7 +4065,7 @@
 	    <definition>The maximum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
-            v1.0 (Pre-2020): Attribute creation
+            v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity
         </comment>
         <DD_Value_Domain>
