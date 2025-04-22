@@ -854,7 +854,7 @@
     
     <DD_Attribute>
         <name>ring_event_start_time_utc</name>
-        <version_id>2.1</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>ring_event_start_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -864,8 +864,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
-            v2.1 (LDD version v1.23.0.0, 2024-11-13): Fixed definition
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC, fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -875,7 +874,7 @@
     
     <DD_Attribute>
         <name>ring_event_stop_time_utc</name>
-        <version_id>2.1</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>ring_event_stop_time_utc</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -885,8 +884,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
-            v2.1 (LDD version v1.23.0.0, 2024-11-13): Fixed definition
+            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC, fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
