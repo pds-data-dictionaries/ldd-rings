@@ -1976,7 +1976,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe offset between observed and subsolar ring longitude
-            v1.1 (post-2020): Fixed spelling error in description.
+            v1.1 (post-2020): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1999,8 +1999,8 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (post-2020):
-            v1.2 (post-2020): 
+            v1.1 (post-2020): Fixed a spelling error in the definition
+            v1.2 (post-2020): Changed definition to no longer state attribute's requirement in label files for ring occultation data.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2023,7 +2023,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (post-2020):
+            v1.1 (post-2020): Fixed a spelling error in the definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
