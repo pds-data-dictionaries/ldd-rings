@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon Apr 28 22:33:17 UTC 2025 -->
-  <!-- Generated from the PDS4 Information Model Version 1.23.0.0 - System Build 15.0 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon Apr 28 22:33:20 UTC 2025 -->
+  <!-- Generated from the PDS4 Information Model Version 1.24.0.0 - System Build 15.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -331,9 +331,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Central_Body_Parameters/rings:gmass">
-      <sch:assert test="@unit = ('km**3s**-2')">
+      <sch:assert test="@unit = ('km**3/s**2')">
         <title>rings:Central_Body_Parameters/rings:gmass/rings:gmass</title>
-        The attribute @unit must be equal to one of the following values 'km**3s**-2'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'km**3/s**2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -1640,9 +1640,9 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="rings:Satellite_Parameters/rings:gmass">
-      <sch:assert test="@unit = ('km**3s**-2')">
+      <sch:assert test="@unit = ('km**3/s**2')">
         <title>rings:Satellite_Parameters/rings:gmass/rings:gmass</title>
-        The attribute @unit must be equal to one of the following values 'km**3s**-2'.</sch:assert>
+        The attribute @unit must be equal to one of the following values 'km**3/s**2'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
