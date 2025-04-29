@@ -96,7 +96,21 @@
         label, its maximum occurrences is set to zero.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="emission_angle" type="rings:emission_angle" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="emission_angle" type="rings:emission_angle" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="observed_event_time" type="rings:observed_event_time" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="observed_event_time_utc" type="rings:observed_event_time_utc" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="spacecraft_event_time" type="rings:spacecraft_event_time" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="earth_received_time" type="rings:earth_received_time" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="ring_event_tbd" type="rings:ring_event_tbd" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="normal_optical_depth" type="rings:normal_optical_depth" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="stellar_signal_level" type="rings:stellar_signal_level" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="ring_radius" type="rings:ring_radius" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="phase_angle" type="rings:phase_angle" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="observed_ring_azimuth" type="rings:observed_ring_azimuth" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="maximum_sub_stellar_ring_azimuth" type="rings:maximum_sub_stellar_ring_azimuth" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="minimum_sub_stellar_clock_angle" type="rings:minimum_sub_stellar_clock_angle" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="maximum_sub_stellar_clock_angle" type="rings:maximum_sub_stellar_clock_angle" minOccurs="0" maxOccurs="0"> </xs:element>
+      <xs:element name="projected_sun_diameter" type="rings:projected_sun_diameter" minOccurs="0" maxOccurs="0"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
