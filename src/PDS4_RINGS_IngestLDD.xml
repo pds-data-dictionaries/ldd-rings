@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://github.com/pds-data-dictionaries/ldd-disp/blob/main/build/development/27ac6f8b6b096fb8bf35574bd1bff00b65ea6b16/1.23.0.0/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
-            xmlns:disp="http://github.com/pds-data-dictionaries/ldd-disp/blob/main/build/development/27ac6f8b6b096fb8bf35574bd1bff00b65ea6b16/1.23.0.0"
+            xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
             
             xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd
-                                http://github.com/pds-data-dictionaries/ldd-disp/blob/main/build/development/27ac6f8b6b096fb8bf35574bd1bff00b65ea6b16/1.23.0.0  https://github.com/pds-data-dictionaries/ldd-disp/blob/main/build/development/27ac6f8b6b096fb8bf35574bd1bff00b65ea6b16/1.23.0.0/PDS4_DISP_1N00_1510.xsd">
+                                http://pds.nasa.gov/pds4/disp/v1  https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -7001,7 +7001,7 @@
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 
     <!-- Here is a rule to require disp:Display_Direction -->
-    <DD_Rule>
+    <!-- <DD_Rule>
         <local_identifier>rule_display_direction_check</local_identifier>
         <rule_context>rings:Ring_Moon_Systems</rule_context>
         <rule_assign>name="is_image_like" value="//(rings:Ring_Reprojection|rings:Ring_Spectrum)"</rule_assign>
@@ -7010,5 +7010,5 @@
             <rule_test>if ($is_image_like) then //disp:Display_Settings/disp:Display_Direction else true()</rule_test>
             <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "disp:Display_Direction" must be specified, as well.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule>
+    </DD_Rule> -->
 </Ingest_LDD>
