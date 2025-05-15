@@ -6997,6 +6997,7 @@
     <!-- Here is a rule to require disp:Display_Direction -->
     <DD_Rule>
         <local_identifier>rule_display_direction_check</local_identifier>
+        <ns prefix="disp" uri="http://pds.nasa.gov/pds4/disp/v1"/>
         <rule_context>rings:Ring_Moon_Systems</rule_context>
         <rule_assign>name="is_image_like" value="//(rings:Ring_Reprojection|rings:Ring_Spectrum)"</rule_assign>
         <DD_Rule_Statement>
