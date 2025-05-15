@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.7.0
-   Date        2025-05-15T21:35:53Z
+   Date        2025-05-15T21:49:11Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/build/development/418ec9f7f2dcb238e739851cbec5caa75556bfa9/1.22.0.0/PDS4_RINGS_1M00_1D00.xml]
+   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ebadce0f7c530c80a5fc5c24af14b7c8445919e/1.22.0.0/PDS4_RINGS_1M00_1D00.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/418ec9f7f2dcb238e739851cbec5caa75556bfa9/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/418ec9f7f2dcb238e739851cbec5caa75556bfa9/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ebadce0f7c530c80a5fc5c24af14b7c8445919e/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ebadce0f7c530c80a5fc5c24af14b7c8445919e/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -24,8 +24,8 @@ Error near {...ettings/disp:Display_Direct...} at char 48 in xsl:when/@test on l
 
 Product Level Validation Results
 
-  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/build/development/418ec9f7f2dcb238e739851cbec5caa75556bfa9/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
-      FATAL_ERROR  [error.label.schematron]   Error occurred while processing schematron 'file:/home/runner/work/ldd-rings/ldd-rings/build/development/418ec9f7f2dcb238e739851cbec5caa75556bfa9/1.22.0.0/PDS4_RINGS_1M00_1D00.sch': net.sf.saxon.s9api.SaxonApiException: Errors were reported during stylesheet compilation
+  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ebadce0f7c530c80a5fc5c24af14b7c8445919e/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
+      FATAL_ERROR  [error.label.schematron]   Error occurred while processing schematron 'file:/home/runner/work/ldd-rings/ldd-rings/build/development/3ebadce0f7c530c80a5fc5c24af14b7c8445919e/1.22.0.0/PDS4_RINGS_1M00_1D00.sch': net.sf.saxon.s9api.SaxonApiException: Errors were reported during stylesheet compilation
         1 product validation(s) completed
 
 Summary:
@@ -50,5 +50,5 @@ Summary:
     1            error.label.schematron
 
 End of Report
-Completed execution in 3385 ms
+Completed execution in 3066 ms
 
