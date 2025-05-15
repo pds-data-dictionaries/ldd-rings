@@ -26,20 +26,22 @@
 - INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
 - ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
 - ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
+- 5/15/25: The attributes `reprojection_grid_radial/longitudinal_resolution_mean/min/max` have been removed. The definitions for `radial_resolution`, `longitudinal_resolution`, `reprojection_grid_radial_resolution`, and `reprojection_grid_longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
+`minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, `reprojection_grid_radial_sampling_interval`, and `reprojection_grid_longitudinal_sampling_interval`
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
 
 ### Issue #242: Deprecate copied classes from Geometry and Display dictionaries
-- STILL TO DO: Replaced references to Body_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident with references to geom.Body_Identification_Base, geom.Reference_Frame_Identification, and geom.Central_Body_Identification, after having set element_flag=true for each of those within the Geometry LDD.
-- STILL TO DO: Removed Body_Ident_Base, Frame_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident.  Also remove attributes used only within those classes, namely body_spice_name and frame_spice_name.
+- Replaced references to Body_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident with references to geom.Body_Identification_Base, geom.Reference_Frame_Identification, and geom.Central_Body_Identification, after having set element_flag=true for each of those within the Geometry LDD.
+- Removed Body_Ident_Base, Frame_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident. Also remove attributes used only within those classes, namely body_spice_name and frame_spice_name.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/242
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#242
 
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
-- Added schematron rule rule_display_direction_check, BUT IT DIDN'T WORK SO WE COMMENTED IT OUT.
-- STILL TO DO: CREATE UNIT TESTS
-- STILL TO DO: REMOVE DISPLAY_DIRECTION, ALL ITS CHILD ATTRIBUTES, AND THE REFERENCES TO IT
+- Added schematron rule rule_display_direction_check
+- Created unit tests for this schematron rule.
+- Replaced rings:Display_Direction class with reference to disp:Display_Settings/disp:Dislay_Direction.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/243
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#243
 
@@ -50,7 +52,7 @@
 
 ### Issue #267: Create class for attributes that are not currently members of any class
 - Created the class Column_Headers
-- STILL TO DO: COLLECT ALL ATTRIBUTES THAT SHOULD LIVE WITHIN THIS CLASS
+- All orphaned attributes have been moved to this class.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/267
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#267
 
@@ -66,12 +68,13 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#306
 
 ### Issue #319: Update readme to include links to version history
-- STILL TO FINISH
+- The README.md file now contains referenced to all version history.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/319
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#319
 
 ### Issue #320: Add version history for attributes and classes
-- STILL TO FINISH
+- All attributes now have comment entries detailing version history.
+- STILL TO DO: Classes cannot have comment entries. No version history can exist for classes until this is changed.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/320
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#320
 

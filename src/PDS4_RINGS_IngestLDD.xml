@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<Ingest_LDD 
-  xmlns="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"   
-  xsi:schemaLocation=
-   "http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd 
-    http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:disp="http://pds.nasa.gov/pds4/disp/v1" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd      http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -22,10 +14,9 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2025-01-08</last_modification_date_time>
-    
-<!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
+    <last_modification_date_time>2025-05-15</last_modification_date_time>
 
+<!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
     <DD_Attribute>
         <name>body_spice_name</name>
         <version_id>1.0</version_id>
@@ -63,113 +54,7 @@
         </DD_Value_Domain>
     </DD_Attribute>
 
-    <DD_Attribute>
-        <name>horizontal_display_axis</name>
-        <version_id>1.0</version_id>
-        <local_identifier>horizontal_display_axis</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Elizabeth Rye</submitter_name>
-        <definition>The horizontal_display_axis attribute
-        identifies, by name, the axis of an Array (or Array subclass)
-        that is intended to be displayed in the horizontal or "sample"
-        dimension on a display device. The value of this attribute must
-        match the value of one, and only one, axis_name attribute in an
-        Axis_Array class of the associated Array.
-        </definition>
-        <comment>
-            v1.0 (pre-2020):  Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-    <DD_Attribute>
-        <name>horizontal_display_direction</name>
-        <version_id>1.0</version_id>
-        <local_identifier>horizontal_display_direction</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Elizabeth Rye</submitter_name>
-        <definition>The horizontal_display_direction attribute specifies the direction
-            across the screen of a display device that data along the horizontal axis of
-            an Array is supposed to be displayed. 
-        </definition>
-        <comment>
-            v1.0 (pre-2020):  Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>true</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-            <DD_Permissible_Value>
-                <value>Left to Right</value>
-                <value_meaning>Data along the horizontal axis of an array should
-                	be displayed from left to right.
-                 </value_meaning>
-            </DD_Permissible_Value>
-            <DD_Permissible_Value>
-                <value>Right to Left</value>
-                <value_meaning>Data along the horizontal axis of an array should
-                	be displayed from right to left.
-                </value_meaning>
-            </DD_Permissible_Value>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-    <DD_Attribute>
-        <name>vertical_display_axis</name>
-        <version_id>1.0</version_id>
-        <local_identifier>vertical_display_axis</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Elizabeth Rye</submitter_name>
-        <definition>The vertical_display_axis attribute
-        identifies, by name, the axis of an Array (or Array subclass)
-        that is intended to be displayed in the vertical or "line"
-        dimension on a display device. The value of this attribute must
-        match the value of one, and only one, axis_name attribute in an
-        Axis_Array class of the associated Array.
-        </definition>
-        <comment>
-            v1.0 (pre-2020):  Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-    <DD_Attribute>
-        <name>vertical_display_direction</name>
-        <version_id>1.0</version_id>
-        <local_identifier>vertical_display_direction</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>Elizabeth Rye</submitter_name>
-        <definition>The vertical_display_direction attribute specifies the direction
-            along the screen of a display device that data along the vertical axis
-            of an Array is supposed to be displayed. 
-        </definition>
-        <comment>
-            v1.0 (pre-2020):  Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>true</enumeration_flag>
-            <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-            <DD_Permissible_Value>
-                <value>Top to Bottom</value>
-                <value_meaning>Data along the vertical axis of an array should
-                	be displayed from the top to the bottom of the display device.
-                 </value_meaning>
-            </DD_Permissible_Value>
-            <DD_Permissible_Value>
-                <value>Bottom to Top</value>
-                <value_meaning>Data along the vertical axis of an array should
-                	be displayed from the bottom to the top of the display device.
-                </value_meaning>
-            </DD_Permissible_Value>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-<!-- @@@ End of the block of attributes borrowed from the geom namespace pending a fix to LDDTool -->
+    <!-- @@@ End of the block of attributes borrowed from the geom namespace pending a fix to LDDTool -->
 
 
 <!-- General attributes -->
@@ -1248,13 +1133,13 @@
         <local_identifier>radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>radial_resolution indicates the nominal radial distance over which changes in ring
-            properties can be detected within a data product. Note: this value may be larger than the 
-            radial_sampling_interval value, because a data product can be over-sampled.
-
-            Required in labels if the value is fixed, as it is for stellar occultations. 
-            If the value varies, the corresponding minimum and maximum attributes must be used instead. 
-            Not intended to be used as a table field.
+        <definition>radial_resolution indicates the nominal radial size of a single pixel.
+        Note: this value may be either smaller or larger than that of radial_sampling_interval
+        or reprojection_grid_radial_resolution, because a derived product can be
+        over-sampled or under-sampled.
+        Required in labels if the value is fixed. If the value varies, the corresponding
+        mean and minimum and maximum attributes must be used in labels and 
+        radial_resolution should be a table field.
         </definition>
         <comment>
             v1.1 (pre-2020):  Attribute creation
@@ -1272,12 +1157,12 @@
         <local_identifier>minimum_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_radial_resolution indicates the minimum radial distance over which changes in ring
-            properties can be detected within a data product. Note: this value may be larger than the 
-            radial_sampling_interval value, because a data product can be over-sampled.
-
-            If the value of radial resolution varies, the minimum and maximum radial resolution attributes 
-            are required in labels. Not intended to be used as a table field.
+        <definition>minimum_radial_resolution indicates the smallest radial size of a
+        single pixel. Note: this value may be either smaller or larger than that of
+        radial_sampling_interval or reprojection_grid_radial_resolution, because a derived
+        product can be over-sampled or under-sampled.
+        Required in labels if the value of radial_resolution varies. Not intended to be
+        used as a table field.
         </definition>
         <comment>
             v1.1 (pre-2020):  Attribute creation
@@ -1295,15 +1180,132 @@
         <local_identifier>maximum_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_radial_resolution indicates the maximum radial distance over which changes in ring
-            properties can be detected within a data product. Note: this value may be larger than the 
-            radial_sampling_interval value, because a data product can be over-sampled.
-
-            If the value of radial resolution varies, the minimum and maximum radial resolution attributes 
-            are required in labels. Not intended to be used as a table field.
+        <definition>indicates the largest radial size of a single pixel. Note: this value
+        may be either smaller or larger than that of radial_sampling_interval or
+        reprojection_grid_radial_resolution, because a derived product can be over-sampled
+        or under-sampled.
+        Required in labels if the value of radial_resolution varies. Not intended to be
+        used as a table field.
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>mean_radial_resolution</name>
+        <version_id>1.2</version_id>
+        <local_identifier>mean_radial_resolution</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>M. Gordon</submitter_name>
+        <definition>indicates the mean radial size of a single pixel. Note: this value
+        may be either smaller or larger than that of radial_sampling_interval or
+        reprojection_grid_radial_resolution, because a derived product can be over-sampled
+        or under-sampled.
+        Required in labels if the value of radial_resolution varies. Not intended to be
+        used as a table field.
+        </definition>
+        <comment>
+            v1.2 (pre-2020):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>longitudinal_resolution</name>
+        <version_id>1.0</version_id>
+        <local_identifier>longitudinal_resolution</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>longitudinal_resolution indicates the nominal longitudinal size of a
+        single pixel. Note: this value may be either smaller or larger than that of
+        radial_sampling_interval or reprojection_grid_longitudinal_resolution,
+        because a derived product can be over-sampled or under-sampled.
+        Required in labels if the value is fixed. If the value varies, the corresponding
+        mean and minimum and maximum attributes must be used in labels and
+        longitudinal_resolution should be a table field.
+        </definition>
+        <comment>
+            v1.0 (1.13.0):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+
+    <DD_Attribute>
+        <name>minimum_longitudinal_resolution</name>
+        <version_id>1.0</version_id>
+        <local_identifier>minimum_longitudinal_resolution</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>minimum_longitudinal_resolution indicates the smallest longitudinal
+        size of a single pixel. Note: this value may be either smaller or larger than that
+        of radial_sampling_interval or reprojection_grid_longitudinal_resolution, because
+        a derived product can be over-sampled or under-sampled.
+        Required in labels if the value of longitudinal_resolution varies. Not intended to
+        be used as a table field.
+        </definition>
+        <comment>
+            v1.0 (1.13.0):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>maximum_longitudinal_resolution</name>
+        <version_id>1.0</version_id>
+        <local_identifier>maximum_longitudinal_resolution</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>minimum_longitudinal_resolution indicates the largest longitudinal
+        size of a single pixel. Note: this value may be either smaller or larger than that
+        of radial_sampling_interval or reprojection_grid_longitudinal_resolution, because
+        a derived product can be over-sampled or under-sampled.
+        Required in labels if the value of longitudinal_resolution varies. Not intended to
+        be used as a table field.
+        </definition>
+        <comment>
+            v1.0 (1.13.0):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>mean_longitudinal_resolution</name>
+        <version_id>1.0</version_id>
+        <local_identifier>mean_longitudinal_resolution</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>minimum_longitudinal_resolution indicates the mean longitudinal
+        size of a single pixel. Note: this value may be either smaller or larger than that
+        of radial_sampling_interval or reprojection_grid_longitudinal_resolution, because
+        a derived product can be over-sampled or under-sampled.
+        Required in labels if the value of longitudinal_resolution varies. Not intended to
+        be used as a table field.
+        </definition>
+        <comment>
+            v1.0 (1.13.0):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4077,14 +4079,18 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>reprojection_grid_radial_resolution_mean</name>
+        <name>reprojection_grid_radial_resolution</name>
         <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_radial_resolution_mean</local_identifier>
+        <local_identifier>reprojection_grid_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_radial_resolution_mean indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
+        <definition>reprojection_grid_radial_resolution indicates the radial spacing
+          between consecutive rows or columns in a ring reprojected image. This will
+          usually be different from and can be either larger or smaller than the
+          radial_resolution because an image may be under- or over-sampled.
+          Required in labels if the value is fixed. If the value varies, the corresponding
+          minimum and maximum attributes must be used in labels and
+          reprojection_grid_radial_resolution should be a table field.
         </definition>
         <comment>
             v1.0 (post-2020): Attribute creation
@@ -4097,14 +4103,18 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>reprojection_grid_radial_resolution_min</name>
+        <name>reprojection_grid_longitudinal_resolution</name>
         <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_radial_resolution_min</local_identifier>
+        <local_identifier>reprojection_grid_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_radial_resolution_min indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
+        <definition>reprojection_grid_longitudinal_resolution indicates the longitudinal spacing
+          between consecutive rows or columns in a ring reprojected image. This will
+          usually be different from and can be either larger or smaller than the
+          longitudinal_resolution because an image may be under- or over-sampled.
+          Required in labels if the value is fixed. If the value varies, the corresponding
+          minimum and maximum attributes must be used in labels and
+          reprojection_grid_longitudinal_resolution should be a table field.
         </definition>
         <comment>
             v1.0 (post-2020): Attribute creation
@@ -4117,14 +4127,17 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>reprojection_grid_radial_resolution_max</name>
+        <name>reprojection_grid_radial_sampling_interval</name>
         <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_radial_resolution_max</local_identifier>
+        <local_identifier>reprojection_grid_radial_sampling_interval</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_radial_resolution_max indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
+        <definition>reprojection_grid_radial_sampling_interval indicates the radial size
+        of a single pixel in a reprojected image (a derived product). In practice, this
+        may be either larger or smaller than the radial_resolution because a profile or
+        reprojection may be over-sampled or under-sampled.
+        Required in labels for reprojected images, which are expected to have a fixed grid
+        and thus a constant value for this attribute.
         </definition>
         <comment>
             v1.0 (post-2020): Attribute creation
@@ -4137,14 +4150,17 @@
     </DD_Attribute>
 
     <DD_Attribute>
-        <name>reprojection_grid_angular_resolution_mean</name>
+        <name>reprojection_grid_longitudinal_sampling_interval</name>
         <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_angular_resolution_mean</local_identifier>
+        <local_identifier>reprojection_grid_longitudinal_sampling_interval</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_angular_resolution_mean indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
+        <definition>reprojection_grid_longitudinal_sampling_interval indicates the
+        longitudinal size of a single pixel in a reprojected image (a derived product).
+        In practice, this may be either larger or smaller than the longitudinal_resolution
+        because a profile or reprojection may be over-sampled or under-sampled.
+        Required in labels for reprojected images, which are expected to have a fixed grid
+        and thus a constant value for this attribute.
         </definition>
         <comment>
             v1.0 (post-2020): Attribute creation
@@ -4155,48 +4171,6 @@
             <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
         </DD_Value_Domain>
     </DD_Attribute>
-
-    <DD_Attribute>
-        <name>reprojection_grid_angular_resolution_min</name>
-        <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_angular_resolution_min</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_angular_resolution_min indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
-        </definition>
-        <comment>
-            v1.0 (post-2020): Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Real</value_data_type>
-            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-    <DD_Attribute>
-        <name>reprojection_grid_angular_resolution_max</name>
-        <version_id>1.0</version_id>
-        <local_identifier>reprojection_grid_angular_resolution_max</local_identifier>
-        <nillable_flag>false</nillable_flag>
-        <submitter_name>M. Tiscareno</submitter_name>
-        <definition>reprojection_grid_angular_resolution_max indicates <!--MORE NEEDED HERE-->
-            Required in labels.
-            Not intended to be used as a table field.
-        </definition>
-        <comment>
-            v1.0 (post-2020): Attribute creation
-        </comment>
-        <DD_Value_Domain>
-            <enumeration_flag>false</enumeration_flag>
-            <value_data_type>ASCII_Real</value_data_type>
-            <unit_of_measure_type>Units_of_Length</unit_of_measure_type>
-        </DD_Value_Domain>
-    </DD_Attribute>
-
-
 
 
 <!-- @@@ The following classes are modified versions of classes borrowed from the geom namespace
@@ -4206,7 +4180,7 @@
     <DD_Class>
         <name>Body_Ident_Base</name>
         <version_id>1.0</version_id>
-        <local_identifier>Body_Ident_Base</local_identifier>
+        <local_identifier>geom.Body_Identification_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Body_Ident_Base class provides multiple attributes
             that can be used to identify a physical object (spacecraft, planet 
@@ -4237,7 +4211,7 @@
     <DD_Class>
         <name>Frame_Ident_Base</name>
         <version_id>1.0</version_id>
-        <local_identifier>Frame_Ident_Base</local_identifier>
+        <local_identifier>geom.Frame_Identification_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Frame_Ident_Base class provides multiple attributes
             that can be used to identify a reference frame. At least one must be used.
@@ -4273,7 +4247,7 @@
     <DD_Class>
         <name>Central_Body_Ident</name>
         <version_id>2.0</version_id>
-        <local_identifier>Central_Body_Ident</local_identifier>
+        <local_identifier>geom.Central_Body_Identification</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Central_Body_Ident class uniquely
             identifies the body that is the central body associated
@@ -4288,7 +4262,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>Body_Ident_Base</identifier_reference>
+            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -4298,7 +4272,7 @@
     <DD_Class>
         <name>Reference_Frame_Ident</name>
         <version_id>2.0</version_id>
-        <local_identifier>Reference_Frame_Ident</local_identifier>
+        <local_identifier>geom.Reference_Frame_Identification</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Reference_Frame_Ident class is
             a base class for identifying reference frames.  These 
@@ -4314,75 +4288,14 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>Frame_Ident_Base</identifier_reference>
+            <identifier_reference>geom.Frame_Identification_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
     </DD_Class>
 
-    <DD_Class>
-        <name>Display_Direction</name>
-        <version_id>2.0</version_id>
-        <local_identifier>Display_Direction</local_identifier>
-        <submitter_name>Mitch Gordon</submitter_name>
-        <definition>The Display_Direction class specifies which two 
-        of the dimensions of an Array object should be displayed and how
-        they should be displayed in the vertical (line) and horizontal 
-        (sample) dimensions of a display device. This class is a modification 
-        of the corresponding class in the Display Dictionary, and  
-        is redefined here for convenience. The local_identifier_reference is 
-        used to identify the array or arrays to which this iteration of the 
-        class applies. Multiple entries are permitted the settings in the 
-        iteration of Display_Direction apply to all of the referenced arrays.
-        </definition>
-        <abstract_flag>false</abstract_flag>
-        <element_flag>false</element_flag>
-        <DD_Association>
-            <identifier_reference>pds.local_identifier</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>pds.local_identifier_reference</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>*</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>pds.comment</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>horizontal_display_axis</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>horizontal_display_direction</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>vertical_display_axis</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>vertical_display_direction</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>1</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-    </DD_Class>
-
-<!-- @@@ End of the block of classes borrowed from the geom namespace pending a fix to LDDTool -->
+    <!-- @@@ End of the block of classes borrowed from the geom namespace pending a fix to LDDTool -->
 
 <!-- Classes for general use  -->
 
@@ -4511,37 +4424,73 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_radial_resolution_mean</identifier_reference>
+            <identifier_reference>reprojection_grid_radial_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_radial_resolution_min</identifier_reference>
+            <identifier_reference>reprojection_grid_longitudinal_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_radial_resolution_max</identifier_reference>
+            <identifier_reference>reprojection_grid_radial_sampling_interval</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_angular_resolution_mean</identifier_reference>
+            <identifier_reference>reprojection_grid_longitudinal_sampling_interval</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_angular_resolution_min</identifier_reference>
+            <identifier_reference>radial_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>reprojection_grid_angular_resolution_max</identifier_reference>
+            <identifier_reference>minimum_radial_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_radial_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>mean_radial_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>longitudinal_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_longitudinal_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_longitudinal_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>mean_longitudinal_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5426,7 +5375,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>Body_Ident_Base</identifier_reference>
+            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5442,7 +5391,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>Body_Ident_Base</identifier_reference>
+            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5522,7 +5471,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>Reference_Frame_Ident</identifier_reference>
+            <identifier_reference>geom.Reference_Frame_Identification</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5544,7 +5493,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>Central_Body_Ident</identifier_reference>
+            <identifier_reference>geom.Central_Body_Identification</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -6092,12 +6041,6 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>Display_Direction</identifier_reference>
-            <reference_type>component_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
             <identifier_reference>Central_Body_Parameters</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -6136,12 +6079,6 @@
         <DD_Association>
             <identifier_reference>pds.local_identifier</identifier_reference>
             <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>Display_Direction</identifier_reference>
-            <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
@@ -6440,7 +6377,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>ring_event_tbd</identifier_reference>
+            <identifier_reference>ring_event_tdb</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -7058,14 +6995,14 @@
     <!-- There will likely be further rules needed for Ring_Spectrum ... -->
 
     <!-- Here is a rule to require disp:Display_Direction -->
-<!--        <DD_Rule>
+    <DD_Rule>
         <local_identifier>rule_display_direction_check</local_identifier>
         <rule_context>rings:Ring_Moon_Systems</rule_context>
         <rule_assign>name="is_image_like" value="//(rings:Ring_Reprojection|rings:Ring_Spectrum)"</rule_assign>
         <DD_Rule_Statement>
             <rule_type>Assert</rule_type>
-            <rule_test>if ($is_image_like) then //disp:Display_Direction else true()</rule_test>
-            <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "Display_Direction" must be specified, as well.</rule_message>
+            <rule_test>if ($is_image_like) then //disp:Display_Settings/disp:Display_Direction else true()</rule_test>
+            <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "disp:Display_Direction" must be specified, as well.</rule_message>
         </DD_Rule_Statement>
-    </DD_Rule> -->
+    </DD_Rule>
 </Ingest_LDD>
