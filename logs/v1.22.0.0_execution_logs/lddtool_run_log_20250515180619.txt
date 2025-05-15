@@ -1,13 +1,11 @@
 
->>  INFO LDDTOOL Version: 15.2.4
+>>  INFO LDDTOOL Version: 15.3.0
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Thu Apr 24 22:50:01 UTC 2025
->>  INFO PARENT_DIR: /tmp/lddtool-15.2.4/Data/
+>>  INFO Date: Thu May 15 18:06:19 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
 
->>> ERROR Class:0001_NASA_PDS_1.rings.Column_Headers  Association:rings:ring_event_tbd  Attribute: rings:ring_event_tbd - Missing Attribute
->>> ERROR Association: rings:ring_event_tbd - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:rings
 >>> INFO Init:  - Config.Properties Namespace Id Using:rings
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -101,11 +99,10 @@
 >>> INFO Attribute: <minimum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
 >>> INFO Attribute: <maximum_corotating_ring_longitude> - The default minimum value provided by the attribute's data type is being overridden with 0
 >>> INFO Attribute: <maximum_corotating_ring_longitude> - The default maximum value provided by the attribute's data type is being overridden with 360
->>> WARNING Attribute: <ring_event_tdb> - This local attribute was not used in an Association.
 
  -- LDDTool Execution Summary --
-     1 warning(s)
-     2 error(s)
+     0 warning(s)
+     0 error(s)
      0 fatal error(s)
 
 Input:

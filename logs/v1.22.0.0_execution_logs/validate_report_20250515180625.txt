@@ -1,0 +1,54 @@
+
+PDS Validate Tool Report
+
+Configuration:
+   Version     3.7.0
+   Date        2025-05-15T18:06:25Z
+
+Parameters:
+   Targets                        [file:/home/runner/work/ldd-rings/ldd-rings/build/development/9155d64a2c4309c0ab01f6b2da8f618f4947c876/1.22.0.0/PDS4_RINGS_1M00_1D00.xml]
+   Rule Type                      pds4.label
+   User Specified Schemas         [file:/home/runner/work/ldd-rings/ldd-rings/build/development/9155d64a2c4309c0ab01f6b2da8f618f4947c876/1.22.0.0/PDS4_RINGS_1M00_1D00.xsd, file:/tmp/PDS4_PDS_1M00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-rings/ldd-rings/build/development/9155d64a2c4309c0ab01f6b2da8f618f4947c876/1.22.0.0/PDS4_RINGS_1M00_1D00.sch, file:/tmp/PDS4_PDS_1M00.sch]
+   Severity Level                 WARNING
+   Recurse Directories            true
+   File Filters Used              [*.xml, *.XML]
+   Data Content Validation        off
+   Product Level Validation       on
+   Max Errors                     100000
+   Registered Contexts File       /tmp/validate-3.7.0/resources/registered_context_products.json
+
+
+Error near {...ettings/disp:Display_Direct...} at char 48 in xsl:when/@test on line 7127 column 112 
+  XPST0081: Namespace prefix 'disp' has not been declared
+
+Product Level Validation Results
+
+  FAIL: file:/home/runner/work/ldd-rings/ldd-rings/build/development/9155d64a2c4309c0ab01f6b2da8f618f4947c876/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
+      FATAL_ERROR  [error.label.schematron]   Error occurred while processing schematron 'file:/home/runner/work/ldd-rings/ldd-rings/build/development/9155d64a2c4309c0ab01f6b2da8f618f4947c876/1.22.0.0/PDS4_RINGS_1M00_1D00.sch': net.sf.saxon.s9api.SaxonApiException: Errors were reported during stylesheet compilation
+        1 product validation(s) completed
+
+Summary:
+
+  1 product(s)
+  1 error(s)
+  0 warning(s)
+
+  Product Validation Summary:
+    0          product(s) passed
+    1          product(s) failed
+    0          product(s) skipped
+    1          product(s) total
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+    0          check(s) total
+
+  Message Types:
+    1            error.label.schematron
+
+End of Report
+Completed execution in 3173 ms
+
