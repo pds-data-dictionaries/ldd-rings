@@ -21,12 +21,11 @@
 ### Issue #241: Reprojection grid attributes for ring coordinate system and Issue #301: Update Rings dictionary for R&A F ring mosaics project
 - 1/22: WE DID SOME TESTS OF A WAVELENGTH_MIN_MAX CLASS, BUT CANNOT DO A XSCHOICE BETWEEN A CLASS AND AN ATTRIBUTE.
 - SOME THINGS STILL TO DO
-- We added the class `Reprojection_Grid_Parameters` containing new attributes `reprojection_grid_radial_resolution_mean`, `reprojection_grid_radial_resolution_min`, `reprojection_grid_radial_resolution_max`, `reprojection_grid_angular_resolution_mean`, `reprojection_grid_angular_resolution_min`, and `reprojection_grid_angular_resolution_max`.  WE STILL NEED DEFINITIONS AND UNIT TESTS, AND THIS WILL BE SUBJECT TO THE REORGANIZATION MENTIONED BELOW.
 - We made changes to the definitions of corotating_flag, emission_angle, and light_source_incidence_angle and corrected spelling errors in multiple attributes.
 - INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
 - ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
 - ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
-- 5/15/25: The attributes `reprojection_grid_radial/longitudinal_resolution_mean/min/max` have been removed. The definitions for `radial_resolution`, `longitudinal_resolution`, `reprojection_grid_radial_resolution`, and `reprojection_grid_longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
+- 5/15/25: The definitions for `radial_resolution`, `longitudinal_resolution`, `reprojection_grid_radial_resolution`, and `reprojection_grid_longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
 `minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, `reprojection_grid_radial_sampling_interval`, and `reprojection_grid_longitudinal_sampling_interval`
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
