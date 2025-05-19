@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMATRONS IN LABEL. THEY WILL BE ADDED VIA COMMAND-LINE -->
+
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:example="http://pds.nasa.gov/pds4/example/v1"
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:bundle:collection:product</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>My First Product</title>
+    <information_model_version>1.23.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time xsi:nil="true" nilReason="inapplicable"/>
+      <stop_date_time xsi:nil="true" nilReason="inapplicable"/>
+    </Time_Coordinates>
+    <Investigation_Area>
+      <name>None</name>
+      <type>Individual Investigation</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:individual.none</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>None</name>
+        <type>Telescope</type>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>None</name>
+      <type>Comet</type>
+    </Target_Identification>
+    <Discipline_Area>
+      <rings:Ring_Moon_Systems>
+        <rings:Ring_Spectrum>
+          <rings:Wavelength_Parameters>
+            <rings:wavelength unit="mm">5</rings:wavelength>
+          </rings:Wavelength_Parameters>
+        </rings:Ring_Spectrum>
+      </rings:Ring_Moon_Systems>
+      <disp:Display_Settings>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Array_2D_Image</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:local_identifier_reference>Array_2D_Image</disp:local_identifier_reference>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+    </Discipline_Area>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>No.Data</file_name>
+      <creation_date_time>2019-04-30T19:32:42.000Z</creation_date_time>
+    </File>
+    <Array_2D_Image>
+      <name>Image</name>
+      <local_identifier>Array_2D_Image</local_identifier>
+      <offset unit="byte">0</offset>
+      <axes>2</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>UnsignedByte</data_type>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>512</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Sample</axis_name>
+        <elements>512</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+    </Array_2D_Image>
+  </File_Area_Observational>
+</Product_Observational>

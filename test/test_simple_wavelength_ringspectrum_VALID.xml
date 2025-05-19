@@ -6,6 +6,7 @@
   xmlns:example="http://pds.nasa.gov/pds4/example/v1"  
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
+  xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <!-- NOTE: DO NOT INCLUDE SPECIFIC SCHEMALOCATIONS IN LABEL. THEY WILL BE ADDED VIA PIPELINE -->
@@ -51,6 +52,19 @@
                     </rings:Wavelength_Parameters>
                 </rings:Ring_Spectrum>
             </rings:Ring_Moon_Systems>
+            <disp:Display_Settings>
+                <Local_Internal_Reference>
+                    <local_identifier_reference>test</local_identifier_reference>
+                    <local_reference_type>display_settings_to_array</local_reference_type>
+                </Local_Internal_Reference>
+                <disp:Display_Direction>
+                    <disp:local_identifier_reference>test</disp:local_identifier_reference>
+                    <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+                    <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+                    <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+                    <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+                </disp:Display_Direction>
+            </disp:Display_Settings>
         </Discipline_Area>
     </Observation_Area>
     <File_Area_Observational>
