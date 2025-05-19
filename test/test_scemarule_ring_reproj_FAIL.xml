@@ -5,6 +5,7 @@
 <Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
   xmlns:example="http://pds.nasa.gov/pds4/example/v1"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
   xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
