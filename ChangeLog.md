@@ -25,7 +25,7 @@
 - INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
 - ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
 - ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
-- 5/15/25: The definitions for `radial_resolution`, `longitudinal_resolution`, `reprojection_grid_radial_resolution`, and `reprojection_grid_longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
+- 5/15/25: The definitions for `radial_resolution` and `longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
 `minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, `reprojection_grid_radial_sampling_interval`, and `reprojection_grid_longitudinal_sampling_interval`
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
