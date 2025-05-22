@@ -1,34 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
   <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Mon May 19 18:46:13 UTC 2025 -->
+=======
+  <!-- PDS4 XML/Schema for Name Space Id:rings  Version:1.13.0.0 - Mon Nov 18 19:20:03 UTC 2024 -->
+>>>>>>> main
   <!-- Generated from the PDS4 Information Model Version 1.23.0.0 - System Build 15.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.23.0.0 - pds: - Common Dictionary                                       -->
+<<<<<<< HEAD
   <!-- 1.9.10.0 - geom: - Geometry Dictionary Full                               -->
   <!-- 1.5.1.0 - disp: - Display                                                 -->
+=======
+>>>>>>> main
   <!-- 1.13.0.0 - rings: - Rings Dictionary                                      -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/rings/v1"
     xmlns:rings="http://pds.nasa.gov/pds4/rings/v1"
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+<<<<<<< HEAD
     xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
     xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
+=======
+>>>>>>> main
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
     version="1.13.0.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd"/>
+<<<<<<< HEAD
     <xs:import namespace="http://pds.nasa.gov/pds4/geom/v1" schemaLocation="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1N00_19A0.xsd"/>
     <xs:import namespace="http://pds.nasa.gov/pds4/disp/v1" schemaLocation="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd"/>
+=======
+>>>>>>> main
  
   <xs:annotation>
     <xs:documentation>
  
+<<<<<<< HEAD
 
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
+=======
+    
+    	Classes used from the geom namespace
+    	  - Body_Ident_Base
+    	  - Reference_Frame_Ident
+    	  - Central_Body_Ident
+    	  - Display_Direction
+    	  
+    	Classes used from the pds namespace
+    	  - Internal_Reference
+
+    	Attributes used from the pds namespace
+    	  - local_identifier_reference
+    	  - sampling_parameter_name
+    	  - sampling_parameter_unit
+    	  - sampling_parameter_interval
+    	  - description
+    	  - name     (indirectly via classes from the geom namespace)
+    	  - comment  (indirectly via classes from the geom namespace)
+
+      v1.2.0  2014-03-29
+        -  Moved information from comments into definitions for all attributes. 
+        -  Added source product, orbit number and sclk start/stop times. 
+        -  Revised some enumerated value options, and corrected some nillable inconsistencies.
+      v1.3.0  2015-01-23
+        -  Updated to version 1.3.0.1 of IM.
+        -  Added min/max_observed_event_time.
+        -  Included reference_time_UTC as optional attribute for all profile labels.
+        -  Revised some definitions.
+      v1.4.0.0  2016-04-25
+        -  This version was not released
+        -  Updated to version 1.6.0.0 of IM.
+        -  Corrected case errors in class and attribute names and enumerated values
+        -  Changed several time attribute types from ASCII_Date_Time_UTC to ASCII_Date_Time_YMD_UTC
+        -  revised several definitions
+        -  Changed ring_occultation_direction to occultation_direction, and modified the definitions 
+           for the values ingress and egress.
+        -  Added the class Occultation_Time_Series.
+        -  Combined Radio_Occultation and Stellar_Occultation into Occultation_Ring_Profile
+        -  Renamed Radio_Occultation_Support to Occultation_Supplement
+        -  Removed ring_observation_id and source_pds3_id from all classes except Occultation_Supplement.
+        -  Added Schematron rules to make some optional attributes required based on the value of 
+           occultation type (e.g., dsn_station_number if occultation_type = radio, sub_stellar_ring_azimuth
+           if occultation_type = stellar).
+        -  Reordered some attributes in Occultation_Time_Series.
+        -  Reordered some attributes in Occultation_Supplement.
+      v1.5.0.0  2017-04-12
+        -  Changed schema location URLs to https
+        -  Updated to version 1.8.0.0 of IM.
+        -  Revised definition of pds3_source_id
+        -  Corrected the definition of sub_stellar_ring_azimuth
+        -  Changed the name of the umbrella class from Occultation to Ring_Moon_Systems
+        -  Added Time_Series_Direction 
+      v1.5.1.0  2017-08-09
+        -  corrected minor formating errors for a few enumerated values
+        -  Reinstated the ring_plane attribute in the Occultation_Ring_Profile and Occultation_Time_Series classes.      
+      v1.6.0.0  2019-03-06
+        -  Updated to version 1.9.0.0 of IM.
+        -  Added the Ring_Model class and numerous classes and attributes to support it.
+        -  Added the Orbital_Elements class.
+        -  ring_event_tdb - changed the enumeration flag to false
+        -  added optional description attribute to several classes 
+        -  added classes to support ring mosaics: Ring_Reprojection and Reprojection_Geometry.
+        -  added several attributes to support ring mosaics.  
+        - Added Display_Direction including pds:local_identifier_reference with a cardinality of [0,*].  
+        - Added the class Ring_Spectrum
+        - Added attributes
+          - emission angle
+          - ring_intercept_resolution
+          - ring_longitude_observed_minus_subsolar 
+          - reflectivity
+        - Added an optional pds.local_identifier attribute to most classes.
+        -  As an interim bandaid(?) pending repair of LDDTool, added several classes
+           and attributes 'borrowed' from the geometry dictionary and removed the 
+           geom. prefixes to those classes in this dictionary. The affected classes
+           are:
+                - Body_Ident_Base       
+                - Frame_Ident_Base  (not used explicitly when geom is referenced)    
+                - Reference_Frame_Ident 
+                - Central_Body_Ident    
+        - Added Uniformly_Sampled_Radius based on Uniformly_Sampled_Wavelength from the sp namespace 
+        - Made the use of ring_observation_id optional.
+        - @@@ Need schematron rule to ensure values for axis_name correspond to entries in Axis_Array.name 
+      v1.7.0.0  2019-03-07
+        - Updated to version 1.10.0.0 of IM.
+        - Removed the Rings_Supplement class.
+        - Removed the ring_observation_id attribute.
+        - Removed pds:Internal_Reference from the Body_Ident_Base and Frame_Ident_Base classes.
+        - Added a SChematron definition for a value in reference_type in pds:Internal_Reference in Uniformly_Sampled_Radius
+      v1.8.0.0  2020-01-28
+        - Updated to version 1.12.0.0 of IM.
+        - Made Ring_Moon_Systems class the only xsi element.
+        - removed the attribute source_pds3_id and spice_filename
+        - removed milable from orbit_number and along_track_timing.
+        - Added attributes fresnel_scale, projected_star_diameter, sigma_projected_star_diameter, fractional_error_star_counts, 
+          time_constant_type, time_constant, sigma_time_constant.
+        - All 7 of the preceding were added as optional attributes in the Occultation_Time_Series class
+      v1.9.0.0  2020-01-31
+        - Updated to version 1.13.0.0 of IM.
+        - Add Units of Measure Type = Gmass to the gmass attribute.
+      v1.10.0.0  2020-06-25
+        - Updated to version 1.14.0.0 of IM.
+        - Added the attributes: data_quality_index, ring_detected.
+        - Revised the case of several attribute enumerated values from Title case to all lower case. The named rings of 
+          Saturn are in title case while those of Uranus are lower case, consistent with normal usage by the community.
+        - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series.
+        - Expanded definitions of highest and lowest detectable opacity. In each, set the minimum value to -1.0 which 
+          indicates the signal was too poor to allow the calculation of the value.
+      v1.11.0.0  2021-11-10
+        - Defined the attributes and included in Occultation_Time_Series: 
+          minimum_projected_sun_diameter, maximum_projected_sun_diameter, 
+          sigma_projected_sun_diameter, average_unocculted_signal,
+          lowest_detectable_normal_optical_depth, highest_detectable_normal_optical_depth,
+        - Defined attributes antipated to be used as columns in data tables:
+          observed_event_TDB_start_integration, observed_event_TDB_mid_integration,
+          observed_event_TDB_stop_integration, ring_event_TDB_start_integration,
+          ring_event_TDB_mid_integration, ring_event_TDB_stop_integration,
+          ring_radius_start_integration, ring_radius_mid_integration, ring_radius_stop_integration,
+          raw_total_counts,counts_per_second, transparency, normal_optical_depth,
+          projected_sun_diameter. 
+        - In Occultation_Ring_Profile and Occultation_Time_Series,changed the cardinality of 
+          data_quality_index to [0,*].
+        - Added to data_quality_index enumerated values to support solar occultations: B, F, R, U, X.
+        - Revised the case of several attribute enumerated values to Title case.
+        - Added the attribute: ring_detected.
+        - Added attributes min/max ring_longitude and observed_ring azimuth to Occultation_Time_Series
+      v1.12.0.0  2023-04-18
+        - Update steward name from Mitchell Gordon to Matthew Tiscareno
+        - Improved definitions of epoch_reprojection_basis_utc, corotating_ring_longitude, minimum_corotating_ring_longitude, 
+          and maximum_corotating_ring_longitude.  
+        - Fixed typo in corotating_flag enumerated value definition. 
+        - Regularized spelling of "corotation"
+        - Add inertial_ring_longitude, minimum_inertial_ring_longitude, and maximum_inertial_ring_longitude.  These replace 
+          ring_longitude, minimum_ring_longitude, and maximum_ring_longitude, which should be deprecated. 
+        - Also, classes that are copied here from the Geometry and Display dictionaries should be deprecated, as of now.
+          These include Body_Ident_Base, Reference_Frame_Ident, Central_Body_Ident, and Display_Direction. 
+        - Actual deprecation not yet implemented.
+      v1.13.0  2024-08-07
+        - Switched to three-element semantic versioning (this is v1.13.0, not v1.13.0.0).
+	- Add a new class, Wavelength_Parameters, which includes the three existing wavelength attributes; update the various classes that already use the wavelength attributes to use the new class; update the associated schematron rules. 
+>>>>>>> main
     
     </xs:documentation>
   </xs:annotation>
@@ -91,6 +246,7 @@
     </xs:complexContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:complexType name="Column_Headers">
     <xs:annotation>
       <xs:documentation>This class is meant to collect attributes that
@@ -121,6 +277,35 @@
       <xs:element name="maximum_sub_stellar_clock_angle" type="rings:maximum_sub_stellar_clock_angle" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="projected_sun_diameter" type="rings:projected_sun_diameter" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
+=======
+  <xs:complexType name="Display_Direction">
+    <xs:annotation>
+      <xs:documentation>The Display_Direction class specifies which two
+        of the dimensions of an Array object should be displayed and how
+        they should be displayed in the vertical (line) and horizontal
+        (sample) dimensions of a display device. This class is a
+        modification of the corresponding class in the Display
+        Dictionary, and is redefined here for convenience. The
+        local_identifier_reference is used to identify the array or
+        arrays to which this iteration of the class applies. Multiple
+        entries are permitted the settings in the iteration of
+        Display_Direction apply to all of the referenced arrays.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="local_identifier_reference" type="pds:local_identifier_reference" minOccurs="0" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="comment" type="pds:comment" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="horizontal_display_axis" type="rings:horizontal_display_axis" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="horizontal_display_direction" type="rings:horizontal_display_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="vertical_display_axis" type="rings:vertical_display_axis" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="vertical_display_direction" type="rings:vertical_display_direction" minOccurs="1" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="rings:horizontal_display_direction = ('Left to Right', 'Right to Left')"/> -->
+    <!-- <xs:assert test="rings:vertical_display_direction = ('Bottom to Top', 'Top to Bottom')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+>>>>>>> main
   </xs:complexType>
 
   <xs:complexType name="Frame_Ident_Base">
@@ -152,7 +337,11 @@
   <xs:complexType name="Normal_Mode_Parameters">
     <xs:annotation>
       <xs:documentation>This class provides the normal mode parameters
+<<<<<<< HEAD
         if one is present in the described ring.</xs:documentation>
+=======
+        is one is present in the described ring.</xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:sequence>
       <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -218,8 +407,13 @@
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
       <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+=======
+      <xs:element name="minimum_ring_longitude" type="rings:minimum_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_ring_longitude" type="rings:maximum_ring_longitude" minOccurs="1" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="minimum_observed_ring_azimuth" type="rings:minimum_observed_ring_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_observed_ring_azimuth" type="rings:maximum_observed_ring_azimuth" minOccurs="1" maxOccurs="1"> </xs:element>
       <xs:element name="sub_stellar_ring_azimuth" type="rings:sub_stellar_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -329,8 +523,13 @@
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
       <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+=======
+      <xs:element name="minimum_ring_longitude" type="rings:minimum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_ring_longitude" type="rings:maximum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="minimum_observed_ring_azimuth" type="rings:minimum_observed_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_observed_ring_azimuth" type="rings:maximum_observed_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="sub_stellar_ring_azimuth" type="rings:sub_stellar_ring_azimuth" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -386,7 +585,11 @@
     <xs:annotation>
       <xs:documentation>This class provides the parameters describing
         reprojection geometry when the ring(s) is reprojected based on a
+<<<<<<< HEAD
         fixed grid of coordinates (e.g., radius vs.
+=======
+        fixed grid of coordinates (.g., radius vs.
+>>>>>>> main
         longitude).</xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -404,11 +607,19 @@
       <xs:element name="maximum_observed_ring_elevation" type="rings:maximum_observed_ring_elevation" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
+=======
+      <xs:element name="minimum_ring_longitude" type="rings:minimum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_ring_longitude" type="rings:maximum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_radius" type="rings:minimum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
       <xs:element name="Reprojection_Grid_Parameters" type="rings:Reprojection_Grid_Parameters" minOccurs="1" maxOccurs="1"> </xs:element>
+=======
+>>>>>>> main
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="rings:reprojection_plane = ('A', 'B', 'C', 'D', 'E', 'Equator', 'F', 'G', 'Laplace', 'Phoebe', 'alpha', 'beta', 'delta', 'epsilon', 'eta', 'five', 'four', 'gamma', 'lambda', 'mu', 'nu', 'six')"/> -->
@@ -416,6 +627,7 @@
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:complexType name="Reprojection_Grid_Parameters">
     <xs:annotation>
       <xs:documentation>This class contains reprojection grid resolution
@@ -436,6 +648,8 @@
     </xs:sequence>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:complexType name="Ring_Identification">
     <xs:annotation>
       <xs:documentation>This class identifies the specific ring to which
@@ -479,7 +693,10 @@
       <xs:element name="Ring_Model" type="rings:Ring_Model" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Ring_Reprojection" type="rings:Ring_Reprojection" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Ring_Spectrum" type="rings:Ring_Spectrum" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
       <xs:element name="Column_Headers" type="rings:Column_Headers" minOccurs="0" maxOccurs="0"> </xs:element>
+=======
+>>>>>>> main
     </xs:sequence>
   </xs:complexType>
 
@@ -527,6 +744,10 @@
     <xs:sequence>
       <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element ref="pds:Local_Internal_Reference" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
+=======
+      <xs:element name="Display_Direction" type="rings:Display_Direction" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="Central_Body_Parameters" type="rings:Central_Body_Parameters" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Ring_Orbital_Elements" type="rings:Ring_Orbital_Elements" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="Reprojection_Geometry" type="rings:Reprojection_Geometry" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -541,6 +762,10 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element ref="pds:local_identifier" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
+=======
+      <xs:element name="Display_Direction" type="rings:Display_Direction" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="description" type="pds:description" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_radius" type="rings:minimum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_radius" type="rings:maximum_ring_radius" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -550,9 +775,15 @@
       <xs:element name="inertial_ring_longitude" type="rings:inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_inertial_ring_longitude" type="rings:minimum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_inertial_ring_longitude" type="rings:maximum_inertial_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+<<<<<<< HEAD
       <xs:element name="corotating_ring_longitude" type="rings:corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_corotating_ring_longitude" type="rings:minimum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_corotating_ring_longitude" type="rings:maximum_corotating_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+=======
+      <xs:element name="ring_longitude" type="rings:ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="minimum_ring_longitude" type="rings:minimum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="maximum_ring_longitude" type="rings:maximum_ring_longitude" minOccurs="0" maxOccurs="1"> </xs:element>
+>>>>>>> main
       <xs:element name="ring_longitude_observed_minus_subsolar" type="rings:ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="minimum_ring_longitude_observed_minus_subsolar" type="rings:minimum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="maximum_ring_longitude_observed_minus_subsolar" type="rings:maximum_ring_longitude_observed_minus_subsolar" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -753,8 +984,13 @@
   <xs:simpleType name="corotating_flag">
     <xs:annotation>
       <xs:documentation>The corotating_flag is a yes-or-no flag that
+<<<<<<< HEAD
         indicates whether or not a corotating frame is used.
         </xs:documentation>
+=======
+        indicates whether or not a corotating frame is used. a table
+        field. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -762,6 +998,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="corotating_ring_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -785,6 +1022,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="corotation_rate_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -808,7 +1047,12 @@
     <xs:annotation>
       <xs:documentation>data_quality_index provides a more precise
         subjective assessment by the data provider of the quality of the
+<<<<<<< HEAD
         observed/predicted ring occultation. </xs:documentation>
+=======
+        observed/predicted ring occultation. Possible values are:.
+        </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -844,25 +1088,51 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="earth_received_start_time_utc">
+=======
+  <xs:simpleType name="earth_received_start_time_utc_WO_Units">
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="earth_received_start_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>earth_received_start_time_utc gives the UTC time
         corresponding to the earliest time for the data product at which
         telemetry or other photons were received on Earth. Optional for
         occultation data. </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:earth_received_start_time_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="earth_received_stop_time_utc_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="earth_received_stop_time_utc">
+=======
+  <xs:complexType name="earth_received_stop_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>earth_received_stop_time_utc gives the UTC time
         corresponding to the latest time for the data product at which
         telemetry or other photons were received on Earth. Optional for
         occultation data. </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
@@ -894,6 +1164,10 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:earth_received_time_WO_Units">
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:earth_received_stop_time_utc_WO_Units">
+>>>>>>> main
         <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
       </xs:extension>
     </xs:simpleContent>
@@ -934,6 +1208,7 @@
       <xs:documentation>The emission_angle element provides the value of
         the angle between the surface normal vector at the intercept
         point and a vector from the intercept point to the spacecraft.
+<<<<<<< HEAD
         The emission_angle varies from 0 degrees when the spacecraft is
         viewing the subspacecraft point (nadir viewing) to 90 degrees
         when the intercept is tangent to the surface of the target body.
@@ -942,6 +1217,14 @@
         to 180 degrees indicate viewing on the unlit side from oblique
         or edge-on at 90 degrees to the unlit nadir at 180 degrees.
         </xs:documentation>
+=======
+        Higher values of emission_angle indicate more oblique viewing of
+        the target. The emission_angle varies from 0 degrees when the
+        spacecraft is viewing the subspacecraft point (nadir viewing) to
+        90 degrees when the intercept is tangent to the surface of the
+        target body, values in the range of 90 to 180 degrees are
+        possible for ring data. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:emission_angle_WO_Units">
@@ -950,31 +1233,70 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="epoch_reprojection_basis_utc">
-    <xs:annotation>
-      <xs:documentation>The basis epoch for the corotating frame. Format
-        is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating
-        frame is defined so that zero corotating longitude is equal to
-        zero inertial longitude defined at the epoch specified by
-        epoch_reprojection_basis_utc. Thus, zero corotating longitude in
-        the corotating frame at time t corresponds to an inertial
-        longitude of (t-epoch)*corotation_rate. </xs:documentation>
-    </xs:annotation>
+=======
+  <xs:simpleType name="epoch_reprojection_basis_utc_WO_Units">
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:complexType name="epoch_reprojection_basis_utc">
+>>>>>>> main
+    <xs:annotation>
+      <xs:documentation>The basis epoch for the corotating frame. Format
+        is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated. The corotating
+        frame is defined so that zero corotating longitude is equal to
+<<<<<<< HEAD
+        zero inertial longitude defined at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude in
+        the corotating frame at time t corresponds to an inertial
+        longitude of (t-epoch)*corotation_rate. </xs:documentation>
+    </xs:annotation>
+=======
+        zero inertial longitude at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
+        time t corresponds to an inertial longitude of
+        (t-epoch)*corotation_rate. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:epoch_reprojection_basis_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="epoch_ring_fit_utc_WO_Units">
+>>>>>>> main
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+<<<<<<< HEAD
   <xs:simpleType name="epoch_ring_fit_utc">
+=======
+  <xs:complexType name="epoch_ring_fit_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>The epoch for the ring orbital elements given in
         this product. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be
         truncated. </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:epoch_ring_fit_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+>>>>>>> main
 
   <xs:simpleType name="first_ring_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
@@ -1005,8 +1327,13 @@
 
   <xs:complexType name="fit_rms_semimajor">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>The root mean square residuals for the semimajor
         axis of the body or ring identified in the enclosing class.
+=======
+      <xs:documentation>The RMS residuals for the semimajor axis of the
+        body or ring identified in the enclosing class.
+>>>>>>> main
         </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -1149,6 +1476,37 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
+=======
+  <xs:simpleType name="horizontal_display_axis">
+    <xs:annotation>
+      <xs:documentation>The horizontal_display_axis attribute
+        identifies, by name, the axis of an Array (or Array subclass)
+        that is intended to be displayed in the horizontal or "sample"
+        dimension on a display device. The value of this attribute must
+        match the value of one, and only one, axis_name attribute in an
+        Axis_Array class of the associated Array. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="horizontal_display_direction">
+    <xs:annotation>
+      <xs:documentation>The horizontal_display_direction attribute
+        specifies the direction across the screen of a display device
+        that data along the horizontal axis of an Array is supposed to
+        be displayed. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+>>>>>>> main
   <xs:simpleType name="incidence_angle_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -1160,6 +1518,7 @@
     <xs:annotation>
       <xs:documentation>The incidence_angle element provides a measure
         of the lighting condition at the intercept point. Incidence
+<<<<<<< HEAD
         angle is the angle between the surface normal vector at the
         intercept point and a vector from the intercept point to the
         sun. The incidence_angle varies from 0 degrees when the
@@ -1167,6 +1526,15 @@
         when the intercept is tangent to the surface of the target body,
         values in the range of 90 to 180 degrees are possible for ring
         data. </xs:documentation>
+=======
+        angle is the angle the surface normal vector at the intercept
+        point and a vector from the intercept point to the sun. The
+        incidence_angle varies from 0 degrees when the intercept point
+        coincides with the subsolar point to 90 degrees when the
+        intercept is tangent to the surface of the target body, values
+        in the range of 90 to 180 degrees are possible for ring data.
+        </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:incidence_angle_WO_Units">
@@ -1321,10 +1689,17 @@
         of a photon arriving from the light source. For rings, the
         normal vector is that on the same side of the rings as the light
         source, so values always range between 0 and 90 in units of
+<<<<<<< HEAD
         degrees. For ring occultations, this value is always equal to 90
         - | observed_ring_elevation | This will enable users to perform
         database searches based on the effective ring opening angle when
         they are not concerned about the distinction between northside
+=======
+        degrees. The value is always equal to 90 - |
+        observed_ring_elevation | This will enable users to perform
+        database searches based on the effective ring opening angle when
+        they are not concerned about the distinction between north-side
+>>>>>>> main
         and southside viewpoints. We have included the 'light source'
         prefix to the term so that this quantity is not confused with
         'incidence angle', a term that is generally associated with
@@ -1341,6 +1716,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="longitudinal_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -1366,6 +1742,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="lowest_detectable_normal_optical_depth">
     <xs:annotation>
       <xs:documentation>lowest_detectable_normal_optical_depth gives the
@@ -1409,10 +1787,17 @@
       <xs:documentation>The maximum value in this product for ring
         longitude in the corotating frame. The corotating frame is
         defined so that zero corotating longitude is equal to zero
+<<<<<<< HEAD
         inertial longitude defined at the epoch specified by
         epoch_reprojection_basis_utc. Thus, zero corotating longitude in
         the corotating frame at time t corresponds to an inertial
         longitude of (t-epoch)*corotation_rate. </xs:documentation>
+=======
+        inertial longitude at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
+        time t corresponds to an inertial longitude of
+        (t-epoch)*corotation_rate. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:maximum_corotating_ring_longitude_WO_Units">
@@ -1494,7 +1879,11 @@
 
   <xs:complexType name="maximum_light_source_incidence_angle">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>maximum_light_source_incidence_angle specifies
+=======
+      <xs:documentation>maximum_light_source_incidence_angle specifes
+>>>>>>> main
         the largest value for light_source_incidence_angle in the
         observation. Only used if the value is not constant over the
         observation. Values range from 0 to +90 in units of degrees. Not
@@ -1507,6 +1896,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="maximum_longitudinal_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -1531,6 +1921,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="maximum_observed_event_time_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -1564,7 +1956,11 @@
 
   <xs:complexType name="maximum_observed_ring_azimuth">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>maximum_observed_ring_azimuth specifies the
+=======
+      <xs:documentation>maximum_observed_ring_azimuth specifes the
+>>>>>>> main
         largest value for observed_ring_azimuth in the data file. Values
         range from 0 to 360 in units of degrees. Required in label files
         for ring occultation data. </xs:documentation>
@@ -1585,7 +1981,11 @@
 
   <xs:complexType name="maximum_observed_ring_elevation">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>maximum_observed_ring_elevation specifies the
+=======
+      <xs:documentation>maximum_observed_ring_elevation specifes the
+>>>>>>> main
         largest value for observed_ring_elevation in the data file. Only
         used if the value is not constant over the observation. Values
         range from -90 to +90 in units of degrees. Not intended for use
@@ -1628,7 +2028,11 @@
   <xs:complexType name="maximum_projected_sun_diameter">
     <xs:annotation>
       <xs:documentation>maximum_projected_sun_diameter provides the
+<<<<<<< HEAD
         largest value of projected_sun_diameter in the observation.
+=======
+        largest value of projected_sun_diameter in the obsevation.
+>>>>>>> main
         </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -1647,12 +2051,23 @@
 
   <xs:complexType name="maximum_radial_resolution">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>indicates the largest radial size of a single
         pixel. Note: this value may be either smaller or larger than
         that of radial_sampling_interval because a derived product can
         be over-sampled or under-sampled. Required in labels if the
         value of radial_resolution varies. Not intended to be used as a
         table field. </xs:documentation>
+=======
+      <xs:documentation>maximum_radial_resolution indicates the maximum
+        radial distance over which changes in ring properties can be
+        detected within a data product. Note: this value may be larger
+        than the radial_sampling_interval value, because a data product
+        can be over-sampled. If the value of radial resolution varies,
+        the minimum and maximum radial resolution attributes are
+        required in labels. Not intended to be used as a table field.
+        </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:maximum_radial_resolution_WO_Units">
@@ -1716,13 +2131,18 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="maximum_ring_longitude_observed_minus_subsolar_WO_Units">
+=======
+  <xs:simpleType name="maximum_ring_longitude_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
      <xs:maxInclusive value="360"/>
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:complexType name="maximum_ring_longitude_observed_minus_subsolar">
     <xs:annotation>
       <xs:documentation>maximum_ring_longitude_observed_minus_sub-solar
@@ -1747,23 +2167,42 @@
     <xs:annotation>
       <xs:documentation>maximum_ring_radius indicates the largest ring
         radius value in the data table. Units are always positive.
+=======
+  <xs:complexType name="maximum_ring_longitude">
+    <xs:annotation>
+      <xs:documentation>maximum_ring_longitude specifies one boundary
+        for the ring longitude range in the data; normally the largest
+        value. However, for ranges that cross the prime meridian, the
+        maximum ring longitude will have a value less than the minimum
+        ring longitude. Values range from 0 to 360 in units of degrees.
+>>>>>>> main
         Required in label files for ring occultation data.
         </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
+<<<<<<< HEAD
       <xs:extension base="rings:maximum_ring_radius_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+=======
+      <xs:extension base="rings:maximum_ring_longitude_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+>>>>>>> main
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="maximum_sub_stellar_clock_angle_WO_Units">
+=======
+  <xs:simpleType name="maximum_ring_longitude_observed_minus_subsolar_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
      <xs:maxInclusive value="360"/>
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:complexType name="maximum_sub_stellar_clock_angle">
     <xs:annotation>
       <xs:documentation>maximum_sub_stellar_clock_angle specifies the
@@ -1774,11 +2213,22 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:maximum_sub_stellar_clock_angle_WO_Units">
+=======
+  <xs:complexType name="maximum_ring_longitude_observed_minus_subsolar">
+    <xs:annotation>
+      <xs:documentation>maximum_ring_longitude_observed_minus_sub-solar
+        specifes smallest separation in ring longitude between the
+        observation and the subsolar point. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:maximum_ring_longitude_observed_minus_subsolar_WO_Units">
+>>>>>>> main
         <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="maximum_sub_stellar_ring_azimuth_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -1797,6 +2247,25 @@
     <xs:simpleContent>
       <xs:extension base="rings:maximum_sub_stellar_ring_azimuth_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+=======
+  <xs:simpleType name="maximum_ring_radius_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="maximum_ring_radius">
+    <xs:annotation>
+      <xs:documentation>maximum_ring_radius indicates the largest ring
+        radius value in the data table. Units are km and are always
+        positive. Required in label files for ring occultation data.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:maximum_ring_radius_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+>>>>>>> main
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1822,6 +2291,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="mean_longitudinal_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -1846,6 +2316,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="mean_observed_ring_elevation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-90"/>
@@ -1855,7 +2327,11 @@
 
   <xs:complexType name="mean_observed_ring_elevation">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>mean_observed_ring_elevation specifies the mean
+=======
+      <xs:documentation>mean_observed_ring_elevation specifes the mean
+>>>>>>> main
         value for observed_ring_elevation in the data file.
         </xs:documentation>
     </xs:annotation>
@@ -1886,6 +2362,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="mean_radial_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -1909,6 +2386,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="minimum_corotating_ring_longitude_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -1921,10 +2400,17 @@
       <xs:documentation>The minimum value in this product for ring
         longitude in the corotating frame. The corotating frame is
         defined so that zero corotating longitude is equal to zero
+<<<<<<< HEAD
         inertial longitude defined at the epoch specified by
         epoch_reprojection_basis_utc. Thus, zero corotating longitude in
         the corotating frame at time t corresponds to an inertial
         longitude of (t-epoch)*corotation_rate. </xs:documentation>
+=======
+        inertial longitude at the epoch specified by
+        epoch_reprojection_basis_utc. Thus, zero corotating longitude at
+        time t corresponds to an inertial longitude of
+        (t-epoch)*corotation_rate. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:minimum_corotating_ring_longitude_WO_Units">
@@ -1982,7 +2468,11 @@
 
   <xs:complexType name="minimum_inertial_ring_longitude">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>minimum_inertial_ring_longitude specifies one
+=======
+      <xs:documentation>minimum_inertial_ring_longitude specifes one
+>>>>>>> main
         boundary for the ring longitude range in the data; normally the
         smallest value. However, for ranges that cross the prime
         meridian, the minimum ring longitude will have a value greater
@@ -2006,7 +2496,11 @@
 
   <xs:complexType name="minimum_light_source_incidence_angle">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>minimum_light_source_incidence_angle specifies
+=======
+      <xs:documentation>minimum_light_source_incidence_angle specifes
+>>>>>>> main
         the smallest value for light_source_incidence_angle in the
         observation. Only used if the value is not constant over the
         observation. Values range from 0 to +90 in units of degrees. Not
@@ -2019,6 +2513,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="minimum_longitudinal_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -2043,6 +2538,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="minimum_observed_event_time_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -2076,7 +2573,11 @@
 
   <xs:complexType name="minimum_observed_ring_azimuth">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>minimum_observed_ring_azimuth specifies the
+=======
+      <xs:documentation>minimum_observed_ring_azimuth specifes the
+>>>>>>> main
         smallest value for observed_ring_azimuth in the data file.
         Values range from 0 to 360 in units of degrees. Required in
         label files for ring occultation data. </xs:documentation>
@@ -2097,7 +2598,11 @@
 
   <xs:complexType name="minimum_observed_ring_elevation">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>minimum_observed_ring_elevation specifies the
+=======
+      <xs:documentation>minimum_observed_ring_elevation specifes the
+>>>>>>> main
         smallest value for observed_ring_elevation in the data file.
         Only used if the value is not constant over the observation.
         Values range from -90 to +90 in units of degrees. Not intended
@@ -2140,7 +2645,11 @@
   <xs:complexType name="minimum_projected_sun_diameter">
     <xs:annotation>
       <xs:documentation>minimum_projected_sun_diameter provides the
+<<<<<<< HEAD
         smallest value of projected_sun_diameter in the observation.
+=======
+        smallest value of projected_sun_diameter in the obsevation.
+>>>>>>> main
         </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -2159,12 +2668,23 @@
 
   <xs:complexType name="minimum_radial_resolution">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>minimum_radial_resolution indicates the smallest
         radial size of a single pixel. Note: this value may be either
         smaller or larger than that of radial_sampling_interva because a
         derived product can be over-sampled or under-sampled. Required
         in labels if the value of radial_resolution varies. Not intended
         to be used as a table field. </xs:documentation>
+=======
+      <xs:documentation>minimum_radial_resolution indicates the minimum
+        radial distance over which changes in ring properties can be
+        detected within a data product. Note: this value may be larger
+        than the radial_sampling_interval value, because a data product
+        can be over-sampled. If the value of radial resolution varies,
+        the minimum and maximum radial resolution attributes are
+        required in labels. Not intended to be used as a table field.
+        </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:minimum_radial_resolution_WO_Units">
@@ -2228,6 +2748,33 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
+=======
+  <xs:simpleType name="minimum_ring_longitude_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="360"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="minimum_ring_longitude">
+    <xs:annotation>
+      <xs:documentation>minimum_ring_longitude specifes one boundary for
+        the ring longitude range in the data; normally the smallest
+        value. However, for ranges that cross the prime meridian, the
+        minimum ring longitude will have a value greater than the
+        maximum ring longitude. Values range from 0 to 360 in units of
+        degrees. Required in label files for ring occultation data.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:minimum_ring_longitude_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+>>>>>>> main
   <xs:simpleType name="minimum_ring_longitude_observed_minus_subsolar_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -2238,8 +2785,14 @@
   <xs:complexType name="minimum_ring_longitude_observed_minus_subsolar">
     <xs:annotation>
       <xs:documentation>minimum_ring_longitude_observed_minus_subsolar
+<<<<<<< HEAD
         specifies smallest separation in ring longitude between the
         observation and the sub-solar point. </xs:documentation>
+=======
+        specifes smallest separation in ring longitude between the
+        observation and the sub-solar point. Required in label files for
+        ring occultation data. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:minimum_ring_longitude_observed_minus_subsolar_WO_Units">
@@ -2258,8 +2811,13 @@
   <xs:complexType name="minimum_ring_radius">
     <xs:annotation>
       <xs:documentation>minimum_ring_radius indicates the smallest ring
+<<<<<<< HEAD
         radius value in the data table. Units are always positive.
         Required in label files for ring occultation data.
+=======
+        radius value in the data table. Units are km and are always
+        positive. Required in label files for ring occultation data.
+>>>>>>> main
         </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -2269,6 +2827,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="minimum_sub_stellar_clock_angle_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -2326,6 +2885,21 @@
         used in the observation. Optional in labels. Used with
         maximum_wavelength when the observation is over a wavelength
         range. </xs:documentation>
+=======
+  <xs:simpleType name="minimum_wavelength_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="-1.7976931348623157e308"/>
+     <xs:maxInclusive value="1.7976931348623157e308"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="minimum_wavelength">
+    <xs:annotation>
+      <xs:documentation>minimum_wavelength is the smallest wavelength
+        used in the observation. Optional in labels. Used with
+        maximum_wavelength when the observation is over a wavelength
+        range. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:minimum_wavelength_WO_Units">
@@ -2564,6 +3138,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="normal_optical_depth">
     <xs:annotation>
       <xs:documentation>normal_optical_depth is the ratio of incident to
@@ -2580,6 +3155,8 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="number_points">
     <xs:annotation>
       <xs:documentation>Number of fitted data points for the orbit of
@@ -2660,6 +3237,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="observed_event_tdb_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -2781,6 +3359,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="observed_ring_elevation_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-90"/>
@@ -2964,6 +3544,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="phase_angle_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -2989,6 +3570,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="planetary_occultation_flag">
     <xs:annotation>
       <xs:documentation>The planetary_occultation_flag is a yes-or-no
@@ -3103,6 +3686,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="projected_sun_diameter_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3126,6 +3710,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="radial_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3136,6 +3722,7 @@
   <xs:complexType name="radial_resolution">
     <xs:annotation>
       <xs:documentation>radial_resolution indicates the nominal radial
+<<<<<<< HEAD
         size of a single pixel. Note: this value may be either smaller
         or larger than that of radial_sampling_interval because a
         derived product can be over-sampled or under-sampled. Required
@@ -3143,6 +3730,15 @@
         corresponding mean and minimum and maximum attributes must be
         used in labels and radial_resolution should be a table field.
         </xs:documentation>
+=======
+        distance over which changes in ring properties can be detected
+        within a data product. Note: this value may be larger than the
+        radial_sampling_interval value, because a data product can be
+        over-sampled. Required in labels if the value is fixed, as it is
+        for stellar occultations. If the value varies, the corresponding
+        minimum and maximum attributes must be used instead. Not
+        intended to be used as a table field. </xs:documentation>
+>>>>>>> main
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:radial_resolution_WO_Units">
@@ -3176,7 +3772,17 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="reference_time_utc">
+=======
+  <xs:simpleType name="reference_time_utc_WO_Units">
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="reference_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>reference_time_utc provides a date and time in
         UTC format. Given in a label when time values in a table are
@@ -3187,10 +3793,19 @@
         than when Barycentric Dynamical Time is used (e.g.,
         observed_event_tdb). </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:reference_time_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+>>>>>>> main
 
   <xs:simpleType name="reflectivity">
     <xs:annotation>
@@ -3205,6 +3820,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="reprojection_grid_longitudinal_sampling_interval_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3255,6 +3871,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="reprojection_plane">
     <xs:annotation>
       <xs:documentation>reprojection_plane identifies the plane onto
@@ -3305,17 +3923,40 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_event_start_time_utc">
+=======
+  <xs:simpleType name="ring_event_start_time_utc_WO_Units">
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ring_event_start_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>ring_event_start_time_utc gives the UTC time
         corresponding to the earliest time given by ring_event_time or
         ring_event_tdb in the data table. ring_event_start_time_utc is
+<<<<<<< HEAD
         required for all ring occultation data. </xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
+=======
+        required for all ring occultation data.
+        ring_event_start_time_utc is required label attribute for all
+        ring occultation data. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:ring_event_start_time_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+>>>>>>> main
 
   <xs:simpleType name="ring_event_stop_tdb_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
@@ -3338,6 +3979,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_event_stop_time_utc">
     <xs:annotation>
       <xs:documentation>ring_event_stop_time_utc gives the UTC time
@@ -3345,11 +3987,15 @@
         ring_event_tdb in the data table. ring_event_stop_time_utc is
         required for all ring occultation data. </xs:documentation>
     </xs:annotation>
+=======
+  <xs:simpleType name="ring_event_stop_time_utc_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_event_tdb_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3372,18 +4018,36 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:ring_event_tdb_WO_Units">
+=======
+  <xs:complexType name="ring_event_stop_time_utc">
+    <xs:annotation>
+      <xs:documentation>ring_event_stop_time_utc gives the UTC time
+        corresponding to the latest time given by ring_event_time or
+        ring_event_tdb in the data table. ring_event_stop_time_utc is
+        required for all ring occultation data. ring_event_stop_time_utc
+        is required label attribute for all ring occultation data.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:ring_event_stop_time_utc_WO_Units">
+>>>>>>> main
         <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_event_time_WO_Units">
+=======
+  <xs:simpleType name="ring_intercept_resolution_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
      <xs:maxInclusive value="1.7976931348623157e308"/>
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:complexType name="ring_event_time">
     <xs:annotation>
       <xs:documentation>ring_event_time indicates the instant at which
@@ -3404,10 +4068,24 @@
     <xs:simpleContent>
       <xs:extension base="rings:ring_event_time_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+=======
+  <xs:complexType name="ring_intercept_resolution">
+    <xs:annotation>
+      <xs:documentation>ring_intercept_resolution is the size of edge of
+        a pixel at the distance of the ring intercept point. If the
+        pixel shape is not square, it is defined by the smaller of the
+        two edges. Unlike the quantity ‘radial resolution’, these values
+        are not projected into the ring plane. </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:ring_intercept_resolution_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+>>>>>>> main
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_intercept_resolution_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3426,6 +4104,33 @@
     <xs:simpleContent>
       <xs:extension base="rings:ring_intercept_resolution_WO_Units">
         <xs:attribute name="unit" type="pds:Units_of_Length" use="required" />
+=======
+  <xs:simpleType name="ring_longitude_WO_Units">
+    <xs:restriction base="pds:ASCII_Real">
+     <xs:minInclusive value="0"/>
+     <xs:maxInclusive value="360"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ring_longitude">
+    <xs:annotation>
+      <xs:documentation>ring_longitude specifies the inertial longitude
+        of a ring feature relative to the prime meridian. In planetary
+        ring systems, the prime meridian is the ascending node of the
+        planet's invariable plane on the Earth's mean equator of J2000.
+        Longitudes are measured in the direction of orbital motion along
+        the planet's invariable plane to the ring's ascending node, and
+        thence along the ring plane. Values range from 0 to 360 in units
+        of degrees. Note: The invariable plane of a planet is equivalent
+        to its equatorial plane for every ringed planet except Neptune.
+        Required to be the second field in ring occultation profiles. In
+        labels, the min and max attributes are required.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="rings:ring_longitude_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Angle" use="required" />
+>>>>>>> main
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -3439,7 +4144,11 @@
 
   <xs:complexType name="ring_longitude_observed_minus_subsolar">
     <xs:annotation>
+<<<<<<< HEAD
       <xs:documentation>ring_longitude_observed_minus_subsolar provides
+=======
+      <xs:documentation>ring_longitude_observed_minus_subsolar providees
+>>>>>>> main
         the difference between the inertial ring longitude of the
         observation and inertial ring longitude of the sub-solar point.
         </xs:documentation>
@@ -3489,6 +4198,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="ring_radius_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>
@@ -3513,6 +4223,8 @@
     </xs:simpleContent>
   </xs:complexType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="sampling_base">
     <xs:annotation>
       <xs:documentation> The sampling_base attribute indicates the
@@ -3675,7 +4387,11 @@
     <xs:annotation>
       <xs:documentation>sigma_time_constant indicates the uncertainty in
         the time_constant. See Eq. 9 Elliot et al. (1984) Astron. J.
+<<<<<<< HEAD
         1587-1603. If this attribute is used then the attribute
+=======
+        1587-1603. If this attribute is used them the attribute
+>>>>>>> main
         time_constant also must be present. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -3685,7 +4401,17 @@
     </xs:simpleContent>
   </xs:complexType>
 
+<<<<<<< HEAD
   <xs:simpleType name="spacecraft_event_start_time_utc">
+=======
+  <xs:simpleType name="spacecraft_event_start_time_utc_WO_Units">
+    <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
+  <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="spacecraft_event_start_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>spacecraft_event_start_time_utc gives the UTC
         time corresponding to the earliest time given by
@@ -3695,12 +4421,27 @@
         UTC date time. Required in the label for radio occultation data.
         Not used for stellar occultations. </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:spacecraft_event_start_time_utc_WO_Units">
+        <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="spacecraft_event_stop_time_utc_WO_Units">
+>>>>>>> main
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="spacecraft_event_stop_time_utc">
+=======
+  <xs:complexType name="spacecraft_event_stop_time_utc">
+>>>>>>> main
     <xs:annotation>
       <xs:documentation>spacecraft_event_stop_time_utc gives the UTC
         time corresponding to the latest time given by
@@ -3710,6 +4451,7 @@
         date time. Required in the label for radio occultation data. Not
         used for stellar occultations. </xs:documentation>
     </xs:annotation>
+<<<<<<< HEAD
     <xs:restriction base="pds:ASCII_Date_Time_YMD_UTC">
   <!-- format="YYYY-MM-DDTHH:MM:SS.SSSSSSZ" -->
 	   </xs:restriction>
@@ -3738,6 +4480,10 @@
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="rings:spacecraft_event_time_WO_Units">
+=======
+    <xs:simpleContent>
+      <xs:extension base="rings:spacecraft_event_stop_time_utc_WO_Units">
+>>>>>>> main
         <xs:attribute name="unit" type="pds:Units_of_Time" use="required" />
       </xs:extension>
     </xs:simpleContent>
@@ -3759,6 +4505,7 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
   <xs:simpleType name="stellar_signal_level">
     <xs:annotation>
       <xs:documentation>stellar_signal_level indicates the anticipated
@@ -3777,6 +4524,8 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+=======
+>>>>>>> main
   <xs:simpleType name="sub_stellar_clock_angle_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="0"/>
@@ -3853,7 +4602,11 @@
     <xs:annotation>
       <xs:documentation>time_constant indicates the instrumental time
         constant of the detector. See Eq. 9 Elliot et al. (1984) Astron.
+<<<<<<< HEAD
         J. 1587-1603. If this attribute is used then the attribute
+=======
+        J. 1587-1603. If this attribute is used them the attribute
+>>>>>>> main
         time_constant_type also must be present. </xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
@@ -3894,6 +4647,37 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+<<<<<<< HEAD
+=======
+  <xs:simpleType name="vertical_display_axis">
+    <xs:annotation>
+      <xs:documentation>The vertical_display_axis attribute identifies,
+        by name, the axis of an Array (or Array subclass) that is
+        intended to be displayed in the vertical or "line" dimension on
+        a display device. The value of this attribute must match the
+        value of one, and only one, axis_name attribute in an Axis_Array
+        class of the associated Array. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="vertical_display_direction">
+    <xs:annotation>
+      <xs:documentation>The vertical_display_direction attribute
+        specifies the direction along the screen of a display device
+        that data along the vertical axis of an Array is supposed to be
+        displayed. </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+>>>>>>> main
   <xs:simpleType name="wavelength_WO_Units">
     <xs:restriction base="pds:ASCII_Real">
      <xs:minInclusive value="-1.7976931348623157e308"/>

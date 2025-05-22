@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/release/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
   <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon May 19 18:46:05 UTC 2025 -->
+=======
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon Nov 18 19:20:03 UTC 2024 -->
+>>>>>>> main:build/development/5f19162c056c75db5941e866e6c722bf0f2678c7/1.22.0.0/PDS4_RINGS_1M00_1C00.sch
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -110,12 +114,21 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+<<<<<<< HEAD:build/release/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
       <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+=======
+      <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
+        <title>//rings:Occultation_Ring_Profile/Rule</title>
+        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+      <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
+        <title>//rings:Occultation_Ring_Profile/Rule</title>
+        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+>>>>>>> main:build/development/5f19162c056c75db5941e866e6c722bf0f2678c7/1.22.0.0/PDS4_RINGS_1M00_1C00.sch
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
         <title>//rings:Occultation_Ring_Profile/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
@@ -221,12 +234,21 @@
       <sch:assert test="if ((rings:maximum_inertial_ring_longitude) and not (rings:minimum_inertial_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_inertial_ring_longitude and rings:maximum_inertial_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+<<<<<<< HEAD:build/release/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
       <sch:assert test="if ((rings:minimum_corotating_ring_longitude) and not (rings:maximum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
       <sch:assert test="if ((rings:maximum_corotating_ring_longitude) and not (rings:minimum_corotating_ring_longitude))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_corotating_ring_longitude and rings:maximum_corotating_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+=======
+      <sch:assert test="if ((rings:minimum_ring_longitude) and not (rings:maximum_ring_longitude))  then false() else true()">
+        <title>//rings:Occultation_Time_Series/Rule</title>
+        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+      <sch:assert test="if ((rings:maximum_ring_longitude) and not (rings:minimum_ring_longitude))  then false() else true()">
+        <title>//rings:Occultation_Time_Series/Rule</title>
+        rings:minimum_ring_longitude and rings:maximum_ring_longitude, are a pair; if you use one, you must use both.</sch:assert>
+>>>>>>> main:build/development/5f19162c056c75db5941e866e6c722bf0f2678c7/1.22.0.0/PDS4_RINGS_1M00_1C00.sch
       <sch:assert test="if ((rings:minimum_observed_ring_azimuth) and not (rings:maximum_observed_ring_azimuth))  then false() else true()">
         <title>//rings:Occultation_Time_Series/Rule</title>
         rings:minimum_observed_ring_azimuth and rings:maximum_observed_ring_azimuth, are a pair; if you use one, you must use both.</sch:assert>
@@ -619,6 +641,7 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+<<<<<<< HEAD:build/release/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
     <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_corotating_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Ring_Profile/rings:minimum_corotating_ring_longitude/rings:minimum_corotating_ring_longitude</title>
@@ -626,6 +649,8 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+=======
+>>>>>>> main:build/development/5f19162c056c75db5941e866e6c722bf0f2678c7/1.22.0.0/PDS4_RINGS_1M00_1C00.sch
     <sch:rule context="rings:Occultation_Ring_Profile/rings:minimum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Ring_Profile/rings:minimum_inertial_ring_longitude/rings:minimum_inertial_ring_longitude</title>
@@ -962,6 +987,7 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+<<<<<<< HEAD:build/release/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
     <sch:rule context="rings:Occultation_Time_Series/rings:minimum_corotating_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Time_Series/rings:minimum_corotating_ring_longitude/rings:minimum_corotating_ring_longitude</title>
@@ -969,6 +995,8 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+=======
+>>>>>>> main:build/development/5f19162c056c75db5941e866e6c722bf0f2678c7/1.22.0.0/PDS4_RINGS_1M00_1C00.sch
     <sch:rule context="rings:Occultation_Time_Series/rings:minimum_inertial_ring_longitude">
       <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
         <title>rings:Occultation_Time_Series/rings:minimum_inertial_ring_longitude/rings:minimum_inertial_ring_longitude</title>
