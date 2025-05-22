@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
   <!-- PDS4 XML product label for PDS4 V1.22.0.0  Mon May 19 18:46:05 UTC 2025 -->
+=======
+  <!-- PDS4 XML product label for PDS4 V1.22.0.0  Mon Dec 09 23:36:58 UTC 2024 -->
+>>>>>>> main:build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
   <!-- Generated from the PDS4 Information Model V1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 XML product label is an operational deliverable. *** -->
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1M00.sch"
@@ -17,7 +21,11 @@
         <product_class>Product_XML_Schema</product_class>
         <Modification_History>
             <Modification_Detail>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
                 <modification_date>2025-05-19</modification_date>
+=======
+                <modification_date>2024-12-09</modification_date>
+>>>>>>> main:build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
                 <version_id>1.0</version_id>
                 <description>This is the system generated PDS4 product label for PDS4 XML Schema and Schematron files.</description>
             </Modification_Detail>
@@ -26,9 +34,15 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_RINGS_1M00_1D00.xsd</file_name>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
             <creation_date_time>2025-05-19T11:46:05</creation_date_time>
             <file_size unit="byte">191356</file_size>
             <records>3917</records>
+=======
+            <creation_date_time>2024-12-09T15:36:58</creation_date_time>
+            <file_size unit="byte">177436</file_size>
+            <records>3614</records>
+>>>>>>> main:build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
         </File>
         <XML_Schema>
             <name>PDS4_RINGS_1M00_1D00.xsd</name>
@@ -40,9 +54,15 @@
     <File_Area_XML_Schema>
         <File>
             <file_name>PDS4_RINGS_1M00_1D00.sch</file_name>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
             <creation_date_time>2025-05-19T11:46:05</creation_date_time>
             <file_size unit="byte">132680</file_size>
             <records>1763</records>
+=======
+            <creation_date_time>2024-12-09T15:36:58</creation_date_time>
+            <file_size unit="byte">130156</file_size>
+            <records>1725</records>
+>>>>>>> main:build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.xml
         </File>
         <XML_Schema>
             <name>PDS4_RINGS_1M00_1D00.sch</name>

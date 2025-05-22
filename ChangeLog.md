@@ -19,23 +19,11 @@
 - Namely `ring_longitude`, `minimum_ring_longitude`, and `maximum_ring_longitude`
 
 ### Issue #241: Reprojection grid attributes for ring coordinate system and Issue #301: Update Rings dictionary for R&A F ring mosaics project
-- 1/22: WE DID SOME TESTS OF A WAVELENGTH_MIN_MAX CLASS, BUT CANNOT DO A XSCHOICE BETWEEN A CLASS AND AN ATTRIBUTE.
-- SOME THINGS STILL TO DO
-- We made changes to the definitions of corotating_flag, emission_angle, and light_source_incidence_angle and corrected spelling errors in multiple attributes.
-- INSTEAD OF SIMPLY ADDING MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE TO THE REPROJECTION_GEOMETRY CLASS, CONSIDER MORE BROADLY MAKING MANY OF THESE ATTRIBUTES A XS.CHOICE BETWEEN (FOR EXAMPLE) THE ATTRIBUTE INCIDENCE ANGLE AND A CLASS CALLED INCIDENCE_ANGLE_RANGE, THE LATTER HAS MINIMUM_INCIDENCE_ANGLE AND MAXIMUM_INCIDENCE_ANGLE REQUIRED.
-- ROB'S POINTS ARE MOSTLY EDITS OF ATTRIBUTE DEFINITIONS
-- ROB'S DISCUSSION OF INCIDENCE ANGLES AND RING LONGITUDES MAY ALSO FIT WITH THE IDEA ABOVE ABOUT DOING THESE WITH CLASSES
-- 5/15/25: The definitions for `radial_resolution` and `longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`,
-`minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, `reprojection_grid_radial_sampling_interval`, and `reprojection_grid_longitudinal_sampling_interval`
+- We made changes to the definitions of corotating_flag, emission_angle, and light_source_incidence_angle and corrected spelling errors in multiple attribute definitions.
+- The definitions for `radial_resolution` and `longitudinal_resolution` have been changed. The following new attributes have been added: `mean_radial_resolution`, `minimum_radial_resolution`, `maximum_radial_resolution`, `mean_longitudinal_resolution`, `minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, `reprojection_grid_radial_sampling_interval`, and `reprojection_grid_longitudinal_sampling_interval`
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/241 and https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/301
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#241
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#301
-
-### Issue #242: Deprecate copied classes from Geometry and Display dictionaries
-- Replaced references to Body_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident with references to geom.Body_Identification_Base, geom.Reference_Frame_Identification, and geom.Central_Body_Identification, after having set element_flag=true for each of those within the Geometry LDD.
-- Removed Body_Ident_Base, Frame_Ident_Base, Reference_Frame_Ident, and Central_Body_Ident. Also remove attributes used only within those classes, namely body_spice_name and frame_spice_name.
-- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/242
-- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#242
 
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
 - Added schematron rule rule_display_direction_check
@@ -56,7 +44,6 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#267
 
 ### Issue #302: Fix various copy-editing errors in the Rings dictionary
-- STILL TO FINISH
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/302
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#302
 
@@ -73,9 +60,8 @@
 
 ### Issue #320: Add version history for attributes and classes
 - All attributes now have comment entries detailing version history.
-- STILL TO DO: Classes cannot have comment entries. No version history can exist for classes until this is changed.
+- STILL TO DO: Classes cannot have comment entries. No version history can exist for classes until this is changed. This will be fixed in the next build, per [CCB#54](https://github.com/NASA-PDS/PDS4-CCB/issues/54).
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/320
-- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#320
 
 ### General Cleanup
 - Fixed spelling error in `ring_longitude_observed_minus_subsolar` definition: "providees" ==> "provides".  Incremented the version to 1.1 for this attribute.

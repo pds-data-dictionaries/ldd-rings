@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.23.0.0/PDS4_DISP_1N00_1510.xml
   <!-- PDS4 XML product label for PDS4 V1.23.0.0  Mon May 19 18:46:12 UTC 2025 -->
+=======
+  <!-- PDS4 XML product label for PDS4 V1.23.0.0  Mon Nov 18 19:20:03 UTC 2024 -->
+>>>>>>> main:build/release/1.23.0.0/PDS4_RINGS_1N00_1D00.xml
   <!-- Generated from the PDS4 Information Model V1.23.0.0 - System Build 15.0 -->
   <!-- *** This PDS4 XML product label is an operational deliverable. *** -->
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch"
@@ -10,14 +14,24 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd">
     <Identification_Area>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.23.0.0/PDS4_DISP_1N00_1510.xml
         <logical_identifier>urn:nasa:pds:system_bundle:xml_schema:disp-xml_schema_1.23.0.0_1.5.1.0</logical_identifier>
         <version_id>1.0</version_id>
         <title>PDS4 XML Schema - DISP V1.5.1.0</title>
+=======
+        <logical_identifier>urn:nasa:pds:system_bundle:xml_schema:rings-xml_schema_1.23.0.0_1.13.0</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>PDS4 XML Schema - RINGS V1.13.0.0</title>
+>>>>>>> main:build/release/1.23.0.0/PDS4_RINGS_1N00_1D00.xml
         <information_model_version>1.23.0.0</information_model_version>
         <product_class>Product_XML_Schema</product_class>
         <Modification_History>
             <Modification_Detail>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.23.0.0/PDS4_DISP_1N00_1510.xml
                 <modification_date>2025-05-19</modification_date>
+=======
+                <modification_date>2024-11-18</modification_date>
+>>>>>>> main:build/release/1.23.0.0/PDS4_RINGS_1N00_1D00.xml
                 <version_id>1.0</version_id>
                 <description>This is the system generated PDS4 product label for PDS4 XML Schema and Schematron files.</description>
             </Modification_Detail>
@@ -25,6 +39,7 @@
     </Identification_Area>
     <File_Area_XML_Schema>
         <File>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.23.0.0/PDS4_DISP_1N00_1510.xml
             <file_name>PDS4_DISP_1N00_1510.xsd</file_name>
             <creation_date_time>2025-05-19T11:46:12</creation_date_time>
             <file_size unit="byte">15689</file_size>
@@ -32,6 +47,15 @@
         </File>
         <XML_Schema>
             <name>PDS4_DISP_1N00_1510.xsd</name>
+=======
+            <file_name>PDS4_RINGS_1N00_1D00.xsd</file_name>
+            <creation_date_time>2024-11-18T11:20:03</creation_date_time>
+            <file_size unit="byte">177436</file_size>
+            <records>3614</records>
+        </File>
+        <XML_Schema>
+            <name>PDS4_RINGS_1N00_1D00.xsd</name>
+>>>>>>> main:build/release/1.23.0.0/PDS4_RINGS_1N00_1D00.xml
             <offset unit="byte">0</offset>
             <parsing_standard_id>XML Schema Version 1.1</parsing_standard_id>
             <description>This is a PDS4 XML Schema file for the declared namespace.</description>
@@ -39,6 +63,7 @@
     </File_Area_XML_Schema>
     <File_Area_XML_Schema>
         <File>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.23.0.0/PDS4_DISP_1N00_1510.xml
             <file_name>PDS4_DISP_1N00_1510.sch</file_name>
             <creation_date_time>2025-05-19T11:46:12</creation_date_time>
             <file_size unit="byte">5945</file_size>
@@ -46,6 +71,15 @@
         </File>
         <XML_Schema>
             <name>PDS4_DISP_1N00_1510.sch</name>
+=======
+            <file_name>PDS4_RINGS_1N00_1D00.sch</file_name>
+            <creation_date_time>2024-11-18T11:20:03</creation_date_time>
+            <file_size unit="byte">130156</file_size>
+            <records>1725</records>
+        </File>
+        <XML_Schema>
+            <name>PDS4_RINGS_1N00_1D00.sch</name>
+>>>>>>> main:build/release/1.23.0.0/PDS4_RINGS_1N00_1D00.xml
             <offset unit="byte">0</offset>
             <parsing_standard_id>Schematron ISO/IEC 19757-3:2006</parsing_standard_id>
             <description>This is the PDS4 Schematron file for the declared namespace. Schematron provides rule-based validation for XML Schema.</description>

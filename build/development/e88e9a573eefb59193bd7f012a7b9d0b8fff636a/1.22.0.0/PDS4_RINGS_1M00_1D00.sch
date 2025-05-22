@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:build/development/e88e9a573eefb59193bd7f012a7b9d0b8fff636a/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
   <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon May 19 18:46:05 UTC 2025 -->
+=======
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.13.0.0 - Mon Dec 09 23:36:58 UTC 2024 -->
+>>>>>>> main:build/development/3ec23430181e59abf7c04dc036b7e626ac40a553/1.22.0.0/PDS4_RINGS_1M00_1D00.sch
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
