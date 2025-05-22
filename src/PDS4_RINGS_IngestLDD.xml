@@ -4139,7 +4139,7 @@
     <DD_Class>
         <name>Body_Ident_Base</name>
         <version_id>1.0</version_id>
-        <local_identifier>geom.Body_Identification_Base</local_identifier>
+        <local_identifier>Body_Ident_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Body_Ident_Base class provides multiple attributes
             that can be used to identify a physical object (spacecraft, planet 
@@ -4164,7 +4164,7 @@
     <DD_Class>
         <name>Frame_Ident_Base</name>
         <version_id>1.0</version_id>
-        <local_identifier>geom.Frame_Identification_Base</local_identifier>
+        <local_identifier>Frame_Ident_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Frame_Ident_Base class provides multiple attributes
             that can be used to identify a reference frame. At least one must be used.
@@ -4194,7 +4194,7 @@
     <DD_Class>
         <name>Central_Body_Ident</name>
         <version_id>2.0</version_id>
-        <local_identifier>geom.Central_Body_Identification</local_identifier>
+        <local_identifier>Central_Body_Ident</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Central_Body_Ident class uniquely
             identifies the body that is the central body associated
@@ -4209,7 +4209,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
+            <identifier_reference>Body_Ident_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -4219,7 +4219,7 @@
     <DD_Class>
         <name>Reference_Frame_Ident</name>
         <version_id>2.0</version_id>
-        <local_identifier>geom.Reference_Frame_Identification</local_identifier>
+        <local_identifier>Reference_Frame_Ident</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Reference_Frame_Ident class is
             a base class for identifying reference frames.  These 
@@ -4235,7 +4235,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>geom.Frame_Identification_Base</identifier_reference>
+            <identifier_reference>Frame_Ident_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5310,7 +5310,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
+            <identifier_reference>Body_Ident_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5326,7 +5326,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
+            <identifier_reference>Body_Ident_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5406,7 +5406,7 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>geom.Reference_Frame_Identification</identifier_reference>
+            <identifier_reference>Reference_Frame_Ident</identifier_reference>
             <reference_type>component_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -5428,7 +5428,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>geom.Central_Body_Identification</identifier_reference>
+            <identifier_reference>Central_Body_Ident</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
