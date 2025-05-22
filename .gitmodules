@@ -1,9 +1,9 @@
 [submodule "src/dependencies/ldd-disp"]
-	path = src/dependencies/ldd-disp
-	url = https://github.com/pds-data-dictionaries/ldd-disp
-[submodule "src/dependencies/ldd-disp/"]
-	branch = main
+    path = src/dependencies/ldd-disp
+    url = https://github.com/pds-data-dictionaries/ldd-disp
+    branch = main
+
 [submodule "src/dependencies/ldd-geom"]
-	path = src/dependencies/ldd-geom
-	url = https://github.com/pds-data-dictionaries/ldd-geom
-	
+    path = src/dependencies/ldd-geom
+    url = https://github.com/pds-data-dictionaries/ldd-geom
+    branch = main

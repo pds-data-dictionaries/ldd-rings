@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1M00_1970.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
             xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
-            
+            xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
             xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd
-                                http://pds.nasa.gov/pds4/disp/v1  https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd">
+                                http://pds.nasa.gov/pds4/disp/v1  https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd
+                                http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1M00_1970.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -23,7 +25,7 @@
     <last_modification_date_time>2025-05-15</last_modification_date_time>
 
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
-    <DD_Attribute>
+    <!-- <DD_Attribute>
         <name>body_spice_name</name>
         <version_id>1.0</version_id>
         <local_identifier>body_spice_name</local_identifier>
@@ -58,7 +60,7 @@
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
         </DD_Value_Domain>
-    </DD_Attribute>
+    </DD_Attribute> -->
 
     <!-- @@@ End of the block of attributes borrowed from the geom namespace pending a fix to LDDTool -->
 
@@ -4152,12 +4154,6 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>body_spice_name</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
             <identifier_reference>pds.name</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -4177,12 +4173,6 @@
         <element_flag>false</element_flag>
         <DD_Association>
             <identifier_reference>pds.local_identifier</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>frame_spice_name</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -6948,6 +6938,35 @@
             <rule_type>Assert</rule_type>
             <rule_test>if ($is_image_like) then //disp:Display_Settings/disp:Display_Direction else true()</rule_test>
             <rule_message>If "rings:Ring_Reprojection" or "rings:Ring_Spectrum" is specified, a "disp:Display_Direction" must be specified, as well.</rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
+    <!-- Here are the rules for  radial and longitudinal resolution, as defined under the Reprojection_Grid_Parameters class-->
+    <DD_Rule>
+        <local_identifier>radial_resolution_check</local_identifier>
+        <rule_context>//rings:Reprojection_Geometry</rule_context>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Reprojection_Grid_Parameters/rings:minimum_radial_resolution) and not (rings:Reprojection_Grid_Parameters/rings:maximum_radial_resolution))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_radial_resolution and rings:maximum_radial_resolution, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Reprojection_Grid_Parameters/rings:maximum_radial_resolution) and not (rings:Reprojection_Grid_Parameters/rings:minimum_radial_resolution))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_radial_resolution and rings:maximum_radial_resolution, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+    </DD_Rule>
+    <DD_Rule>
+        <local_identifier>longitudinal_resolution_check</local_identifier>
+        <rule_context>//rings:Reprojection_Geometry</rule_context>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Reprojection_Grid_Parameters/rings:minimum_longitudinal_resolution) and not (rings:Reprojection_Grid_Parameters/rings:maximum_longitudinal_resolution))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_longitudinal_resolution and rings:maximum_longitudinal_resolution, are a pair; if you use one, you must use both.</rule_message>
+        </DD_Rule_Statement>
+        <DD_Rule_Statement>
+            <rule_type>Assert</rule_type>
+            <rule_test>if ((rings:Reprojection_Grid_Parameters/rings:maximum_longitudinal_resolution) and not (rings:Reprojection_Grid_Parameters/rings:minimum_longitudinal_resolution))  then false() else true()</rule_test>
+            <rule_message>rings:minimum_longitudinal_resolution and rings:maximum_longitudinal_resolution, are a pair; if you use one, you must use both.</rule_message>
         </DD_Rule_Statement>
     </DD_Rule>
 </Ingest_LDD>
