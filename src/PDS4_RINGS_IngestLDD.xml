@@ -4025,7 +4025,7 @@
         <local_identifier>corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>The ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+        <definition>The ring longitude in the corotating frame. The zero longitude is defined as the prime meridian at the epoch specified by epoch_reprojection_basis_utc. Therefore, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
@@ -4047,7 +4047,7 @@
         <local_identifier>minimum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-	<definition>The minimum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+	<definition>The minimum value in this product for ring longitude in the corotating frame. The zero longitude is defined as the prime meridian at the epoch specified by epoch_reprojection_basis_utc. Therefore, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
@@ -4069,7 +4069,7 @@
         <local_identifier>maximum_corotating_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-	    <definition>The maximum value in this product for ring longitude in the corotating frame.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
+	    <definition>The maximum value in this product for ring longitude in the corotating frame. The zero longitude is defined as the prime meridian at the epoch specified by epoch_reprojection_basis_utc. Therefore, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
