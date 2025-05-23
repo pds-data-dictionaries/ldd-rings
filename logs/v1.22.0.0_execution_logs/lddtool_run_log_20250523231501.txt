@@ -1,9 +1,9 @@
 
 >>  INFO LDDTOOL Version: 15.3.0
->>  INFO IM Version Id: 1.23.0.0
+>>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Fri May 23 14:02:47 UTC 2025
+>>  INFO Date: Fri May 23 23:15:01 UTC 2025
 >>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:geom
@@ -205,7 +205,7 @@
 
 Input:
 
-     - IM Version: 1N00
+     - IM Version: 1M00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -215,9 +215,9 @@ Input:
 
 Output:
 
-     - ./PDS4_GEOM_1N00_19A0.xsd
-     - ./PDS4_GEOM_1N00_19A0.sch
-     - ./PDS4_GEOM_1N00_19A0.xml
-     - ./export/PDS4_PDS_1N00.JSON
+     - ./PDS4_GEOM_1M00_19A0.xsd
+     - ./PDS4_GEOM_1M00_19A0.sch
+     - ./PDS4_GEOM_1M00_19A0.xml
+     - ./export/PDS4_PDS_1M00.JSON
 
 >>  INFO Exit(0)

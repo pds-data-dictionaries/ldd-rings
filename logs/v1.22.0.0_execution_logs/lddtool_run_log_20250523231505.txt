@@ -3,9 +3,11 @@
 >>  INFO IM Version Id: 1.22.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Fri May 23 14:02:45 UTC 2025
+>>  INFO Date: Fri May 23 23:15:05 UTC 2025
 >>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
 
+>>> ERROR Class:0001_NASA_PDS_1.rings.Column_Headers  Association:rings:observed_optical_depth  Attribute: rings:observed_optical_depth - Missing Attribute
+>>> ERROR Association: rings:observed_optical_depth - Could not find referenced attribute - Reference Type: attribute_of
 >>> INFO Init:  - Config.Properties Namespace Id Found:geom
 >>> INFO Init:  - Config.Properties Namespace Id Using:geom
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
@@ -562,6 +564,7 @@
 >>> INFO Attribute: <ring_detected> - The default maximum characters provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <planetary_occultation_flag> - The default minimum characters provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <planetary_occultation_flag> - The default maximum characters provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <observed_optical_depth> - The default minimum value provided by the attribute's data type is being overridden with -2000
 >>> INFO Attribute: <normal_optical_depth> - The default minimum value provided by the attribute's data type is being overridden with -2000
 >>> INFO Attribute: <highest_detectable_opacity> - The default minimum value provided by the attribute's data type is being overridden with -1
 >>> INFO Attribute: <lowest_detectable_opacity> - The default minimum value provided by the attribute's data type is being overridden with -1
@@ -678,7 +681,7 @@
 
  -- LDDTool Execution Summary --
      28 warning(s)
-     0 error(s)
+     2 error(s)
      0 fatal error(s)
 
 Input:
@@ -698,4 +701,4 @@ Output:
      - ./PDS4_RINGS_1M00_1D00.xml
      - ./export/PDS4_PDS_1M00.JSON
 
->>  INFO Exit(0)
+>>  INFO Exit(1)
