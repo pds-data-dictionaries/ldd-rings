@@ -1648,7 +1648,7 @@
     <DD_Attribute>
         <name>observed_optical_depth</name>
         <version_id>1.0</version_id>
-        <local_identifier>normal_optical_depth</local_identifier>
+        <local_identifier>observed_optical_depth</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
         <definition>Optical depth is equal to -ln(T), where the transparency T is the ratio of incident to
