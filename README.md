@@ -1,7 +1,7 @@
 # Rings local data dictionary
 
-The Ring dictionary that describes objects related to planetary ring observation. It includes classes to describe a 
-ring model, occulations (radio and stellar) and ring relationships.
+The Rings dictionary describes objects related to planetary ring observation. It includes classes to describe a 
+ring model, occultations (radio and stellar) and ring relationships.
 
 ## Versions
 

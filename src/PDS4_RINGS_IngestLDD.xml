@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1M00_1970.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1N00_1980.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
@@ -9,7 +9,7 @@
             xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
             xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1  https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd
                                 http://pds.nasa.gov/pds4/disp/v1  https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1N00_1510.xsd
-                                http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1M00_1970.xsd">
+                                http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1N00_1980.xsd">
  
     <name>Rings Dictionary</name>
     <ldd_version_id>1.13.0</ldd_version_id>
@@ -22,7 +22,7 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2025-05-15</last_modification_date_time>
+    <last_modification_date_time>2025-05-27</last_modification_date_time>
 
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
     <!-- <DD_Attribute>
@@ -176,7 +176,7 @@
         <version_id>1.0</version_id>
         <local_identifier>sampling_interval_length</local_identifier>
         <nillable_flag>false</nillable_flag>
-        <submitter_name>Mith Gordon</submitter_name>
+        <submitter_name>Micth Gordon</submitter_name>
         <definition>
             The sampling_interval_length attribute provides the
             spacing of points, in units of length, at which data are sampled and at which a value
@@ -893,6 +893,8 @@
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>1</maximum_characters>
             <DD_Permissible_Value>
                 <value>0</value>
                 <value_meaning>Not observable - observations at the predicted occultation event time for this ring were either not recorded (for example, the star was below the horizon) or the occultation chord did not intersect the ring.</value_meaning>
@@ -1189,9 +1191,10 @@
         <local_identifier>maximum_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>indicates the largest radial size of a single pixel. Note: this value
-        may be either smaller or larger than that of radial_sampling_interval because a
-        derived product can be over-sampled or under-sampled.
+        <definition>maximum_radial_resolution indicates the largest radial size of a
+        single pixel. Note: this value may be either smaller or larger than that of
+        radial_sampling_interval because a derived product can be over-sampled or
+        under-sampled.
         Required in labels if the value of radial_resolution varies. Not intended to be
         used as a table field.
         </definition>
@@ -1211,9 +1214,10 @@
         <local_identifier>mean_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>indicates the mean radial size of a single pixel. Note: this value
-        may be either smaller or larger than that of radial_sampling_interval because a
-        derived product can be over-sampled or under-sampled.
+        <definition>mean_radial_resolution indicates the mean radial size of a single pixel.
+        Note: this value may be either smaller or larger than that of
+        radial_sampling_interval because a derived product can be over-sampled or
+        under-sampled.
         Required in labels if the value of radial_resolution varies. Not intended to be
         used as a table field.
         </definition>
@@ -1282,7 +1286,7 @@
         <local_identifier>maximum_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
-        <definition>minimum_longitudinal_resolution indicates the largest longitudinal
+        <definition>maximum_longitudinal_resolution indicates the largest longitudinal
         size of a single pixel. Note: this value may be either smaller or larger than that
         of radial_sampling_interval because a derived product can be over-sampled or
         under-sampled.
@@ -1305,7 +1309,7 @@
         <local_identifier>mean_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
-        <definition>minimum_longitudinal_resolution indicates the mean longitudinal
+        <definition>mean_longitudinal_resolution indicates the mean longitudinal
         size of a single pixel. Note: this value may be either smaller or larger than that
         of radial_sampling_interval because a derived product can be over-sampled or
         under-sampled.
@@ -2870,6 +2874,8 @@
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>2</maximum_characters>
             <DD_Permissible_Value>
                 <value>R</value>
                 <value_meaning>Frequency range: 1.70 to 2.60 GHz </value_meaning>
@@ -3713,6 +3719,8 @@
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
             <value_data_type>ASCII_Integer</value_data_type>
+            <minimum_characters>1</minimum_characters>
+            <maximum_characters>1</maximum_characters>
             <unit_of_measure_type>Units_of_None</unit_of_measure_type>
             <DD_Permissible_Value>
               <value>0</value>

@@ -28,7 +28,7 @@
 ### Issue #243: Define Local_Internal_Reference in Ring_Reprojection
 - Added schematron rule rule_display_direction_check
 - Created unit tests for this schematron rule.
-- Replaced rings:Display_Direction class with reference to disp:Display_Settings/disp:Dislay_Direction.
+- Replaced rings:Display_Direction class with reference to disp:Display_Settings/disp:Display_Direction.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/243
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#243
 
