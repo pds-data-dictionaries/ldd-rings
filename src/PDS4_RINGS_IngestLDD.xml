@@ -22,7 +22,7 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2025-05-27</last_modification_date_time>
+    <last_modification_date_time>2025-05-29</last_modification_date_time>
 
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
     <!-- <DD_Attribute>
@@ -176,7 +176,7 @@
         <version_id>1.0</version_id>
         <local_identifier>sampling_interval_length</local_identifier>
         <nillable_flag>false</nillable_flag>
-        <submitter_name>Micth Gordon</submitter_name>
+        <submitter_name>Mitch Gordon</submitter_name>
         <definition>
             The sampling_interval_length attribute provides the
             spacing of points, in units of length, at which data are sampled and at which a value
@@ -336,7 +336,7 @@
         <comment>
             v1.0 (pre-2020): Attribute creation
             v1.1 (pre-2020): Made an optional attribute for all profile labels.
-            v2.0 (LDD version v1.3.0.0, 2020-06-25): Removed specification of "Units_of_Time"
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed specification of "Units_of_Time"
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -526,7 +526,7 @@
         </definition>
         <comment>
             v1.1 (pre-2020): Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC. Removed "Units_of_time".
+            v2.0 (LDD version v1.13.0, 2025-05-29): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC. Removed "Units_of_Time".
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -617,7 +617,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time".
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -640,7 +640,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time".
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -689,7 +689,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time".
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -757,7 +757,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC, fixed definition
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time", fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -777,7 +777,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC, fixed definition
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time", fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -889,6 +889,7 @@
             v1.0 (pre-2020):  Attribute creation
             v1.1 (LDD version v1.10.0.0, 2020-06-25):  Revised enumerated values to lower case
             v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added values to support solar occultations
+            v1.1 (LDD version v1.13.0.0, 2025-05-29):  Revised definition.  Added minimum_characters and maximum_characters
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -986,7 +987,6 @@
         </definition>
         <comment>
             v1.2 (LDD version v1.10.0.0, 2020-06-25): Attribute creation.
-            v1.2 (LDD version v1.11.0.0, 2021-11-10): Attribute creation.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1091,9 +1091,9 @@
             a table field.
         </definition>
         <comment>
-            v1.3 (pre-2020):  Attribute creation
-            v1.4 (pre-2020):  Renamed from ring_occultation_direction to occultation_direction
-	    v1.5 (v1.13.0): Attribute definition and value definition updated.  Also fixed capitalization for value.
+            v1.3 (pre-2020):  Attribute creation, renamed from ring_occultation_direction to occultation_direction, modified the definitions
+                              for the values ingress and egress.
+            v1.4 (LDD version v1.13.0, 2025-05-29):  Attribute definition and value definitions updated.  Also fixed capitalization for value.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1153,7 +1153,7 @@
         </definition>
         <comment>
             v1.1 (pre-2020):  Attribute creation
-            v1.2 (1.13.0):  Changed definition
+            v1.2 (LDD version v1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1164,7 +1164,7 @@
 
     <DD_Attribute>
         <name>minimum_radial_resolution</name>
-        <version_id>1.1</version_id>
+        <version_id>1.2</version_id>
         <local_identifier>minimum_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1177,6 +1177,7 @@
         </definition>
         <comment>
             v1.1 (pre-2020):  Attribute creation
+            v1.2 (LDD version v1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1187,7 +1188,7 @@
     
     <DD_Attribute>
         <name>maximum_radial_resolution</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1200,6 +1201,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
+            v1.3 (LDD version v1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1210,7 +1212,7 @@
 
     <DD_Attribute>
         <name>mean_radial_resolution</name>
-        <version_id>1.2</version_id>
+        <version_id>1.0</version_id>
         <local_identifier>mean_radial_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1222,7 +1224,7 @@
         used as a table field.
         </definition>
         <comment>
-            v1.2 (pre-2020):  Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1233,7 +1235,7 @@
 
     <DD_Attribute>
         <name>longitudinal_resolution</name>
-        <version_id>1.1</version_id>
+        <version_id>1.0</version_id>
         <local_identifier>longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -1246,8 +1248,7 @@
         longitudinal_resolution should be a table field.
         </definition>
         <comment>
-            v1.0 (1.13.0):  Attribute creation
-            v1.1 (1.13.0):  Changed definition
+            v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1271,7 +1272,7 @@
         be used as a table field.
         </definition>
         <comment>
-            v1.0 (1.13.0):  Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1294,7 +1295,7 @@
         be used as a table field.
         </definition>
         <comment>
-            v1.0 (1.13.0):  Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1883,7 +1884,7 @@
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
         <definition>ring_radius indicates a radial location within a planetary ring system. Radii are
-            measured from the center of mass of the planet along the nominal ring plane. Units are 
+            measured from the center of mass of the planet along the nominal ring plane. Values are 
             always positive.
 
             Required to be the first field in ring occultation profiles. Data are always organized 
@@ -1906,7 +1907,7 @@
         <local_identifier>minimum_ring_radius</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>minimum_ring_radius indicates the smallest ring radius value in the data table. Units are
+        <definition>minimum_ring_radius indicates the smallest ring radius value in the data table. Values are
             always positive.
 
             Required in label files for ring occultation data.
@@ -1928,7 +1929,7 @@
         <local_identifier>maximum_ring_radius</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
-        <definition>maximum_ring_radius indicates the largest ring radius value in the data table. Units are
+        <definition>maximum_ring_radius indicates the largest ring radius value in the data table. Values are
             always positive.
 
             Required in label files for ring occultation data.
@@ -1962,7 +1963,6 @@
             max attributes are required.
         </definition>
         <comment>
-            v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added as replacement for deprecated ring_longitude
         </comment>
         <DD_Value_Domain>
@@ -1977,7 +1977,7 @@
     
     <DD_Attribute>
         <name>minimum_inertial_ring_longitude</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_inertial_ring_longitude</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1989,6 +1989,7 @@
         </definition>
         <comment>
             v1.2 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of inertial longitudes
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2036,7 +2037,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe offset between observed and subsolar ring longitude
-            v1.1 (post-2020): Fixed spelling error in definition.
+            v1.1 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2050,7 +2051,7 @@
     
     <DD_Attribute>
         <name>minimum_ring_longitude_observed_minus_subsolar</name>
-        <version_id>1.2</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>minimum_ring_longitude_observed_minus_subsolar</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -2059,8 +2060,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (post-2020): Fixed a spelling error in the definition
-            v1.2 (post-2020): Changed definition to no longer state attribute's requirement in label files for ring occultation data.
+            v1.1 (LDD version v1.13.0.0, 2025-05-29): Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2083,7 +2083,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (post-2020): Fixed a spelling error in the definition
+            v1.1 (LDD version v1.13.0.0, 2025-05-29): Fixed a spelling error in the definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2130,7 +2130,7 @@
     
     <DD_Attribute>
         <name>minimum_observed_ring_elevation</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>minimum_observed_ring_elevation</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -2142,6 +2142,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2155,7 +2156,7 @@
     
     <DD_Attribute>
         <name>maximum_observed_ring_elevation</name>
-        <version_id>1.2</version_id>
+        <version_id>1.3</version_id>
         <local_identifier>maximum_observed_ring_elevation</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -2167,6 +2168,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2217,7 +2219,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (post-2020): Made changes to the definition
+            v1.1 (LDD version v1.13.0.0, 2025-05-29): Made changes to the definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2288,7 +2290,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (post-2020): corrected spelling errors in definition
+            v1.1 (LDD version v1.13.0.0, 2025-05-27): Revised definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2367,8 +2369,8 @@
             the data table.
         </definition>
         <comment>
-            v1.0 (pre-2020):  Attribute creation
-            v1.1 (post-2020): corrected spelling errors in definition
+            v1.2 (pre-2020):  Attribute creation
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Revised definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2394,7 +2396,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (post-2020): corrected spelling errors in definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): corrected spelling errors in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2420,7 +2422,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (post-2020): corrected spelling errors in definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): corrected spelling errors in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2564,8 +2566,8 @@
             Required in label files for ring occultation data.
         </definition>
         <comment>
-            v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.11.0.0, 2021-11-10): Added to the Occultation_Time_Series class
+            v1.2 (pre-2020):  Added to the Occultation_Time_Series class
+            v1.3 (LDD version 1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2589,8 +2591,8 @@
             Required in label files for ring occultation data.
         </definition>
         <comment>
-            v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.11.0.0, 2021-11-10): Added to the Occultation_Time_Series class
+            v1.2 (pre-2020):  Added to the Occultation_Time_Series class
+            v1.3 (LDD version 1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2649,7 +2651,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (pre-2020): Corrected definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2675,7 +2677,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (pre-2020): Corrected definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2734,7 +2736,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (pre-2020): Corrected definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2760,7 +2762,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (pre-2020): Corrected definition
+            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3090,6 +3092,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.8.0.0, 2020-01-28):  Added to support time response modeling
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Fixed spelling error in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3111,7 +3114,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.8.0.0, 2020-01-28):  Attribute creation
-            v1.1 (post-2020)
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Fixed spelling error in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3133,7 +3136,8 @@
         	 size based on the distance of the central body from the sun.
         </definition>
         <comment>
-            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added for solar occultation calibration
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added for solar occultation calibration
+            v1.1 (LDD version v1.13.0, 2025-05-29): Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3152,7 +3156,8 @@
          projected_sun_diameter in the observation.
         </definition>
         <comment>
-            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+            v1.1 (LDD version v1.13.0, 2025-05-29): Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3171,8 +3176,8 @@
          projected_sun_diameter in the observation.
         </definition>
         <comment>
-            v1.0 (pre-2020): Attribute creation
-            v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+            v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
+            v1.1 (LDD version 1.13.0, 2025-05-29):  Fixed spelling error in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3403,7 +3408,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v2.0 (LDD version v1.23.0.0): Changed to have value data type ASCII_Date_Time_YMD_UTC
+            v2.0 (LDD version v1.13.0): Removed "Units_of_Time".
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3768,7 +3773,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (post-2020): Improved definition clarity
+            v1.1 (LDD version v1.13.0, 2025-05-29): Improved definition clarity
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4025,7 +4030,7 @@
         </definition>
         <comment>
             v1.0 (post-2020): Attribute creation
-            v2.0 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity
+            v2.0 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity, removed Units_of_Time
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4044,7 +4049,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.12.0.0, 2023-04-18):  Updated definition and spelling
+            v1.3 (LDD version v1.13.0, 2025-05-29):  Updated definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -4090,7 +4095,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Improved clarity in definition
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Improved clarity in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4112,7 +4117,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of corotating longitudes
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Added to define range of corotating longitudes
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4134,7 +4139,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Improved definition clarity
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4160,7 +4165,7 @@
         and thus a constant value for this attribute.
         </definition>
         <comment>
-            v1.0 (post-2020): Attribute creation
+            v1.0 (LDD version v1.13.0.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4183,7 +4188,7 @@
         and thus a constant value for this attribute.
         </definition>
         <comment>
-            v1.0 (post-2020): Attribute creation
+            v1.0 (LDD version v1.13.0.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4199,7 +4204,7 @@
 
     <DD_Class>
         <name>Body_Ident_Base</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>Body_Ident_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Body_Ident_Base class provides multiple attributes
@@ -4224,7 +4229,7 @@
 
     <DD_Class>
         <name>Frame_Ident_Base</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>Frame_Ident_Base</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Frame_Ident_Base class provides multiple attributes
@@ -4279,7 +4284,7 @@
     
     <DD_Class>
         <name>Reference_Frame_Ident</name>
-        <version_id>2.0</version_id>
+        <version_id>2.1</version_id>
         <local_identifier>Reference_Frame_Ident</local_identifier>
         <submitter_name>Elizabeth Rye</submitter_name>
         <definition>The Reference_Frame_Ident class is
@@ -5808,7 +5813,7 @@
 
     <DD_Class>
         <name>Reprojection_Geometry</name>  
-        <version_id>2.1</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>Reprojection_Geometry</local_identifier>
         <submitter_name>M. Gordon</submitter_name>
         <definition>This class provides the parameters describing reprojection geometry when the ring(s) is reprojected based on a fixed grid of coordinates (e.g., radius vs. longitude).</definition>
