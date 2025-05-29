@@ -710,7 +710,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v2.0 (LDD version v1.23.0.0, 2024-11-13): Changed data type from ASCII_Real to ASCII_Date_Time_YMD_UTC.
+            v2.0 (LDD version v1.13.0, 2025-05-29): Removed "Units_of_Time"
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1068,7 +1068,7 @@
 
     <DD_Attribute>
         <name>occultation_direction</name>
-        <version_id>1.5</version_id>
+        <version_id>1.4</version_id>
         <local_identifier>occultation_direction</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Gordon</submitter_name>
@@ -1886,7 +1886,7 @@
         </definition>
         <comment>
             v1.1 (pre-2020): Attribute creation
-            v1.2 (LDD version v1.23.0.0): Fixed definition
+            v1.2 (LDD version v1.13.0, 2025-05-29): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1908,7 +1908,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.23.0.0): Fixed definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1930,7 +1930,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.23.0.0): Fixed definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Fixed definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3914,7 +3914,7 @@
         Required in labels of ring reprojection products.
         </definition>
         <comment>
-            v1.0 (post-2020): Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -4019,7 +4019,7 @@
         <definition>The basis epoch for the corotating frame. Format is YYYY-MM-DDTHH:MM:SS.SSSZ and may be truncated.  The corotating frame is defined so that zero corotating longitude is equal to zero inertial longitude defined at the epoch specified by epoch_reprojection_basis_utc.  Thus, zero corotating longitude in the corotating frame at time t corresponds to an inertial longitude of (t-epoch)*corotation_rate.
         </definition>
         <comment>
-            v1.0 (post-2020): Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
             v2.0 (LDD version v1.12.0.0, 2023-04-18):  Improved definition clarity, removed Units_of_Time
         </comment>
         <DD_Value_Domain>
@@ -4064,7 +4064,7 @@
         <definition>The corotation rate associated with the data.
         </definition>
         <comment>
-            v1.0 (post-2020): Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
