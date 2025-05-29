@@ -5364,7 +5364,7 @@
         <abstract_flag>false</abstract_flag>        
         <element_flag>false</element_flag>
         <DD_Association>
-            <identifier_reference>geom.Body_Identification_Base</identifier_reference>
+            <identifier_reference>Body_Ident_Base</identifier_reference>
             <reference_type>parent_of</reference_type>
             <minimum_occurrences>1</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
