@@ -50,7 +50,7 @@
             <rings:corotating_flag>N</rings:corotating_flag>
             <rings:Reprojection_Grid_Parameters>
               <local_identifier>test</local_identifier>
-              <rings:maximum_longitudinal_resolution unit="km">10</rings:maximum_longitudinal_resolution>
+              <rings:maximum_longitudinal_resolution unit="deg">2</rings:maximum_longitudinal_resolution>
             </rings:Reprojection_Grid_Parameters>
           </rings:Reprojection_Geometry>
           <rings:description>null</rings:description>
