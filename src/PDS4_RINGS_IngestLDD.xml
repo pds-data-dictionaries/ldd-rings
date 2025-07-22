@@ -1229,7 +1229,7 @@
 
     <DD_Attribute>
         <name>longitudinal_resolution</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -1243,6 +1243,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
+            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1254,7 +1255,7 @@
 
     <DD_Attribute>
         <name>minimum_longitudinal_resolution</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>minimum_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -1267,6 +1268,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
+            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1277,7 +1279,7 @@
 
     <DD_Attribute>
         <name>maximum_longitudinal_resolution</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>maximum_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -1290,6 +1292,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
+            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1300,7 +1303,7 @@
 
     <DD_Attribute>
         <name>mean_longitudinal_resolution</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>mean_longitudinal_resolution</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -1313,6 +1316,7 @@
         </definition>
         <comment>
             v1.0 (1.13.0):  Attribute creation
+            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
