@@ -1,5 +1,20 @@
 # Rings Namespace Change Log
 
+## Changes from v1.13.0.0 to v1.14.0
+
+### Issue #346: "Longitudinal" attributes should have Units of Angle
+- Every attribute in the Rings LDD that contains the string longitudinal has Units of Length, when it should have Units of Angle.
+- The following attributes were updated: `longitudinal_resolution`, `minimum_longitudinal_resolution`, `maximum_longitudinal_resolution`, and `mean_longitudinal_resolution`.
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/346
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#346
+
+### Issue #347:  New attributes for Reprojection_Geometry: min/max/mean_emission_angle and min/max/mean_incidence_angle
+- EThe Reprojection_Geometry class requires more substantial options for `emission_angle` `and incidence_angle`.
+- The following attributes were added to the `Reprojection_Geometry` class: `minimum_incidence_angle`, `maximum_incidence_angle` `minimum_emission_angle`, `maximum_emission_angle`.
+- The following attributes were created and added to the `Reprojection_Geometry` class: `mean_incidence_angle` and `mean_emission_angle`
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/347
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#347
+
 ## Changes from v1.12.0.0 to v1.13.0
 
 ### Switched to three-element semantic versioning

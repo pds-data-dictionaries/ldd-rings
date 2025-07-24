@@ -2272,6 +2272,28 @@
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
     </DD_Attribute>
+
+    <DD_Attribute>
+        <name>mean_emission_angle</name>
+        <version_id>1.0</version_id>
+        <local_identifier>mean_emission_angle</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>The mean_emission_angle element provides the mean 
+            value during the observation for the emission angle at the target.
+        </definition>
+        <comment>
+            v1.0 (LDD version v1.13.0.0, 2025-07-24):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>0</minimum_value>
+            <maximum_value>180</maximum_value>
+            <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+            <specified_unit_id>deg</specified_unit_id>
+        </DD_Value_Domain>
+    </DD_Attribute>
     
     <DD_Attribute>
         <name>incidence_angle</name>
@@ -2333,6 +2355,28 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
+        </comment>
+        <DD_Value_Domain>
+            <enumeration_flag>false</enumeration_flag>
+            <value_data_type>ASCII_Real</value_data_type>
+            <minimum_value>0</minimum_value>
+            <maximum_value>180</maximum_value>
+            <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+            <specified_unit_id>deg</specified_unit_id>
+        </DD_Value_Domain>
+    </DD_Attribute>
+
+    <DD_Attribute>
+        <name>mean_incidence_angle</name>
+        <version_id>1.0</version_id>
+        <local_identifier>mean_incidence_angle</local_identifier>
+        <nillable_flag>false</nillable_flag>
+        <submitter_name>Rob French</submitter_name>
+        <definition>The mean_incidence_angle element provides the mean 
+            value during the observation for the incidence angle at the target.
+        </definition>
+        <comment>
+            v1.0 (LDD version v1.13.0.0, 2025-07-24):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -5915,6 +5959,42 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_ring_radius</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_incidence_angle</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_incidence_angle</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>mean_incidence_angle</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>minimum_emission_angle</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>maximum_emission_angle</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
+            <identifier_reference>mean_emission_angle</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
