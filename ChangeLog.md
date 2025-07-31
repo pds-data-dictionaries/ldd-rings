@@ -15,6 +15,11 @@
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/347
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#347
 
+### Issue #348:  Definition changes for emission_angle and incidence_angle
+- The following attributes had their definitions updated: `emission_angle`, `incidence_angle`, and `phase_angle`.
+- Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/348
+- Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#348
+
 ## Changes from v1.12.0.0 to v1.13.0
 
 ### Switched to three-element semantic versioning

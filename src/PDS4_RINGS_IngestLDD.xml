@@ -889,7 +889,7 @@
             v1.0 (pre-2020):  Attribute creation
             v1.1 (LDD version v1.10.0.0, 2020-06-25):  Revised enumerated values to lower case
             v1.1 (LDD version v1.11.0.0, 2021-11-10):  Added values to support solar occultations
-            v1.1 (LDD version v1.13.0.0, 2025-05-29):  Revised definition.
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Revised definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1987,7 +1987,7 @@
         </definition>
         <comment>
             v1.2 (LDD version v1.12.0.0, 2023-04-18):  Added to define range of inertial longitudes
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
+            v1.3 (LDD version v1.13.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2035,7 +2035,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe offset between observed and subsolar ring longitude
-            v1.1 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
+            v1.1 (LDD version v1.13.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2058,7 +2058,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (LDD version v1.13.0.0, 2025-05-29): Revised definition
+            v1.1 (LDD version v1.13.0, 2025-05-29): Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2081,7 +2081,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020): Added to describe minimum offset between observed and subsolar ring longitude
-            v1.1 (LDD version v1.13.0.0, 2025-05-29): Fixed a spelling error in the definition
+            v1.1 (LDD version v1.13.0, 2025-05-29): Fixed a spelling error in the definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2140,7 +2140,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
+            v1.3 (LDD version v1.13.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2166,7 +2166,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Fixed spelling error in definition.
+            v1.3 (LDD version v1.13.0, 2025-05-29): Fixed spelling error in definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2202,22 +2202,16 @@
 
     <DD_Attribute>
         <name>emission_angle</name>
-        <version_id>1.1</version_id>
+        <version_id>1.2</version_id>
         <local_identifier>emission_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The emission_angle element provides the value of the angle between the surface
-            normal vector at the intercept point and a vector from the intercept point to the
-            spacecraft. The emission_angle varies from 0 degrees when the spacecraft is viewing the
-            subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the
-            surface of the target body. Thus, higher values of emission_angle indicate more oblique
-	    viewing of the target. For ring data, values in the range of 90 to 180 degrees indicate
-	    viewing on the unlit side from oblique or edge-on at 90 degrees to the unlit nadir at
-	    180 degrees.
+        <definition>The emission_angle element provides a measure of the relationship between the instrument viewing position and the surface normal vector at the intercept point. Specifically, it is the angle, measured at the intercept point, between the local surface normal vector and a vector in the direction of the outgoing photon to the observing instrument. The emission_angle varies from 0 degrees when the spacecraft is viewing the subspacecraft point (nadir viewing) to 90 degrees when the intercept is tangent to the surface of the target body. Thus, higher values of emission_angle indicate more oblique viewing of the target. In the context of planetary rings, the local surface normal vector is always on the side of the ring plane illuminated by the light source. Thus, the emission_angle varies from 0 degrees when the spacecraft is viewing the illuminated side of the rings face-on, to 90 degrees when viewing the rings edge-on (that is, the spacecraft is in the ring plane), to 180 degrees when the spacecraft is viewing the unlit side of the rings face-on.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (LDD version v1.13.0.0, 2025-05-29): Made changes to the definition
+            v1.1 (LDD version v1.13.0, 2025-05-29): Made changes to the definition
+	    v1.2 (LDD version v1.14.0, 2025-07-31): revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2283,7 +2277,7 @@
             value during the observation for the emission angle at the target.
         </definition>
         <comment>
-            v1.0 (LDD version v1.13.0.0, 2025-07-24):  Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-07-24):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2297,20 +2291,16 @@
     
     <DD_Attribute>
         <name>incidence_angle</name>
-        <version_id>1.1</version_id>
+        <version_id>1.2</version_id>
         <local_identifier>incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The incidence_angle element provides a measure of the lighting condition at
-            the intercept point. Incidence angle is the angle between the surface normal vector at the intercept
-            point and a vector from the intercept point to the sun. The incidence_angle varies from 0 degrees
-            when the intercept point coincides with the subsolar point to 90 degrees when the intercept is 
-            tangent to the surface of the target body, values in the range of 90 to 180 degrees are possible for 
-            ring data.
+        <definition>The incidence_angle element provides a measure of the lighting condition at the intercept point. Specifically, it is the angle, measured at the intercept point, between a vector in the direction of an incoming photon from the illumination source and the local surface normal vector. [[ The incidence_angle varies from 0 degrees when the intercept point coincides with the subsolar point to 90 degrees when the intercept is tangent to the surface of the target body. ]] In the context of planetary rings, the local surface normal vector is always on the side of the ring plane illuminated by the light source. Thus, the incidence_angle varies from 0 degrees if the light source illuminates the rings face-on, to 90 degrees if the light source illuminates the rings edge-on.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
-            v1.1 (LDD version v1.13.0.0, 2025-05-27): Revised definition.
+            v1.1 (LDD version v1.13.0, 2025-05-27): Revised definition.
+	    v1.2 (LDD version v1.14.0, 2025-07-31): revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2376,7 +2366,7 @@
             value during the observation for the incidence angle at the target.
         </definition>
         <comment>
-            v1.0 (LDD version v1.13.0.0, 2025-07-24):  Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-07-24):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2412,7 +2402,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Revised definition.
+            v1.3 (LDD version v1.13.0, 2025-05-29): Revised definition.
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2438,7 +2428,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): corrected spelling errors in definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): corrected spelling errors in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2464,7 +2454,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): corrected spelling errors in definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): corrected spelling errors in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2478,19 +2468,15 @@
 
     <DD_Attribute>
         <name>phase_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>phase_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The phase_angle element provides a measure of the relationship between 
-            the instrument viewing position and incident illumination (such as solar 
-            light). Phase angle is measured at the target; it is the angle between 
-            a vector to the illumination source and a vector to the instrument. If 
-            not specfied, the target is assumed to be at the center of the instrument 
-            field of view. If illumination is from behind the instrument, phase_angle will be small.
+        <definition>The phase_angle element provides a measure of the relationship between the instrument viewing position and incident illumination (such as solar light). Specifically, it is the angle, measured at the intercept point, between a vector in the direction of an incoming photon from the illumination source and a vector in the direction of an outgoing photon to the observing instrument. If illumination is from behind the instrument, phase_angle will be small.
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
+	    v1.1 (LDD version v1.14.0, 2025-07-31): revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2609,7 +2595,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Added to the Occultation_Time_Series class
-            v1.3 (LDD version 1.13.0, 2025-05-29):  Revised definition
+            v1.3 (LDD version v1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2634,7 +2620,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Added to the Occultation_Time_Series class
-            v1.3 (LDD version 1.13.0, 2025-05-29):  Revised definition
+            v1.3 (LDD version v1.13.0, 2025-05-29):  Revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2693,7 +2679,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2719,7 +2705,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2778,7 +2764,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2804,7 +2790,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020):  Attribute creation
-            v1.3 (LDD version v1.13.0.0, 2025-05-29): Corrected definition
+            v1.3 (LDD version v1.13.0, 2025-05-29): Corrected definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3217,7 +3203,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to support solar occultation geometry
-            v1.1 (LDD version 1.13.0, 2025-05-29):  Fixed spelling error in definition
+            v1.1 (LDD version v1.13.0, 2025-05-29):  Fixed spelling error in definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4201,7 +4187,7 @@
         and thus a constant value for this attribute.
         </definition>
         <comment>
-            v1.0 (LDD version v1.13.0.0, 2025-05-29): Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4224,7 +4210,7 @@
         and thus a constant value for this attribute.
         </definition>
         <comment>
-            v1.0 (LDD version v1.13.0.0, 2025-05-29): Attribute creation
+            v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
