@@ -2291,7 +2291,7 @@
     
     <DD_Attribute>
         <name>incidence_angle</name>
-        <version_id>1.2</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
@@ -2300,13 +2300,13 @@
         <comment>
             v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.13.0, 2025-05-27): Revised definition.
-	    v1.2 (LDD version v1.14.0, 2025-07-31): revised definition
+	    v2.0 (LDD version v1.14.0, 2025-07-31): revised definition and fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <minimum_value>0</minimum_value>
-            <maximum_value>180</maximum_value>
+            <maximum_value>90</maximum_value>
             <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
@@ -2314,7 +2314,7 @@
 
     <DD_Attribute>
         <name>minimum_incidence_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>minimum_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
@@ -2323,12 +2323,13 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
+	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <minimum_value>0</minimum_value>
-            <maximum_value>180</maximum_value>
+            <maximum_value>90</maximum_value>
             <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
@@ -2336,7 +2337,7 @@
 
     <DD_Attribute>
         <name>maximum_incidence_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>maximum_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
@@ -2345,12 +2346,13 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
+	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <minimum_value>0</minimum_value>
-            <maximum_value>180</maximum_value>
+            <maximum_value>90</maximum_value>
             <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
@@ -2358,7 +2360,7 @@
 
     <DD_Attribute>
         <name>mean_incidence_angle</name>
-        <version_id>1.0</version_id>
+        <version_id>2.0</version_id>
         <local_identifier>mean_incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Rob French</submitter_name>
@@ -2367,12 +2369,13 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-07-24):  Attribute creation
+	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>
             <minimum_value>0</minimum_value>
-            <maximum_value>180</maximum_value>
+            <maximum_value>90</maximum_value>
             <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
             <specified_unit_id>deg</specified_unit_id>
         </DD_Value_Domain>
