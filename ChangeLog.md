@@ -17,6 +17,7 @@
 
 ### Issue #348:  Definition changes for emission_angle and incidence_angle
 - The following attributes had their definitions updated: `emission_angle`, `incidence_angle`, and `phase_angle`.
+- Fix maximum_value for incidence_angle, which should never exceed 90 degrees.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/348
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#348
 
