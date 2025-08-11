@@ -16,13 +16,10 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#347
 
 ### Issue #348:  Definition changes for emission_angle and incidence_angle
-- STILL TO-DO
-- Currently the definitions for the `emission_angle` and `incidence_angle` attributes contain definitions that have been proposed for a rewrite.
+- The following attributes had their definitions updated: `emission_angle`, `incidence_angle`, and `phase_angle`.
+- Fix maximum_value for incidence_angle, which should never exceed 90 degrees.
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/348
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#348
-
-### Re-order min/max/mean groups of geometry definitions to be consistent.
-- Two types of reordering: standardizing the order of mean/min/max, and reordering groups of attributes.
 
 ## Changes from v1.12.0.0 to v1.13.0
 
