@@ -1243,7 +1243,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
-            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
+            v1.1 (LDD version v1.14.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1268,7 +1268,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
-            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
+            v1.1 (LDD version v1.14.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1292,7 +1292,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29):  Attribute creation
-            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
+            v1.1 (LDD version v1.14.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1315,8 +1315,8 @@
         be used as a table field.
         </definition>
         <comment>
-            v1.0 (1.13.0):  Attribute creation
-            v1.1 (LDD version v1.13.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
+            v1.0 (LDD version v1.13.0):  Attribute creation
+            v1.1 (LDD version v1.14.0, 2025-07-22):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1588,7 +1588,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute created.
-	    v1.3 (v1.13.0): Attribute definition and value definition updated
+            v1.3 (v1.13.0): Attribute definition and value definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -1687,7 +1687,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added for standardized measure of ring opacity
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1714,7 +1714,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to Occultation_Time_Series
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1740,7 +1740,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.11.0.0, 2021-11-10):  Added to Occultation_Time_Series
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1768,7 +1768,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-	    v1.3 (v1.13.0): Attribute definition updated
+            v1.3 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -1797,7 +1797,7 @@
         </definition>
         <comment>
             v1.2 (pre-2020): Attribute creation
-	    v1.3 (v1.13.0): Attribute definition updated
+            v1.3 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2206,12 +2206,22 @@
         <local_identifier>emission_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The emission_angle element provides a measure of the relationship between the instrument viewing position and the surface normal vector at the intercept point. Specifically, it is the angle, measured at the intercept point, between the local surface normal vector and a vector in the direction of the outgoing photon to the observing instrument. In the context of planetary rings, the local surface normal vector is always on the side of the ring plane illuminated by the light source. Thus, the emission_angle varies from 0 degrees when the spacecraft is viewing the illuminated side of the rings face-on, to 90 degrees when viewing the rings edge-on (that is, the spacecraft is in the ring plane), to 180 degrees when the spacecraft is viewing the unlit side of the rings face-on.
+        <definition>The emission_angle element provides a measure of the relationship
+            between the instrument viewing position and the surface normal vector at
+            the intercept point. Specifically, it is the angle, measured at the intercept
+            point, between the local surface normal vector and a vector in the direction
+            of the outgoing photon to the observing instrument. In the context of
+            planetary rings, the local surface normal vector is always on the side of the
+            ring plane illuminated by the light source. Thus, the emission_angle varies
+            from 0 degrees when the spacecraft is viewing the illuminated side of the
+            rings face-on, to 90 degrees when viewing the rings edge-on (that is, the
+            spacecraft is in the ring plane), to 180 degrees when the spacecraft is
+            viewing the unlit side of the rings face-on.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.13.0, 2025-05-29): Made changes to the definition
-	    v1.2 (LDD version v1.14.0, 2025-07-31): revised definition
+	        v1.2 (LDD version v1.14.0, 2025-07-31): revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2277,7 +2287,7 @@
             value during the observation for the emission angle at the target.
         </definition>
         <comment>
-            v1.0 (LDD version v1.13.0, 2025-07-24):  Attribute creation
+            v1.0 (LDD version v1.14.0, 2025-07-24):  Attribute creation
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2295,12 +2305,20 @@
         <local_identifier>incidence_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The incidence_angle element provides a measure of the lighting condition at the intercept point. Specifically, it is the angle, measured at the intercept point, between a vector in the direction of an incoming photon from the illumination source and the local surface normal vector. In the context of planetary rings, the local surface normal vector is always on the side of the ring plane illuminated by the light source. Thus, the incidence_angle varies from 0 degrees if the light source illuminates the rings face-on, to 90 degrees if the light source illuminates the rings edge-on.
+        <definition>The incidence_angle element provides a measure of the lighting
+            condition at the intercept point. Specifically, it is the angle, measured at
+            the intercept point, between a vector in the direction of an incoming photon
+            from the illumination source and the local surface normal vector. In the
+            context of planetary rings, the local surface normal vector is always on the
+            side of the ring plane illuminated by the light source. Thus, the
+            incidence_angle varies from 0 degrees if the light source illuminates the
+            rings face-on, to 90 degrees if the light source illuminates the rings
+            edge-on.
         </definition>
         <comment>
             v1.0 (pre-2020): Attribute creation
             v1.1 (LDD version v1.13.0, 2025-05-27): Revised definition.
-	    v2.0 (LDD version v1.14.0, 2025-07-31): revised definition and fix maximum_value
+	        v2.0 (LDD version v1.14.0, 2025-07-31): revised definition and fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2323,7 +2341,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
+	        v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2346,7 +2364,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
+	        v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2369,7 +2387,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-07-24):  Attribute creation
-	    v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
+	        v2.0 (LDD version v1.14.0, 2025-07-31): Fix maximum_value
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -2479,7 +2497,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v1.1 (LDD version v1.14.0, 2025-07-31): revised definition
+	        v1.1 (LDD version v1.14.0, 2025-07-31): revised definition
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3246,7 +3264,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3268,7 +3286,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3287,7 +3305,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -3309,7 +3327,7 @@
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
-	    v1.1 (v1.13.0): Attribute definition updated
+            v1.1 (v1.13.0): Attribute definition updated
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
@@ -4214,6 +4232,7 @@
         </definition>
         <comment>
             v1.0 (LDD version v1.13.0, 2025-05-29): Attribute creation
+            v1.1 (LDD version v1.14.0, 2025-08-11):  Changed Units_of_Length to Units_of_Angle
         </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
