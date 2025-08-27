@@ -2493,7 +2493,13 @@
         <local_identifier>phase_angle</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Mitchell K. Gordon</submitter_name>
-        <definition>The phase_angle element provides a measure of the relationship between the instrument viewing position and incident illumination (such as solar light). Specifically, it is the angle, measured at the intercept point, between a vector in the direction of an incoming photon from the illumination source and a vector in the direction of an outgoing photon to the observing instrument. If illumination is from behind the instrument, phase_angle will be small.
+        <definition>The phase_angle element provides a measure of the relationship between
+            the instrument viewing position and incident illumination (such as solar
+            light). Specifically, it is the angle, measured at the intercept point,
+            between a vector in the direction of an incoming photon from the illumination
+            source and a vector in the direction of an outgoing photon to the observing
+            instrument. If illumination is from behind the instrument, phase_angle will be
+            small.
         </definition>
         <comment>
             v1.0 (pre-2020):  Attribute creation
@@ -4219,7 +4225,7 @@
 
     <DD_Attribute>
         <name>reprojection_grid_longitudinal_sampling_interval</name>
-        <version_id>1.0</version_id>
+        <version_id>1.1</version_id>
         <local_identifier>reprojection_grid_longitudinal_sampling_interval</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>M. Tiscareno</submitter_name>
