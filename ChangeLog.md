@@ -1,5 +1,11 @@
 # Rings Namespace Change Log
 
+## Changes from v1.14.0 to v1.15.0
+
+### Corrected the order of `Reprojection_Grid_Parameters` radial and longitudinal attributes
+- The attributes `minimum/maximum/mean_radial/logitudinal_resolution` were in the order min/max/mean.
+- Changed the order from `min/max/mean` to `mean/min/max` for the associated `radial_resolution` and `longitudinal_resolution` values.
+
 ## Changes from v1.13.0 to v1.14.0
 
 ### Issue #346: "Longitudinal" attributes should have Units of Angle
@@ -9,7 +15,7 @@
 - Resolves pds-data-dictionaries/PDS4-LDD-Issue-Repo#346
 
 ### Issue #347:  New attributes for Reprojection_Geometry: min/max/mean_emission_angle and min/max/mean_incidence_angle
-- The Reprojection_Geometry class requires more substantial options for `emission_angle` `and incidence_angle`.
+- The Reprojection_Geometry class requires more substantial options for `emission_angle` and `incidence_angle`.
 - The following attributes were added to the `Reprojection_Geometry` class: `minimum_incidence_angle`, `maximum_incidence_angle` `minimum_emission_angle`, `maximum_emission_angle`.
 - The following attributes were created and added to the `Reprojection_Geometry` class: `mean_incidence_angle` and `mean_emission_angle`
 - Discussion found at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/347
