@@ -12,7 +12,7 @@
                                 http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1O00_19A0.xsd">
  
     <name>Rings Dictionary</name>
-    <ldd_version_id>1.14.0</ldd_version_id>
+    <ldd_version_id>1.15.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
@@ -22,7 +22,7 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2025-08-11</last_modification_date_time>
+    <last_modification_date_time>2025-09-15</last_modification_date_time>
 
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
     <!-- <DD_Attribute>
