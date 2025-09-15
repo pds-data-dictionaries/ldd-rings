@@ -12,7 +12,7 @@
                                 http://pds.nasa.gov/pds4/geom/v1  https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1O00_19A0.xsd">
  
     <name>Rings Dictionary</name>
-    <ldd_version_id>1.14.0</ldd_version_id>
+    <ldd_version_id>1.15.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Matthew Tiscareno</full_name>
     <steward_id>rings</steward_id>
@@ -22,7 +22,7 @@
       Changes are tracked in the file ChangeLog.md in the ldd-rings directory.
       
     </comment>
-    <last_modification_date_time>2025-08-11</last_modification_date_time>
+    <last_modification_date_time>2025-09-15</last_modification_date_time>
 
 <!-- @@@ The following attributes are borrowed from the geom namespace pending a fix to LDDTool -->
     <!-- <DD_Attribute>
@@ -4505,6 +4505,12 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
+            <identifier_reference>mean_radial_resolution</identifier_reference>
+            <reference_type>attribute_of</reference_type>
+            <minimum_occurrences>0</minimum_occurrences>
+            <maximum_occurrences>1</maximum_occurrences>
+        </DD_Association>
+        <DD_Association>
             <identifier_reference>minimum_radial_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
@@ -4517,13 +4523,13 @@
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>mean_radial_resolution</identifier_reference>
+            <identifier_reference>longitudinal_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
         </DD_Association>
         <DD_Association>
-            <identifier_reference>longitudinal_resolution</identifier_reference>
+            <identifier_reference>mean_longitudinal_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>
@@ -4536,12 +4542,6 @@
         </DD_Association>
         <DD_Association>
             <identifier_reference>maximum_longitudinal_resolution</identifier_reference>
-            <reference_type>attribute_of</reference_type>
-            <minimum_occurrences>0</minimum_occurrences>
-            <maximum_occurrences>1</maximum_occurrences>
-        </DD_Association>
-        <DD_Association>
-            <identifier_reference>mean_longitudinal_resolution</identifier_reference>
             <reference_type>attribute_of</reference_type>
             <minimum_occurrences>0</minimum_occurrences>
             <maximum_occurrences>1</maximum_occurrences>

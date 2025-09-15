@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.14.0.0 - Tue Sep 02 19:53:10 UTC 2025 -->
+  <!-- PDS4 Schematron for Name Space Id:rings  Version:1.14.0.0 - Mon Sep 15 20:16:57 UTC 2025 -->
   <!-- Generated from the PDS4 Information Model Version 1.22.0.0 - System Build 14.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
