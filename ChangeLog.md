@@ -5,6 +5,7 @@
 ### Corrected the order of `Reprojection_Grid_Parameters` radial and longitudinal attributes
 - The attributes `minimum/maximum/mean_radial/logitudinal_resolution` were in the order min/max/mean.
 - Changed the order from `min/max/mean` to `mean/min/max` for the associated `radial_resolution` and `longitudinal_resolution` values.
+- Discussion found at https://github.com/pds-data-dictionaries/ldd-rings/pull/34
 
 ## Changes from v1.13.0 to v1.14.0
 
